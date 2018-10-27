@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5ce293e3-4f45-434c-9e84-7d63baa3e712" name="Default Changelist" comment="" />
+    <list default="true" id="5ce293e3-4f45-434c-9e84-7d63baa3e712" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Project/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/frontend/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Project/frontend/index.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,19 +30,19 @@
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.closed" value="5" />
-          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="1" />
           <entry key="html" value="1" />
-          <entry key="php" value="22" />
+          <entry key="php" value="23" />
           <entry key="sql" value="1" />
           <entry key="txt" value="1" />
         </counts>
@@ -48,7 +51,7 @@
         <counts>
           <entry key="CSS" value="1" />
           <entry key="HTML" value="1" />
-          <entry key="PHP" value="22" />
+          <entry key="PHP" value="23" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Scratch" value="1" />
         </counts>
@@ -57,7 +60,7 @@
         <counts>
           <entry key="css" value="2" />
           <entry key="html" value="14" />
-          <entry key="php" value="906" />
+          <entry key="php" value="924" />
           <entry key="txt" value="8" />
         </counts>
       </usages-collector>
@@ -65,7 +68,7 @@
         <counts>
           <entry key="CSS" value="2" />
           <entry key="HTML" value="14" />
-          <entry key="PHP" value="906" />
+          <entry key="PHP" value="924" />
           <entry key="PLAIN_TEXT" value="8" />
         </counts>
       </usages-collector>
@@ -79,10 +82,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Project/frontend/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Project/backend/classes/Arc.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="24" lean-forward="true" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+            <state relative-caret-position="-544">
+              <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -94,6 +106,9 @@
       <find>login100-form-title</find>
     </findStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -103,10 +118,10 @@
         <option value="$PROJECT_DIR$/Project/frontend/css/main.css" />
         <option value="$PROJECT_DIR$/Project/frontend/connexion.php" />
         <option value="$PROJECT_DIR$/Project/backend/includes/fonctionAffichage.php" />
-        <option value="$PROJECT_DIR$/Project/frontend/index.php" />
         <option value="$PROJECT_DIR$/Project/backend/classes/affichage.php" />
         <option value="$PROJECT_DIR$/Project/design/code/index.html" />
         <option value="$PROJECT_DIR$/Project/design/code/index.php" />
+        <option value="$PROJECT_DIR$/Project/frontend/index.php" />
       </list>
     </option>
   </component>
@@ -117,8 +132,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-78" />
-    <option name="y" value="427" />
+    <option name="x" value="-1928" />
+    <option name="y" value="-68" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
@@ -127,6 +142,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -158,11 +174,16 @@
               <item name="Project" type="462c0819:PsiDirectoryNode" />
               <item name="design" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="TANGU" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TANGU" type="462c0819:PsiDirectoryNode" />
+              <item name="Project" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -206,17 +227,18 @@
       <workItem from="1540376860736" duration="9168000" />
       <workItem from="1540640070630" duration="1274000" />
       <workItem from="1540641631595" duration="583000" />
+      <workItem from="1540649702555" duration="26000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13357000" />
+    <option name="totallyTimeSpent" value="13383000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-1928" y="-68" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12686567" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12793177" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -267,9 +289,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Project/backend/fct/connexion_bdd.php" />
     <entry file="file://$PROJECT_DIR$/Project/backend/fct/inscription.php" />
-    <entry file="file://$PROJECT_DIR$/Project/backend/logs/logs.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/backend/logs/logs.txt" />
     <entry file="file://$PROJECT_DIR$/Project/backend/classes/Log.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="969">
@@ -324,13 +344,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Project/design/code/index.html" />
     <entry file="file://$PROJECT_DIR$/Project/backend/classes/affichage.php" />
-    <entry file="file://$PROJECT_DIR$/Project/frontend/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="22" lean-forward="true" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Desktop/Alhabaj-Elarchi-Dakroubi-Doglbe/Projet/Functions/HiddenTreasuresFNC.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -345,13 +358,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project/backend/includes/fonctionAffichage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="52" selection-start-line="7" selection-start-column="52" selection-end-line="7" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/backend/includes/fonctionAffichage.php" />
     <entry file="file://$PROJECT_DIR$/Project/design/code/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -361,8 +368,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Project/backend/classes/Arc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="24" lean-forward="true" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+        <state relative-caret-position="-544">
+          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/frontend/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
         </state>
       </provider>
     </entry>
