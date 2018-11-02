@@ -43,7 +43,7 @@
 
     if(isset($_POST['creationEnt'])  ) {
         require_once ('../../backend/classes/entrainement.php');
-        $ent1=new entrainement($_POST['nom'],$_POST['lieu'],$_POST['date'],$_POST['distance'],$_POST['arc'],$_POST['blason'],$_POST['serie'],$_POST['volee'],$_POST['fleche']);
+        $ent1=new entrainement($_POST['nom'],$_POST['lieu'],$_POST['date'],$_POST['distance'],$_POST['arc'],$_POST['blason'],$_POST['serie'],$_POST['volee'],$_POST['fleche'],1);
     }
 
 
