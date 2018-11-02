@@ -35,18 +35,24 @@ class entrainement
 
         echo 'objet instancié';
 
+
+        $this->creerEntrainement($this->$nom,$this->$lieu,$this->$date,$this->$distance, $this->$ID_arc,$this->$ID_blason,$this->$nbserie,$this->$nbvolees,$this->$nbfleches);
+
+
     }
+/////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
-    public function checkEnt($ID_blason, $ID_arc, $nom, $lieu, $date, $distance, $nbserie, $nbvolees, $nbfleches)
+    public function checkEnt($nom,$lieu,$date,$distance,$ID_arc,$ID_blason,$nbserie,$nbvolees,$nbfleches)
     { //on check si les valeurs saisi sont valides pour etre envoyés dans la base de données.
 
+        echo $date;
 
         if (!empty($ID_blason) and !empty($ID_arc) and !empty($nom) and !empty($lieu) and !empty($date)
             and !empty($distance) and !empty($nbserie) and !empty($nbvolees) and !empty($nbfleches)) {
 
+
             if (is_numeric($ID_blason) and is_numeric($ID_arc) and strlen($nom) <= 30 and strlen($lieu) <= 200
-                /* and entrainement::verifDate($date) == true */ and is_numeric($distance) and $distance <= 125
+                and $this->verifdateheure($date)    and is_numeric($distance) and $distance <= 125
                 and is_numeric($nbserie) and $nbserie <= 5 and is_numeric($nbvolees) and $nbvolees <= 10 and is_numeric($nbfleches) and $nbfleches <= 10) {
                 return true;
 
@@ -66,31 +72,33 @@ class entrainement
 
 
     }
+////////////////////////////////////////////////////////////////////////////////////////////
+    function verifdateheure($dateheure) {
 
-    public function verifDate($input)
-    {
 
-        list($d, $m, $y) = explode('-', $input);
-        if (!checkdate($d, $m, $y)) {
-
-            echo '<p> Date non valide</p>';
+        if (($timestamp = strtotime($dateheure)) === false) {
             return false;
         } else {
-
             return true;
         }
 
     }
 
-    public function creerEntrainement($ID_blason, $ID_arc, $nom, $lieu, $date, $distance, $nbserie, $nbvolees, $nbfleches)
+
+
+////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    public function creerEntrainement($nom,$lieu,$date,$distance,$ID_arc,$ID_blason,$nbserie,$nbvolees,$nbfleches)
     {
 
-        if (entrainement::checkEnt($ID_blason, $ID_arc, $nom, $lieu, $date, $distance, $nbserie, $nbvolees, $nbfleches) == true) {
+        if ($this->checkEnt($nom,$lieu,$date,$distance,$ID_arc,$ID_blason,$nbserie,$nbvolees,$nbfleches) == true) {
 
 
            // include '../backend/includes/connexion_bdd.php';
             include '../includes/connexion_bdd.php';
-            $requ = $bdd->exec("INSERT INTO `entrainement` (`ID_ENT`, `ID_USER`, `ID_ARC`, `ID_BLAS`, `NOM_ENT`, `LIEU_ENT`, `DATE_ENT`, `DIST_ENT`, `NBR_FLECHES`, `PTS_TOTAL`, `PCT_DIX`, `PCT_NEUF`, `MOY_ENT`, `STATUT_ENT`) VALUES (NULL, '1', '$ID_arc', '$ID_blason', '$nom', '$lieu', '2018-11-14 00:00:00', '$distance', '$nbfleches', NULL, NULL, NULL, NULL, '1')");
+            $requ = $bdd->exec("INSERT INTO `entrainement` (`ID_ENT`, `ID_USER`, `ID_ARC`, `ID_BLAS`, `NOM_ENT`, `LIEU_ENT`, `DATE_ENT`, `DIST_ENT`, `NBR_FLECHES`, `PTS_TOTAL`, `PCT_DIX`, `PCT_NEUF`, `MOY_ENT`, `STATUT_ENT`) 
+            VALUES (NULL, '1', '$ID_arc', '$ID_blason', '$nom', '$lieu', '$date', '$distance', '$nbfleches', NULL, NULL, NULL, NULL, '1')");
 
 
             echo '<p> Entranement crée! </p>';
@@ -99,7 +107,7 @@ class entrainement
 
 
     }
-
+////////////////////////////////////////////////////////////////////////////////////////////
      /* public function lancerEntrainement($nbserie, $nbvolees, $nbfleches)
     {
 
@@ -129,9 +137,21 @@ class entrainement
 
 
 
+
 }
-$ent1=new entrainement('nom1', 'lieu1', '2018-11-14 00:00:00', 15, 1, 1, 2, 5, 3);
-$ent1->creerEntrainement(1, 1,'nom1' , 'lieu1', '2018-11-14 00:00:00', 15, 2, 5, 3);
+
+$nom="nom1";
+$lieu="lieu1";
+$date="2018-12-07 00:00:00";
+$distance=15;
+$id_arc=1;
+$ID_blason=1;
+$nbserie=2;
+$nbvolees=5;
+$nbfleches=3;
+
+$ent1=new entrainement($nom,$lieu,$date,$distance,$id_arc,$ID_blason,$nbserie,$nbvolees,$nbfleches);
+//$ent1->creerEntrainement($nom,$lieu,$date,$distance,1,$ID_blason,$nbserie,$nbvolees,$nbfleches);
 
 
 

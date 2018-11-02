@@ -88,4 +88,10 @@ function checkPhoto($photo) {
     return false;
 }
 
+
+
+
+
+
+
 ?>
