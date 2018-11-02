@@ -33,7 +33,7 @@ class entrainement
 
 
 
-        echo 'objet instancié';
+       // echo 'objet instancié';
 
 
         $this->creerEntrainement($this->$nom,$this->$lieu,$this->$date,$this->$distance, $this->$ID_arc,$this->$ID_blason,$this->$nbserie,$this->$nbvolees,$this->$nbfleches);
@@ -45,7 +45,7 @@ class entrainement
     public function checkEnt($nom,$lieu,$date,$distance,$ID_arc,$ID_blason,$nbserie,$nbvolees,$nbfleches)
     { //on check si les valeurs saisi sont valides pour etre envoyés dans la base de données.
 
-        echo $date;
+
 
         if (!empty($ID_blason) and !empty($ID_arc) and !empty($nom) and !empty($lieu) and !empty($date)
             and !empty($distance) and !empty($nbserie) and !empty($nbvolees) and !empty($nbfleches)) {
@@ -95,8 +95,8 @@ class entrainement
         if ($this->checkEnt($nom,$lieu,$date,$distance,$ID_arc,$ID_blason,$nbserie,$nbvolees,$nbfleches) == true) {
 
 
-           // include '../backend/includes/connexion_bdd.php';
-            include '../includes/connexion_bdd.php';
+            include '../../backend/includes/connexion_bdd.php';
+           // include '../includes/connexion_bdd.php';
             $requ = $bdd->exec("INSERT INTO `entrainement` (`ID_ENT`, `ID_USER`, `ID_ARC`, `ID_BLAS`, `NOM_ENT`, `LIEU_ENT`, `DATE_ENT`, `DIST_ENT`, `NBR_FLECHES`, `PTS_TOTAL`, `PCT_DIX`, `PCT_NEUF`, `MOY_ENT`, `STATUT_ENT`) 
             VALUES (NULL, '1', '$ID_arc', '$ID_blason', '$nom', '$lieu', '$date', '$distance', '$nbfleches', NULL, NULL, NULL, NULL, '1')");
 
@@ -142,7 +142,7 @@ class entrainement
 
 $nom="nom1";
 $lieu="lieu1";
-$date="2018-12-07 00:00:00";
+$date="2018-12-07 01:30";
 $distance=15;
 $id_arc=1;
 $ID_blason=1;
@@ -150,7 +150,7 @@ $nbserie=2;
 $nbvolees=5;
 $nbfleches=3;
 
-$ent1=new entrainement($nom,$lieu,$date,$distance,$id_arc,$ID_blason,$nbserie,$nbvolees,$nbfleches);
+//$ent1=new entrainement($nom,$lieu,$date,$distance,$id_arc,$ID_blason,$nbserie,$nbvolees,$nbfleches);
 //$ent1->creerEntrainement($nom,$lieu,$date,$distance,1,$ID_blason,$nbserie,$nbvolees,$nbfleches);
 
 
