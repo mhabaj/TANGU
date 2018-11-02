@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* Nom de SGBD :  MySQL 5.0                                     */
-/* Date de création :  02/11/2018 22:41:36                      */
+/* Date de création :  02/11/2018 22:49:26                      */
 /*==============================================================*/
 
 
@@ -107,7 +107,6 @@ create table BLASON
 create table ENTRAINEMENT
 (
    ID_ENT               int not null auto_increment  comment '',
-   ID_ENT_USER          int not null  comment '',
    ID_USER              int not null  comment '',
    ID_ARC               int not null  comment '',
    ID_BLAS              int not null  comment '',
@@ -123,7 +122,7 @@ create table ENTRAINEMENT
    PCT_NEUF             float  comment '',
    MOY_ENT              real  comment '',
    STATUT_ENT           bool not null  comment '',
-   primary key (ID_ENT, ID_ENT_USER)
+   primary key (ID_ENT)
 );
 
 /*==============================================================*/
@@ -144,7 +143,6 @@ create table SERIE
 (
    ID_SERIE             int not null auto_increment  comment '',
    ID_ENT               int not null  comment '',
-   ID_ENT_USER          int not null  comment '',
    PTSSERIE             smallint not null  comment '',
    NBRVOLSERIE          tinyint not null  comment '',
    MOYSERIE             real not null  comment '',
@@ -200,8 +198,8 @@ alter table ENTRAINEMENT add constraint FK_ENTRAINE_UTILISE2_BLASON foreign key 
 alter table FLECHE add constraint FK_FLECHE_COMPOSEE4_VOLEE foreign key (ID_VOL)
       references VOLEE (ID_VOL) on delete restrict on update restrict;
 
-alter table SERIE add constraint FK_SERIE_COMPOSEE_ENTRAINE foreign key (ID_ENT, ID_ENT_USER)
-      references ENTRAINEMENT (ID_ENT, ID_ENT_USER) on delete restrict on update restrict;
+alter table SERIE add constraint FK_SERIE_COMPOSEE_ENTRAINE foreign key (ID_ENT)
+      references ENTRAINEMENT (ID_ENT) on delete restrict on update restrict;
 
 alter table VOLEE add constraint FK_VOLEE_COMPOSEE3_SERIE foreign key (ID_SERIE)
       references SERIE (ID_SERIE) on delete restrict on update restrict;

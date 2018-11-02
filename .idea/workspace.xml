@@ -4,10 +4,13 @@
     <list default="true" id="5ce293e3-4f45-434c-9e84-7d63baa3e712" name="Default Changelist" comment="Creation entrainement fini (reste à creer les tables series fleches et volee)&#10;&#10;Creation du affichage champs fini (reste le design)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project/backend/classes/entrainement.php" beforeDir="false" afterPath="$PROJECT_DIR$/Project/backend/classes/entrainement.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/design/code/add.php" beforeDir="false" afterPath="$PROJECT_DIR$/Project/design/code/add.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TANGUBDD/MCDV1.bcd" beforeDir="false" afterPath="$PROJECT_DIR$/TANGUBDD/MCDV1.bcd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TANGUBDD/MCDV1.cdm" beforeDir="false" afterPath="$PROJECT_DIR$/TANGUBDD/MCDV1.cdm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TANGUBDD/MLDV1.bld" beforeDir="false" afterPath="$PROJECT_DIR$/TANGUBDD/MLDV1.bld" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TANGUBDD/MLDV1.ldm" beforeDir="false" afterPath="$PROJECT_DIR$/TANGUBDD/MLDV1.ldm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TANGUBDD/MPDV1.bpd" beforeDir="false" afterPath="$PROJECT_DIR$/TANGUBDD/MPDV1.bpd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TANGUBDD/MPDV1.pdm" beforeDir="false" afterPath="$PROJECT_DIR$/TANGUBDD/MPDV1.pdm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TANGUBDD/SQLV2.sql" beforeDir="false" afterPath="$PROJECT_DIR$/TANGUBDD/SQLV2.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/desktop.ini" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -106,13 +109,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="php" value="2684" />
+          <entry key="php" value="3135" />
           <entry key="txt" value="251" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PHP" value="2675" />
+          <entry key="PHP" value="3126" />
           <entry key="PLAIN_TEXT" value="251" />
           <entry key="SQL" value="9" />
         </counts>
@@ -133,7 +136,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Project/design/code/edit.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
+            <state relative-caret-position="176">
               <caret line="30" column="44" lean-forward="true" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="44" />
             </state>
           </provider>
@@ -142,8 +145,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Project/backend/classes/entrainement.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="134" column="16" selection-start-line="134" selection-start-column="16" selection-end-line="134" selection-end-column="16" />
+            <state relative-caret-position="716">
+              <caret line="85" column="60" selection-start-line="85" selection-start-column="60" selection-end-line="85" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -151,7 +154,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Project/design/code/add.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
+            <state relative-caret-position="144">
               <caret line="45" column="175" selection-start-line="45" selection-start-column="175" selection-end-line="45" selection-end-column="175" />
               <folding>
                 <element signature="n#style#0;n#i#0;n#a#0;n#button#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -204,8 +207,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Project/backend/classes/Arc.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="50" column="20" lean-forward="true" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
+            <state relative-caret-position="517">
+              <caret line="55" column="39" lean-forward="true" selection-start-line="55" selection-start-column="39" selection-end-line="55" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -279,7 +282,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
@@ -421,7 +424,7 @@
       <workItem from="1541109335326" duration="134000" />
       <workItem from="1541109497346" duration="37000" />
       <workItem from="1541109596656" duration="4359000" />
-      <workItem from="1541177621325" duration="15042000" />
+      <workItem from="1541177621325" duration="18738000" />
     </task>
     <task id="LOCAL-00001" summary="Finalisation insertion entrainement dans BDD.&#10;&#10;Reste à faire: debut entrainement">
       <created>1541186235074</created>
@@ -441,7 +444,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33554000" />
+    <option name="totallyTimeSpent" value="37250000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -576,10 +579,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project/design/code/edit.php">
+    <entry file="file://$PROJECT_DIR$/Project/backend/includes/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="30" column="44" lean-forward="true" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="44" />
+        <state relative-caret-position="285">
+          <caret line="57" column="41" selection-start-line="57" selection-start-column="41" selection-end-line="57" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/frontend/inscription.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="40" column="26" lean-forward="true" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -590,9 +600,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Project/design/code/edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="30" column="44" lean-forward="true" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Project/design/code/add.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
+        <state relative-caret-position="144">
           <caret line="45" column="175" selection-start-line="45" selection-start-column="175" selection-end-line="45" selection-end-column="175" />
           <folding>
             <element signature="n#style#0;n#i#0;n#a#0;n#button#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -616,29 +633,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Project/backend/classes/Arc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="50" column="20" lean-forward="true" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project/backend/includes/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="57" column="41" selection-start-line="57" selection-start-column="41" selection-end-line="57" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project/frontend/inscription.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="40" column="26" lean-forward="true" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
+        <state relative-caret-position="517">
+          <caret line="55" column="39" lean-forward="true" selection-start-line="55" selection-start-column="39" selection-end-line="55" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Project/backend/classes/entrainement.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="134" column="16" selection-start-line="134" selection-start-column="16" selection-end-line="134" selection-end-column="16" />
+        <state relative-caret-position="716">
+          <caret line="85" column="60" selection-start-line="85" selection-start-column="60" selection-end-line="85" selection-end-column="60" />
         </state>
       </provider>
     </entry>
