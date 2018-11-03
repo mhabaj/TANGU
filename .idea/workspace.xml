@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5ce293e3-4f45-434c-9e84-7d63baa3e712" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/backend/classes/entrainement.php" beforeDir="false" afterPath="$PROJECT_DIR$/Project/backend/classes/entrainement.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/backend/includes/connexion_bdd.php" beforeDir="false" afterPath="$PROJECT_DIR$/Project/backend/includes/connexion_bdd.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TANGUBDD/MCDV1.bcd" beforeDir="false" afterPath="$PROJECT_DIR$/TANGUBDD/MCDV1.bcd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TANGUBDD/MCDV1.cdm" beforeDir="false" afterPath="$PROJECT_DIR$/TANGUBDD/MCDV1.cdm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TANGUBDD/MLDV1.bld" beforeDir="false" afterPath="$PROJECT_DIR$/TANGUBDD/MLDV1.bld" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TANGUBDD/MLDV1.ldm" beforeDir="false" afterPath="$PROJECT_DIR$/TANGUBDD/MLDV1.ldm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TANGUBDD/MPDV1.bpd" beforeDir="false" afterPath="$PROJECT_DIR$/TANGUBDD/MPDV1.bpd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TANGUBDD/MPDV1.pdm" beforeDir="false" afterPath="$PROJECT_DIR$/TANGUBDD/MPDV1.pdm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TANGUBDD/SQLV2.sql" beforeDir="false" afterPath="$PROJECT_DIR$/TANGUBDD/SQLV2.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TANGUBDD/TIREALARC.bpj" beforeDir="false" afterPath="$PROJECT_DIR$/TANGUBDD/TIREALARC.bpj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TANGUBDD/TIREALARC.prj" beforeDir="false" afterPath="$PROJECT_DIR$/TANGUBDD/TIREALARC.prj" afterDir="false" />
-    </list>
+    <list default="true" id="5ce293e3-4f45-434c-9e84-7d63baa3e712" name="Default Changelist" comment="CREATION ENTRAINEMENT AVEC TABLES SERIES VOLEES ET FLECHES TERMINE.&#10;&#10;A FAIRE: Faire la fonction PENDANT LENTRAINEMENT" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +78,7 @@
     <session id="-1026751689">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.12" value="1" />
@@ -116,13 +101,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="php" value="4399" />
-          <entry key="txt" value="371" />
+          <entry key="txt" value="503" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PHP" value="4328" />
-          <entry key="PLAIN_TEXT" value="371" />
+          <entry key="PLAIN_TEXT" value="503" />
           <entry key="SQL" value="71" />
         </counts>
       </usages-collector>
@@ -142,8 +127,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Project/backend/classes/entrainement.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="190" column="20" selection-start-line="190" selection-start-column="20" selection-end-line="190" selection-end-column="20" />
+            <state relative-caret-position="215">
+              <caret line="175" lean-forward="true" selection-start-line="175" selection-end-line="175" />
             </state>
           </provider>
         </entry>
@@ -255,6 +240,7 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="maah" />
         <option value="Mah" />
         <option value="mah" />
       </list>
@@ -288,7 +274,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
@@ -430,7 +416,7 @@
       <workItem from="1541109335326" duration="134000" />
       <workItem from="1541109497346" duration="37000" />
       <workItem from="1541109596656" duration="4359000" />
-      <workItem from="1541177621325" duration="26007000" />
+      <workItem from="1541177621325" duration="26160000" />
     </task>
     <task id="LOCAL-00001" summary="Finalisation insertion entrainement dans BDD.&#10;&#10;Reste à faire: debut entrainement">
       <created>1541186235074</created>
@@ -457,7 +443,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44519000" />
+    <option name="totallyTimeSpent" value="44672000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -470,7 +456,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13219616" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -526,7 +511,8 @@
     <MESSAGE value="Finalisation insertion entrainement dans BDD.&#10;&#10;Reste à faire: debut entrainement" />
     <MESSAGE value="Creation entrainement fini (reste à creer les tables series fleches et volee)&#10;&#10;Creation du affichage champs fini (reste le design)" />
     <MESSAGE value="REPARATIONS CREATION ENTRAINEMENT (constructeur mal appelé avec des $ mal mis) et résolutions de bugs." />
-    <option name="LAST_COMMIT_MESSAGE" value="REPARATIONS CREATION ENTRAINEMENT (constructeur mal appelé avec des $ mal mis) et résolutions de bugs." />
+    <MESSAGE value="CREATION ENTRAINEMENT AVEC TABLES SERIES VOLEES ET FLECHES TERMINE.&#10;&#10;A FAIRE: Faire la fonction PENDANT LENTRAINEMENT" />
+    <option name="LAST_COMMIT_MESSAGE" value="CREATION ENTRAINEMENT AVEC TABLES SERIES VOLEES ET FLECHES TERMINE.&#10;&#10;A FAIRE: Faire la fonction PENDANT LENTRAINEMENT" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Project/backend/fct/connexion_bdd.php" />
@@ -657,8 +643,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Project/backend/classes/entrainement.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="190" column="20" selection-start-line="190" selection-start-column="20" selection-end-line="190" selection-end-column="20" />
+        <state relative-caret-position="215">
+          <caret line="175" lean-forward="true" selection-start-line="175" selection-end-line="175" />
         </state>
       </provider>
     </entry>
