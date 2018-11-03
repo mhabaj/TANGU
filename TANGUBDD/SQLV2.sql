@@ -1,76 +1,8 @@
-/*==============================================================*/
+﻿/*==============================================================*/
 /* Nom de SGBD :  MySQL 5.0                                     */
-/* Date de création :  02/11/2018 22:49:26                      */
+/* Date de création :  03/11/2018 01:14:12                      */
 /*==============================================================*/
 
-
-alter table ARC 
-   drop foreign key FK_ARC_POSSEDE_B_USERS;
-
-alter table BLASON 
-   drop foreign key FK_BLASON_POSSEDE_B_USERS;
-
-alter table ENTRAINEMENT 
-   drop foreign key FK_ENTRAINE_POSSEDE_E_USERS;
-
-alter table ENTRAINEMENT 
-   drop foreign key FK_ENTRAINE_UTILISE_ARC;
-
-alter table ENTRAINEMENT 
-   drop foreign key FK_ENTRAINE_UTILISE2_BLASON;
-
-alter table FLECHE 
-   drop foreign key FK_FLECHE_COMPOSEE4_VOLEE;
-
-alter table SERIE 
-   drop foreign key FK_SERIE_COMPOSEE_ENTRAINE;
-
-alter table VOLEE 
-   drop foreign key FK_VOLEE_COMPOSEE3_SERIE;
-
-
-alter table ARC 
-   drop foreign key FK_ARC_POSSEDE_B_USERS;
-
-drop table if exists ARC;
-
-
-alter table BLASON 
-   drop foreign key FK_BLASON_POSSEDE_B_USERS;
-
-drop table if exists BLASON;
-
-
-alter table ENTRAINEMENT 
-   drop foreign key FK_ENTRAINE_POSSEDE_E_USERS;
-
-alter table ENTRAINEMENT 
-   drop foreign key FK_ENTRAINE_UTILISE_ARC;
-
-alter table ENTRAINEMENT 
-   drop foreign key FK_ENTRAINE_UTILISE2_BLASON;
-
-drop table if exists ENTRAINEMENT;
-
-
-alter table FLECHE 
-   drop foreign key FK_FLECHE_COMPOSEE4_VOLEE;
-
-drop table if exists FLECHE;
-
-
-alter table SERIE 
-   drop foreign key FK_SERIE_COMPOSEE_ENTRAINE;
-
-drop table if exists SERIE;
-
-drop table if exists USERS;
-
-
-alter table VOLEE 
-   drop foreign key FK_VOLEE_COMPOSEE3_SERIE;
-
-drop table if exists VOLEE;
 
 /*==============================================================*/
 /* Table : ARC                                                  */
@@ -107,6 +39,7 @@ create table BLASON
 create table ENTRAINEMENT
 (
    ID_ENT               int not null auto_increment  comment '',
+   ID_ENT_USER          int not null  comment '',
    ID_USER              int not null  comment '',
    ID_ARC               int not null  comment '',
    ID_BLAS              int not null  comment '',
@@ -122,7 +55,7 @@ create table ENTRAINEMENT
    PCT_NEUF             float  comment '',
    MOY_ENT              real  comment '',
    STATUT_ENT           bool not null  comment '',
-   primary key (ID_ENT)
+   primary key (ID_ENT, ID_ENT_USER)
 );
 
 /*==============================================================*/
@@ -142,12 +75,13 @@ create table FLECHE
 create table SERIE
 (
    ID_SERIE             int not null auto_increment  comment '',
-   ID_ENT               int not null  comment '',
+   ID_ENT_USER          int not null  comment '',
    PTSSERIE             smallint not null  comment '',
    NBRVOLSERIE          tinyint not null  comment '',
    MOYSERIE             real not null  comment '',
    PCTDIXSERIE          real not null  comment '',
    PCTHUITSERIE         real not null  comment '',
+   ID_ENT               int not null  comment '',
    primary key (ID_SERIE)
 );
 
@@ -198,8 +132,8 @@ alter table ENTRAINEMENT add constraint FK_ENTRAINE_UTILISE2_BLASON foreign key 
 alter table FLECHE add constraint FK_FLECHE_COMPOSEE4_VOLEE foreign key (ID_VOL)
       references VOLEE (ID_VOL) on delete restrict on update restrict;
 
-alter table SERIE add constraint FK_SERIE_COMPOSEE_ENTRAINE foreign key (ID_ENT)
-      references ENTRAINEMENT (ID_ENT) on delete restrict on update restrict;
+alter table SERIE add constraint FK_SERIE_COMPOSEE_ENTRAINE foreign key (ID_ENT, ID_ENT_USER)
+      references ENTRAINEMENT (ID_ENT, ID_ENT_USER) on delete restrict on update restrict;
 
 alter table VOLEE add constraint FK_VOLEE_COMPOSEE3_SERIE foreign key (ID_SERIE)
       references SERIE (ID_SERIE) on delete restrict on update restrict;
