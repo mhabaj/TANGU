@@ -1,2 +1,7 @@
 
+<<<<<<< HEAD
 .idea/workspace.xml
+=======
+*.ini
+desktop.ini
+>>>>>>> f5e2bf5ebd24e99a30e0d69426c55d1f2c7622fb
