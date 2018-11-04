@@ -174,6 +174,7 @@ class entrainement
 
                 for ($j = 0; $j < $nbvolees; $j++) {
 
+
                     $requ6 = $bdd->exec("INSERT INTO `volee` (`ID_VOL`, `ID_SERIE`, `PTSVOL`, `NBRFLECHEVOL`, `MOYVOL`, `PCTDIXVOL`, `PCTHUITVOL`) 
                               VALUES (NULL, '$ID_SERIE', NULL, '$nbfleches', NULL, NULL, NULL)")or die(print_r($bdd->errorInfo()));
 
