@@ -172,6 +172,9 @@ class entrainement
 
                 $ID_SERIE = $donnees2['ID_SERIE'];
 
+
+
+
                 for ($j = 0; $j < $nbvolees; $j++) {
 
 
