@@ -20,7 +20,16 @@ class entrainement
     private $ID_user;
 
     public function __construct($nom, $lieu, $date, $distance, $ID_arc, $ID_blason, $nbserie, $nbvolees, $nbfleches, $ID_user)
+
+
+
+
+
+
+
     {
+
+        include '../../backend/includes/connexion_bdd.php';
         //$tab[$nbserie] = array( $nbvolees => array( $nbfleches, $nbfleches, $nbfleches));
         $this->ID_blason = $ID_blason;
         $this->ID_arc = $ID_arc;
@@ -139,7 +148,7 @@ class entrainement
         if ($this->checkEnt($nom, $lieu, $date, $distance, $ID_arc, $ID_blason, $nbserie, $nbvolees, $nbfleches, $ID_user) == true) {
 
 
-            include '../../backend/includes/connexion_bdd.php';
+            //include '../../backend/includes/connexion_bdd.php';
             // include '../includes/connexion_bdd.php';
 
 
