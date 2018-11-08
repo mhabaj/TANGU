@@ -55,5 +55,5 @@ class Log {
 //$myfile->write('Erreur log', 'Erreur');
 //$myfile->close();
 
-$log_file = new Log('../backend/logs/logs.txt');
+$log_file = new Log('../controller/logs.logs.txt');
 ?>

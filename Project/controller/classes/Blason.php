@@ -1,8 +1,8 @@
 <?php
-include '../includes/connexion_bdd.php';
+include '../controller/functions/connexion_bdd.php';
 
-require('../includes/control-session.php');
-require_once('Log.php');
+//require('../controller/functions/control-session.php');
+require_once('../controller/classes/Log.php');
 
 global $bdd;
 global $idUser;

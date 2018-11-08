@@ -24,7 +24,8 @@ class entrainement
 
     {
 
-        include '../../backend/includes/connexion_bdd.php';
+      // include '../controller/functions/connexion_bdd.php';
+
         //$tab[$nbserie] = array( $nbvolees => array( $nbfleches, $nbfleches, $nbfleches));
         $this->ID_blason = $ID_blason;
         $this->ID_arc = $ID_arc;
@@ -61,7 +62,7 @@ class entrainement
                 and is_numeric($nbserie) and $nbserie <= 5 and is_numeric($nbvolees) and $nbvolees <= 10 and is_numeric($nbfleches) and $nbfleches <= 10) {
                 echo $ID_user;
                 echo $nom;
-                include '../../backend/includes/connexion_bdd.php';
+				include '../controller/functions/connexion_bdd.php';
                 // Pour test: include '../includes/connexion_bdd.php';
 
                 // on verifie la validité de l'utilisateur:
@@ -145,6 +146,7 @@ class entrainement
 
             //include '../../backend/includes/connexion_bdd.php';
             // include '../includes/connexion_bdd.php';
+			include '../controller/functions/connexion_bdd.php';
 
 
             $requ = $bdd->exec("INSERT INTO `entrainement` (`ID_ENT`,`ID_ENT_USER`, `ID_USER`, `ID_ARC`, `ID_BLAS`, `NOM_ENT`, `LIEU_ENT`, `DATE_ENT`, `DIST_ENT`,`NBR_SERIE`,`NBR_VOLEE`, `NBR_FLECHES`, `PTS_TOTAL`, `PCT_DIX`, `PCT_NEUF`, `MOY_ENT`, `STATUT_ENT`) 

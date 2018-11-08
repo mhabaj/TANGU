@@ -1,8 +1,10 @@
 <?php
-require_once('../backend/classes/Log.php');
+include '../controller/functions/connexion_bdd.php';
 
-include '../backend/includes/connexion_bdd.php';
-require('../backend/includes/functions.php');
+//require('../controller/functions/control-session.php');
+require_once('../controller/classes/Log.php');
+
+
 
 //include '../includes/connexion_bdd.php';
 //require('../includes/functions.php');
