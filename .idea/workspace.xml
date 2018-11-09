@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5ce293e3-4f45-434c-9e84-7d63baa3e712" name="Default Changelist" comment="CREATION ENTRAINEMENT AVEC TABLES SERIES VOLEES ET FLECHES TERMINE.&#10;&#10;A FAIRE: Faire la fonction PENDANT LENTRAINEMENT">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3f6769ea-2659-42de-a85c-bc90ad64a1ed.xml" beforeDir="false" />
+    <list default="true" id="524ebfcc-9668-4991-822d-d999c5f7a411" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/controller/classes/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/Project/controller/classes/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/view/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/Project/view/account.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/view/connexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/Project/view/connexion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/view/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/Project/view/edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/view/entrainement.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/view/index.html" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,111 +28,42 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="TANGUBDD" type="feb32156:DbDataSourceImpl" />
+      </path>
+    </expand>
     <select />
   </component>
   <component name="FUSProjectUsageTrigger">
-    <session id="-1116749018">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="6" />
-          <entry key="project.open.time.0" value="2" />
-          <entry key="project.open.time.2" value="1" />
-          <entry key="project.open.time.6" value="1" />
-          <entry key="project.open.time.8" value="1" />
-          <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="6" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="css" value="1" />
-          <entry key="html" value="1" />
-          <entry key="php" value="23" />
-          <entry key="sql" value="1" />
-          <entry key="txt" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="CSS" value="1" />
-          <entry key="HTML" value="1" />
-          <entry key="PHP" value="23" />
-          <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Scratch" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="css" value="2" />
-          <entry key="html" value="14" />
-          <entry key="php" value="924" />
-          <entry key="txt" value="8" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="CSS" value="2" />
-          <entry key="HTML" value="14" />
-          <entry key="PHP" value="924" />
-          <entry key="PLAIN_TEXT" value="8" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.php.new.class">
-        <counts>
-          <entry key="PHP Class.type" value="1" />
-        </counts>
-      </usages-collector>
-    </session>
     <session id="-1026751689">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-<<<<<<< HEAD
-          <entry key="project.closed" value="10" />
-          <entry key="project.open.time.10" value="2" />
-=======
-          <entry key="project.closed" value="6" />
-          <entry key="project.open.time.10" value="1" />
->>>>>>> parent of c14916e... Update .idea/workspace.xml
-          <entry key="project.open.time.11" value="1" />
-          <entry key="project.open.time.12" value="1" />
-          <entry key="project.open.time.15" value="1" />
-          <entry key="project.open.time.31" value="1" />
-          <entry key="project.open.time.38" value="1" />
           <entry key="project.open.time.6" value="1" />
-<<<<<<< HEAD
-          <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="10" />
-=======
-          <entry key="project.opened" value="6" />
->>>>>>> parent of c14916e... Update .idea/workspace.xml
+          <entry key="project.opened" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="1" />
-          <entry key="php" value="15" />
-          <entry key="sql" value="1" />
+          <entry key="html" value="9" />
+          <entry key="php" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="1" />
-          <entry key="PHP" value="15" />
-          <entry key="Scratch" value="1" />
+          <entry key="HTML" value="9" />
+          <entry key="PHP" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="php" value="4399" />
-          <entry key="txt" value="503" />
+          <entry key="php" value="415" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PHP" value="4328" />
-          <entry key="PLAIN_TEXT" value="503" />
-          <entry key="SQL" value="71" />
+          <entry key="PHP" value="415" />
         </counts>
       </usages-collector>
     </session>
@@ -134,114 +71,66 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Project/view/index.html">
+        <entry file="file://$PROJECT_DIR$/Project/view/blasonSlides.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-503">
-              <caret line="11" column="30" lean-forward="true" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+            <state relative-caret-position="187">
+              <caret line="11" column="25" selection-start-line="11" selection-end-line="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Project/view/arcSlides.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="772">
+              <caret line="76" column="9" selection-end-line="76" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-<<<<<<< HEAD
-        <entry file="file://$PROJECT_DIR$/Project/view/entrainement.php">
-=======
-        <entry file="file://$PROJECT_DIR$/Project/backend/classes/entrainement.php">
+        <entry file="file://$PROJECT_DIR$/Project/view/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="172" column="36" selection-start-line="172" selection-start-column="36" selection-end-line="172" selection-end-column="36" />
+            <state relative-caret-position="154">
+              <caret line="28" column="29" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Project/backend/includes/connexion_bdd.php">
+        <entry file="file://$PROJECT_DIR$/Project/view/account.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="2" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
+            <state relative-caret-position="-1367">
+              <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Project/design/code/add.php">
+        <entry file="file://$PROJECT_DIR$/Project/view/edit.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="45" column="177" lean-forward="true" selection-start-line="45" selection-start-column="177" selection-end-line="45" selection-end-column="177" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Project/backend/includes/connect_user.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Project/frontend/connexion.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="799">
-              <caret line="47" column="20" selection-start-line="47" selection-start-column="20" selection-end-line="49" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Project/frontend/inscription.php">
->>>>>>> parent of c14916e... Update .idea/workspace.xml
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="22" lean-forward="true" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+            <state relative-caret-position="850">
+              <caret line="50" column="53" selection-start-line="50" selection-start-column="53" selection-end-line="50" selection-end-column="53" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>login100-form-title</find>
-      <find>`</find>
-      <find>id_blason</find>
-      <find>$ID_blas</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>'</replace>
-      <replace>ID_blason</replace>
-      <replace>$ID_blason</replace>
-    </replaceStrings>
-  </component>
   <component name="Git.Settings">
-    <option name="PREVIOUS_COMMIT_AUTHORS">
-      <list>
-        <option value="maah" />
-        <option value="Mah" />
-        <option value="mah" />
-      </list>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Project/frontend/inscription.php" />
-        <option value="$PROJECT_DIR$/Project/backend/classes/User.php" />
-        <option value="$PROJECT_DIR$/Project/backend/classes/Log.php" />
-        <option value="$PROJECT_DIR$/Project/frontend/css/main.css" />
-        <option value="$PROJECT_DIR$/Project/frontend/connexion.php" />
-        <option value="$PROJECT_DIR$/Project/backend/includes/fonctionAffichage.php" />
-        <option value="$PROJECT_DIR$/Project/backend/classes/affichage.php" />
-        <option value="$PROJECT_DIR$/Project/design/code/index.html" />
-        <option value="$PROJECT_DIR$/Project/design/code/index.php" />
-        <option value="$PROJECT_DIR$/Project/frontend/index.php" />
-        <option value="$PROJECT_DIR$/Project/backend/includes/functions.php" />
-        <option value="$PROJECT_DIR$/Project/design/code/add.php" />
-        <option value="$PROJECT_DIR$/Project/backend/includes/connexion_bdd.php" />
-        <option value="$PROJECT_DIR$/Project/backend/classes/entrainement.php" />
+        <option value="$PROJECT_DIR$/Project/controller/functions/control-session.php" />
+        <option value="$PROJECT_DIR$/Project/view/connexion.php" />
+        <option value="$PROJECT_DIR$/Project/controller/classes/User.php" />
+        <option value="$PROJECT_DIR$/Project/view/account.html" />
+        <option value="$PROJECT_DIR$/Project/view/edit.html" />
+        <option value="$PROJECT_DIR$/Project/view/entrainement.php" />
+        <option value="$PROJECT_DIR$/Project/view/index.html" />
+        <option value="$PROJECT_DIR$/Project/view/index.php" />
       </list>
     </option>
   </component>
@@ -253,13 +142,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="x" value="7" />
+    <option name="y" value="-20" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
-  </component>
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -283,6 +169,47 @@
               <item name="TANGU" type="b2602c69:ProjectViewProjectNode" />
               <item name="TANGU" type="462c0819:PsiDirectoryNode" />
               <item name="Project" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TANGU" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TANGU" type="462c0819:PsiDirectoryNode" />
+              <item name="Project" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TANGU" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TANGU" type="462c0819:PsiDirectoryNode" />
+              <item name="Project" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="swiper.js" type="620a8d5e:NestingTreeNode" />
+            </path>
+            <path>
+              <item name="TANGU" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TANGU" type="462c0819:PsiDirectoryNode" />
+              <item name="Project" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TANGU" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TANGU" type="462c0819:PsiDirectoryNode" />
+              <item name="Project" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TANGU" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TANGU" type="462c0819:PsiDirectoryNode" />
+              <item name="Project" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="functions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TANGU" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TANGU" type="462c0819:PsiDirectoryNode" />
+              <item name="Project" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -292,20 +219,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../bin/php/php7.2.10/php.exe" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="SQL Dialects" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\TANGU\Project\backend\includes" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\TANGU\Project\design\code" />
-    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -319,31 +233,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.swipe.html">
-    <configuration name="add.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/TANGU/Project/design/code/add.php">
+  <component name="RunManager" selected="JavaScript Debug.blasonSlides.html">
+    <configuration name="arcSlides.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/TANGU/Project/view/arcSlides.html">
       <method v="2" />
     </configuration>
-    <configuration name="entrainement.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/TANGU/Project/backend/classes/entrainement.php">
+    <configuration name="blasonSlides.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/TANGU/Project/view/blasonSlides.html">
       <method v="2" />
     </configuration>
-    <configuration name="swipe.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/TANGU/Project/view/swipe.html">
-      <method v="2" />
-    </configuration>
-    <configuration name="add.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/Project/design/code/add.php">
+    <configuration name="stats.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/TANGU/Project/view/stats.html">
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="JavaScript Debug.entrainement.php" />
-      <item itemvalue="PHP Script.add.php" />
-      <item itemvalue="JavaScript Debug.add.php" />
-      <item itemvalue="JavaScript Debug.swipe.html" />
+      <item itemvalue="JavaScript Debug.arcSlides.html" />
+      <item itemvalue="JavaScript Debug.stats.html" />
+      <item itemvalue="JavaScript Debug.blasonSlides.html" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.swipe.html" />
-        <item itemvalue="JavaScript Debug.add.php" />
-        <item itemvalue="PHP Script.add.php" />
-        <item itemvalue="JavaScript Debug.entrainement.php" />
+        <item itemvalue="JavaScript Debug.blasonSlides.html" />
+        <item itemvalue="JavaScript Debug.stats.html" />
+        <item itemvalue="JavaScript Debug.arcSlides.html" />
       </list>
     </recent_temporary>
   </component>
@@ -352,121 +261,41 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="5ce293e3-4f45-434c-9e84-7d63baa3e712" name="Default Changelist" comment="" />
-      <created>1540214007214</created>
+      <changelist id="524ebfcc-9668-4991-822d-d999c5f7a411" name="Default Changelist" comment="" />
+      <created>1541802995468</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1540214007214</updated>
-      <workItem from="1540214008516" duration="1207000" />
-      <workItem from="1540303654775" duration="1125000" />
-      <workItem from="1540376860736" duration="9168000" />
-      <workItem from="1540640070630" duration="1274000" />
-      <workItem from="1540641631595" duration="583000" />
-      <workItem from="1540649702555" duration="625000" />
-      <workItem from="1541109335326" duration="134000" />
-      <workItem from="1541109497346" duration="37000" />
-      <workItem from="1541109596656" duration="4359000" />
-      <workItem from="1541177621325" duration="26160000" />
-      <workItem from="1541338379843" duration="1454000" />
-      <workItem from="1541350960837" duration="847000" />
-<<<<<<< HEAD
-      <workItem from="1541351851126" duration="110000" />
-      <workItem from="1541797878498" duration="221000" />
-      <workItem from="1541798130224" duration="209000" />
-      <workItem from="1541798368266" duration="493000" />
-=======
->>>>>>> parent of c14916e... Update .idea/workspace.xml
+      <updated>1541802995468</updated>
+      <workItem from="1541803000320" duration="3566000" />
     </task>
-    <task id="LOCAL-00001" summary="Finalisation insertion entrainement dans BDD.&#10;&#10;Reste à faire: debut entrainement">
-      <created>1541186235074</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1541186235074</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Creation entrainement fini (reste à creer les tables series fleches et volee)&#10;&#10;Creation du affichage champs fini (reste le design)">
-      <created>1541190616759</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1541190616759</updated>
-    </task>
-    <task id="LOCAL-00003" summary="REPARATIONS CREATION ENTRAINEMENT (constructeur mal appelé avec des $ mal mis) et résolutions de bugs.">
-      <created>1541198720730</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1541198720730</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-<<<<<<< HEAD
-    <option name="totallyTimeSpent" value="48006000" />
-=======
-    <option name="totallyTimeSpent" value="46973000" />
->>>>>>> parent of c14916e... Update .idea/workspace.xml
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
+    <option name="totallyTimeSpent" value="3566000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-<<<<<<< HEAD
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13965885" />
-=======
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13432837" />
->>>>>>> parent of c14916e... Update .idea/workspace.xml
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.329718" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.329718" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" weight="0.329718" />
-      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.329718" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50053304" side_tool="true" weight="0.329718" />
-      <window_info anchor="bottom" id="PHP-CGI Server" order="12" />
-      <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.49946696" weight="0.329718" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" weight="0.32995737" />
-    </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12579957" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="right" id="Database" weight="0.07409382" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" weight="0.32995737" />
-    </layout-to-restore>
+    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -474,115 +303,119 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Finalisation insertion entrainement dans BDD.&#10;&#10;Reste à faire: debut entrainement" />
-    <MESSAGE value="Creation entrainement fini (reste à creer les tables series fleches et volee)&#10;&#10;Creation du affichage champs fini (reste le design)" />
-    <MESSAGE value="REPARATIONS CREATION ENTRAINEMENT (constructeur mal appelé avec des $ mal mis) et résolutions de bugs." />
-    <MESSAGE value="CREATION ENTRAINEMENT AVEC TABLES SERIES VOLEES ET FLECHES TERMINE.&#10;&#10;A FAIRE: Faire la fonction PENDANT LENTRAINEMENT" />
-    <option name="LAST_COMMIT_MESSAGE" value="CREATION ENTRAINEMENT AVEC TABLES SERIES VOLEES ET FLECHES TERMINE.&#10;&#10;A FAIRE: Faire la fonction PENDANT LENTRAINEMENT" />
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Project/backend/fct/connexion_bdd.php" />
-    <entry file="file://$PROJECT_DIR$/Project/backend/fct/inscription.php" />
-    <entry file="file://$PROJECT_DIR$/Project/backend/logs/logs.txt" />
-    <entry file="file://$PROJECT_DIR$/Project/backend/classes/Log.php" />
-    <entry file="file://$PROJECT_DIR$/Project/frontend/css/main.css" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/3f6769ea-2659-42de-a85c-bc90ad64a1ed/console.sql" />
-    <entry file="file://$PROJECT_DIR$/Project/backend/includes/control-session.php" />
-    <entry file="file://$PROJECT_DIR$/Project/design/code/index.html" />
-    <entry file="file://$PROJECT_DIR$/Project/backend/classes/affichage.php" />
-    <entry file="file://$USER_HOME$/Desktop/Alhabaj-Elarchi-Dakroubi-Doglbe/Projet/Functions/HiddenTreasuresFNC.php" />
-    <entry file="file://$PROJECT_DIR$/Project/backend/includes/fonctionAffichage.php" />
-    <entry file="file://$PROJECT_DIR$/Project/design/code/index.php" />
-    <entry file="file://$PROJECT_DIR$/Project/frontend/index.php" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/48c4955e-5236-4b4d-b76d-c3e55b655ecf/console.sql">
+    <entry file="file://$PROJECT_DIR$/Project/controller/classes/Arc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2264" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/view/stats.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/Project/design/code/edit.php" />
-    <entry file="file://$PROJECT_DIR$/Project/backend/includes/connexion_bdd.php" />
-    <entry file="file://$PROJECT_DIR$/Project/design/code/add.php" />
-    <entry file="file://$PROJECT_DIR$/Project/backend/includes/connect_user.php" />
-    <entry file="file://$PROJECT_DIR$/Project/frontend/connexion.php" />
-    <entry file="file://$PROJECT_DIR$/Project/frontend/inscription.php" />
-    <entry file="file://$PROJECT_DIR$/Project/backend/classes/Arc.php" />
-    <entry file="file://$PROJECT_DIR$/Project/backend/classes/User.php" />
-    <entry file="file://$PROJECT_DIR$/Project/backend/includes/functions.php" />
-    <entry file="file://$PROJECT_DIR$/Project/backend/classes/entrainement.php" />
-    <entry file="file://$PROJECT_DIR$/Project/view/add.php">
+    <entry file="file://$PROJECT_DIR$/Project/view/connexion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="9" column="55" selection-start-line="9" selection-start-column="55" selection-end-line="9" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/controller/functions/control-session.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="32" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/controller/functions/functions.php">
       <provider selected="true" editor-type-id="text-editor" />
-=======
-    <entry file="file://$PROJECT_DIR$/Project/design/code/edit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="44" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project/backend/includes/connexion_bdd.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="2" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project/backend/includes/connect_user.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project/frontend/connexion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="47" column="20" selection-start-line="47" selection-start-column="20" selection-end-line="49" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project/frontend/inscription.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" column="26" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project/backend/classes/Arc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="55" column="39" selection-start-line="55" selection-start-column="39" selection-end-line="55" selection-end-column="39" />
-        </state>
-      </provider>
->>>>>>> parent of c14916e... Update .idea/workspace.xml
     </entry>
     <entry file="file://$PROJECT_DIR$/Project/controller/classes/User.php">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/view/account.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1367">
+          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Project/view/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-503">
-          <caret line="11" column="30" lean-forward="true" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+        <state relative-caret-position="687">
+          <caret line="174" column="54" lean-forward="true" selection-start-line="174" selection-start-column="54" selection-end-line="174" selection-end-column="54" />
+          <folding>
+            <element signature="n#style#0;n#i#0;n#a#0;n#button#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#a#0;n#button#1;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#a#0;n#button#2;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#a#0;n#button#0;n#div#1;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#a#0;n#button#1;n#div#1;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#a#0;n#button#2;n#div#1;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#a#0;n#button#0;n#div#2;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#a#0;n#button#1;n#div#2;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#a#0;n#button#2;n#div#2;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#a#0;n#button#0;n#div#3;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#a#0;n#button#1;n#div#3;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#a#0;n#button#2;n#div#3;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#a#0;n#button#0;n#div#4;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#a#0;n#button#1;n#div#4;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#a#0;n#button#2;n#div#4;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/Project/view/entrainement.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="22" lean-forward="true" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-=======
-    <entry file="file://$PROJECT_DIR$/Project/design/code/add.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="45" column="177" lean-forward="true" selection-start-line="45" selection-start-column="177" selection-end-line="45" selection-end-column="177" />
+        <state relative-caret-position="394">
+          <caret line="173" column="24" lean-forward="true" selection-start-line="173" selection-start-column="24" selection-end-line="173" selection-end-column="24" />
+          <folding>
+            <element signature="n#style#0;n#i#0;n#a#0;n#button#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#a#0;n#button#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#a#0;n#button#2;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#a#0;n#button#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#a#0;n#button#1;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#a#0;n#button#2;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#a#0;n#button#0;n#div#2;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#a#0;n#button#1;n#div#2;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#a#0;n#button#2;n#div#2;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#a#0;n#button#0;n#div#3;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#a#0;n#button#1;n#div#3;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#a#0;n#button#2;n#div#3;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#a#0;n#button#0;n#div#4;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#a#0;n#button#1;n#div#4;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#a#0;n#button#2;n#div#4;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project/backend/classes/entrainement.php">
+    <entry file="file://$PROJECT_DIR$/Project/view/edit.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="172" column="36" selection-start-line="172" selection-start-column="36" selection-end-line="172" selection-end-column="36" />
->>>>>>> parent of c14916e... Update .idea/workspace.xml
+        <state relative-caret-position="850">
+          <caret line="50" column="53" selection-start-line="50" selection-start-column="53" selection-end-line="50" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/view/blasonSlides.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="25" selection-start-line="11" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/view/arcSlides.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="772">
+          <caret line="76" column="9" selection-end-line="76" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/view/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="28" column="29" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
         </state>
       </provider>
     </entry>

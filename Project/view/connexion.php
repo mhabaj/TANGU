@@ -1,5 +1,5 @@
 <?php
-include ('../backend/classes/User.php');
+include ('../controller/classes/User.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -7,8 +7,8 @@ include ('../backend/classes/User.php');
 	<title>connexion</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/main.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/util.css">
 
 <!--===============================================================================================-->
 </head>
@@ -50,7 +50,7 @@ include ('../backend/classes/User.php');
 						</button>
 					</div>
 				</form>
-                <?php include '../backend/includes/connect_user.php'; ?>
+                <?php include '../controller/functions/connect_user.php'; ?>
                 
 			</div>
 		</div>
