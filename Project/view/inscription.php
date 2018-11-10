@@ -56,7 +56,7 @@ include ('../backend/classes/User.php');
                         </button>
                     </div>
 				</form>
-                <?php include '../backend/includes/creation_user.php';?>
+                <?php include '../controller/functions/creation_user.php';?>
 			</div>
 		</div>
 	</div>
