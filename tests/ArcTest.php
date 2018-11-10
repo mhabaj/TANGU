@@ -1,10 +1,6 @@
 <?php
 
-require __DIR__ . "/../src/Arc.php";//
-
-
-
-
+require __DIR__ . "/../src/Arc.php";
 
 class ArcTest extends PHPUnit\Framework\TestCase {
 
