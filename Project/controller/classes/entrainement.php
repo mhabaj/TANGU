@@ -1,7 +1,6 @@
 <?php
 
 
-
 class entrainement
 {
     // private $tabTrain = array(nbserie, nbvolees, nbfleche);
@@ -18,7 +17,7 @@ class entrainement
     private $ID_blason;
     private $ID_arc;
     private $ID_user;
-    static $new_ID_Ent;
+    private $new_ID_Ent;
     private $ID_ENT;
     private $ID_SERIE;
     private $ID_VOLEE;
@@ -43,25 +42,31 @@ class entrainement
         $this->ID_user = $ID_user;
 
 
-
         // echo 'objet instancié';
 
 
-        $this->creerEntrainement($this->nom, $this->lieu, $this->date, $this->distance, $this->ID_arc, $this->ID_blason, $this->nbserie, $this->nbvolees, $this->nbfleches, $this->ID_user);
-       // header("Location: ChoisirSerie.php?new_ID_Ent=$this->ID_ENT_USER");
+        //  $this->creerEntrainement($this->nom, $this->lieu, $this->date, $this->distance, $this->ID_arc, $this->ID_blason, $this->nbserie, $this->nbvolees, $this->nbfleches, $this->ID_user);
 
+        if ($this->creerEntrainement($this->nom, $this->lieu, $this->date, $this->distance, $this->ID_arc, $this->ID_blason, $this->nbserie, $this->nbvolees, $this->nbfleches, $this->ID_user)) {
 
+            $ID_ENT_USER = $this->GetEntID();
+            header("Location: ChoisirSerie.php?new_ID_Ent=$ID_ENT_USER");
+            die();
+            // header("Location: ChoisirSerie.php?new_ID_Ent=$this->ID_ENT_USER");
+
+        }
     }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 ///
 ///
 
-public static function GetEntID(){
+    public function GetEntID()
+    {
 
-    return self::new_ID_Ent;
+        return $this->new_ID_Ent;
 
-}
+    }
 
     public function checkEnt($nom, $lieu, $date, $distance, $ID_arc, $ID_blason, $nbserie, $nbvolees, $nbfleches, $ID_user)
     { //on check si les valeurs saisi sont valides pour etre envoyés dans la base de données.
@@ -174,7 +179,7 @@ public static function GetEntID(){
 
             $ID_ENT = $donnees['ID_ENT'];
 
-            $this->ID_ENT=$ID_ENT;
+            $this->ID_ENT = $ID_ENT;
 
             $new_ID_Ent = $this->genIdEntrainement($ID_ENT, $ID_user);
 
@@ -189,14 +194,14 @@ public static function GetEntID(){
                   VALUES (NULL,'$new_ID_Ent', NULL, '$nbvolees', NULL, NULL, NULL, '$ID_ENT') ") or die(print_r($bdd->errorInfo()));
 
 
-                $requ5 = $bdd->query("SELECT ID_SERIE FROM serie WHERE ID_ENT_USER='$new_ID_Ent' and NBRVOLSERIE='$nbvolees' and ID_ENT='$ID_ENT'") or die(print_r($bdd->errorInfo()));
+                $requ5 = $bdd->query("SELECT ID_SERIE FROM serie WHERE ID_ENT_USER='$new_ID_Ent' and NBRVOLSERIE='$nbvolees' and ID_ENT='$ID_ENT' ORDER BY serie.ID_SERIE DESC limit 1") or die(print_r($bdd->errorInfo()));
 
 
                 $donnees2 = $requ5->fetch();
 
                 $ID_SERIE = $donnees2['ID_SERIE'];
 
-                $this->ID_SERIE=$ID_SERIE;
+                $this->ID_SERIE = $ID_SERIE;
 
                 for ($j = 0; $j < $nbvolees; $j++) {
 
@@ -210,7 +215,7 @@ public static function GetEntID(){
 
                     $ID_VOLEE = $donnees3['ID_VOL'];
 
-                    $this->ID_VOLEE=$ID_VOLEE;
+                    $this->ID_VOLEE = $ID_VOLEE;
 
                     for ($z = 0; $z < $nbfleches; $z++) {
                         $requ7 = $bdd->exec("INSERT INTO `fleche` (`ID_FLECHE`, `ID_VOL`, `PTSFLECHE`) 
@@ -225,23 +230,22 @@ public static function GetEntID(){
 
 
             echo '<p> Entrainement crée! </p>';
+            return true;
+
 
         }
 
 
     }
+
 ////////////////////////////////////////////////////////////////////////////////////////////
 
 
-
-     public function lancerEntrainement($ID_ENT,$nbserie, $nbvolees, $nbfleches)
-   {
-
+    public function lancerEntrainement($ID_ENT, $nbserie, $nbvolees, $nbfleches)
+    {
 
 
-
-   }
-
+    }
 
 
 }
