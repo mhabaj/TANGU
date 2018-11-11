@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="projet" version="4">
+  <OBJECT>
+    <ID name="projet" mc="Standard.Package" uid="20ae1947-fdff-43c5-b6a1-f6f4b8a3a678"/>
+    <PID name="projet" mc="Standard.Project" uid="77b79f04-4378-4eb7-a0bb-0d601b841fac"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[projet]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Arc" mc="Standard.Class" uid="d17a6287-baa0-45ca-95fc-d5b3464feb0f"/>
+        <COMPID name="Blason" mc="Standard.Class" uid="b8127c82-1e2c-40b7-abf5-618c09b09811"/>
+        <COMPID name="Log" mc="Standard.Class" uid="290b2398-1652-41c2-aebb-6d9d6fd62093"/>
+        <COMPID name="User" mc="Standard.Class" uid="7b65ae4e-1413-487a-985f-75525df1f491"/>
+        <COMPID name="Connexion" mc="Standard.Class" uid="cd06197a-d943-41b4-8136-64d2b3c63584"/>
+        <COMPID name="Connexion_bdd" mc="Standard.Class" uid="d97fa9a7-4aa5-4990-92d2-3b3aff9695f5"/>
+        <COMPID name="Control-session" mc="Standard.Class" uid="3f1505d4-c6a2-499e-9551-84a5b97dd35e"/>
+        <COMPID name="Inscription" mc="Standard.Class" uid="24cd94ae-fc5c-4698-ac6f-98a63e363ef1"/>
+        <COMPID name="connect_user" mc="Standard.Class" uid="ae61fd0b-ac37-4b96-ba37-5216cec5c6a9"/>
+        <COMPID name="creation-user" mc="Standard.Class" uid="d919ae77-92f4-46f0-9956-2f3ee4a94a5b"/>
+        <COMPID name="functions" mc="Standard.Class" uid="8f41c891-fb9e-4925-acf6-dfa6c821da9a"/>
+        <COMPID name="Connexion" mc="Standard.Class" uid="41e34a72-f119-452a-9c6c-158bc1498297"/>
+        <COMPID name="Inscription" mc="Standard.Class" uid="48e92376-9c1b-416e-936f-7e43ceb90db0"/>
+      </COMP>
+      <COMP relation="Product">
+        <COMPID name="projet Class diagram" mc="Standard.ClassDiagram" uid="ac2bb0b1-32d1-471c-8006-8f29bae0054a"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

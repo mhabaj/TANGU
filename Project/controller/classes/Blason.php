@@ -26,7 +26,7 @@ class Blason {
         //global $log_file;
         include '../controller/functions/connexion_bdd.php';
         
-        $this->idUser = 1;//$idUser;
+        $this->idUser = 1/*$idUser*/;
 		$this->nom = $nom;
 		$this->taille = $taille;
 		$this->photo = $photo;

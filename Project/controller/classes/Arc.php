@@ -37,12 +37,12 @@ class Arc {
         //$this->bdd = $bdd;
         
         $this->idUser = 1 /*$idUser*/;
-		$this->nom = $nom;
+        $this->nom = $nom;
         $this->poids = $poids;
         $this->taille = $taille;
         $this->puissance = $puissance;
-		$this->type = $type;
-		$this->photo = $photo;
+        $this->type = $type;
+        $this->photo = $photo;
         
         //Inserer valeurs à la creation d une nouvelle instance
         $this->creerArc();
