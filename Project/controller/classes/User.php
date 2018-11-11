@@ -1,5 +1,4 @@
 <?php
-include '../controller/functions/connexion_bdd.php';
 
 //require('../controller/functions/control-session.php');
 require_once('../controller/classes/Log.php');
@@ -9,12 +8,11 @@ require_once('../controller/classes/Log.php');
 //include '../includes/connexion_bdd.php';
 require('../controller/functions/functions.php');
 
-global $bdd;
 $msg = "";
 
 //Nouvelle instance globale de Log, puis ouvrir le fichier
-global $log_file;
-$log_file->open();
+//global $log_file;
+//$log_file->open();
 
 class User {
     private $pseudo;
@@ -25,14 +23,15 @@ class User {
         $this->pseudo = $pseudo;
         $this->mdp = $mdp;
         
-        echo "<p>Objet User instancié</p>";
+        //echo "<p>Objet User instancié</p>";
     }
     
     public function inscription($verif_mdp) {
         //Check si pseudo, mdp et verif_mdp sont valides
         //hash mdp et verif_mdp
         //Inserer dans bdd
-        global $bdd;
+        //global $bdd;
+        include '../controller/functions/connexion_bdd.php';
         global $msg;
         
         if(checkMdp($this->mdp) && equivMdp($this->mdp, $verif_mdp) && checkPseudo($this->pseudo) && checkExistPseudo($this->pseudo)) {
@@ -56,7 +55,8 @@ class User {
         //Check si pseudo, mdp sont valides
         //hash mdp
         //Comparer pseudo et mdp avec bdd
-        global $bdd;
+        //global $bdd;
+        include '../controller/functions/connexion_bdd.php';
         global $msg;
         
         if(checkMdp($this->mdp) && checkPseudo($this->pseudo)) {
@@ -85,13 +85,14 @@ class User {
     }
 }
 
+/*
 $pseudo = "Matt";
 $mdp = "123456";
 $verif_mdp = "123456";
-/*$user = new User($pseudo, $mdp, $verif_mdp);
+$user = new User($pseudo, $mdp, $verif_mdp);
 $user->inscription();
 var_dump($msg);
 */
 
-$log_file->close();
+//$log_file->close();
 ?>
