@@ -7,6 +7,48 @@
     left: 0%;
 }
 
+.blasonContainer {
+    display: none;
+}
+
+.arcContainer {
+    display: block;
+}
+
+#selectBox {
+    border-style: none;
+    position: fixed;
+    top: 15%;
+    left: 0;
+    height: 7%;
+    z-index: 10;
+}
+
+#selectBox i {
+    position: fixed;
+    top: 18%;
+    z-index: 10;
+    left: 20%;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+#selectBox select {
+    position: fixed;
+    border-style: none;
+    top: 15%;
+    left: 5%;
+    height: 7%;
+    width: 25%;
+    min-width: 25%;
+    background: none;
+    font-family: SF-Text-Semibold;
+    font-size: 1.1em;
+}
 
 .swiper-container {
     position: fixed;
@@ -15,13 +57,14 @@
 
 .swiper-wrapper {
     position: fixed;
-    top: 8%;
+    top: 12%;
     bottom: 8%;
     margin: auto 0;
     border-style: none;
 }
 
 .swiper-slide {
+    height: 90%;
     text-align: center;
     font-size: 18px;
     background: grey;
@@ -43,4 +86,10 @@
 
 .swiper-pagination {
     margin-bottom: 10%;
+}
+
+@font-face {
+    font-family: SF-Text-Semibold;
+    src: url(../fonts/SF/SFProText-Semibold.ttf);
+    font-weight: normal;
 }

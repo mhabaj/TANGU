@@ -1,98 +1,36 @@
 <?php
 
-//$tab["nomdutruc"] = $vartruc;
 
-/**
- * Class entrainement
- */
+
 class entrainement
 {
     // private $tabTrain = array(nbserie, nbvolees, nbfleche);
     //private $tabTrain[$nbserie][$nbvolees][$nbfleches];
 
-    /**
-     * @var array
-     */
-    private $tab = array();
 
-    /**
-     * Nom de l'entrainement.
-     * @var
-     */
     private $nom;
-
-    /**
-     * Lieu de l'entrainement.
-     * @var
-     */
     private $lieu;
-
-    /**
-     * Date de l'entrainement.
-     * @var
-     */
     private $date;
-
-    /**
-     * distance de tir.
-     * @var
-     */
     private $distance;
-
-    /**
-     * Nombre de série.
-     * @var
-     */
     private $nbserie;
-
-    /**
-     * nombre de volées.
-     * @var
-     */
     private $nbvolees;
-
-    /**
-     * Nombre de flèches.
-     * @var
-     */
     private $nbfleches;
-
-    /**
-     * ID du blason séléctionné pour l'entrainement.
-     * @var
-     */
     private $ID_blason;
-
-    /**
-     * ID de l'arc séléctionné pour l'entrainement.
-     * @var
-     */
     private $ID_arc;
-
-    /**
-     * ID de l'utilisateur qui a crée l'entrainement.
-     * @var
-     */
     private $ID_user;
+    static $new_ID_Ent;
+    private $ID_ENT;
+    private $ID_SERIE;
+    private $ID_VOLEE;
 
-    /**
-     * entrainement constructor.
-     * @param $nom
-     * @param $lieu
-     * @param $date
-     * @param $distance
-     * @param $ID_arc
-     * @param $ID_blason
-     * @param $nbserie
-     * @param $nbvolees
-     * @param $nbfleches
-     * @param $ID_user
-     */
     public function __construct($nom, $lieu, $date, $distance, $ID_arc, $ID_blason, $nbserie, $nbvolees, $nbfleches, $ID_user)
+
+
     {
 
-        include '../../backend/includes/connexion_bdd.php';
-        //$tab[$nbserie] = array( $nbvolees => array( $nbfleches, $nbfleches, $nbfleches));
+        // include '../controller/functions/connexion_bdd.php';
+
+
         $this->ID_blason = $ID_blason;
         $this->ID_arc = $ID_arc;
         $this->nom = $nom;
@@ -105,31 +43,26 @@ class entrainement
         $this->ID_user = $ID_user;
 
 
+
         // echo 'objet instancié';
 
 
         $this->creerEntrainement($this->nom, $this->lieu, $this->date, $this->distance, $this->ID_arc, $this->ID_blason, $this->nbserie, $this->nbvolees, $this->nbfleches, $this->ID_user);
+       // header("Location: ChoisirSerie.php?new_ID_Ent=$this->ID_ENT_USER");
 
 
     }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////
+///
+///
 
-    /**
-     * Vérifie si les valeurs de l'entrainement sont valides.
-     * Envoie ces valeurs a la base de données.
-     * @param $nom
-     * @param $lieu
-     * @param $date
-     * @param $distance
-     * @param $ID_arc
-     * @param $ID_blason
-     * @param $nbserie
-     * @param $nbvolees
-     * @param $nbfleches
-     * @param $ID_user
-     * @return bool
-     */
+public static function GetEntID(){
+
+    return self::new_ID_Ent;
+
+}
+
     public function checkEnt($nom, $lieu, $date, $distance, $ID_arc, $ID_blason, $nbserie, $nbvolees, $nbfleches, $ID_user)
     { //on check si les valeurs saisi sont valides pour etre envoyés dans la base de données.
 
@@ -143,7 +76,7 @@ class entrainement
                 and is_numeric($nbserie) and $nbserie <= 5 and is_numeric($nbvolees) and $nbvolees <= 10 and is_numeric($nbfleches) and $nbfleches <= 10) {
                 echo $ID_user;
                 echo $nom;
-                include '../../backend/includes/connexion_bdd.php';
+                include '../controller/functions/connexion_bdd.php';
                 // Pour test: include '../includes/connexion_bdd.php';
 
                 // on verifie la validité de l'utilisateur:
@@ -192,12 +125,6 @@ class entrainement
     }
 
 ////////////////////////////////////////////////////////////////////////////////////////////
-
-    /**
-     * Vérifie si la date et l'heure sont valides.
-     * @param $dateheure
-     * @return bool
-     */
     function verifdateheure($dateheure)
     {
 
@@ -210,12 +137,6 @@ class entrainement
 
     }
 
-    /**
-     * Genere un nouveau ID entrainement en fusionnant le ID user avec celui d'entrainement
-     * @param $ID_ENT
-     * @param $ID_user
-     * @return int
-     */
     public static function genIdEntrainement($ID_ENT, $ID_user)
     { // Cette fonction sert à generer un nouveau ID entrainement en fusionnant le ID user avec celui d'entrainement
 
@@ -229,19 +150,6 @@ class entrainement
 ////////////////////////////////////////////////////////////////////////////////////////////
 
 
-    /**
-     * Crée l'entrainement avec les valeurs entrée par l'utilisateur.
-     * @param $nominput
-     * @param $lieuinput
-     * @param $date
-     * @param $distance
-     * @param $ID_arc
-     * @param $ID_blason
-     * @param $nbserie
-     * @param $nbvolees
-     * @param $nbfleches
-     * @param $ID_user
-     */
     public function creerEntrainement($nominput, $lieuinput, $date, $distance, $ID_arc, $ID_blason, $nbserie, $nbvolees, $nbfleches, $ID_user)
     {
 
@@ -252,6 +160,7 @@ class entrainement
 
             //include '../../backend/includes/connexion_bdd.php';
             // include '../includes/connexion_bdd.php';
+            include '../controller/functions/connexion_bdd.php';
 
 
             $requ = $bdd->exec("INSERT INTO `entrainement` (`ID_ENT`,`ID_ENT_USER`, `ID_USER`, `ID_ARC`, `ID_BLAS`, `NOM_ENT`, `LIEU_ENT`, `DATE_ENT`, `DIST_ENT`,`NBR_SERIE`,`NBR_VOLEE`, `NBR_FLECHES`, `PTS_TOTAL`, `PCT_DIX`, `PCT_NEUF`, `MOY_ENT`, `STATUT_ENT`) 
@@ -265,8 +174,12 @@ class entrainement
 
             $ID_ENT = $donnees['ID_ENT'];
 
+            $this->ID_ENT=$ID_ENT;
+
             $new_ID_Ent = $this->genIdEntrainement($ID_ENT, $ID_user);
-            echo $new_ID_Ent;
+
+            $this->new_ID_Ent = $new_ID_Ent;
+
             $requ3 = $bdd->exec("UPDATE `entrainement` SET `ID_ENT_USER` = '$new_ID_Ent' WHERE `entrainement`.`ID_ENT` = '$ID_ENT' AND `entrainement`.`NOM_ENT` = '$nom'") or die(print_r($bdd->errorInfo()));
 
 
@@ -283,10 +196,12 @@ class entrainement
 
                 $ID_SERIE = $donnees2['ID_SERIE'];
 
+                $this->ID_SERIE=$ID_SERIE;
+
                 for ($j = 0; $j < $nbvolees; $j++) {
 
                     $requ6 = $bdd->exec("INSERT INTO `volee` (`ID_VOL`, `ID_SERIE`, `PTSVOL`, `NBRFLECHEVOL`, `MOYVOL`, `PCTDIXVOL`, `PCTHUITVOL`) 
-                              VALUES (NULL, '$ID_SERIE', NULL, '$nbfleches', NULL, NULL, NULL)")or die(print_r($bdd->errorInfo()));
+                              VALUES (NULL, '$ID_SERIE', NULL, '$nbfleches', NULL, NULL, NULL)") or die(print_r($bdd->errorInfo()));
 
                     $requ7 = $bdd->query("SELECT ID_VOL FROM volee WHERE ID_SERIE='$ID_SERIE' and NBRFLECHEVOL='$nbfleches'") or die(print_r($bdd->errorInfo()));
 
@@ -295,11 +210,11 @@ class entrainement
 
                     $ID_VOLEE = $donnees3['ID_VOL'];
 
+                    $this->ID_VOLEE=$ID_VOLEE;
+
                     for ($z = 0; $z < $nbfleches; $z++) {
                         $requ7 = $bdd->exec("INSERT INTO `fleche` (`ID_FLECHE`, `ID_VOL`, `PTSFLECHE`) 
                         VALUES (NULL,'$ID_VOLEE', NULL)") or die(print_r($bdd->errorInfo()));
-
-
 
 
                     }
@@ -309,40 +224,28 @@ class entrainement
             }
 
 
-            echo '<p> Entranement crée! </p>';
+            echo '<p> Entrainement crée! </p>';
 
         }
 
 
     }
 ////////////////////////////////////////////////////////////////////////////////////////////
-    /* public function lancerEntrainement($nbserie, $nbvolees, $nbfleches)
+
+
+
+     public function lancerEntrainement($ID_ENT,$nbserie, $nbvolees, $nbfleches)
    {
 
 
-       for ($i = 0; $i <= $nbserie; $i++) {
-
-           for ($j = 0; $j <= $nbvolees; $j++) {
-
-               inculde();
-
-
-               htmlForm(recup dans int[][][nbfleche] des points)
-                       statVolee(tabTrain, iS, iV)
-                       bddexec()
-
-           }
-
-       }
 
 
    }
-*/
+
 
 
 }
 
-/*
 $nom = "nom1";
 $lieu = "lieu1";
 $date = "2018-12-07 01:30";
@@ -353,10 +256,9 @@ $nbserie = 2;
 $nbvolees = 5;
 $nbfleches = 3;
 
-$ent1=new entrainement($nom,$lieu,$date,$distance,$id_arc,$ID_blason,$nbserie,$nbvolees,$nbfleches);
-$ent1->creerEntrainement($nom,$lieu,$date,$distance,1,$ID_blason,$nbserie,$nbvolees,$nbfleches);
-$genENTRAINEMENTID=entrainement::genIdEntrainement(8,1);
-echo $genENTRAINEMENTID;
-*/
+//$ent1=new entrainement($nom,$lieu,$date,$distance,$id_arc,$ID_blason,$nbserie,$nbvolees,$nbfleches);
+//$ent1->creerEntrainement($nom,$lieu,$date,$distance,1,$ID_blason,$nbserie,$nbvolees,$nbfleches);
+//$genENTRAINEMENTID=entrainement::genIdEntrainement(8,1);
+//echo $genENTRAINEMENTID;
 
-?>
+

@@ -3,5 +3,5 @@ session_start();
 
 $_SESSION = array();
 session_destroy();
-header("Location: ../../frontend/connexion.php");
+header("Location: connexion.php");
 ?>

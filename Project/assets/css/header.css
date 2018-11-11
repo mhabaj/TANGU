@@ -40,12 +40,13 @@
 }
 
 #headerBox {
-    border-style: none;
+    border-bottom: 0.5px solid rgba(192, 192, 192, 0.8);
+    box-shadow: 0px 1.75px 5px rgba(224, 224, 224, 0.9);
     width: 100%;
     position: fixed;
     left: 0;
     top: 0;
-    height: 15%;
+    height: 12%;
     padding: 5% 0;
 }
 
@@ -62,6 +63,6 @@
     top: 12%;
     left: 5%;
     right: 5%;
-    border-top-style: solid;
+    border-top-style: none;
     border-top-color: rgba(0, 0, 0, 0.7);
 }

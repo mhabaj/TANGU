@@ -1,8 +1,8 @@
 <?php
-include '../includes/connexion_bdd.php';
+include '../controller/functions/connexion_bdd.php';
 
-require('../includes/control-session.php');
-require_once('Log.php');
+//require('../controller/functions/control-session.php');
+require_once('../controller/classes/Log.php');
 
 global $bdd;
 global $idUser;
@@ -12,50 +12,17 @@ global $log_file;
 
 $log_file->open();
 
-/**
- * Class Blason
- */
 class Blason {
-
-    /**
-     * ID du blason générer par la base de données.
-     * @var mixed
-     */
+    
     private $idBlas;
-
-    /**
-     * ID de l'utilisateur a qui l'arc appartient.
-     * @var
-     */
     private $idUser;
-
-    /**
-     * Nom de blason.
-     * @var
-     */
-    private $nom;
-
-    /**
-     * Taille du blason.
-     * @var
-     */
-    private $taille;
-
-    /**
-     * Emplacement de la photo du blason.
-     * @var
-     */
-    private $photo;
+	private $nom;
+	private $taille;
+	private $photo;
     
     //private $log_file;
 
-    /**
-     * Blason constructor.
-     * @param $nom
-     * @param $taille
-     * @param $photo
-     */
-    public function __construct($nom, $taille, $photo) {
+	public function __construct($nom, $taille, $photo) {
         global $idUser;
         global $log_file;
         
@@ -73,11 +40,7 @@ class Blason {
         //echo '<p>Objet Blason instancié</p>';
 
 	}
-
-    /**
-     * Renvoie l'ID du blason.
-     * @return mixed
-     */
+    
     public function getBlasonID() {
         //Recuperer l'id pour pouvoir modifier ou supprimer le blason
         global $bdd;
@@ -90,11 +53,7 @@ class Blason {
         return $result;
     }
 
-    /**
-     * Vérifie si les valeurs du blason sont valides.
-     * @return bool
-     */
-    public function checkBlason() {
+	public function checkBlason() {
 		// Verifier si le blason existe dans la DB
 		// Verifier s'il y a une ligne ou plus avec les memes valeurs d'attributs
 		// Si oui return false, true sinon
@@ -114,11 +73,7 @@ class Blason {
         
 	}
 
-    /**
-     * Vérifie les valeurs du blason.
-     * Récupère ces valeurs et les envoies dans la base de données.
-     */
-    public function creerBlason() {
+	public function creerBlason() {
         global $bdd;
         global $log_file;
         
@@ -141,11 +96,7 @@ class Blason {
             //echo "<p>Données insérées avec succes</p>";
         }
 	}
-
-    /**
-     * Modifie les valeurs du blason dans la base.
-     * @param $attr
-     */
+    
     public function modifierBlason($attr) {
         //modif:array de taille 3 tlq ["NOMBLAS" => valeur, "TAILLEBLAS" => valeur, "PHOTOBLAS" => valeur, etc]
         global $bdd;
@@ -167,10 +118,7 @@ class Blason {
         //echo '<p>Valeur(s) modifiée(s)</p>';
     }
 
-    /**
-     * Supprime le blason de la base de données.
-     */
-    public function supprimerBlason() {
+	public function supprimerBlason() {
 		//Effacer données du blason
         //Valeur $id a prendre dans l'url
         global $bdd;
@@ -188,7 +136,6 @@ class Blason {
 	}
 }
 
-/*
 $nom = "Nom Blas";
 $nom2 = "Nom";
 $taille = 25;
@@ -196,13 +143,12 @@ $photo = "photo blason";
 
 $attr = array("NOMBLAS" => "nouveau nom", "TAILLEBLAS" => NULL, "PHOTOBLAS" => "nouvelle photo");
 
-$blason = new Blason($nom, $taille, $photo);
-$blason->modifierBlason($attr);
-$blason2 = new Blason($nom2, $taille, $photo);
-$blason->supprimerBlason();
-$blason2->modifierBlason($attr);
-$blason2->supprimerBlason();
-*/
+//$blason = new Blason($nom, $taille, $photo);
+//$blason->modifierBlason($attr);
+//$blason2 = new Blason($nom2, $taille, $photo);
+//$blason->supprimerBlason();
+//$blason2->modifierBlason($attr);
+//$blason2->supprimerBlason();
 
 $log_file->close();
 ?>

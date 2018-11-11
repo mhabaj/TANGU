@@ -1,8 +1,8 @@
 <?php
-include '../includes/connexion_bdd.php';
+include '../controller/functions/connexion_bdd.php';
 
-require('../includes/control-session.php');
-require_once('Log.php');
+//require('../controller/functions/control-session.php');
+require_once('../controller/classes/Log.php');
 
 
 global $bdd;
@@ -13,71 +13,20 @@ global $log_file;
 
 $log_file->open();
 
-/**
- * Class Arc
- */
 class Arc {
-
-    /**
-     * ID de l'arc générer par la base de données.
-     * @var mixed
-     */
+    
     private $idArc;
-
-    /**
-     * ID de l'utilisateur a qui l'arc appartient.
-     * @var
-     */
     private $idUser;
-
-    /**
-     * Nom de l'arc.
-     * @var
-     */
-    private $nom;
-
-    /**
-     * Poids de l'arc.
-     * @var
-     */
+	private $nom;
     private $poids;
-
-    /**
-     * Taille de l'arc.
-     * @var
-     */
     private $taille;
-
-    /**
-     * Puissance de l'arc.
-     * @var
-     */
     private $puissance;
-
-    /**
-     * Type d'arc.
-     * @var
-     */
-    private $type;
-
-    /**
-     * Emplacement de la photo de l'arc.
-     * @var
-     */
-    private $photo;
+	private $type;
+	private $photo;
     
     //private $log_file;
 
-    /**
-     * Arc constructor.
-     * @param $nom
-     * @param $poids
-     * @param $taille
-     * @param $puissance
-     * @param $type
-     * @param $photo
-     */
-    public function __construct($nom, $poids, $taille, $puissance, $type, $photo) {
+	public function __construct($nom, $poids, $taille, $puissance, $type, $photo) {
         global $idUser;
         global $log_file;
         
@@ -96,11 +45,7 @@ class Arc {
         $this->idArc = $this->getArcID();
         //echo '<p>Objet Arc instancié</p>' ;
 	}
-
-    /**
-     * Renvoie l'ID de l'arc.
-     * @return mixed
-     */
+    
     public function getArcID() {
         //Recuperer l'id de l'arc pour pouvoir le modifier ou le supprimer
         global $bdd;
@@ -113,11 +58,7 @@ class Arc {
         return $result;
     }
 
-    /**
-     * Vérifie si les valeurs de arc sont valides.
-     * @return bool
-     */
-    public function checkArc() {
+	public function checkArc() {
 		// Verifier si l'arc existe dans la DB
 		// Verifier s'il y a une ligne ou plus avec les memes valeurs d'attributs
 		// Si oui return false, true sinon
@@ -136,11 +77,7 @@ class Arc {
         return true;
     }
 
-    /**
-     * Vérifie les valeurs de arc.
-     * Récupère ces valeurs et les envoies dans la base de données.
-     */
-    public function creerArc() {
+	public function creerArc() {
         global $bdd;
         global $log_file;
         
@@ -167,11 +104,7 @@ class Arc {
             echo "<p>Données insérées avec succes</p>";
         }
     }
-
-    /**
-     * Modifie les valeurs d'un arc dans la base.
-     * @param $attr
-     */
+    
     public function modifierArc($attr) {
         //modif:array de taille 6 tlq ["NOMARC" => valeur, "POIDSARC" => valeur, "TAILLEARC" => valeur, etc]
         global $bdd;
@@ -193,10 +126,7 @@ class Arc {
         //echo '<p>Valeur(s) modifiée(s)</p>';
     }
 
-    /**
-     * Supprime l'arc de la base de données.
-     */
-    public function supprimerArc() {
+	public function supprimerArc() {
 		//Effacer données de l'arc
         //Valeur $id a prendre dans l'url
         global $bdd;
@@ -212,16 +142,12 @@ class Arc {
         $log_file->write($log_message);
         //echo '<p>Arc supprimé</p>';
 	}
-
-    /**
-     *
-     */
+    
     public function __destruct(){
         ;
     }
 }
 
-/*
 $nom = "Nom Arc";
 $nom2 = "Nol";
 $poids = 25;
@@ -230,15 +156,14 @@ $pwr = 12;
 $type = "Cool";
 $photo = "photo";
 
-$attr = array("NOMARC" => "nom", "POIDSARC" => 17, "TAILLEARC" => NULL, "PWRARC" => NULL, "TYPEARC" => "poius", "PHOTOARC" => NULL);
+//$attr = array("NOMARC" => "nom", "POIDSARC" => 17, "TAILLEARC" => NULL, "PWRARC" => NULL, "TYPEARC" => "poius", "PHOTOARC" => NULL);
 
-$arc = new Arc($nom, $poids, $taille, $pwr, $type, $photo);
-$arc->modifierArc($attr);
-$arc2 = new Arc($nom2, $poids, $taille, $pwr, $type, $photo);
-$arc->supprimerArc();
-$arc2->modifierArc($attr);
-$arc2->supprimerArc();
-*/
+//$arc = new Arc($nom, $poids, $taille, $pwr, $type, $photo);
+//$arc->modifierArc($attr);
+//$arc2 = new Arc($nom2, $poids, $taille, $pwr, $type, $photo);
+//$arc->supprimerArc();
+//$arc2->modifierArc($attr);
+//$arc2->supprimerArc();
 
 
 $log_file->close();
