@@ -208,7 +208,7 @@ class entrainement
                     $requ6 = $bdd->exec("INSERT INTO `volee` (`ID_VOL`, `ID_SERIE`, `PTSVOL`, `NBRFLECHEVOL`, `MOYVOL`, `PCTDIXVOL`, `PCTHUITVOL`) 
                               VALUES (NULL, '$ID_SERIE', NULL, '$nbfleches', NULL, NULL, NULL)") or die(print_r($bdd->errorInfo()));
 
-                    $requ7 = $bdd->query("SELECT ID_VOL FROM volee WHERE ID_SERIE='$ID_SERIE' and NBRFLECHEVOL='$nbfleches'") or die(print_r($bdd->errorInfo()));
+                    $requ7 = $bdd->query("SELECT ID_VOL FROM volee WHERE ID_SERIE='$ID_SERIE' and NBRFLECHEVOL='$nbfleches'ORDER BY volee.ID_VOL DESC limit 1") or die(print_r($bdd->errorInfo()));
 
 
                     $donnees3 = $requ7->fetch();
