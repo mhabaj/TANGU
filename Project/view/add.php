@@ -42,9 +42,16 @@
     <?php
 
     if(isset($_POST['creationEnt'])  ) {
-        require_once ('../../backend/classes/entrainement.php');
+        require ('../controller/classes/entrainement.php');
         $ent1=new entrainement($_POST['nom'],$_POST['lieu'],$_POST['date'],$_POST['distance'],$_POST['arc'],$_POST['blason'],$_POST['serie'],$_POST['volee'],$_POST['fleche'],1);
+
+
+        $ID_ENT_USER=entrainement::GetEntID();
+        header("Location: ChoisirSerie.php?new_ID_Ent=$ID_ENT_USER");
+        die();
+
     }
+
 
     ?>
 

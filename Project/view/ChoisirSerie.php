@@ -1,38 +1,58 @@
+
+
+
+
 <p> Quel serie voudrez vous manipuler?</p>
-<form method="GET" action="google.fr">
-    <select>
+
+<form action="entrainement.php" id="serieform" >
+
+    <input type="submit">
+</form>
+
+<select name="SerieChoisi" form="serieform">
+
+
+    <?php
+
+     $new_ID_Ent=$_GET['new_ID_Ent'];
+
+    include('../controller/functions/connexion_bdd.php'); //on se connect a la base et on envoie la requete
+
+    $reponse = $bdd->query("SELECT * FROM serie WHERE ID_ENT_USER= '$new_ID_Ent'");
+    $n = 1;
+    // On affiche chaque entrée une à une
+    while ($donnees = $reponse->fetch()) {
+
+
+        ?>
+
+
+        <option   value="<?php echo $n ?>">Serie
+            numero <?php echo $n ?></option>
 
 
         <?php
+        $n++;
+    }
 
-        include('../controller/functions/connexion_bdd.php'); //on se connect a la base et on envoie la requete
-        $ID_ENT = 1;
-        $reponse = $bdd->query("SELECT * FROM serie WHERE ID_ENT= '$ID_ENT'");
-        $n = 1;
-        // On affiche chaque entrée une à une
-        while ($donnees = $reponse->fetch()) {
+    $reponse->closeCursor(); // Termine le traitement de la requête
 
-
-            ?>
+    ?>
+</select>
 
 
-            <option type="submit" name="<?php echo $n ?>" value="<?php echo $n ?>">Serie numero <?php echo $n ?></option>
-
-
-            <?php
-            $n++;
-        }
-
-        $reponse->closeCursor(); // Termine le traitement de la requête
-
-        ?>
-    </select>
-
-
-</form>
 
 
 <?php
 
+//if(isset($_Get['submitserie'])) {
+//  $idSerie = $_POST['pseudo'];
+//$mdp = $_POST['mdp'];
+//$verif_mdp = $_POST['mdp2'];
 
-    ?>
+//$user = new User($pseudo, $mdp);
+
+//$user->inscription($verif_mdp);
+//}
+
+?>

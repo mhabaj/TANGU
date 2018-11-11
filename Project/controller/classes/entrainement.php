@@ -1,13 +1,13 @@
 <?php
 
-//$tab["nomdutruc"] = $vartruc;
+
 
 class entrainement
 {
     // private $tabTrain = array(nbserie, nbvolees, nbfleche);
     //private $tabTrain[$nbserie][$nbvolees][$nbfleches];
 
-    private $tab = array();
+
     private $nom;
     private $lieu;
     private $date;
@@ -18,7 +18,7 @@ class entrainement
     private $ID_blason;
     private $ID_arc;
     private $ID_user;
-    private $new_ID_Ent;
+    static $new_ID_Ent;
     private $ID_ENT;
     private $ID_SERIE;
     private $ID_VOLEE;
@@ -30,7 +30,7 @@ class entrainement
 
         // include '../controller/functions/connexion_bdd.php';
 
-        //$tab[$nbserie] = array( $nbvolees => array( $nbfleches, $nbfleches, $nbfleches));
+
         $this->ID_blason = $ID_blason;
         $this->ID_arc = $ID_arc;
         $this->nom = $nom;
@@ -48,11 +48,20 @@ class entrainement
 
 
         $this->creerEntrainement($this->nom, $this->lieu, $this->date, $this->distance, $this->ID_arc, $this->ID_blason, $this->nbserie, $this->nbvolees, $this->nbfleches, $this->ID_user);
+       // header("Location: ChoisirSerie.php?new_ID_Ent=$this->ID_ENT_USER");
 
 
     }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////
+///
+///
+
+public static function GetEntID(){
+
+    return self::new_ID_Ent;
+
+}
 
     public function checkEnt($nom, $lieu, $date, $distance, $ID_arc, $ID_blason, $nbserie, $nbvolees, $nbfleches, $ID_user)
     { //on check si les valeurs saisi sont valides pour etre envoyés dans la base de données.
@@ -252,4 +261,4 @@ $nbfleches = 3;
 //$genENTRAINEMENTID=entrainement::genIdEntrainement(8,1);
 //echo $genENTRAINEMENTID;
 
-?>
+

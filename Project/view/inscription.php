@@ -1,5 +1,5 @@
 <?php
-include ('../backend/classes/User.php');
+include ('../controller/classes/User.php');
 ?>
 
 <!DOCTYPE html>
