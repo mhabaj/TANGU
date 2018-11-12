@@ -49,7 +49,13 @@ class Log {
     }
 }
 
+$logFile = new Log('../logs/logs.txt');
 
+/*
+$logFile->open();
+$logFile->write("hgffdrgvbgfrdgvb");
+$logFile->close();
+*/
 //$myfile = new Log('../logs/logs.txt');
 //$myfile->open();
 //$myfile->write('Erreur log', 'Erreur');

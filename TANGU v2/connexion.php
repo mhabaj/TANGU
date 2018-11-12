@@ -14,6 +14,7 @@
 </html>
 <?php
 require_once 'controllers/classes/User.php';
+
 if(isset($_GET['formconnexion'])) {
     $pseudo = $_GET['pseudoconnect'];
     $mdp = $_GET['mdpconnect'];

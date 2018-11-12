@@ -3,6 +3,8 @@ require_once('../controllers/functions/control-session.php');
 require_once('ConnexionBDD.php');
 require_once('Log.php');
 
+global $logFile;
+
 class Arc {
 
     private $idArc, $idUser, $nom, $poids, $taille, $puissance, $type, $photo;
@@ -64,6 +66,7 @@ class Arc {
 	public function creerArc() {
         $bdd = new ConnexionBDD();
         $con = $bdd->getCon();
+        global $logFile;
         
         if ($this->checkArc() == false) {
             //Insérer données dans la DB
@@ -84,9 +87,9 @@ class Arc {
             //Inserer dans le fichier log l'action effectuée
             $log_message = "Nouvel arc crée par idUser: " . $this->idUser;
 
-            $_SESSION['LOGFILE']->open();
-            $_SESSION['LOGFILE']->write($log_message);
-            $_SESSION['LOGFILE']->close();
+            $logFile->open();
+            $logFile->write($log_message);
+            $logFile->close();
             //showMessage('Arc crée avec succès !', 'succes');
             echo "<p>Données insérées avec succes</p>";
         }
@@ -94,6 +97,7 @@ class Arc {
     
     public function modifierArc($attr) {
         //modif:array de taille 6 tlq ["NOMARC" => valeur, "POIDSARC" => valeur, "TAILLEARC" => valeur, etc]
+        global $logFile;
         $bdd = new ConnexionBDD();
         $con = $bdd->getCon();
         
@@ -110,15 +114,16 @@ class Arc {
         //Inserer dans le fichier log l'action effectuée
         $log_message = "idArc: " . $arcID ." modifié par idUser: " . $this->idUser;
 
-        $_SESSION['LOGFILE']->open();
-        $_SESSION['LOGFILE']->write($log_message);
-        $_SESSION['LOGFILE']->close();
+        $logFile->open();
+        $logFile->write($log_message);
+        $logFile->close();
         //echo '<p>Valeur(s) modifiée(s)</p>';
     }
 
 	public function supprimerArc() {
 		//Effacer données de l'arc
         //Valeur $id a prendre dans l'url
+        global $logFile;
         $bdd = new ConnexionBDD();
         $con = $bdd->getCon();
         
@@ -130,10 +135,10 @@ class Arc {
         //Inserer dans le fichier log l'action effectuée
         $log_message = "idArc: " . $arcID ." supprimé par idUser: " . $this->idUser;
 
-        $_SESSION['LOGFILE']->open();
-        $_SESSION['LOGFILE']->write($log_message);
+        $logFile->open();
+        $logFile->write($log_message);
         //echo '<p>Arc supprimé</p>';
-        $_SESSION['LOGFILE']->close();
+        $logFile->close();
 	}
     
     public function __destruct(){

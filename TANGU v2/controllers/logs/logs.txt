@@ -1,0 +1,1 @@
+[Type: Info]::[Message: hgffdrgvbgfrdgvb]::[Location: /TANGU/TANGU v2/controllers/classes/Log.php]::[12/11/2018:20:49:57]
