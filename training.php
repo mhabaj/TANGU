@@ -1,5 +1,5 @@
 <?php
-require_once 'controllers/functions/control-session.php';
+require 'controllers/functions/control-session.php';
 $title = "Entrainement";?>
 <!DOCTYPE html>
 

@@ -1,12 +1,12 @@
 <?php
 session_start();
-//include '../classes/functions.php';
 
 if ((!isset($_SESSION['ID'])) || ($_SESSION['ID'] == ''))
 {
-    header('Location : connexion.php');
+    header('Location: connexion.php');
+    exit();
+
 } else {
-    $url = "";
-    header('Location: ' . $url);
+    $idUser = $_SESSION['ID'];
 }
 ?>

@@ -1,4 +1,3 @@
-<?php include_once 'controllers/functions/control-session.php' ;?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

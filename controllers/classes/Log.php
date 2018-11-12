@@ -49,9 +49,13 @@ class Log {
     }
 }
 
+$logfile = new Log('../logs/logs.txt');
 
 //$myfile = new Log('../logs/logs.txt');
 //$myfile->open();
 //$myfile->write('Erreur log', 'Erreur');
 //$myfile->close();
+
+
+
 ?>

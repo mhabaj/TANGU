@@ -13,7 +13,7 @@
 </html>
 
 <?php
-require_once 'controller/classes/User.php';
+require_once 'controllers/classes/User.php';
 
 if(isset($_POST['formInscription'])) {
     $pseudo = $_POST['pseudo'];

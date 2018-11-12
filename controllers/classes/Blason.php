@@ -1,5 +1,5 @@
 <?php
-require_once('../functions/control-session.php');
+require('../functions/control-session.php');
 require_once('ConnexionBDD.php');
 require_once('Log.php');
 

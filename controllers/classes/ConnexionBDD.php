@@ -39,6 +39,5 @@ class ConnexionBDD {
 
 /*
 $bdd = new ConnexionBDD();
-$bdd->connect();
-*/
+$bdd->connect();*/
 ?>

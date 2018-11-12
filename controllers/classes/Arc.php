@@ -1,7 +1,11 @@
 <?php
-require_once('../functions/control-session.php');
+require('../functions/control-session.php');
 require_once('ConnexionBDD.php');
 require_once('Log.php');
+
+global $logfile;
+
+$logfile->open();
 
 class Arc {
 
@@ -84,9 +88,7 @@ class Arc {
             //Inserer dans le fichier log l'action effectuée
             $log_message = "Nouvel arc crée par idUser: " . $this->idUser;
 
-            $_SESSION['LOGFILE']->open();
-            $_SESSION['LOGFILE']->write($log_message);
-            $_SESSION['LOGFILE']->close();
+            $logfile->write($log_message);
             //showMessage('Arc crée avec succès !', 'succes');
             echo "<p>Données insérées avec succes</p>";
         }
@@ -110,9 +112,7 @@ class Arc {
         //Inserer dans le fichier log l'action effectuée
         $log_message = "idArc: " . $arcID ." modifié par idUser: " . $this->idUser;
 
-        $_SESSION['LOGFILE']->open();
-        $_SESSION['LOGFILE']->write($log_message);
-        $_SESSION['LOGFILE']->close();
+        $logfile->write($log_message);
         //echo '<p>Valeur(s) modifiée(s)</p>';
     }
 
@@ -130,10 +130,8 @@ class Arc {
         //Inserer dans le fichier log l'action effectuée
         $log_message = "idArc: " . $arcID ." supprimé par idUser: " . $this->idUser;
 
-        $_SESSION['LOGFILE']->open();
-        $_SESSION['LOGFILE']->write($log_message);
+        $logfile->write($log_message);
         //echo '<p>Arc supprimé</p>';
-        $_SESSION['LOGFILE']->close();
 	}
     
     public function __destruct(){
@@ -151,11 +149,12 @@ $photo = "photo";
 
 //$attr = array("NOMARC" => "nom", "POIDSARC" => 17, "TAILLEARC" => NULL, "PWRARC" => NULL, "TYPEARC" => "poius", "PHOTOARC" => NULL);
 
-//$arc = new Arc($nom, $poids, $taille, $pwr, $type, $photo);
+$arc = new Arc($nom, $poids, $taille, $pwr, $type, $photo);
 //$arc->modifierArc($attr);
 //$arc2 = new Arc($nom2, $poids, $taille, $pwr, $type, $photo);
 //$arc->supprimerArc();
 //$arc2->modifierArc($attr);
 //$arc2->supprimerArc();
 
+$logfile->close();
 ?>
