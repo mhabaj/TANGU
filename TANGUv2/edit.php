@@ -1,6 +1,7 @@
 <?php
 require_once 'controllers/functions/control-session.php';
-$title = "Personnaliser";?>
+$title = "Personnaliser";
+?>
 <!DOCTYPE html>
 
 <html lang="en">

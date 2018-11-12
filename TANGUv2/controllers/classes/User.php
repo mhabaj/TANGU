@@ -36,7 +36,7 @@ class User {
             $stmt->execute([$this->pseudo, $hash_mdp]);
             
             //Afficher msg de succès
-            $msg .= "<p>Votre compte est crée! <a href='connexion.php'>Connexion ici</a></p>";
+            $msg .= "<p>Votre compte est crée! <a href='../../connexion.php'>Connexion ici</a></p>";
             
         } else {
             $msg .= "<p>Inscription non effectuée</p>";

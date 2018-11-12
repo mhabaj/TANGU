@@ -1,4 +1,3 @@
-<?php include_once 'controllers/functions/control-session.php' ;?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +13,6 @@
 </html>
 <?php
 require_once 'controllers/classes/User.php';
-
 if(isset($_GET['formconnexion'])) {
     $pseudo = $_GET['pseudoconnect'];
     $mdp = $_GET['mdpconnect'];
