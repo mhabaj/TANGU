@@ -7,7 +7,7 @@ class entrainement
     // private $tabTrain = array(nbserie, nbvolees, nbfleche);
     //private $tabTrain[$nbserie][$nbvolees][$nbfleches];
 
-    private $tab = array();
+
     private $nom;
     private $lieu;
     private $date;
@@ -18,13 +18,14 @@ class entrainement
     private $ID_blason;
     private $ID_arc;
     private $ID_user;
+    private $new_ID_Ent;
 
     public function __construct($nom, $lieu, $date, $distance, $ID_arc, $ID_blason, $nbserie, $nbvolees, $nbfleches, $ID_user)
 
 
     {
 
-      // include '../controller/functions/connexion_bdd.php';
+        // include '../controller/functions/connexion_bdd.php';
 
         //$tab[$nbserie] = array( $nbvolees => array( $nbfleches, $nbfleches, $nbfleches));
         $this->ID_blason = $ID_blason;
@@ -62,7 +63,7 @@ class entrainement
                 and is_numeric($nbserie) and $nbserie <= 5 and is_numeric($nbvolees) and $nbvolees <= 10 and is_numeric($nbfleches) and $nbfleches <= 10) {
                 echo $ID_user;
                 echo $nom;
-				include '../controller/functions/connexion_bdd.php';
+                include '../controller/functions/connexion_bdd.php';
                 // Pour test: include '../includes/connexion_bdd.php';
 
                 // on verifie la validité de l'utilisateur:
@@ -146,7 +147,7 @@ class entrainement
 
             //include '../../backend/includes/connexion_bdd.php';
             // include '../includes/connexion_bdd.php';
-			include '../controller/functions/connexion_bdd.php';
+            include '../controller/functions/connexion_bdd.php';
 
 
             $requ = $bdd->exec("INSERT INTO `entrainement` (`ID_ENT`,`ID_ENT_USER`, `ID_USER`, `ID_ARC`, `ID_BLAS`, `NOM_ENT`, `LIEU_ENT`, `DATE_ENT`, `DIST_ENT`,`NBR_SERIE`,`NBR_VOLEE`, `NBR_FLECHES`, `PTS_TOTAL`, `PCT_DIX`, `PCT_NEUF`, `MOY_ENT`, `STATUT_ENT`) 
@@ -162,6 +163,8 @@ class entrainement
 
             $new_ID_Ent = $this->genIdEntrainement($ID_ENT, $ID_user);
             echo $new_ID_Ent;
+
+            $this->new_ID_Ent=$new_ID_Ent;
             $requ3 = $bdd->exec("UPDATE `entrainement` SET `ID_ENT_USER` = '$new_ID_Ent' WHERE `entrainement`.`ID_ENT` = '$ID_ENT' AND `entrainement`.`NOM_ENT` = '$nom'") or die(print_r($bdd->errorInfo()));
 
 
@@ -181,7 +184,7 @@ class entrainement
                 for ($j = 0; $j < $nbvolees; $j++) {
 
                     $requ6 = $bdd->exec("INSERT INTO `volee` (`ID_VOL`, `ID_SERIE`, `PTSVOL`, `NBRFLECHEVOL`, `MOYVOL`, `PCTDIXVOL`, `PCTHUITVOL`) 
-                              VALUES (NULL, '$ID_SERIE', NULL, '$nbfleches', NULL, NULL, NULL)")or die(print_r($bdd->errorInfo()));
+                              VALUES (NULL, '$ID_SERIE', NULL, '$nbfleches', NULL, NULL, NULL)") or die(print_r($bdd->errorInfo()));
 
                     $requ7 = $bdd->query("SELECT ID_VOL FROM volee WHERE ID_SERIE='$ID_SERIE' and NBRFLECHEVOL='$nbfleches'") or die(print_r($bdd->errorInfo()));
 
@@ -193,8 +196,6 @@ class entrainement
                     for ($z = 0; $z < $nbfleches; $z++) {
                         $requ7 = $bdd->exec("INSERT INTO `fleche` (`ID_FLECHE`, `ID_VOL`, `PTSFLECHE`) 
                         VALUES (NULL,'$ID_VOLEE', NULL)") or die(print_r($bdd->errorInfo()));
-
-
 
 
                     }

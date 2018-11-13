@@ -1,30 +1,27 @@
+<?php
+
+include ('../controller/classes/entrainement.php');
 
 
-<?php require("../backend/includes/control-session.php") ?>
+?>
+<form method="GET">
+<?php
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>SLT TANGU IS ONLINE </title>
-</head>
-<body>
-<p>TANGU IS HERE SALUTTTEUFHAUFHAFGAHAHHAA</p>
+$stmt = $bdd->query("SELECT * FROM `serie` WHERE ID_USER='$ID_user' and ID_ENT_USER='$'");
 
+$nbrOccur = $stmt->rowCount();
 
-<p> Test Userid : <br>
-    reçu: <?php echo $idUser ?>
-<!-------------------------------------------->
+if ($nbrOccur == 0) {
 
 
-<p> Test creating entrainement </p>
+?>
+
+    <select name="Serie">
+        <option value="" selected></option>
+        <option value=""></option>
+        <option value=""></option>
+    </select>
+</form>
 
 
-    <input class="input100" type="text" name="nom" placeholder="nom entrainement">
-
-
-</p>
-<a href="../backend/includes/deconnexion.php"> <button type="button" class="btn btn-xs btn-rouge deco">Disconnect</button> </a>
-</body>
-</html>
 
