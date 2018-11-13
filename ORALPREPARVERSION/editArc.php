@@ -33,78 +33,59 @@ $title = "Personnaliser";?>
             
 	<div class="swiper-container" id="contentBox">
     <div class="swiper-wrapper">
-        <div class="container swiper-slide" id="e1">
-            <h3>Nom arc</h3>
-        </div>
-        <div class="container swiper-slide" id="e2">
-            <h3>Nom arc</h3>
-        </div>
-        <div class="container swiper-slide" id="e3">
-            <h3>Nom arc</h3>
-        </div>
-        <div class="container swiper-slide" id="e4">
-            <h3>Nom arc</h3>
-        </div>
-        <div class="container swiper-slide" id="e5">
-            <h3>Nom arc</h3>
-        </div>
-        <div class="container swiper-slide" id="e6">
-            <h3>Nom arc</h3>
-        </div>
-        <div class="container swiper-slide" id="e7">
-            <h3>Nom arc</h3>
-        </div>
-        <div class="container swiper-slide" id="e8">
-            <h3>Nom arc</h3>
-        </div>
-        <div class="container swiper-slide" id="e9">
-            <h3>Nom arc</h3>
-        </div>
-        <div class="container swiper-slide" id="e10">
-            <h3>Nom arc</h3>
-        </div>
-        <div class="container swiper-slide" id="e11">
-            <h3>Nom arc</h3>
-        </div>
+        
+		
+		 		
+		<?php 
+		
+		
+		
+		  include('controllers/functions/connexion_bdd.php'); //on se connect a la base et on envoie la requete
+
+                $reponse = $bdd->query("SELECT * FROM arc WHERE ID_USER='$idUser'");
+                $n = 1;
+                // On affiche chaque entrée une à une
+                while ($donnees = $reponse->fetch()) {
+					
+					
+		
+		
+		
+		
+		
+		
+		?>
+			
+
+			<div class="container swiper-slide" id="e<?php echo $n ; ?>">
+				<p>Nom Arc :    <?php echo $donnees['NOMARC']; ?></hp>
+			</div>
+	
+	<?php 
+	
+	
+	 $n++;
+                }
+
+                $reponse->closeCursor(); // Termine le traitement de la requête
+
+	
+	
+	
+	
+	?>
+		
+		
+		
+		
+		
+		
+       
 						</div>
 			<div class="swiper-pagination"></div>
 </div>
 		
-		 <div class="container-fluid" id="selectBox">
-               					
-          <a href="editBlason.php">     <input name="submitChoix" type="submit"  value="Blasons"> </a>
-			
-			
-			<form method="POST"  > 
-			
-			
-			<select name="SelectForm"  onchange="this.form.submit()">
-			<option value="Blason">Blasons</option>
-			<option value="Arc">Arcs</option>
-			</select>
-        
-				</form>
-			
-				<?php
-				
-				
-				
-				if (ISSET($_POST['SelectForm'])){
-					
-					
-					if (  ){
-						
-						
-						
-					}
-					
-					
-				
-				
-				
-				?>
-				
-            </div>
+		 
 		
 		
 		

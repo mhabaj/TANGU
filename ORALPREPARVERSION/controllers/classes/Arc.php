@@ -8,11 +8,11 @@ class Arc {
 	public function __construct($nom, $poids, $taille, $puissance, $type, $photo) {
         
         $this->idUser = 1 /*$_SESSION['ID']*/;
-		$this->nom = $nom;
+		$this->nom = addslashes($nom);
         $this->poids = $poids;
         $this->taille = $taille;
         $this->puissance = $puissance;
-		$this->type = $type;
+		$this->type = addslashes($type);
 		$this->photo = $photo;
         
         //Inserer valeurs à la creation d une nouvelle instance

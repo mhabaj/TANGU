@@ -1,7 +1,3 @@
-<?php require('controllers/functions/control-session.php');
-include ('controllers/classes/Arc.php');
-include('controllers/functions/functions.php');
-?>
 <!DOCTYPE html>
 
 <html lang="en">
@@ -9,16 +5,16 @@ include('controllers/functions/functions.php');
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Nouveau Arc</title>
+        <title>Personnaliser</title>
         
-        <link rel="stylesheet" href="assets/css/header.css">
-        <link rel="stylesheet" href="assets/scss/addArc.css">
-        <link rel="stylesheet" href="assets/css/navbar.css">
-        <link rel="stylesheet" href="assets/css/responsive.css">
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/csss/header.css">
+        <link rel="stylesheet" href="assets/csss/edit.css">
+        <link rel="stylesheet" href="assets/csss/navbar.css">
+        <link rel="stylesheet" href="assets/csss/responsive.css">
+        <link rel="stylesheet" href="assets/csss/swiper.css">
+        <link rel="stylesheet" href="assets/csss/bootstrap.min.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
         
-		
         <script src="js/bootstrap.min.js"></script>
     </head>
     
@@ -26,82 +22,27 @@ include('controllers/functions/functions.php');
         <div class="container-fluid" id="mainBox">
             <div class="container-fluid header" id="headerBox">
                 <div id="titleBox">
-                    <h1>Nouveau Arc</h1>
-              </div>
-               <div id="line">
-			<form method="POST" >
-                    <div class="sousline">
-				<h3>Nom de l'arc</h3><input type="text" max="" min="" value="" name="Nomarc">
-                     </div>
-
-                     <div class="sousline">
-				<h3>Poids de l'arc</h3><input type="number" max="50"  min="1" value="" name="Poids">
-                    </div>
-
-                    <div class="sousline">
-				<h3>Taille de l'arc</h3><input type="text" value="" max="300" min="1" name="Taille">
-                    </div>
-
-                    <div class="sousline">
-				<h3>Force de l'arc</h3><input type="text" value="" max="100" min="1" name="Force">
-                    </div>
-
-                    <div class="sousline">
-				<h3>Type de l'arc</h3><input type="text" value="" max="50"  min="0" name="Type">
-                    </div>
-
-                    <div class="sousline">
-				<h3>Photo de l'arc</h3><input type="image" max="1024" min="1" value="" name="Photo">
-                    </div>
-					
-						<input type="submit" name="envoyerCreateArc"> </input>
-			</form>
-			
-			<?php  if (isset($_POST['envoyerCreateArc']))  {
-					
-					
-				
-					
-					
-					$nom=htmlspecialchars( ($_POST['Nomarc']));
-					$poids=$_POST['Poids'];
-					$taille=$_POST['Taille'];
-					$pwr=$_POST['Force'];
-					$type=htmlspecialchars($_POST['Type']);
-					$idUser=$_SESSION['ID'];
-					
-					
-					if(!empty($nom)&&!empty($poids)&&!empty($taille)&&!empty($pwr)&&!empty($type)){
-					
-					if (is_numeric($taille) and $taille <=300 && is_numeric($pwr) and $pwr <=100
-					and is_numeric($poids) and $poids<=56){
-					
-					
-					if (checkNom($nom)==true and checkPuissance($pwr)==true and  checkType($type)==true){
-					
-					$photo=null;
-					
-					$arc = new Arc($nom, $poids, $taille, $pwr, $type, $photo,$idUser);
-			
-			
-			
-			
-					}}}
-			}else{
-				
-				echo '<p> Merci de remplir tous les champs </p>';
-				
-			}
-			
-			
-			
-			?>
-			 </div>
-				
+                    <h1>Personnaliser</h1>
+                </div>
+                <div id="line"></div>
             </div>
             
-    
-    <div class="container-fluid footer" id="footerBox">
+            <div class="container-fluid content" id="contentBox">
+                <div id="arcBox">
+                    <div id="blur1"></div>
+                   <button id="arcButton" >
+                        <a href="editArc.php"> <h3>ARCS</h3></a>
+                    </button>
+                </div>
+                <div id="blur2"></div>
+                <div id="blasonBox">
+                    <button id="blasonButton">
+                       <a href="editBlason.php"> <h3>BLASONS</h3></a>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="container-fluid footer" id="footerBox">
                 <div class="container" id="homeBox">
                     <button id="homeBtn">
                         <a href="training.php">
@@ -121,7 +62,7 @@ include('controllers/functions/functions.php');
                 </div>
                 <div class="container" id="statsBox">
                     <button id="statsBtn">
-                        <a href="stats.php">
+                        <a href="stats.php"> 
                             <i class="fas fa-chart-line fa-2x" style="color: rgba(179, 179, 179, 0.9)"></i>
                         </a>
                     </button>
@@ -156,17 +97,17 @@ include('controllers/functions/functions.php');
                 <div class="container" id="editBox">
                         <button id="editBtn">
                             <a href="edit.php">
-                                <i class="far fa-edit fa-2x" style="color: rgba(179, 179, 179, 0.9)"></i>
+                                <i class="far fa-edit fa-2x" style="color: rgba(0, 0, 0, 0.9)"></i>
                             </a>
                         </button>
                         <button id="editBtn2">
                             <a href="edit.php">
-                                <i class="far fa-edit fa-lg" style="color: rgba(179, 179, 179, 0.9)"></i>
+                                <i class="far fa-edit fa-lg" style="color: rgba(0, 0, 0, 0.9)"></i>
                             </a>
                         </button>
                         <button id="editBtn3">
                             <a href="edit.php">
-                                <i class="far fa-edit fa-3x" style="color: rgba(179, 179, 179, 0.9)"></i>
+                                <i class="far fa-edit fa-3x" style="color: rgba(0, 0, 0, 0.9)"></i>
                             </a>
                         </button>
                 </div>
@@ -189,7 +130,7 @@ include('controllers/functions/functions.php');
                 </div>
             </div>
         </div>
-    
-    
+        
+        <script src="assets/js/swiper.min.js"></script>
     </body>
 </html>

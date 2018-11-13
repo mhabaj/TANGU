@@ -33,16 +33,15 @@ $title = "Personnaliser";?>
             
 	<div class="swiper-container" id="contentBox">
     <div class="swiper-wrapper">
-      
-
-			
+	
+      		
 		<?php 
 		
 		
 		
 		  include('controllers/functions/connexion_bdd.php'); //on se connect a la base et on envoie la requete
 
-                $reponse = $bdd->query("SELECT * FROM arc WHERE ID_USER='$idUser'");
+                $reponse = $bdd->query("SELECT * FROM blason WHERE ID_USER='$idUser'");
                 $n = 1;
                 // On affiche chaque entrée une à une
                 while ($donnees = $reponse->fetch()) {
@@ -58,7 +57,7 @@ $title = "Personnaliser";?>
 			
 
 			<div class="container swiper-slide" id="e<?php echo $n ; ?>">
-				<h3>Nom Arc : <?php echo $donnees['NOMARC']; ?></h3>
+				<p>Nom Blason :    <?php echo $donnees['NOMBLAS']; ?></hp>
 			</div>
 	
 	<?php 
@@ -74,6 +73,8 @@ $title = "Personnaliser";?>
 	
 	
 	?>
+	
+
 	
 	
 	</div>

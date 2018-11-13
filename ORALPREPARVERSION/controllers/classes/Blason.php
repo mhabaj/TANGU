@@ -11,7 +11,7 @@ class Blason {
 		
 
         $this->idUser = $idUser;
-		$this->nom = $nom;
+		$this->nom = addslashes($nom);
 		$this->taille = $taille;
 		$this->photo = $photo;
         

@@ -1,3 +1,12 @@
+
+
+
+
+
+
+
+
+
 <div class="container-fluid footer" id="footerBox">
     <div class="container" id="homeBox">
         <button id="homeBtn">
