@@ -32,6 +32,9 @@ $title = "Personnaliser";?>
           
             
 	<div class="swiper-container" id="contentBox">
+	
+	<div class="text-center">
+	<a href="addBlason.php"> <button type="button" class="btn btn-dark">Ajouter</button> </a> </div>
     <div class="swiper-wrapper">
 	
       		
@@ -57,7 +60,7 @@ $title = "Personnaliser";?>
 			
 
 			<div class="container swiper-slide" id="e<?php echo $n ; ?>">
-				<p>Nom Blason :    <?php echo $donnees['NOMBLAS']; ?></hp>
+				<h3>  <?php echo $donnees['NOMBLAS']; ?></h3>
 			</div>
 	
 	<?php 

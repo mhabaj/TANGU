@@ -32,6 +32,8 @@ $title = "Personnaliser";?>
           
             
 	<div class="swiper-container" id="contentBox">
+	<div class="text-center">
+	<a href="addArc.php"> <button type="button" class="btn btn-dark">Ajouter</button> </a> </div>
     <div class="swiper-wrapper">
         
 		
@@ -58,7 +60,7 @@ $title = "Personnaliser";?>
 			
 
 			<div class="container swiper-slide" id="e<?php echo $n ; ?>">
-				<p>Nom Arc :    <?php echo $donnees['NOMARC']; ?></hp>
+				<h3> <?php echo $donnees['NOMARC']; ?></h3>
 			</div>
 	
 	<?php 
