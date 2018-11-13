@@ -1,6 +1,5 @@
 <?php
 
-//$tab["nomdutruc"] = $vartruc;
 
 class entrainement
 {
@@ -19,6 +18,12 @@ class entrainement
     private $ID_arc;
     private $ID_user;
     private $new_ID_Ent;
+<<<<<<< HEAD
+=======
+    private $ID_ENT;
+    private $ID_SERIE;
+    private $ID_VOLEE;
+>>>>>>> 4844864a54ea1230bbd57c6fbe45ce6f0153feec
 
     public function __construct($nom, $lieu, $date, $distance, $ID_arc, $ID_blason, $nbserie, $nbvolees, $nbfleches, $ID_user)
 
@@ -26,8 +31,11 @@ class entrainement
     {
 
         // include '../controller/functions/connexion_bdd.php';
+<<<<<<< HEAD
+=======
 
-        //$tab[$nbserie] = array( $nbvolees => array( $nbfleches, $nbfleches, $nbfleches));
+>>>>>>> 4844864a54ea1230bbd57c6fbe45ce6f0153feec
+
         $this->ID_blason = $ID_blason;
         $this->ID_arc = $ID_arc;
         $this->nom = $nom;
@@ -43,12 +51,28 @@ class entrainement
         // echo 'objet instancié';
 
 
-        $this->creerEntrainement($this->nom, $this->lieu, $this->date, $this->distance, $this->ID_arc, $this->ID_blason, $this->nbserie, $this->nbvolees, $this->nbfleches, $this->ID_user);
+        //  $this->creerEntrainement($this->nom, $this->lieu, $this->date, $this->distance, $this->ID_arc, $this->ID_blason, $this->nbserie, $this->nbvolees, $this->nbfleches, $this->ID_user);
 
+        if ($this->creerEntrainement($this->nom, $this->lieu, $this->date, $this->distance, $this->ID_arc, $this->ID_blason, $this->nbserie, $this->nbvolees, $this->nbfleches, $this->ID_user)) {
 
+            $ID_ENT_USER = $this->GetEntID();
+            header("Location: ChoisirSerie.php?new_ID_Ent=$ID_ENT_USER");
+            die();
+            // header("Location: ChoisirSerie.php?new_ID_Ent=$this->ID_ENT_USER");
+
+        }
     }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////
+///
+///
+
+    public function GetEntID()
+    {
+
+        return $this->new_ID_Ent;
+
+    }
 
     public function checkEnt($nom, $lieu, $date, $distance, $ID_arc, $ID_blason, $nbserie, $nbvolees, $nbfleches, $ID_user)
     { //on check si les valeurs saisi sont valides pour etre envoyés dans la base de données.
@@ -161,10 +185,18 @@ class entrainement
 
             $ID_ENT = $donnees['ID_ENT'];
 
+            $this->ID_ENT = $ID_ENT;
+
             $new_ID_Ent = $this->genIdEntrainement($ID_ENT, $ID_user);
+<<<<<<< HEAD
             echo $new_ID_Ent;
 
             $this->new_ID_Ent=$new_ID_Ent;
+=======
+
+            $this->new_ID_Ent = $new_ID_Ent;
+
+>>>>>>> 4844864a54ea1230bbd57c6fbe45ce6f0153feec
             $requ3 = $bdd->exec("UPDATE `entrainement` SET `ID_ENT_USER` = '$new_ID_Ent' WHERE `entrainement`.`ID_ENT` = '$ID_ENT' AND `entrainement`.`NOM_ENT` = '$nom'") or die(print_r($bdd->errorInfo()));
 
 
@@ -174,24 +206,28 @@ class entrainement
                   VALUES (NULL,'$new_ID_Ent', NULL, '$nbvolees', NULL, NULL, NULL, '$ID_ENT') ") or die(print_r($bdd->errorInfo()));
 
 
-                $requ5 = $bdd->query("SELECT ID_SERIE FROM serie WHERE ID_ENT_USER='$new_ID_Ent' and NBRVOLSERIE='$nbvolees' and ID_ENT='$ID_ENT'") or die(print_r($bdd->errorInfo()));
+                $requ5 = $bdd->query("SELECT ID_SERIE FROM serie WHERE ID_ENT_USER='$new_ID_Ent' and NBRVOLSERIE='$nbvolees' and ID_ENT='$ID_ENT' ORDER BY serie.ID_SERIE DESC limit 1") or die(print_r($bdd->errorInfo()));
 
 
                 $donnees2 = $requ5->fetch();
 
                 $ID_SERIE = $donnees2['ID_SERIE'];
 
+                $this->ID_SERIE = $ID_SERIE;
+
                 for ($j = 0; $j < $nbvolees; $j++) {
 
                     $requ6 = $bdd->exec("INSERT INTO `volee` (`ID_VOL`, `ID_SERIE`, `PTSVOL`, `NBRFLECHEVOL`, `MOYVOL`, `PCTDIXVOL`, `PCTHUITVOL`) 
                               VALUES (NULL, '$ID_SERIE', NULL, '$nbfleches', NULL, NULL, NULL)") or die(print_r($bdd->errorInfo()));
 
-                    $requ7 = $bdd->query("SELECT ID_VOL FROM volee WHERE ID_SERIE='$ID_SERIE' and NBRFLECHEVOL='$nbfleches'") or die(print_r($bdd->errorInfo()));
+                    $requ7 = $bdd->query("SELECT ID_VOL FROM volee WHERE ID_SERIE='$ID_SERIE' and NBRFLECHEVOL='$nbfleches'ORDER BY volee.ID_VOL DESC limit 1") or die(print_r($bdd->errorInfo()));
 
 
                     $donnees3 = $requ7->fetch();
 
                     $ID_VOLEE = $donnees3['ID_VOL'];
+
+                    $this->ID_VOLEE = $ID_VOLEE;
 
                     for ($z = 0; $z < $nbfleches; $z++) {
                         $requ7 = $bdd->exec("INSERT INTO `fleche` (`ID_FLECHE`, `ID_VOL`, `PTSFLECHE`) 
@@ -205,35 +241,23 @@ class entrainement
             }
 
 
-            echo '<p> Entranement crée! </p>';
+            echo '<p> Entrainement crée! </p>';
+            return true;
+
 
         }
 
 
     }
+
 ////////////////////////////////////////////////////////////////////////////////////////////
-    /* public function lancerEntrainement($nbserie, $nbvolees, $nbfleches)
-   {
 
 
-       for ($i = 0; $i <= $nbserie; $i++) {
-
-           for ($j = 0; $j <= $nbvolees; $j++) {
-
-               inculde();
+    public function lancerEntrainement($ID_ENT, $nbserie, $nbvolees, $nbfleches)
+    {
 
 
-               htmlForm(recup dans int[][][nbfleche] des points)
-                       statVolee(tabTrain, iS, iV)
-                       bddexec()
-
-           }
-
-       }
-
-
-   }
-*/
+    }
 
 
 }
@@ -253,4 +277,4 @@ $nbfleches = 3;
 //$genENTRAINEMENTID=entrainement::genIdEntrainement(8,1);
 //echo $genENTRAINEMENTID;
 
-?>
+

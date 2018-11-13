@@ -7,15 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Nouvel Entrainement</title>
 
-    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
     <link rel="stylesheet" href="">
-    <link rel=stylesheet href="css/navbar.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel=stylesheet href="../assets/css/navbar.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
           integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -35,18 +35,22 @@
         <input name="fleche" placeholder="Fleche(s)" min="1" max="10" type="number" value="">
         </Br></br>
         <button type="submit"  name="creationEnt" >
-            Connexion
+            Creer l'entrainement
         </button>
     </form>
 
     <?php
 
     if(isset($_POST['creationEnt'])  ) {
-        require_once ('../../backend/classes/entrainement.php');
+        require ('../controller/classes/entrainement.php');
         $ent1=new entrainement($_POST['nom'],$_POST['lieu'],$_POST['date'],$_POST['distance'],$_POST['arc'],$_POST['blason'],$_POST['serie'],$_POST['volee'],$_POST['fleche'],1);
+
+    /*
+        $ID_ENT_USER = $ent1->GetEntID();
+        header("Location: ChoisirSerie.php?new_ID_Ent=$ID_ENT_USER");
+        die();
+*/
     }
-
-
 
 
     ?>

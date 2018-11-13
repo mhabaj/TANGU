@@ -7,7 +7,7 @@ require_once('../controller/classes/Log.php');
 
 
 //include '../includes/connexion_bdd.php';
-//require('../includes/functions.php');
+require('../controller/functions/functions.php');
 
 global $bdd;
 $msg = "";
