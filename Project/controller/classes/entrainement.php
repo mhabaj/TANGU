@@ -18,12 +18,10 @@ class entrainement
     private $ID_arc;
     private $ID_user;
     private $new_ID_Ent;
-<<<<<<< HEAD
-=======
     private $ID_ENT;
     private $ID_SERIE;
     private $ID_VOLEE;
->>>>>>> 4844864a54ea1230bbd57c6fbe45ce6f0153feec
+
 
     public function __construct($nom, $lieu, $date, $distance, $ID_arc, $ID_blason, $nbserie, $nbvolees, $nbfleches, $ID_user)
 
@@ -31,10 +29,10 @@ class entrainement
     {
 
         // include '../controller/functions/connexion_bdd.php';
-<<<<<<< HEAD
-=======
 
->>>>>>> 4844864a54ea1230bbd57c6fbe45ce6f0153feec
+
+
+
 
         $this->ID_blason = $ID_blason;
         $this->ID_arc = $ID_arc;
@@ -188,15 +186,13 @@ class entrainement
             $this->ID_ENT = $ID_ENT;
 
             $new_ID_Ent = $this->genIdEntrainement($ID_ENT, $ID_user);
-<<<<<<< HEAD
             echo $new_ID_Ent;
 
             $this->new_ID_Ent=$new_ID_Ent;
-=======
+
 
             $this->new_ID_Ent = $new_ID_Ent;
 
->>>>>>> 4844864a54ea1230bbd57c6fbe45ce6f0153feec
             $requ3 = $bdd->exec("UPDATE `entrainement` SET `ID_ENT_USER` = '$new_ID_Ent' WHERE `entrainement`.`ID_ENT` = '$ID_ENT' AND `entrainement`.`NOM_ENT` = '$nom'") or die(print_r($bdd->errorInfo()));
 
 
