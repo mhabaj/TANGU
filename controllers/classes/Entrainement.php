@@ -1,4 +1,5 @@
 <?php
+include 'ConnexionBDD.php';
 
 class Entrainement
 {
@@ -188,6 +189,18 @@ class Entrainement
         }
 
 
+    }
+
+    public function getNbrSerie() {
+        return $this->nbserie;
+    }
+
+    public function getNbrVolee() {
+        return $this->nbvolees;
+    }
+
+    public function getNbrTir() {
+        return $this->nbfleches;
     }
 ////////////////////////////////////////////////////////////////////////////////////////////
     /* public function lancerEntrainement($nbserie, $nbvolees, $nbfleches)
