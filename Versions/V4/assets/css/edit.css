@@ -7,9 +7,6 @@
     left: 0%;
 }
 
-
-
-
 .blasonContainer {
     display: none;
 }
@@ -18,7 +15,7 @@
     display: block;
 }
 
-.selectBox {
+#selectBox {
     border-style: none;
     position: fixed;
     top: 15%;

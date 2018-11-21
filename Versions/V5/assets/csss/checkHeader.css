@@ -1,0 +1,63 @@
+#headerBox {
+    height: 8%;
+}
+
+#left-arrow, #right-check {
+	border-style: none;
+	position: fixed;
+    top: 0;
+    height: 8%;
+    width: 16%;
+    z-index: 20;
+}
+
+#left-arrow {
+    left: 0;
+}
+
+#right-check {
+    right: 0;
+}
+
+#left-arrow button, #right-check button {
+    position: fixed;
+	border-style: none;
+	background: none;
+    height: 8%;
+    width: 16%;
+}
+
+#left-arrow button:active, #right-check button:active {
+    background-color: rgba(224, 224, 224, 0.45);
+    border-style: none;
+    box-shadow: none;
+}
+
+#left-arrow button {
+    left: 0;
+}
+
+#right-check button {
+    right: 0;
+    z-index: 10;
+}
+
+#left-arrow button a, #left-arrow button a:link, #left-arrow button a:visited, #left-arrow button a:hover, #left-arrow button a:active {
+	text-decoration: none;
+	color: rgba(0, 0, 0, 0.9);
+}
+
+#right-check button a, #right-check button a:link, #right-check button a:visited, #right-check button a:hover, #right-check button a:active {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.9);
+}
+
+#checkLink {
+    pointer-events: none;
+}
+
+#right-check button a i {
+    color: rgba(130, 127, 254, 0.55);
+    -webkit-filter: blur(0.65px);
+    filter: blur(0.65px);
+}

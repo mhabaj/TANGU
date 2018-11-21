@@ -1,0 +1,116 @@
+/****FONTS******/
+        /****ALEO******/
+
+@font-face {
+    font-family: Aleo-Bold;
+    src: url(../fonts/Aleo/Aleo-Bold.otf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Aleo-Light;
+    src: url(../fonts/Aleo/Aleo-Light.otf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Aleo-Regular;
+    src: url(../fonts/Aleo/Aleo-Regular.otf);
+    font-weight: bold;
+}
+
+        /****San Francisco******/
+
+@font-face {
+    font-family: SF-Display-Heavy;
+    src: url(../fonts/SF/SFProDisplay-Heavy.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: SF-Display-Regular;
+    src: url(../fonts/SF/SFProDisplay-Regular.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: SF-Display-Light;
+    src: url(../fonts/SF/SFProDisplay-Light.ttf);
+    font-weight: normal;
+}
+
+@keyframes popIn {
+    from {
+        left: -100%;
+        opacity: 0;
+    }
+    to {
+        left: 5%;
+        opacity: 1;
+    }
+}
+
+@keyframes popOut {
+    from {
+        left: 5%;
+        opacity: 1;
+    }
+    to {
+        left: 200%;
+        opacity: 0;
+    }
+}
+
+@keyframes popInOut {
+    0% {
+        left: -100%;
+        opacity: 0;
+    }
+    
+    55% {
+        left: 5%;
+        opacity: 1;
+    }
+    
+    65% {
+        left: 5%;
+        opacity: 1;
+    }
+    
+    100% {
+        left: 200%;
+        opacity: 0;
+    }
+    
+}
+
+#headerBox {
+    border-bottom: 0.5px solid rgba(192, 192, 192, 0.8);
+    box-shadow: 0px 1.75px 5px rgba(224, 224, 224, 0.9);
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 12%;
+    padding: 5% 0;
+}
+
+#titleBox h1 {
+    border-style: none;
+    font-family: SF-Display-Heavy;
+    position: fixed;
+    left: 5%;
+    /*animation: popIn 2s ease-out 0s 1, popOut 2s ease-in 2s 1;*/
+    /*animation: popInOut 3s ease-in-out 0s 1;*/
+    animation: popIn 1.3s ease 0s 1;
+    
+}
+
+#line {
+    position: fixed;
+    top: 12%;
+    left: 5%;
+    right: 5%;
+    border-top-style: none;
+    border-top-color: rgba(0, 0, 0, 0.7);
+}

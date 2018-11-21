@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="TANGUBDD" uuid="a5d1314f-b3ea-4b37-acf5-47abd741afd4">
+    <data-source source="LOCAL" name="TANGUBDD@localhost" uuid="03acca3e-bda5-47b8-a1cd-64b76f93848f">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost/tangubdd</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost/TANGUBDD</jdbc-url>
       <driver-properties>
         <property name="autoReconnect" value="true" />
         <property name="zeroDateTimeBehavior" value="convertToNull" />
