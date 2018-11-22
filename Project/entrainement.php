@@ -38,7 +38,7 @@ $new_ID_Ent = $_GET['new_ID_Ent'];
 
                 <p> Volée:</p>
 
-                <form method="POST" id="voleeForm" target="_myFrame" name="voleeForm" action="">
+                <form method="GET" id="voleeForm" target="_myFrame" name="voleeForm" action="">
 
                     <select name='volee' onchange='this.form.submit()'>
                         <option value="<?php echo "null"; ?>"> >>CHOISIR UNE VOLEE<<  </option>
@@ -63,6 +63,8 @@ $new_ID_Ent = $_GET['new_ID_Ent'];
                             <option value="<?php echo $donnees['ID_VOL'] ?>">Volee numero <?php echo $n ?></option>
 
 
+
+
                             <?php
                             $n++;
                         }
@@ -71,6 +73,8 @@ $new_ID_Ent = $_GET['new_ID_Ent'];
 
                         ?>
                     </select>
+                    <input name="new_ID_Ent" type="hidden" value="<?php echo $new_ID_Ent ?>">
+                    <input name="Serie" type="hidden" value="<?php echo $idSerie?>">
                     <noscript><input type="submit" value="submit"></noscript>
                 </form>
 
@@ -78,12 +82,12 @@ $new_ID_Ent = $_GET['new_ID_Ent'];
                 <?php
 
 
-                if (isset($_POST['volee'])) {
+                if (isset($_GET['volee'])) {
 
 
-                    if (!empty($_POST['volee']) And is_numeric($_POST['volee'])) {
+                    if (!empty($_GET['volee']) And is_numeric($_GET['volee'])) {
 
-                        $idVolee = $_POST['volee'];
+                        $idVolee = $_GET['volee'];
                         include('controllers/functions/connexion_bdd.php'); //on se connect a la base et on envoie la requete
 
                         ?>
@@ -91,7 +95,7 @@ $new_ID_Ent = $_GET['new_ID_Ent'];
 
 
 
-                <form method="POST" id="FlecheForm" target="_myFrame" name="FlecheForm" action="" >
+                <form method="GET" id="FlecheForm" target="_myFrame" name="FlecheForm" action="entrainement.php" >
 <?php
                         $reponse = $bdd->query("SELECT * FROM fleche WHERE ID_VOL= '$idVolee' ORDER BY fleche.ID_FLECHE ASC");
                         $n = 1;
@@ -104,38 +108,50 @@ $new_ID_Ent = $_GET['new_ID_Ent'];
                             <p> fleche numero<?php echo $donnees['ID_FLECHE'] ; ?></p>
                             <input name="FID<?php echo $n; ?>" type="hidden" type="number" value="<?php echo $donnees['ID_FLECHE']; ?>">
                             <input name="Score<?php echo $n; ?>" type="number"  value="">
+                            <input name="new_ID_Ent" type="hidden" value="<?php echo $new_ID_Ent ?>">
+                            <input name="Serie" type="hidden" value="<?php echo $idSerie?>">
 
                             <?php
                             $n++;
-
+                            echo "je suis a l'interieur du trqitement";
                         }
+                        ?>
 
+                        <input name="MAX" type="hidden" type="number"  value="<?php echo $n; ?>">
 
+                    <?php
                         $reponse->closeCursor(); // Termine le traitement de la requête
 
                         ?>
                         <input type="submit" name="MAJFleche" placeholder="Valider">
                         </form>
+                        <p><?php echo $n; ?></p>
 
                         <?php
 
-                        if (isset($_POST['MAJFleche'])) {
+
+                        if (isset($_GET['MAJFleche'])) {
+                            echo "je suis a l'interieur du if";
                             $j=1;
-                            while ($j<=$n){
+                            $n =  $_GET['MAX'];
+
+                            while ($j<$n){
+
+                            echo "je suis a l'interieur du while";
 
                             include('controllers/functions/connexion_bdd.php'); //on se connect a la base et on envoie la requete
 
                             $FID='FID'.$j;
                             $Score='Score'.$j;
 
-                            $FlechID=$_POST[$FID];
-                            $points=$_POST[$Score];
+                            $FlechID=$_GET[$FID];
+                            $points=$_GET[$Score];
 
                             $req = $bdd->exec("UPDATE `fleche` SET `PTSFLECHE` = '$points' WHERE `fleche`.`ID_FLECHE` = '$FlechID';");
-                            $n = 1;
+
                             // On affiche chaque entrée une à une
 
-
+                            $j++;
 
                         }}
 
