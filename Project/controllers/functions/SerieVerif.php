@@ -8,7 +8,7 @@ function verifSerieUser($Serie, $ID_user, $ID_Ent)
     $new_ID_Ent = ($ID_Ent);
 
     // on verifie si l'utilisateur qui manipule la serie est le même qui l'a creer:
-    include('../controller/functions/connexion_bdd.php'); //on se connect a la base et on envoie la requete
+    include('controllers/functions/connexion_bdd.php'); //on se connect a la base et on envoie la requete
 
 
     $stmt = $bdd->query("SELECT * FROM entrainement WHERE ID_USER='$ID_user' and ID_ENT_USER='$new_ID_Ent'");
