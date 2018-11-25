@@ -201,10 +201,10 @@ if ((!isset($_POST['Serie']) and !isset($_POST['new_ID_Ent'])) and (!isset($_GET
                             }
                             if ($j = $n - 1) {
 
-                                echo('<p> Score mis à jour. </p>');
+                               // echo('<p> Score mis à jour. </p>');
 
-                                header('Location:views/redirect.php');
-
+                               // header('Location:views/redirect.php');
+                                header('Location:entrainement.php');
 
                             }
 
