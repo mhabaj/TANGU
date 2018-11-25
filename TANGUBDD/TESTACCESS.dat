@@ -1,0 +1,170 @@
+#==============================================================
+# DBMS name:      Microsoft Access 2007
+# Created on:     12/10/2018 21:56:58
+#==============================================================
+
+
+RemoveJoin C=FK_ARC_POSSEDE_B_USERS T=ARC P=USERS;
+
+RemoveJoin C=FK_BLASON_POSSEDE_B_USERS T=BLASON P=USERS;
+
+RemoveJoin C=FK_ENTRAINE_POSSEDE_E_USERS T=ENTRAINEMENT P=USERS;
+
+RemoveJoin C=FK_ENTRAINE_UTILISE_ARC T=ENTRAINEMENT P=ARC;
+
+RemoveJoin C=FK_ENTRAINE_UTILISE2_BLASON T=ENTRAINEMENT P=BLASON;
+
+RemoveJoin C=FK_FLECHE_COMPOSEE4_VOLEE T=FLECHE P=VOLEE;
+
+RemoveJoin C=FK_SERIE_COMPOSEE_ENTRAINE T=SERIE P=ENTRAINEMENT;
+
+RemoveJoin C=FK_VOLEE_COMPOSEE3_SERIE T=VOLEE P=SERIE;
+
+RemoveTble C=ARC;
+
+RemoveTble C=BLASON;
+
+RemoveTble C=ENTRAINEMENT;
+
+RemoveTble C=FLECHE;
+
+RemoveTble C=SERIE;
+
+RemoveTble C=USERS;
+
+RemoveTble C=VOLEE;
+
+#==============================================================
+# Table: ARC
+#==============================================================
+CreateTble C=ARC N="ARC"
+(
+   C=ID_ARC T="INTEGER" P=Yes M=Yes N="id_Arc" Z=false,
+   C=ID_USER T="NUMERIC(10)" P=No M=Yes N="id_User" Z=false,
+   C=NOMARC T="VARCHAR(20)" P=No M=Yes N="nomArc" Z=false,
+   C=POIDSARC T="BYTE" P=No M=Yes N="poidsArc" Z=false,
+   C=TAILLEARC T="BYTE" P=No M=Yes N="tailleArc" Z=false,
+   C=PWRARC T="BYTE" P=No M=Yes N="pwrArc" Z=false,
+   C=TYPEARC T="VARCHAR(50)" P=No M=Yes N="typeArc" Z=false,
+   C=PHOTOARC T="VARCHAR(1024)" P=No M=No N="photoArc" Z=false
+);
+
+#==============================================================
+# Table: BLASON
+#==============================================================
+CreateTble C=BLASON N="BLASON"
+(
+   C=ID_BLAS T="INTEGER" P=Yes M=Yes N="id_Blas" Z=false,
+   C=ID_USER T="NUMERIC(10)" P=No M=Yes N="id_User" Z=false,
+   C=NOMBLAS T="VARCHAR(20)" P=No M=Yes N="nomBlas" Z=false,
+   C=TAILLEBLAS T="BYTE" P=No M=Yes N="tailleBlas" Z=false,
+   C=PHOTOBLAS T="VARCHAR(1024)" P=No M=No N="photoBlas" Z=false
+);
+
+#==============================================================
+# Table: ENTRAINEMENT
+#==============================================================
+CreateTble C=ENTRAINEMENT N="ENTRAINEMENT"
+(
+   C=ID_ENT T="INTEGER" P=Yes M=Yes N="id_Ent" Z=false,
+   C=ID_USER T="NUMERIC(10)" P=No M=Yes N="id_User" Z=false,
+   C=ID_ARC T="INTEGER" P=No M=Yes N="id_Arc" Z=false,
+   C=ID_BLAS T="INTEGER" P=No M=Yes N="id_Blas" Z=false,
+   C=LIEU_ENT T="VARCHAR(200)" P=No M=Yes N="lieu_Ent" Z=false,
+   C=STATUT_ENT T="YESNO" P=No M=Yes N="statut_Ent" A=0 B=1 Z=false,
+   C=DIST_ENT T="BYTE" P=No M=Yes N="dist_Ent" Z=false,
+   C=PTS_TOTAL T="SMALLINT" P=No M=No N="pts_Total" Z=false,
+   C=NBR_FLECHES T="BYTE" P=No M=No N="nbr_Fleches" Z=false,
+   C=PCT_DIX T="FLOAT" P=No M=No N="pct_Dix" Z=false,
+   C=PCT_NEUF T="FLOAT" P=No M=No N="pct_Neuf" Z=false,
+   C=MOY_ENT T="SINGLE" P=No M=No N="moy_Ent" Z=false
+);
+
+#==============================================================
+# Table: FLECHE
+#==============================================================
+CreateTble C=FLECHE N="FLECHE"
+(
+   C=ID_FLECHE T="INTEGER" P=Yes M=Yes N="id_Fleche" Z=false,
+   C=ID_VOL T="INTEGER" P=No M=Yes N="id_Vol" Z=false,
+   C=PTSFLECHE T="SMALLINT" P=No M=Yes N="ptsFleche" Z=false
+);
+
+#==============================================================
+# Table: SERIE
+#==============================================================
+CreateTble C=SERIE N="SERIE"
+(
+   C=ID_SERIE T="INTEGER" P=Yes M=Yes N="id_Serie" Z=false,
+   C=ID_ENT T="INTEGER" P=No M=Yes N="id_Ent" Z=false,
+   C=PTSSERIE T="SMALLINT" P=No M=Yes N="ptsSerie" Z=false,
+   C=NBRVOLSERIE T="BYTE" P=No M=Yes N="nbrVolSerie" A=1 B=10 Z=false,
+   C=MOYSERIE T="SINGLE" P=No M=Yes N="moySerie" Z=false,
+   C=PCTDIXSERIE T="SINGLE" P=No M=Yes N="pctDixSerie" Z=false,
+   C=PCTHUITSERIE T="SINGLE" P=No M=Yes N="pctHuitSerie" Z=false
+);
+
+#==============================================================
+# Table: USERS
+#==============================================================
+CreateTble C=USERS N="USERS"
+(
+   C=ID_USER T="NUMERIC(10)" P=Yes M=Yes N="id_User" Z=false,
+   C=PSEUDO T="VARCHAR(20)" P=No M=Yes N="pseudo" Z=false,
+   C=PASSWORD T="VARCHAR(50)" P=No M=Yes N="password" Z=false
+);
+
+#==============================================================
+# Table: VOLEE
+#==============================================================
+CreateTble C=VOLEE N="VOLEE"
+(
+   C=ID_VOL T="INTEGER" P=Yes M=Yes N="id_Vol" Z=false,
+   C=ID_SERIE T="INTEGER" P=No M=Yes N="id_Serie" Z=false,
+   C=PTSVOL T="SMALLINT" P=No M=Yes N="ptsVol" Z=false,
+   C=NBRFLECHEVOL T="BYTE" P=No M=Yes N="nbrFlecheVol" A=1 B=10 Z=false,
+   C=MOYVOL T="SINGLE" P=No M=Yes N="moyVol" Z=false,
+   C=PCTDIXVOL T="SINGLE" P=No M=Yes N="pctDixVol" Z=false,
+   C=PCTHUITVOL T="SINGLE" P=No M=Yes N="pctHuitVol" Z=false
+);
+
+CreateJoin C=FK_ARC_POSSEDE_B_USERS T=ARC P=USERS D=restrict U=restrict
+(
+      P=ID_USER F=ID_USER
+);
+
+CreateJoin C=FK_BLASON_POSSEDE_B_USERS T=BLASON P=USERS D=restrict U=restrict
+(
+      P=ID_USER F=ID_USER
+);
+
+CreateJoin C=FK_ENTRAINE_POSSEDE_E_USERS T=ENTRAINEMENT P=USERS D=restrict U=restrict
+(
+      P=ID_USER F=ID_USER
+);
+
+CreateJoin C=FK_ENTRAINE_UTILISE_ARC T=ENTRAINEMENT P=ARC D=restrict U=restrict
+(
+      P=ID_ARC F=ID_ARC
+);
+
+CreateJoin C=FK_ENTRAINE_UTILISE2_BLASON T=ENTRAINEMENT P=BLASON D=restrict U=restrict
+(
+      P=ID_BLAS F=ID_BLAS
+);
+
+CreateJoin C=FK_FLECHE_COMPOSEE4_VOLEE T=FLECHE P=VOLEE D=restrict U=restrict
+(
+      P=ID_VOL F=ID_VOL
+);
+
+CreateJoin C=FK_SERIE_COMPOSEE_ENTRAINE T=SERIE P=ENTRAINEMENT D=restrict U=restrict
+(
+      P=ID_ENT F=ID_ENT
+);
+
+CreateJoin C=FK_VOLEE_COMPOSEE3_SERIE T=VOLEE P=SERIE D=restrict U=restrict
+(
+      P=ID_SERIE F=ID_SERIE
+);
+

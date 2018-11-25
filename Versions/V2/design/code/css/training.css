@@ -1,0 +1,18 @@
+#contentBox {
+    border-style: solid;
+    position: fixed;
+    top: 15%;
+    left: 0%;
+    height: 75%;
+    overflow: scroll;
+    padding-top: 4%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+}
+
+#contentBox div {
+    border-style: solid;
+    margin-bottom: 5%;
+    height: 30%;
+    position: relative;
+}
