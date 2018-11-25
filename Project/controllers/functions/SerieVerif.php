@@ -1,6 +1,6 @@
 <?php
 
-// Fonction qui verifie si l'utilisateur est bien le proprietaire des series/entrainements données.
+
 function verifSerieUser($Serie, $ID_user, $ID_Ent)
 {
 
@@ -30,14 +30,14 @@ function verifSerieUser($Serie, $ID_user, $ID_Ent)
             return true;
 
         }else{
-           // echo 'MARCHE PAS ';
+            echo 'MARCHE PAS ';
             $bdd=null;
 
             return false;
         }
     }else{
-        //echo 'MARCHE PAS ';
-        //$bdd=null;
+        echo 'MARCHE PAS ';
+        $bdd=null;
 
 
         return false;

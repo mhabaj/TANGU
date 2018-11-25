@@ -14,7 +14,7 @@
 
        <p> Quel serie voudrez vous manipuler?</p>
 
-       <form action="entrainement.php" method="POST" id="serieform">
+       <form action="entrainement.php" id="serieform">
 
 
 
