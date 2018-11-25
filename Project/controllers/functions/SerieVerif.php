@@ -24,7 +24,7 @@ function verifSerieUser($Serie, $ID_user, $ID_Ent)
             //si l'entrainement existe bien sous le numero de l'utilisateur connecté et
             //  que la serie existe bien sous le numero de lentrainement+utilisateur:
 
-            echo 'MARCHE  ';
+          //  echo 'MARCHE  ';
 
             $bdd=null;
             return true;
@@ -37,7 +37,7 @@ function verifSerieUser($Serie, $ID_user, $ID_Ent)
         }
     }else{
         //echo 'MARCHE PAS ';
-        //$bdd=null;
+        $bdd=null;
 
 
         return false;

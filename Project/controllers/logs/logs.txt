@@ -17,3 +17,5 @@
 [Type: Info]::[Message: Nouveau blason crée par idUser: 1]::[Location: /TANGU/TANGU/ORALPREPARVERSION/addBlason.php]::[13/11/2018:14:52:41]
 [Type: Info]::[Message: Nouveau blason crée par idUser: 1]::[Location: /TANGU/TANGU/ORALPREPARVERSION/addBlason.php]::[13/11/2018:14:53:17]
 [Type: Info]::[Message: Nouvel arc crée par idUser: 1]::[Location: /TANGU/ORALPREPARVERSION/addArc.php]::[21/11/2018:21:26:33]
+[Type: Info]::[Message: Nouvel arc crée par idUser: 1]::[Location: /TANGU/TANGU/Project/addArc.php]::[25/11/2018:13:07:58]
+[Type: Info]::[Message: Nouvel arc crée par idUser: 1]::[Location: /TANGU/TANGU/Project/addArc.php]::[25/11/2018:13:10:28]
