@@ -1,6 +1,6 @@
 <?php
 require('../functions/control-session.php');
-require_once('ConnexionBDD.php');
+require_once('../../models/ConnexionBDD.php');
 require_once('Log.php');
 
 global $logfile;

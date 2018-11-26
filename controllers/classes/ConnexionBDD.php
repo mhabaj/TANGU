@@ -25,7 +25,7 @@ class ConnexionBDD {
             try {
                 $this->con = new PDO($dsn, $this->config['username'], $this->config['password']);
                 $this->con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                echo "Connexion BDD reussie";
+                //echo "<p>Connexion BDD reussie</p>";
             } catch (PDOException $e) {
                 die("Erreur connexion bdd : " . $e->getMessage());
             }

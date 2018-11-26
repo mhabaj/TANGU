@@ -31,7 +31,7 @@ $title = "Nouvel Entrainement";?>
 if(isset($_POST['creationEnt'])) {
     require_once ('');
 
-    $ent1=new entrainement($_POST['nom'],$_POST['lieu'],$_POST['date'],$_POST['distance'],$_POST['arc'],$_POST['blason'],$_POST['serie'],$_POST['volee'],$_POST['fleche'],1);
+    $ent1=new entrainement($_POST['nom'],$_POST['lieu'],$_POST['date'],$_POST['distance'],$_POST['arc'],$_POST['blason'],$_POST['SerieController'],$_POST['volee'],$_POST['fleche'],1);
 }
 
 ?>

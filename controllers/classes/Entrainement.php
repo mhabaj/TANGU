@@ -1,5 +1,6 @@
 <?php
-include 'ConnexionBDD.php';
+
+include_once 'ConnexionBDD.php';
 
 class Entrainement
 {

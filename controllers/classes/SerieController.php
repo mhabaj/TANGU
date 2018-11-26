@@ -5,15 +5,17 @@
  * Date: 21/11/2018
  * Time: 20:38
  */
+
 include 'Entrainement.php';
 
-class Serie {
+class SerieController {
 
     private $training;
     private $serie;
     private $nbrSerie;
     private $nbrVolee;
     private $nbrTir;
+    private $idEnt;
 
     public function __construct($training) {
         $this->training = $training;
@@ -101,9 +103,10 @@ class Serie {
         $sumPts = 0.0;
         for($i = 0; $i < $this->nbrVolee; $i++) {
             for($j = 0; $j < $this->nbrTir; $j++) {
-                $sumPts += $this->serie[$numSerie][$i][$j];
+                $sumPts += $this->serie[$numSerie-1][$i][$j];
             }
         }
+
         $moyPts = $sumPts / ($this->nbrTir * $this->nbrVolee);
         $stats["NbrPts"] = $sumPts;
         $stats["MoyennePts"] = $moyPts;
@@ -112,7 +115,7 @@ class Serie {
         $nbrTir10 = 0.0;
         for($i = 0; $i < $this->nbrVolee; $i++) {
             for($j = 0; $j < $this->nbrTir; $j++) {
-                if($this->serie[$numSerie][$i][$j] == 10) $nbrTir10++;
+                if($this->serie[$numSerie-1][$i][$j] == 10) $nbrTir10++;
             }
         }
         $pct10 = ($nbrTir10 / ($this->nbrTir * $this->nbrVolee)) * 100;
@@ -122,7 +125,7 @@ class Serie {
         $nbrTir9 = 0.0;
         for($i = 0; $i < $this->nbrVolee; $i++) {
             for($j = 0; $j < $this->nbrTir; $j++) {
-                if($this->serie[$numSerie][$i][$j] == 9) $nbrTir10++;
+                if($this->serie[$numSerie-1][$i][$j] == 9) $nbrTir9++;
             }
         }
         $pct9 = ($nbrTir9 / ($this->nbrTir * $this->nbrVolee)) * 100;
@@ -145,19 +148,43 @@ class Serie {
     //setter qui place le nombre de pts pour chaque tir
     //$data est de taille $nbrTirs et contient les valeurs des pts pour chaque tir
     public function setVolee($numSerie, $numVolee, $data) {
-        if(count($data) > $this->nbrTir)
+
+        foreach ($data as $fleche) {
+            if ($fleche > 10 || $fleche < 0) {
+                echo "<p>Erreur: pts de tir non valide</p>";
+                //exit();
+            }
+        }
+
+        if(count($data) > $this->nbrTir) {
             echo "<p>Erreur: trop de données de tir dans \$data</p>";
-        else if (count($data) < $this->nbrTir)
+            die();
+        } else if (count($data) < $this->nbrTir) {
             echo "<p>Erreur: il manque des données de tir dans \$data</p>";
-        else {
+            die();
+        } else {
             for($i = 0; $i < $this->nbrTir; $i++) {
-                $this->serie[$numSerie-1][$numVolee-1][$i] = $data[$i];
+                if($data[$i] != null) {
+                    $this->serie[$numSerie-1][$numVolee-1][$i] = $data[$i];
+                }
             }
         }
     }
 
+    public function setTir($numSerie, $numVolee, $numTir, $value) {
+        $this->serie[$numSerie-1][$numVolee-1][$numTir-1] = $value;
+    }
+
     public function getSerie() {
         return $this->serie;
+    }
+
+    public function getNbrVolee() {
+        return $this->nbrVolee;
+    }
+
+    public function getNbrTir() {
+        return $this->nbrTir;
     }
 
     public function getPtsSerie($numSerie) {
@@ -192,6 +219,7 @@ class Serie {
         return $this->getVoleeStat($numSerie, $numVolee)["Pct9"];
     }
 
+
     public function reset() {
         $this->nbrTir = 0;
         $this->serie = [];
@@ -200,13 +228,25 @@ class Serie {
 
 }
 
-$training = new Entrainement('nom', 'lieu', '', '10', '1', '1', 3, 10, 5, 1);
-$serie = new Serie($training);
-$data = [10, 0, 0, 2, 7];
-$serie->setVolee(1, 1, $data);
-$serie->setVolee(1, 2, $data);
-$arr = $serie->getSerie();
-$stats = $serie->getSerieStat(1);
-var_dump($stats);
+/*
+$training = new Entrainement('nom', 'lieu', '', '10', '1', '1', 2, 3, 10, 1);
+$serieController = new SerieController($training);
+$data = [9, 9, 9, 9, 9, 9, 9, 9, 9, 9];
+$data2 = [9, 9, 9, 9, 9, 9, 9, 9, 9, 9];
+$data3 = [9, 9, 9, 9, 9, 9, 9, 9, 9, 9];
+$data4 = [null, null, null, null, null, null, null, null, null, 5];
+$serieController->setVolee(1, 1, $data);
+$serieController->setVolee(1, 2, $data2);
+$serieController->setVolee(1, 3, $data3);
+$arr = $serieController->getSerie();
+$stats = $serieController->getSerieStat(1);
+var_dump($arr);
 
+$serieController->setVolee(1, 1, $data4);
+$arr = $serieController->getSerie();
+var_dump($arr);
+
+$serieController->setTir(1, 1, 10, 0);
+$arr = $serieController->getSerie();
+var_dump($arr);*/
 ?>
