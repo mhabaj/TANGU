@@ -7,11 +7,10 @@ class Arc
 {
     private $idArc, $idUser, $nom, $poids, $taille, $puissance, $type, $photo;
 
-    public function __construct($nom, $poids, $taille, $puissance, $type, $photo)
+    public function __construct($nom, $poids, $taille, $puissance, $type, $photo, $idUser)
     {
 
-        $this->idUser = 1 /*$_SESSION['ID']*/
-        ;
+        $this->idUser = $idUser;
         $this->nom = addslashes($nom);
         $this->poids = $poids;
         $this->taille = $taille;
