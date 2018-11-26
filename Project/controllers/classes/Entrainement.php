@@ -134,7 +134,7 @@ class entrainement
     }
 
 ////////////////////////////////////////////////////////////////////////////////////////////
-    function verifdateheure($dateheure)
+   public function verifdateheure($dateheure)
     {
 
 
