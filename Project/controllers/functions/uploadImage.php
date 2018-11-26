@@ -6,7 +6,7 @@ function uploadImage($Type)
 
 //-----------------------------------------------------
     //Nom de l'image 1
-    $userID = $idUser;
+    $userID = $_SESSION['ID'];
 
 
     if (!file_exists("assets/images/$Type/$userID")) {
@@ -14,7 +14,7 @@ function uploadImage($Type)
     }
 
 
-    $sousdossier = '../images/$Type/' . $userID . '/';
+    $sousdossier = 'assets/images/'.$Type.'/' . $userID . '/';
 
     $ph = basename($_FILES['photo']['name']);
 

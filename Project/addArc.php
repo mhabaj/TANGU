@@ -1,6 +1,7 @@
 <?php require('controllers/functions/control-session.php');
 include('controllers/classes/Arc.php');
 include('controllers/functions/functions.php');
+include('controllers/functions/uploadImage.php');
 
 
 ?>
@@ -32,7 +33,7 @@ include('controllers/functions/functions.php');
             <h1>Nouveau Arc</h1>
         </div>
         <div id="line">
-            <form method="POST">
+            <form method="POST" enctype="multipart/form-data">
                 <div class="sousline">
                     <h5>Nom de l'arc</h5><input type="text" max="" min="" value="" name="Nomarc">
                 </div>
@@ -56,10 +57,9 @@ include('controllers/functions/functions.php');
                 <div class="sousline">
                     <h5>Photo de l'arc</h5><input type="image" max="1024" min="1" value="" name="Photo">
                 </div>
-
+                <input type="hidden" name="MAX_FILE_SIZE" value="8388608">
                 <label for="photo"> Photo (JPG, JPEG, PNG or GIF | max.8 Mo) :</label><br/>
-
-                <input type="file" name="photo"/><br/>
+                <input type="file" id="photo" name="photo"/><br/>
                 <br>
 
                 <input type="submit" name="envoyerCreateArc"> </input>
@@ -67,14 +67,14 @@ include('controllers/functions/functions.php');
 
             <?php if (isset($_POST['envoyerCreateArc'])) {
 
-                include('controllers/functions/uploadImage.php');
+
+
                 $nom = htmlspecialchars(($_POST['Nomarc']));
                 $poids = $_POST['Poids'];
                 $taille = $_POST['Taille'];
                 $pwr = $_POST['Force'];
                 $type = htmlspecialchars($_POST['Type']);
 
-                // $photo = $_POST['photo'];
 
                 if (!empty($nom) && !empty($poids) && !empty($taille) && !empty($pwr) && !empty($type)) {
 
@@ -86,7 +86,6 @@ include('controllers/functions/functions.php');
 
 
                             $photo = uploadImage('arc');
-
 
                             $arc = new Arc($nom, $poids, $taille, $pwr, $type, $photo, $idUser);
 
