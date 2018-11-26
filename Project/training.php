@@ -1,5 +1,5 @@
 <?php
-require_once 'controllers/functions/control-session.php';
+require 'controllers/functions/control-session.php';
 $title = "Entrainements"; ?>
 <!DOCTYPE html>
 
@@ -40,7 +40,7 @@ $title = "Entrainements"; ?>
 
             include('controllers/functions/connexion_bdd.php'); //on se connect a la base et on envoie la requete
 
-            $reponse = $bdd->query("SELECT * FROM entrainement WHERE ID_USER='$idUser'");
+            $reponse = $bdd->query("SELECT * FROM entrainement WHERE ID_USER='$idUser' order by ID_ENT_USER asc ");
             $n = 1;
             // On affiche chaque entrée une à une
             while ($donnees = $reponse->fetch()) {

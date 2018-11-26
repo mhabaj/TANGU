@@ -1,3 +1,4 @@
+<?php require('controllers/functions/control-session.php'); ?>
 <!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/html">
@@ -24,12 +25,79 @@
     <p> Nouvelle entrainement:</p>
 
     <form method="POST">
-        <input name="nom" placeholder="Nom " maxlength='30' type="text" value="">
-        <input name="lieu" placeholder="Lieu " maxlength='200' type="text" value="">
-        <input name="date" placeholder="Date" type="datetime-local" value="">
-        <input name="distance" placeholder="Distance" min="1" max="126" type="number" value="">
-        <input name="arc" placeholder="arc" type="number" value="">
-        <input name="blason" placeholder="blason" type="number" value="">
+        <input name="nom" placeholder="Nom " maxlength='30' type="text" value=""><br>
+        <input name="lieu" placeholder="Lieu " maxlength='200' type="text" value=""><br>
+        <input name="date" placeholder="Date" type="datetime-local" value=""><br>
+        <input name="distance" placeholder="Distance" min="1" max="126" type="number" value=""><br>
+
+
+        <!-- SELECT DES ARCS -->
+        <select name="arc">
+
+            <option value="null" disabled selected>Choisir un arc</option>
+
+
+            <?php
+
+
+            include('controllers/functions/connexion_bdd.php'); //on se connect a la base et on envoie la requete
+
+            $reponse = $bdd->query("SELECT ID_ARC, NOMARC FROM arc where ID_USER='$idUser' order by ID_ARC");
+            $n = 1;
+            // On affiche chaque entrée une à une
+            while ($donnees = $reponse->fetch()) {
+
+
+                ?>
+
+
+                <option value="<?php echo $donnees['ID_ARC']; ?>"><?php echo $donnees['NOMARC']; ?></option>
+
+
+                <?php
+                $n++;
+            }
+
+            $reponse->closeCursor(); // Termine le traitement de la requête
+
+            ?>
+        </select>
+
+        <!-- BLASON: -->
+
+
+        <select name="blason">
+
+            <option value="null" disabled selected>Choisir un Blason</option>
+
+
+            <?php
+
+
+            include('controllers/functions/connexion_bdd.php'); //on se connect a la base et on envoie la requete
+
+            $reponse = $bdd->query("SELECT ID_BLAS, NOMBLAS FROM blason where ID_USER='$idUser' order by ID_BLAS");
+            $n = 1;
+            // On affiche chaque entrée une à une
+            while ($donnees = $reponse->fetch()) {
+
+
+                ?>
+
+
+                <option value="<?php echo $donnees['ID_BLAS']; ?>"><?php echo $donnees['NOMBLAS']; ?></option>
+
+
+                <?php
+                $n++;
+            }
+
+            $reponse->closeCursor(); // Termine le traitement de la requête
+
+            ?>
+        </select>
+
+
         <input name="serie" placeholder="Serie(s)" min="1" max="5" type="number" value="">
         <input name="volee" placeholder="Volée(s)" min="1" max="10" type="number" value="">
         <input name="fleche" placeholder="Fleche(s)" min="1" max="10" type="number" value="">

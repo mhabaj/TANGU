@@ -73,7 +73,8 @@ if ((!isset($_POST['Serie']) and !isset($_POST['new_ID_Ent'])) and (!isset($_GET
                 <form method="POST" name="voleeForm" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
 
                     <select name='volee' onchange='this.form.submit()'>
-                        <option value="<?php echo "null"; ?>"> >>CHOISIR UNE VOLEE<<</option>
+                        <option value="<?php echo "null"; ?>" disabled selected> >>CHOISIR UNE VOLEE<<</option>
+
 
 
                         <?php

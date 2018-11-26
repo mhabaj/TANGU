@@ -18,7 +18,9 @@
 
 
 
-       <select name="Serie" form="serieform">
+       <select name="Serie" form="serieform" onchange='this.form.submit()'>
+           <option value="null" disabled selected>Choisir une série</option>
+
 
 
            <?php
@@ -49,7 +51,6 @@
            ?>
        </select>
            <input name="new_ID_Ent" type="hidden" value="<?php echo $new_ID_Ent ?>">
-           <input type="submit">
 
        </form>
        <?php
