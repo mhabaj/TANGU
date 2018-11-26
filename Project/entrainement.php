@@ -146,7 +146,7 @@ if ((!isset($_POST['Serie']) and !isset($_POST['new_ID_Ent'])) and (!isset($_GET
                                 <input name="FID<?php echo $n; ?>" type="hidden" type="number"
                                        value="<?php echo $donnees['ID_FLECHE']; ?>">
                                 <input id="Score_Submit" name="Score<?php echo $n; ?>" type="number"
-                                       value="<?php echo $donnees['PTSFLECHE']; ?>">
+                                      min="0" max="10" value="<?php echo $donnees['PTSFLECHE']; ?>">
 
 
                                 <?php
