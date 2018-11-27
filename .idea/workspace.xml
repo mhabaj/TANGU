@@ -2,36 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b0c67b52-5667-4bb0-9d8b-bfd1329056e4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/php-test-framework.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gestion/Diagramme.gan" beforeDir="false" afterPath="$PROJECT_DIR$/Gestion/Diagramme.gan" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gestion/UseCaseDiagram (1).mdj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gestion/risques.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/ChoisirSerie.php" beforeDir="false" afterPath="$PROJECT_DIR$/Project/ChoisirSerie.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/add.php" beforeDir="false" afterPath="$PROJECT_DIR$/Project/add.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/add1.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/addArc.php" beforeDir="false" afterPath="$PROJECT_DIR$/Project/addArc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/addBlason.php" beforeDir="false" afterPath="$PROJECT_DIR$/Project/addBlason.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/assets/csss/add.css" beforeDir="false" afterPath="$PROJECT_DIR$/Project/assets/csss/add.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/assets/csss/addArc.css" beforeDir="false" afterPath="$PROJECT_DIR$/Project/assets/csss/addArc.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/assets/csss/addBlason.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/assets/csss/edit.css" beforeDir="false" afterPath="$PROJECT_DIR$/Project/assets/csss/edit.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/assets/csss/entrainement1.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/assets/csss/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/Project/assets/csss/header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/controllers/functions/control-session.php" beforeDir="false" afterPath="$PROJECT_DIR$/Project/controllers/functions/control-session.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/controllers/functions/uploadImage.php" beforeDir="false" afterPath="$PROJECT_DIR$/Project/controllers/functions/uploadImage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gestion/Sprint Tracker.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Gestion/Sprint Tracker.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/assets/images/arc/1/PK-BOX-TREASURE-SML-01-popup.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Project/controllers/logs/logs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Project/controllers/logs/logs.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/Project/edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/entrainement.php" beforeDir="false" afterPath="$PROJECT_DIR$/Project/entrainement.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/training.php" beforeDir="false" afterPath="$PROJECT_DIR$/Project/training.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TANGUBDD/MCDV1.bcd" beforeDir="false" afterPath="$PROJECT_DIR$/TANGUBDD/MCDV1.bcd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TANGUBDD/MCDV1.cdm" beforeDir="false" afterPath="$PROJECT_DIR$/TANGUBDD/MCDV1.cdm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TANGUBDD/MLDV1.bld" beforeDir="false" afterPath="$PROJECT_DIR$/TANGUBDD/MLDV1.bld" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TANGUBDD/MLDV1.ldm" beforeDir="false" afterPath="$PROJECT_DIR$/TANGUBDD/MLDV1.ldm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TANGUBDD/MPDV1.bpd" beforeDir="false" afterPath="$PROJECT_DIR$/TANGUBDD/MPDV1.bpd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TANGUBDD/MPDV1.pdm" beforeDir="false" afterPath="$PROJECT_DIR$/TANGUBDD/MPDV1.pdm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TANGUBDD/SQLFinalPostStats.sql" beforeDir="false" afterPath="$PROJECT_DIR$/TANGUBDD/SQLFinalPostStats.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TANGUBDD/TIREALARC.prj" beforeDir="false" afterPath="$PROJECT_DIR$/TANGUBDD/TIREALARC.prj" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,19 +37,19 @@
     <session id="1968479240">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="5" />
+          <entry key="project.closed" value="6" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.7" value="2" />
-          <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="6" />
+          <entry key="project.open.time.9" value="2" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="165" />
-          <entry key="php" value="1666" />
+          <entry key="php" value="1719" />
           <entry key="sql" value="15" />
           <entry key="txt" value="17" />
         </counts>
@@ -82,7 +57,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="165" />
-          <entry key="PHP" value="1666" />
+          <entry key="PHP" value="1719" />
           <entry key="PLAIN_TEXT" value="17" />
           <entry key="Scratch" value="15" />
         </counts>
@@ -90,14 +65,14 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="3" />
-          <entry key="php" value="59" />
+          <entry key="php" value="63" />
           <entry key="sql" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="3" />
-          <entry key="PHP" value="59" />
+          <entry key="PHP" value="63" />
           <entry key="Scratch" value="2" />
         </counts>
       </usages-collector>
@@ -107,23 +82,18 @@
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Project/addBlason.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Project/addArc.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1530">
-              <caret line="90" lean-forward="true" selection-start-line="90" selection-end-line="90" />
+            <state relative-caret-position="1207">
+              <caret line="71" selection-start-line="71" selection-end-line="71" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Project/tests/ArcTest.php">
+        <entry file="file://$PROJECT_DIR$/Project/addArc.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="68" lean-forward="true" selection-start-line="18" selection-start-column="68" selection-end-line="18" selection-end-column="68" />
+            <state relative-caret-position="1190">
+              <caret line="70" selection-start-line="70" selection-end-line="70" />
             </state>
           </provider>
         </entry>
@@ -131,8 +101,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Project/controllers/classes/Arc.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="850">
-              <caret line="50" column="34" lean-forward="true" selection-start-line="50" selection-start-column="34" selection-end-line="50" selection-end-column="34" />
+            <state relative-caret-position="136">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Project/controllers/classes/Blason.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="748">
+              <caret line="44" column="34" selection-start-line="44" selection-start-column="34" selection-end-line="44" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Project/controllers/functions/uploadImage.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="45" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -142,11 +130,20 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Project/add.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3536">
-              <caret line="208" column="17" selection-start-line="208" selection-start-column="17" selection-end-line="208" selection-end-column="17" />
+            <state relative-caret-position="272">
+              <caret line="63" column="17" lean-forward="true" selection-start-line="63" selection-start-column="17" selection-end-line="63" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Project/controllers/classes/Entrainement.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="952">
+              <caret line="56" column="73" selection-start-line="56" selection-start-column="73" selection-end-line="56" selection-end-column="73" />
             </state>
           </provider>
         </entry>
@@ -180,10 +177,11 @@
         <option value="$PROJECT_DIR$/Project/entrainement.php" />
         <option value="$PROJECT_DIR$/Project/controllers/functions/control-session.php" />
         <option value="$PROJECT_DIR$/Project/training.php" />
-        <option value="$PROJECT_DIR$/Project/add.php" />
         <option value="$PROJECT_DIR$/Project/add1.php" />
         <option value="$PROJECT_DIR$/Project/assets/csss/add.css" />
         <option value="$PROJECT_DIR$/Project/addArc.php" />
+        <option value="$PROJECT_DIR$/Project/addBlason.php" />
+        <option value="$PROJECT_DIR$/Project/add.php" />
       </list>
     </option>
   </component>
@@ -199,7 +197,7 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="953" />
+    <option name="x" value="-7" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
@@ -211,6 +209,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -222,6 +221,12 @@
               <item name="TANGU" type="b2602c69:ProjectViewProjectNode" />
               <item name="TANGU" type="462c0819:PsiDirectoryNode" />
               <item name="Project" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TANGU" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TANGU" type="462c0819:PsiDirectoryNode" />
+              <item name="Project" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TANGU" type="b2602c69:ProjectViewProjectNode" />
@@ -247,19 +252,12 @@
               <item name="TANGU" type="b2602c69:ProjectViewProjectNode" />
               <item name="TANGU" type="462c0819:PsiDirectoryNode" />
               <item name="Project" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TANGU" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TANGU" type="462c0819:PsiDirectoryNode" />
-              <item name="Project" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -315,12 +313,13 @@
       <workItem from="1543275508149" duration="2711000" />
       <workItem from="1543280177592" duration="584000" />
       <workItem from="1543318319069" duration="4860000" />
-      <workItem from="1543325397884" duration="457000" />
+      <workItem from="1543325397884" duration="4249000" />
+      <workItem from="1543330373933" duration="616000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37399000" />
+    <option name="totallyTimeSpent" value="41807000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -335,7 +334,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18336888" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18550107" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -354,7 +353,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.09594883" />
+      <window_info anchor="right" id="Database" order="3" weight="0.19693655" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -396,20 +395,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="42" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project/controllers/classes/Blason.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="116" column="35" selection-start-line="116" selection-start-column="20" selection-end-line="116" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project/controllers/functions/uploadImage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="89" selection-start-line="33" selection-start-column="89" selection-end-line="33" selection-end-column="89" />
         </state>
       </provider>
     </entry>
@@ -461,13 +446,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3519">
           <caret line="207" column="31" selection-start-line="207" selection-start-column="31" selection-end-line="207" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project/controllers/classes/Entrainement.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
         </state>
       </provider>
     </entry>
@@ -524,26 +502,7 @@
         <state relative-caret-position="-765" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project/addBlason.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project/views/add.view.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project/add1.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3196">
-          <caret line="188" column="32" lean-forward="true" selection-start-line="188" selection-start-column="32" selection-end-line="188" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project/add.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3536">
-          <caret line="208" column="17" selection-start-line="208" selection-start-column="17" selection-end-line="208" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/add1.php" />
     <entry file="file://$PROJECT_DIR$/Project/tests/ArcTest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -551,17 +510,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project/controllers/classes/Arc.php">
+    <entry file="file://$PROJECT_DIR$/Project/addBlason.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="50" column="34" lean-forward="true" selection-start-line="50" selection-start-column="34" selection-end-line="50" selection-end-column="34" />
+        <state relative-caret-position="1207">
+          <caret line="71" selection-start-line="71" selection-end-line="71" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Project/addArc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1530">
-          <caret line="90" lean-forward="true" selection-start-line="90" selection-end-line="90" />
+        <state relative-caret-position="1190">
+          <caret line="70" selection-start-line="70" selection-end-line="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/controllers/classes/Arc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/controllers/classes/Blason.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="44" column="34" selection-start-line="44" selection-start-column="34" selection-end-line="44" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/controllers/functions/uploadImage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="45" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/views/add.view.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/controllers/classes/Entrainement.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="952">
+          <caret line="56" column="73" selection-start-line="56" selection-start-column="73" selection-end-line="56" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/add.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="63" column="17" lean-forward="true" selection-start-line="63" selection-start-column="17" selection-end-line="63" selection-end-column="17" />
         </state>
       </provider>
     </entry>
