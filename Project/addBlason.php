@@ -13,13 +13,12 @@ include ('controllers/functions/functions.php');
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Nouveau Blason</title>
         
-        <link rel="stylesheet" href="assets/css/header.css">
-        <link rel="stylesheet" href="assets/css/addArc.css">
-        <link rel="stylesheet" href="assets/css/navbar.css">
-        <link rel="stylesheet" href="assets/css/responsive.css">
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/csss/header.css">
+        <link rel="stylesheet" href="assets/csss/navbar.css">
+        <link rel="stylesheet" href="assets/csss/responsive.css">
+        <link rel="stylesheet" href="assets/csss/bootstrap.min.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-        <link rel="sylesheet" href="assets/css/addArc.css">
+        <link rel="sylesheet" href="assets/csss/addBlason.css">
 		
         <script src="js/bootstrap.min.js"></script>
     </head>
@@ -31,6 +30,7 @@ include ('controllers/functions/functions.php');
                     <h1>Nouveau Blason</h1>
               </div>
                <div id="line">
+			   
 			   
 			   <form method="POST">
 			   

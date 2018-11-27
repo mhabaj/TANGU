@@ -1,10 +1,73 @@
-#h {
-	margin-left: 35%;
-}
 #input{
+	margin-top: 0%;
 	margin-left: 35%;
 	border: solid 1px;
 }
 .sousline{
-	margin-top: 4%;
+	margin-top: 10%;
+	font-size: 11px;
+	font-style: solid;
+	
 }
+
+ 
+ .caracs{
+ 
+	font-size:20px;
+ 
+ }
+ 
+ #droite{
+	 margin-top:2%;
+	 margin-left:50%;
+	 z-index : 1;
+	 
+ }
+ 
+ #gauche{
+	margin-left:2%;
+	margin-top: 2%;
+	z-index : 1;
+	 
+ }
+
+ #submitArc{
+ 
+		margin-top:5%;
+		font-size:11px;
+	
+ }
+
+
+.messageSubmitArc{
+	
+	font-style:italic;
+
+	
+
+}
+
+#contentBox {
+    border-style: none;
+    position: fixed;
+    top: 12%;
+    height: 78%;
+    width: 100%;
+    left: 0%;
+}
+
+#contentBox div > button {
+    position: fixed;
+    width: 100%;
+    border: none;
+}
+
+#contentBox div {
+    border-style: none;
+    position: fixed;
+    left: 0;
+    width: 100%;
+}
+
+
+

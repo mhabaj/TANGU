@@ -9,6 +9,8 @@ if (!empty($_SESSION['Serie']) && !empty($_SESSION['new_ID_Ent'])) {
         $_POST['new_ID_Ent'] = $_SESSION['new_ID_Ent'];
     }
 }
+
+
 if ((!isset($_POST['Serie']) and !isset($_POST['new_ID_Ent'])) and (!isset($_GET['Serie']) and !isset($_GET['new_ID_Ent']))) {
 
     header('Location:training.php');
@@ -74,7 +76,6 @@ if ((!isset($_POST['Serie']) and !isset($_POST['new_ID_Ent'])) and (!isset($_GET
 
                     <select name='volee' onchange='this.form.submit()'>
                         <option value="<?php echo "null"; ?>" disabled selected> >>CHOISIR UNE VOLEE<<</option>
-
 
 
                         <?php
@@ -146,7 +147,7 @@ if ((!isset($_POST['Serie']) and !isset($_POST['new_ID_Ent'])) and (!isset($_GET
                                 <input name="FID<?php echo $n; ?>" type="hidden" type="number"
                                        value="<?php echo $donnees['ID_FLECHE']; ?>">
                                 <input id="Score_Submit" name="Score<?php echo $n; ?>" type="number"
-                                      min="0" max="10" value="<?php echo $donnees['PTSFLECHE']; ?>">
+                                       min="0" max="10" value="<?php echo $donnees['PTSFLECHE']; ?>">
 
 
                                 <?php
@@ -202,10 +203,10 @@ if ((!isset($_POST['Serie']) and !isset($_POST['new_ID_Ent'])) and (!isset($_GET
                             }
                             if ($j = $n - 1) {
 
-                               // echo('<p> Score mis à jour. </p>');
+                                echo('<p> Score mis à jour. </p>');
 
-                               // header('Location:views/redirect.php');
-                                header('Location:entrainement.php');
+                                header('Location:views/redirect.php');
+                                //  header('Location:entrainement.php');
 
                             }
 

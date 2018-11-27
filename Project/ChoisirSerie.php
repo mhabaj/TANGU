@@ -1,3 +1,7 @@
+<?php
+require_once 'controllers/functions/control-session.php';
+?>
+
    <?php
 
    if (!isset($_GET['new_ID_Ent'])){

@@ -1,40 +1,48 @@
-<?php require('controllers/functions/control-session.php'); ?>
+<?php
+require_once 'controllers/functions/control-session.php';
+?>
+
 <!DOCTYPE html>
 
-<html lang="en" xmlns="http://www.w3.org/1999/html">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Nouvel Entrainement</title>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Nouveau Entrainement</title>
+        
+        <link rel="stylesheet" href="assets/csss/header.css">
+        <link rel="stylesheet" href="assets/csss/navbar.css">
+        <link rel="stylesheet" href="assets/csss/responsive.css">
+        <link rel="stylesheet" href="assets/csss/bootstrap.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+        <link rel="sylesheet" href="assets/csss/addBlason.css">
+		
+        <script src="js/bootstrap.min.js"></script>
+    </head>
+    
+    <body>
+        <div class="container-fluid" id="mainBox">
+            <div class="container-fluid header" id="headerBox">
+                <div id="titleBox">
+                    <h1>Nouveau Ent</h1>
+              </div>
+               <div id="line">
+			   
+			   
+				<form method="POST">
+			   
+                 <div class="sousline">
+				    <input name="nom" placeholder="Nom " maxlength='30' type="text" value=""><br>
+					<input name="lieu" placeholder="Lieu " maxlength='200' type="text" value=""><br>
+					<input name="date" placeholder="Date" type="datetime-local" value=""><br>
+					<input name="distance" placeholder="Distance" min="1" max="126" type="number" value=""><br>
+					<select name="arc">
 
-    <link rel="stylesheet" href="assets/css/header.css">
-    <link rel="stylesheet" href="">
-    <link rel=stylesheet href="assets/css/navbar.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
-          integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+					<option value="null" disabled selected>Choisir un arc</option>
 
-    <script src="assets/js/bootstrap.min.js"></script>
-</head>
-
-<body>
-
-<div class="contenu">
-    <p> Nouvelle entrainement:</p>
-
-    <form method="POST">
-        <input name="nom" placeholder="Nom " maxlength='30' type="text" value=""><br>
-        <input name="lieu" placeholder="Lieu " maxlength='200' type="text" value=""><br>
-        <input name="date" placeholder="Date" type="datetime-local" value=""><br>
-        <input name="distance" placeholder="Distance" min="1" max="126" type="number" value=""><br>
-
-
-        <!-- SELECT DES ARCS -->
-        <select name="arc">
-
-            <option value="null" disabled selected>Choisir un arc</option>
+				</form>
+			</div>
 
 
             <?php
@@ -111,7 +119,7 @@
 
     if (isset($_POST['creationEnt'])) {
         require('controllers/classes/entrainement.php');
-        $ent1 = new entrainement($_POST['nom'], $_POST['lieu'], $_POST['date'], $_POST['distance'], $_POST['arc'], $_POST['blason'], $_POST['serie'], $_POST['volee'], $_POST['fleche'], 1);
+        $ent1 = new entrainement($_POST['nom'], $_POST['lieu'], $_POST['date'], $_POST['distance'], $_POST['arc'], $_POST['blason'], $_POST['serie'], $_POST['volee'], $_POST['fleche'], $idUser);
 
         /*
             $ID_ENT_USER = $ent1->GetEntID();
