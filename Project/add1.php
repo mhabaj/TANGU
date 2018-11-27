@@ -3,72 +3,96 @@ require_once 'controllers/functions/control-session.php';
 ?>
 
 <!DOCTYPE html>
+<html>
+<head>
 
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Nouveau Entrainement</title>
-        
-        <link rel="stylesheet" href="assets/csss/header.css">
-        <link rel="stylesheet" href="assets/csss/navbar.css">
-        <link rel="stylesheet" href="assets/csss/responsive.css">
-        <link rel="stylesheet" href="assets/csss/bootstrap.min.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-        <link rel="sylesheet" href="assets/csss/addBlason.css">
-		
-        <script src="js/bootstrap.min.js"></script>
-    </head>
-    
-    <body>
-        <div class="container-fluid" id="mainBox">
-            <div class="container-fluid header" id="headerBox">
-                <div id="titleBox">
-                    <h1>Nouveau Ent</h1>
-              </div>
-               <div id="line">
-			   
-			   
-				<form method="POST">
-			   
-                 <div class="sousline">
-				    <input name="nom" placeholder="Nom " maxlength='30' type="text" value=""><br>
-					<input name="lieu" placeholder="Lieu " maxlength='200' type="text" value=""><br>
-					<input name="date" placeholder="Date" type="datetime-local" value=""><br>
-					<input name="distance" placeholder="Distance" min="1" max="126" type="number" value=""><br>
-					<select name="arc">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nouveau Entrainement</title>
 
-					<option value="null" disabled selected>Choisir un arc</option>
+    <link rel="stylesheet" href="assets/csss/header.css">
+    <link rel="stylesheet" href="assets/csss/navbar.css">
+    <link rel="stylesheet" href="assets/csss/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/csss/add.css">
 
-				</form>
-			</div>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container-fluid" id="mainBox">
+    <div class="container-fluid header" id="headerBox">
+        <div id="titleBox">
+            <h1>Nouveau Ent</h1>
+        </div>
+        <div id="line"></div>
+
+
+<div class="container">
+  <form action="/action_page.php">
+    <div class="row">
+      <div class="col-25">
+        <label for="Nom">Nom</label>
+      </div>
+      <div class="col-75">
+          <input name="nom" placeholder="Nom " maxlength='30' type="text" value="">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="lieu">Lieu</label>
+      </div>
+      <div class="col-75">
+          <input name="lieu" placeholder="Lieu " maxlength='200' type="text" value="">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="date">Date</label>
+      </div>
+      <div class="col-75">
+          <input name="date" placeholder="Date" type="datetime-local" value="">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="distance">Distance</label>
+      </div>
+      <div class="col-75">
+          <input name="distance" placeholder="Distance" min="1" max="126" type="number" value=""><br>
+      </div>
+    </div>
+
+      <div class "row">
+      <select name="arc">
+      <option value="null" disabled selected>Choisir un arc</option>
+    </div>
+
+
+        <?php
+
+
+        include('controllers/functions/connexion_bdd.php'); //on se connect a la base et on envoie la requete
+
+        $reponse = $bdd->query("SELECT ID_ARC, NOMARC FROM arc where ID_USER='$idUser' order by ID_ARC");
+        $n = 1;
+        // On affiche chaque entrée une à une
+        while ($donnees = $reponse->fetch()) {
+
+
+            ?>
+
+
+            <option value="<?php echo $donnees['ID_ARC']; ?>"><?php echo $donnees['NOMARC']; ?></option>
 
 
             <?php
+            $n++;
+        }
 
+        $reponse->closeCursor(); // Termine le traitement de la requête
 
-            include('controllers/functions/connexion_bdd.php'); //on se connect a la base et on envoie la requete
-
-            $reponse = $bdd->query("SELECT ID_ARC, NOMARC FROM arc where ID_USER='$idUser' order by ID_ARC");
-            $n = 1;
-            // On affiche chaque entrée une à une
-            while ($donnees = $reponse->fetch()) {
-
-
-                ?>
-
-
-                <option value="<?php echo $donnees['ID_ARC']; ?>"><?php echo $donnees['NOMARC']; ?></option>
-
-
-                <?php
-                $n++;
-            }
-
-            $reponse->closeCursor(); // Termine le traitement de la requête
-
-            ?>
+        ?>
         </select>
 
         <!-- BLASON: -->
@@ -110,30 +134,32 @@ require_once 'controllers/functions/control-session.php';
         <input name="volee" placeholder="Volée(s)" min="1" max="10" type="number" value="">
         <input name="fleche" placeholder="Fleche(s)" min="1" max="10" type="number" value="">
         </Br></br>
-        <button type="submit" name="creationEnt">
-            Créer l'entrainement
-        </button>
-    </form>
+        </form>
 
-    <?php
+        <?php
 
-    if (isset($_POST['creationEnt'])) {
-        require('controllers/classes/entrainement.php');
-        $ent1 = new entrainement($_POST['nom'], $_POST['lieu'], $_POST['date'], $_POST['distance'], $_POST['arc'], $_POST['blason'], $_POST['serie'], $_POST['volee'], $_POST['fleche'], $idUser);
+        if (isset($_POST['creationEnt'])) {
+            require('controllers/classes/entrainement.php');
+            $ent1 = new entrainement($_POST['nom'], $_POST['lieu'], $_POST['date'], $_POST['distance'], $_POST['arc'], $_POST['blason'], $_POST['serie'], $_POST['volee'], $_POST['fleche'], $idUser);
 
-        /*
-            $ID_ENT_USER = $ent1->GetEntID();
-            header("Location: ChoisirSerie.php?new_ID_Ent=$ID_ENT_USER");
-            die();
-    */
-    }
+            /*
+                $ID_ENT_USER = $ent1->GetEntID();
+                header("Location: ChoisirSerie.php?new_ID_Ent=$ID_ENT_USER");
+                die();
+        */
+        }
 
 
-    ?>
+        ?>
+
+        <div class="row">
+            <input type="submit" value="Submit">
+        </div>
 
 
+    </div>
+  </form>
 </div>
-
 
 <div class="container-fluid footer" id="footerBox">
     <div class="container" id="homeBox">
@@ -171,21 +197,6 @@ require_once 'controllers/functions/control-session.php';
         </button>
     </div>
     <div class="container" id="addBox">
-        <button id="addBtn">
-            <a href="add.php">
-                <i class="fas fa-plus fa-2x" style="color: white"></i>
-            </a>
-        </button>
-        <button id="addBtn2">
-            <a href="add.php">
-                <i class="fas fa-plus fa-lg" style="color: white"></i>
-            </a>
-        </button>
-        <button id="addBtn3">
-            <a href="add.php">
-                <i class="fas fa-plus fa-3x" style="color: white"></i>
-            </a>
-        </button>
     </div>
     <div class="container" id="editBox">
         <button id="editBtn">
@@ -221,7 +232,6 @@ require_once 'controllers/functions/control-session.php';
             </a>
         </button>
     </div>
-</div>
 </div>
 
 

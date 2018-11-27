@@ -10,7 +10,7 @@ $title = "Entrainements"; ?>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title><?= $title ?></title>
 
-    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/csss/header.css">
     <link rel="stylesheet" href="assets/css/edit.css">
     <link rel="stylesheet" href="assets/css/navbar.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
