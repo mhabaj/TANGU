@@ -1,0 +1,84 @@
+html, body {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+#mainBox {
+    border-style: none;
+    height: 100%;
+}
+
+#footerBox {
+    border-style: none;
+    border-color: red;
+    width: 100%;
+    height: 10%;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    box-shadow: -1px 0px 3px grey;
+}
+
+#footerBox div {
+    border-style: none;
+    max-width: 20%;
+    width: 20%;
+    height: 10%;
+    position: fixed;
+    bottom: 0px;
+}
+
+#homeBox {
+    left: 0px;
+}
+
+#statsBox {
+    left: 20%;
+}
+
+#addBox {
+    left: 40%;
+}
+
+#editBox {
+    left: 60%;
+}
+
+#accountBox {
+    left: 80%;
+}
+
+/****** BUTTONS ********/
+
+#footerBox button {
+    background-color: white;
+    border-style: none;
+    max-width: 20%;
+    max-height: 10%;
+    width: 20%;
+    height: 10%;
+    position: fixed;
+    bottom: 0px;
+}
+
+#homeBtn {
+    left: 0%;
+}
+
+#statsBtn {
+    left: 20%;
+}
+
+#addBtn {
+    left: 40%;
+}
+
+#editBtn {
+    left: 60%;
+}
+
+#accountBtn {
+    left: 80%;
+}
