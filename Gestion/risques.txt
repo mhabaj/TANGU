@@ -1,4 +1,0 @@
-Android - interface differente, difficulté pour les tests.
-PHP,JS,MySQL - language pas connu par toute l'équipe.
-Formation sur API PHP et JS pour les graph.
-SCRUM : libre docn plus difficile pour débutants.
