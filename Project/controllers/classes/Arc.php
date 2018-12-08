@@ -181,7 +181,7 @@ class Arc {
 	}
     
     public function __destruct(){
-        ;
+
     }
 }
 //$nom = "Nom Arc";
