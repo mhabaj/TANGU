@@ -12,7 +12,7 @@
        ?>
 
 
-       <p> Quel serie voudrez vous manipuler?</p>
+       <p> Série en cours: </p>
 
        <form action="entrainement.php" method="POST" id="serieform">
 

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?PowerDesigner signature="Workspace" version="16.6.1.5066"?>
+<!-- Veuillez ne pas modifier ce fichier -->
+
+<Workspace>
+	<Local Expanded="Yes">
+		<Model Expanded="Yes" ID="{87F4FDE9-5564-400D-B0F3-FE250B9308FD}" Name="TIREALARC" Type="{FF4B6538-9856-42CF-B9B9-304ED370CEAA}" URL="TIREALARCV2.prj"/>
+	</Local>
+	<BrowserModule Name="Repository"/>
+</Workspace>
