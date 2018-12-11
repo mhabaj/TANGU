@@ -22,12 +22,16 @@ class SerieController {
         $this->nbrSerie = $training->getNbrSerie();
         $this->nbrVolee = $training->getNbrVolee();
         $this->nbrTir = $training->getNbrTir();
+
+        //Fill series elements with empty arrays
         $this->serie = array_fill(0, $training->getNbrSerie(), []);
 
+        //Fill volee elements with empty arrays
         for ($i = 0; $i < $this->nbrSerie; $i++) {
             $this->serie[$i] = array_fill(0, $this->nbrVolee, []);
         }
 
+        //Fill tirs elements with 0
         for ($j = 0; $j < $this->nbrSerie; $j++) {
             for ($k = 0; $k < $this->nbrVolee; $k++) {
                 $this->serie[$j][$k] = array_fill(0, $this->nbrTir, 0);
@@ -36,9 +40,15 @@ class SerieController {
 
     }
 
+    /*
+     * Return a dictionary of stats for a specific volee
+     * @param int, int The serie number and the volee number
+     * @return dictionary Returns the stats in a dictionary form
+     */
     public function getVoleeStat($numSerie, $numVolee) {
 
         if($numSerie > $this->nbrSerie || $numVolee > $this->nbrVolee) {
+            throw new Exception('les stats pour la volee demandée n\'existent pas');
             echo "Erreur: cette serie ou cette volee n'existe pas";
             die();
         }

@@ -27,12 +27,14 @@ class Serie {
 
     public function insertData() {
         if(!$this->checkVolees()) {
-            echo "<p>Erreur: les tirs ne sont pas valides</p>";
+            throw new Exception('les tirs ne sont pas valides');
+            //echo "<p>Erreur: les tirs ne sont pas valides</p>";
             die();
         }
 
         if(!$this->checkIdEnt()) {
-            echo "<p>Erreur: on ne peut pas insérées plusieurs fois pour un meme idEnt</p>";
+            throw new Exception("Can't insert more than once for the same idEnt");
+            //echo "<p>Erreur: on ne peut pas insérées plusieurs fois pour un meme idEnt</p>";
             die();
         }
 
@@ -90,7 +92,7 @@ class Serie {
 
                     $stmt->execute();
                     echo "<p>Succès: données de série insérées</p>";
-                } catch (PDOException $e) {
+                } catch (Exception $e) {
                     die("Erreur insertion stats volee: " . $e->getMessage());
                 }
             }
@@ -155,4 +157,8 @@ $data = [10, 0, 9, 2, 10];
 $serieController->setVolee(1, 1, $data);
 $serieController->setVolee(1, 2, $data);
 $serieModel = new Serie($serieController);
-$serieModel->insertData();
+try {
+    $serieModel->insertData();
+} catch (Exception $e) {
+    echo 'Message: ' .$e->getMessage();
+}
