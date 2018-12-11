@@ -25,6 +25,7 @@ class Log {
             $msg = "[Message: " . $message . "]";
             $location = "[Location: " . $_SERVER['PHP_SELF'] ."]";
             $time = @date('[d/m/Y:H:i:s]');
+			
             
             $text = $msg_type . $sep . $msg . $sep . $location . $sep . $time . PHP_EOL;
             
@@ -49,13 +50,9 @@ class Log {
     }
 }
 
-$logfile = new Log('../logs/logs.txt');
 
-//$myfile = new Log('../logs/logs.txt');
+$logFile = new Log('controllers/logs/logs.txt');
 //$myfile->open();
 //$myfile->write('Erreur log', 'Erreur');
 //$myfile->close();
-
-
-
 ?>

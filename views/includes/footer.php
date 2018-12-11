@@ -1,3 +1,12 @@
+
+
+
+
+
+
+
+
+
 <div class="container-fluid footer" id="footerBox">
     <div class="container" id="homeBox">
         <button id="homeBtn">
@@ -87,9 +96,10 @@
 </div>
 <script>
     let title = document.title;
-    let titles = ["Entrainement", "Statistiques", "Personnaliser", "Mon Compte"];
+    let titles = ["Entrainement", "Statistiques", "Nouvel Entrainement", "Personnaliser", "Mon Compte"];
     $training = document.getElementById('trainingLogo');
     $stats = document.getElementById('statsLogo');
+    $add = document.getElementById('addLogo');
     $edit = document.getElementById('editLogo');
     $account = document.getElementById('accountLogo');
     switch (title) {
@@ -100,9 +110,12 @@
             $stats.style.color = "rgba(0, 0, 0, 0.9)";
             break;
         case titles[2]:
-            $edit.style.color = "rgba(0, 0, 0, 0.9)";
+            $add.style.color = "rgba(0, 0, 0, 0.9)";
             break;
         case titles[3]:
+            $edit.style.color = "rgba(0, 0, 0, 0.9)";
+            break;
+        case titles[4]:
             $account.style.color = "rgba(0, 0, 0, 0.9)";
             break;
         default:
