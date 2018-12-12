@@ -1,3 +1,4 @@
+<canvas id="confetti"></canvas>
 <div class="container-fluid" id="mainBox">
     <!--
     <div id="titleBox">
@@ -23,7 +24,7 @@
     </div>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src='https://unpkg.com/panzoom@7.0.2/dist/panzoom.min.js'></script>
+<script src="../assets/js/confetti-js-master/dist/index.min.js"></script>
 <script>
     var target1 = document.getElementById('target1'),
         target2 = document.getElementById('target2'),
@@ -36,15 +37,12 @@
         subTarget4 = document.getElementById('subTarget4'),
         subTarget5 = document.getElementById('subTarget5'),
         subTarget6 = document.getElementById('subTarget6');
-
+    
 
     var serieText = document.getElementById('serieText'),
         voleeText = document.getElementById('voleeText'),
         tirText = document.getElementById('tirText');
 
-    var touchDuration = 600,
-        timer,
-        lockTimer;
 
     var nbrSeries = 2,
         nbrVolees = 3,
