@@ -6,8 +6,8 @@
     <br>
     <br>
     <p id="tirText"></p>
-    <div id="target">
-        <div id="target1"></div>
+    <div class="zoomTarget" id="target">
+        <div class="zoom" id="target1"></div>
         <div id="subTarget1"></div>
         <div id="target2"></div>
         <div id="subTarget2"></div>
@@ -22,6 +22,7 @@
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="../assets/js/jquery.zoomooz.min.js"></script>
 <script>
     var target1 = document.getElementById('target1'),
         target2 = document.getElementById('target2'),
@@ -40,6 +41,10 @@
         voleeText = document.getElementById('voleeText'),
         tirText = document.getElementById('tirText');
 
+    var touchDuration = 1000,
+        timer,
+        lockTimer;
+
     var nbrSeries = 2,
         nbrVolees = 3,
         nbrTirs = 5,
@@ -54,6 +59,22 @@
     serieText.innerHTML = "Serie " + countSeries;
     voleeText.innerHTML = "Volee " + countVolees;
 
+
+    function touchStart() {
+        if(lockTimer) {
+            return;
+        }
+        timer = setTimeout(longTouchZoom, touchDuration);
+        lockTimer = true;
+    }
+
+    function touchEnd() {
+        if(timer) {
+            clearTimeout(timer);
+            lockTimer = false;
+        }
+    }
+
     function draw(x, y) {
         let point = document.createElement('div');
         point.className = "point";
@@ -63,10 +84,12 @@
         console.log(point);
     }
 
-    function handle(e) {
+    function touchHandler(e) {
 
-        let clientX = e.touches[0].clientX;
-        let clientY = e.touches[0].clientY;
+        let clientX = e.changedTouches[0].clientX;
+        let clientY = e.changedTouches[0].clientY;
+        /*let clientX = e.touches[0].clientX;
+        let clientY = e.touches[0].clientY;*/
 
         if(countTirs >= nbrTirs) {
             greetings();
@@ -96,59 +119,59 @@
     }
 
     function target1Handler(e) {
-        handle(e);
+        touchHandler(e);
     }
 
     function target2Handler(e) {
-        handle(e);
+        touchHandler(e);
     }
 
     function target3Handler(e) {
-        handle(e);
+        touchHandler(e);
         nbr8++;
     }
 
     function target4Handler(e) {
-        handle(e);
+        touchHandler(e);
         nbr9++;
     }
 
     function target5Handler(e) {
-        handle(e);
+        touchHandler(e);
         nbr10++;
     }
 
     function subTarget1Handler(e) {
-        handle(e);
+        touchHandler(e);
     }
 
     function subTarget2Handler(e) {
-        handle(e);
+        touchHandler(e);
     }
 
     function subTarget3Handler(e) {
-        handle(e);
+        touchHandler(e);
         nbr8++;
     }
 
     function subTarget4Handler(e) {
-        handle(e);
+        touchHandler(e);
         nbr9++;
     }
 
     function subTarget5Handler(e) {
-        handle(e);
+        touchHandler(e);
         nbr10++;
     }
 
     function subTarget6Handler(e) {
-        handle(e);
+        touchHandler(e);
         nbr10++;
     }
 
 
-    function launchEvents() {
-        target1.addEventListener('touchstart', target1Handler);
+    function launchTouchEvents() {
+        target1.addEventListener('touchend', target1Handler);
         target2.addEventListener('touchstart', target2Handler);
         target3.addEventListener('touchstart', target3Handler);
         target4.addEventListener('touchstart', target4Handler);
@@ -162,7 +185,7 @@
         subTarget6.addEventListener('touchstart', subTarget6Handler);
     }
 
-    function killEvents() {
+    function killTouchEvents() {
         target1.removeEventListener('touchstart', target1Handler);
         target2.removeEventListener('touchstart', target2Handler);
         target3.removeEventListener('touchstart', target3Handler);
@@ -197,6 +220,7 @@
         var msg;
 
         if(pct8 > 0.9) {
+            console.log(pct8);
             msg = "Pas mal!";
         }
 
@@ -210,8 +234,5 @@
 
         console.log(msg);
     }
-
-
-launchEvents();
 
 </script>

@@ -9,8 +9,8 @@ $title = "Nouvel Entrainement";?>
     <title>Nouvel Entrainement</title>
 
     <link rel="stylesheet" href="assets/css/header.css">
-    <link rel="stylesheet" href="assets/css/navbar.css">
     <link rel="stylesheet" href="assets/css/addTraining.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 
