@@ -15,11 +15,6 @@
     background-color: black;
 }
 
-.zoom {
-    transform: scale(0.1);
-    transform-origin: 0% 0% 0px;
-}
-
 #target {
     border-style: none;
     position: fixed;
