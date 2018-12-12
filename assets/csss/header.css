@@ -66,22 +66,22 @@
         left: -100%;
         opacity: 0;
     }
-    
+
     55% {
         left: 5%;
         opacity: 1;
     }
-    
+
     65% {
         left: 5%;
         opacity: 1;
     }
-    
+
     100% {
         left: 200%;
         opacity: 0;
     }
-    
+
 }
 
 #headerBox {

@@ -1,13 +1,15 @@
 <div class="container-fluid" id="mainBox">
+    <!--
     <div id="titleBox">
         <h1 id="serieText"></h1><br><br>
         <h1 id="voleeText"></h1>
     </div>
     <br>
     <br>
-    <p id="tirText"></p>
-    <div class="zoomTarget" id="target">
-        <div class="zoom" id="target1"></div>
+    --->
+    <div id="target">
+        <div id="target1">
+        </div>
         <div id="subTarget1"></div>
         <div id="target2"></div>
         <div id="subTarget2"></div>
@@ -20,8 +22,8 @@
         <div id="subTarget6"></div>
     </div>
 </div>
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src='https://unpkg.com/panzoom@7.0.2/dist/panzoom.min.js'></script>
 <script>
     var target1 = document.getElementById('target1'),
         target2 = document.getElementById('target2'),
@@ -40,7 +42,7 @@
         voleeText = document.getElementById('voleeText'),
         tirText = document.getElementById('tirText');
 
-    var touchDuration = 1000,
+    var touchDuration = 600,
         timer,
         lockTimer;
 
@@ -55,40 +57,42 @@
         nbr9 = 0,
         nbr8 = 0;
 
-    serieText.innerHTML = "Serie " + countSeries;
-    voleeText.innerHTML = "Volee " + countVolees;
+    let target = document.getElementById("target");
+
+    //serieText.innerHTML = "Serie " + countSeries;
+    //voleeText.innerHTML = "Volee " + countVolees;
 
 
-    function touchStart() {
+    function touchStart(point) {
         if(lockTimer) {
             return;
         }
-        timer = setTimeout(longTouchZoom, touchDuration);
+        timer = setTimeout(zoomOnTouch(point), touchDuration);
         lockTimer = true;
     }
 
-    function touchEnd() {
+    function touchEnd(e, point) {
+        let clientX = e.changedTouches[0].clientX;
+        let clientY = e.changedTouches[0].clientY;
+        console.log('X: ' + clientX + ', Y: ' + clientY);
         if(timer) {
             clearTimeout(timer);
+            draw(point, clientX, clientY);
+            dezoomOffTouch(point);
             lockTimer = false;
         }
     }
 
-    function draw(x, y) {
-        let point = document.createElement('div');
+    function draw(point, x, y) {
         point.className = "point";
         point.style.left = x + "px";
         point.style.top = y + "px";
-        document.body.appendChild(point);
-        console.log(point);
+        target1.insertBefore(point);
     }
 
     function touchHandler(e) {
-
         let clientX = e.changedTouches[0].clientX;
         let clientY = e.changedTouches[0].clientY;
-        /*let clientX = e.touches[0].clientX;
-        let clientY = e.touches[0].clientY;*/
 
         if(countTirs >= nbrTirs) {
             greetings();
@@ -110,7 +114,6 @@
         } else {
             serieText.innerHTML = "Serie " + countSeries;
             voleeText.innerHTML = "Volee " + countVolees;
-            draw(clientX, clientY);
             countTirs++;
             tirText.innerHTML = 'Plus que ' + (nbrTirs - countTirs) + ' tirs';
             console.log('Serie ' + countSeries + ' Volee '+ countVolees  + ' Tir ' + countTirs);
@@ -171,6 +174,7 @@
 
     function launchTouchEvents() {
         target1.addEventListener('touchend', target1Handler);
+        /*
         target2.addEventListener('touchstart', target2Handler);
         target3.addEventListener('touchstart', target3Handler);
         target4.addEventListener('touchstart', target4Handler);
@@ -182,10 +186,12 @@
         subTarget4.addEventListener('touchstart', subTarget4Handler);
         subTarget5.addEventListener('touchstart', subTarget5Handler);
         subTarget6.addEventListener('touchstart', subTarget6Handler);
+        */
     }
 
     function killTouchEvents() {
-        target1.removeEventListener('touchstart', target1Handler);
+        target1.removeEventListener('touchend', target1Handler);
+        /*
         target2.removeEventListener('touchstart', target2Handler);
         target3.removeEventListener('touchstart', target3Handler);
         target4.removeEventListener('touchstart', target4Handler);
@@ -197,6 +203,7 @@
         subTarget4.removeEventListener('touchstart', subTarget4Handler);
         subTarget5.removeEventListener('touchstart', subTarget5Handler);
         subTarget6.removeEventListener('touchstart', subTarget6Handler);
+        */
     }
 
     function pct8() {
@@ -234,4 +241,36 @@
         console.log(msg);
     }
 
+    function zoomOnTouch(point) {
+        point.style.animation = "zoomUp 1.5s linear";
+        point.style.zoom = "135%";
+    }
+
+    function dezoomOffTouch(point) {
+        point.style.animation = "zoomDown 0.5s linear";
+        point.style.zoom = "100%";
+    }
+
+    //document.addEventListener('DOMContentLoaded', zoomTouchHandler);
+
+    let point = document.createElement('div');
+
+    target.addEventListener('touchstart', function (e) {
+        let clientX = e.changedTouches[0].clientX,
+            clientY = e.changedTouches[0].clientY;
+
+        draw(point, clientX, clientY);
+    });
+
+    target.addEventListener('touchmove', function (e) {
+        let clientX = e.changedTouches[0].clientX,
+            clientY = e.changedTouches[0].clientY;
+        draw(point, clientX, clientY);
+        point.style.top = clientY +"px";
+        point.style.left = clientX + "px";
+        console.log('X: ' + clientX + ', Y: ' + clientY);
+    });
+    point.addEventListener('touchend', function () {
+        console.log("stop");
+    });
 </script>

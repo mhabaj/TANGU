@@ -401,7 +401,7 @@ Matrix.I = function(n) {
     }
 
     return CssMatrix;
-})();;/*
+})();/*
  * jquery.zoomooz-helpers.js, part of:
  * http://janne.aukia.com/zoomooz
  *

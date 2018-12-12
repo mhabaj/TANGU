@@ -1,3 +1,47 @@
+@keyframes zoomUp {
+    0% {
+        zoom: 100%;
+    }
+
+    25% {
+        zoom: 110%;
+    }
+
+    50% {
+        zoom: 120%;
+    }
+
+    75% {
+        zoom: 130%;
+    }
+
+    100% {
+        zoom: 135%;
+    }
+}
+
+@keyframes zoomDown {
+    0% {
+        zoom: 135%;
+    }
+
+    25% {
+        zoom: 130%;
+    }
+
+    50% {
+        zoom: 120%;
+    }
+
+    75% {
+        zoom: 110%;
+    }
+
+    100% {
+        zoom: 100%;
+    }
+}
+
 #mainBox {
     border-style: none;
 }
@@ -7,6 +51,7 @@
 }
 
 .point {
+    z-index: 20;
     position: fixed;
     top: 0;
     height: 5px;
@@ -16,7 +61,7 @@
 }
 
 #target {
-    border-style: none;
+    border: solid red;
     position: fixed;
     top: 50%;
     left: 50%;
