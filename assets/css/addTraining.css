@@ -51,13 +51,19 @@
 }
 
 .point {
-    z-index: 20;
     position: fixed;
-    top: 0;
     height: 5px;
     width: 5px;
     border-radius: 50%;
     background-color: black;
+}
+
+.point2 {
+    position: fixed;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    background-color: rgba(204, 204, 204, 0.9);
 }
 
 #target {

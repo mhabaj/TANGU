@@ -63,44 +63,24 @@
     //voleeText.innerHTML = "Volee " + countVolees;
 
 
-    function touchStart(point) {
-        if(lockTimer) {
-            return;
-        }
-        timer = setTimeout(zoomOnTouch(point), touchDuration);
-        lockTimer = true;
-    }
-
-    function touchEnd(e, point) {
-        let clientX = e.changedTouches[0].clientX;
-        let clientY = e.changedTouches[0].clientY;
-        console.log('X: ' + clientX + ', Y: ' + clientY);
-        if(timer) {
-            clearTimeout(timer);
-            draw(point, clientX, clientY);
-            dezoomOffTouch(point);
-            lockTimer = false;
-        }
-    }
-
-    function draw(point, x, y) {
+    function draw(x, y) {
+        let point = document.createElement('div');
         point.className = "point";
-        point.style.left = x + "px";
         point.style.top = y + "px";
-        target1.insertBefore(point);
+        point.style.left = x + "px";
+        document.body.appendChild(point);
     }
 
     function touchHandler(e) {
-        let clientX = e.changedTouches[0].clientX;
-        let clientY = e.changedTouches[0].clientY;
-
+        let clientX = e.changedTouches[0].clientX,
+            clientY = e.changedTouches[0].clientY;
         if(countTirs >= nbrTirs) {
             greetings();
             if(countVolees >= nbrVolees) {
                 if(countSeries >= nbrSeries) {
                     $('.point').remove();
                     console.log('Fin de entrainement');
-                    killEvents();
+                    killTouchEvents();
                 } else {
                     countVolees = 0;
                     countSeries++;
@@ -112,10 +92,11 @@
                 $('.point').remove();
             }
         } else {
-            serieText.innerHTML = "Serie " + countSeries;
-            voleeText.innerHTML = "Volee " + countVolees;
+            //serieText.innerHTML = "Serie " + countSeries;
+            //voleeText.innerHTML = "Volee " + countVolees;
+            //tirText.innerHTML = 'Plus que ' + (nbrTirs - countTirs) + ' tirs';
+            draw(clientX, clientY);
             countTirs++;
-            tirText.innerHTML = 'Plus que ' + (nbrTirs - countTirs) + ' tirs';
             console.log('Serie ' + countSeries + ' Volee '+ countVolees  + ' Tir ' + countTirs);
         }
     }
@@ -173,37 +154,34 @@
 
 
     function launchTouchEvents() {
-        target1.addEventListener('touchend', target1Handler);
-        /*
-        target2.addEventListener('touchstart', target2Handler);
-        target3.addEventListener('touchstart', target3Handler);
-        target4.addEventListener('touchstart', target4Handler);
-        target5.addEventListener('touchstart', target5Handler);
+        target1.addEventListener('touchend', touchHandler);
 
-        subTarget1.addEventListener('touchstart', subTarget1Handler);
-        subTarget2.addEventListener('touchstart', subTarget2Handler);
-        subTarget3.addEventListener('touchstart', subTarget3Handler);
-        subTarget4.addEventListener('touchstart', subTarget4Handler);
-        subTarget5.addEventListener('touchstart', subTarget5Handler);
-        subTarget6.addEventListener('touchstart', subTarget6Handler);
-        */
+        target2.addEventListener('touchend', touchHandler);
+        target3.addEventListener('touchend', touchHandler);
+        target4.addEventListener('touchend', touchHandler);
+        target5.addEventListener('touchend', touchHandler);
+
+        subTarget1.addEventListener('touchend', touchHandler);
+        subTarget2.addEventListener('touchend', touchHandler);
+        subTarget3.addEventListener('touchend', touchHandler);
+        subTarget4.addEventListener('touchend', touchHandler);
+        subTarget5.addEventListener('touchend', touchHandler);
+        subTarget6.addEventListener('touchend', touchHandler);
     }
 
     function killTouchEvents() {
-        target1.removeEventListener('touchend', target1Handler);
-        /*
-        target2.removeEventListener('touchstart', target2Handler);
-        target3.removeEventListener('touchstart', target3Handler);
-        target4.removeEventListener('touchstart', target4Handler);
-        target5.removeEventListener('touchstart', target5Handler);
+        target1.removeEventListener('touchend', touchHandler);
+        target2.removeEventListener('touchend', touchHandler);
+        target3.removeEventListener('touchend', touchHandler);
+        target4.removeEventListener('touchend', touchHandler);
+        target5.removeEventListener('touchend', touchHandler);
 
-        subTarget1.removeEventListener('touchstart', subTarget1Handler);
-        subTarget2.removeEventListener('touchstart', subTarget2Handler);
-        subTarget3.removeEventListener('touchstart', subTarget3Handler);
-        subTarget4.removeEventListener('touchstart', subTarget4Handler);
-        subTarget5.removeEventListener('touchstart', subTarget5Handler);
-        subTarget6.removeEventListener('touchstart', subTarget6Handler);
-        */
+        subTarget1.removeEventListener('touchend', touchHandler);
+        subTarget2.removeEventListener('touchend', touchHandler);
+        subTarget3.removeEventListener('touchend', touchHandler);
+        subTarget4.removeEventListener('touchend', touchHandler);
+        subTarget5.removeEventListener('touchend', touchHandler);
+        subTarget6.removeEventListener('touchend', touchHandler);
     }
 
     function pct8() {
@@ -241,36 +219,5 @@
         console.log(msg);
     }
 
-    function zoomOnTouch(point) {
-        point.style.animation = "zoomUp 1.5s linear";
-        point.style.zoom = "135%";
-    }
-
-    function dezoomOffTouch(point) {
-        point.style.animation = "zoomDown 0.5s linear";
-        point.style.zoom = "100%";
-    }
-
-    //document.addEventListener('DOMContentLoaded', zoomTouchHandler);
-
-    let point = document.createElement('div');
-
-    target.addEventListener('touchstart', function (e) {
-        let clientX = e.changedTouches[0].clientX,
-            clientY = e.changedTouches[0].clientY;
-
-        draw(point, clientX, clientY);
-    });
-
-    target.addEventListener('touchmove', function (e) {
-        let clientX = e.changedTouches[0].clientX,
-            clientY = e.changedTouches[0].clientY;
-        draw(point, clientX, clientY);
-        point.style.top = clientY +"px";
-        point.style.left = clientX + "px";
-        console.log('X: ' + clientX + ', Y: ' + clientY);
-    });
-    point.addEventListener('touchend', function () {
-        console.log("stop");
-    });
+    launchTouchEvents();
 </script>
