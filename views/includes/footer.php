@@ -1,12 +1,3 @@
-
-
-
-
-
-
-
-
-
 <div class="container-fluid footer" id="footerBox">
     <div class="container" id="homeBox">
         <button id="homeBtn">
@@ -96,14 +87,16 @@
 </div>
 <script>
     let title = document.title;
-    let titles = ["Entrainement", "Statistiques", "Nouvel Entrainement", "Personnaliser", "Mon Compte"];
+    let titles = ["Entrainements", "Statistiques", "Nouvel Entrainement", "Personnaliser", "Mon Compte"];
     $training = document.getElementById('trainingLogo');
     $stats = document.getElementById('statsLogo');
     $add = document.getElementById('addLogo');
     $edit = document.getElementById('editLogo');
     $account = document.getElementById('accountLogo');
+
     switch (title) {
         case titles[0]:
+            console.log('Page: ' + titles[0]);
             $training.style.color = "rgba(0, 0, 0, 0.9)";
             break;
         case titles[1]:
@@ -121,5 +114,4 @@
         default:
             break;
     }
-
 </script>

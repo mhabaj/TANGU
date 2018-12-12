@@ -29,14 +29,10 @@ $title = "Entrainements"; ?>
 <div class="container-fluid" id="mainBox">
     <?php include_once 'views/includes/header.php'; ?>
 
-
     <div class="swiper-container" id="contentBox">
 
         <div class="swiper-wrapper">
-
-
             <?php
-
 
             include('controllers/functions/connexion_bdd.php'); //on se connect a la base et on envoie la requete
 

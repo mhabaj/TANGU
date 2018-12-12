@@ -1,0 +1,156 @@
+#mainBox {
+    border-style: none;
+}
+
+#target {
+    border-style: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 400px;
+    width: 100%;
+    transform: translate(-50%, -50%);
+}
+
+#target1 {
+    z-index: 1;
+    border: solid black 1px;
+    background-color: white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 350px;
+    width: 350px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#subTarget1 {
+    z-index: 2;
+    border: solid rgba(140, 140, 140, 0.9) 1px;
+    background: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 305px;
+    width: 305px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#target2 {
+    z-index: 3;
+    border: none;
+    background-color: black;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 260px;
+    width: 260px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#subTarget2 {
+    z-index: 4;
+    border: solid rgba(204, 204, 204, 0.9) 1px;
+    background: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 215px;
+    width: 215px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#target3 {
+    z-index: 5;
+    border: none;
+    background-color: rgba(1, 115, 228, 1);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#subTarget3 {
+    z-index: 6;
+    border: solid rgba(128, 191, 254, 0.9) 1px;
+    background: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 135px;
+    width: 135px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#target4 {
+    z-index: 7;
+    border: none;
+    background-color: rgba(216, 5, 20, 0.9);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#subTarget4 {
+    z-index: 8;
+    border: solid rgba(251, 106, 116, 0.9) 1px;
+    background: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#target5 {
+    z-index: 9;
+    border: none;
+    background-color: rgba(228, 188, 2, 0.9);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#subTarget5 {
+    z-index: 10;
+    border: solid rgba(253, 226, 104, 0.9) 1px;
+    background: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#subTarget6 {
+    z-index: 11;
+    border: solid rgba(253, 226, 104, 0.9) 1px;
+    background: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
