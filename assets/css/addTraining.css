@@ -2,6 +2,15 @@
     border-style: none;
 }
 
+.point {
+    position: fixed;
+    top: 0;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    background-color: black;
+}
+
 #target {
     border-style: none;
     position: fixed;

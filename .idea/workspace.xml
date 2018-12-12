@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="24a430f1-dafd-4e5d-98b4-56d1fe6d0252" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/add.php" beforeDir="false" afterPath="$PROJECT_DIR$/add.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/functions/control-session.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/functions/control-session.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stats.php" beforeDir="false" afterPath="$PROJECT_DIR$/stats.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training.php" beforeDir="false" afterPath="$PROJECT_DIR$/training.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/addTraining.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/addTraining.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/add.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/add.view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/edit.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/edit.view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/includes/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/includes/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/training.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/training.view.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -101,7 +93,7 @@
     <session id="-1684926160">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.opened" value="2" />
@@ -109,26 +101,27 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="8" />
+          <entry key="CSS" value="9" />
           <entry key="PHP" value="27" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="883" />
-          <entry key="PHP" value="5467" />
+          <entry key="CSS" value="980" />
+          <entry key="PHP" value="7350" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/add.view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1525">
-              <caret line="61" column="57" lean-forward="true" selection-start-line="61" selection-start-column="57" selection-end-line="61" selection-end-column="57" />
+            <state relative-caret-position="342">
+              <caret line="208" column="9" lean-forward="true" selection-start-line="208" selection-start-column="9" selection-end-line="208" selection-end-column="9" />
               <folding>
+                <element signature="e#1421#1689#0#HTML" />
                 <element signature="e#1785#1892#0#HTML" />
                 <element signature="e#1924#2031#0#HTML" />
                 <element signature="e#2063#2166#0#HTML" />
@@ -145,6 +138,15 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/css/header.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="50" column="1" lean-forward="true" selection-start-line="50" selection-start-column="1" selection-end-line="50" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/add.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="575">
@@ -153,11 +155,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/css/addTraining.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="5" column="23" lean-forward="true" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+            <state relative-caret-position="-2850">
+              <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -226,8 +228,8 @@
         <option value="$PROJECT_DIR$/training.php" />
         <option value="$PROJECT_DIR$/assets/css/add.css" />
         <option value="$PROJECT_DIR$/add.php" />
-        <option value="$PROJECT_DIR$/views/add.view.php" />
         <option value="$PROJECT_DIR$/assets/css/addTraining.css" />
+        <option value="$PROJECT_DIR$/views/add.view.php" />
       </list>
     </option>
   </component>
@@ -293,7 +295,7 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="reference.idesettings.emmet.css" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -339,12 +341,12 @@
       <workItem from="1544535762265" duration="1350000" />
       <workItem from="1544543992736" duration="764000" />
       <workItem from="1544546421907" duration="276000" />
-      <workItem from="1544561282308" duration="19332000" />
+      <workItem from="1544561282308" duration="28022000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74952000" />
+    <option name="totallyTimeSpent" value="83642000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
@@ -378,7 +380,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/controller/classes/User.php" />
     <entry file="file://$PROJECT_DIR$/controller/functions/control-session.php" />
     <entry file="file://$PROJECT_DIR$/controller/functions/functions.php" />
     <entry file="file://$PROJECT_DIR$/view/arcSlides.php" />
@@ -645,11 +646,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/header.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="50" column="1" lean-forward="true" selection-start-line="50" selection-start-column="1" selection-end-line="50" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/addTraining.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2850">
+          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/views/add.view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1525">
-          <caret line="61" column="57" lean-forward="true" selection-start-line="61" selection-start-column="57" selection-end-line="61" selection-end-column="57" />
+        <state relative-caret-position="342">
+          <caret line="208" column="9" lean-forward="true" selection-start-line="208" selection-start-column="9" selection-end-line="208" selection-end-column="9" />
           <folding>
+            <element signature="e#1421#1689#0#HTML" />
             <element signature="e#1785#1892#0#HTML" />
             <element signature="e#1924#2031#0#HTML" />
             <element signature="e#2063#2166#0#HTML" />
@@ -661,13 +677,6 @@
             <element signature="e#2912#3021#0#HTML" />
             <element signature="e#3056#3165#0#HTML" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/addTraining.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="23" lean-forward="true" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
         </state>
       </provider>
     </entry>
