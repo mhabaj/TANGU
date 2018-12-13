@@ -1,5 +1,5 @@
+<?php include_once 'includes/header.php';?>
 <div class="container-fluid" id="mainBox">
-    <?php include_once 'includes/header.php';?>
     <div class="container-fluid content" id="contentBox">
         <div id="arcBox">
             <div id="blur1"></div>
@@ -14,11 +14,6 @@
             </button>
         </div>
     </div>
-
-</div>
 </div>
 <?php include_once 'includes/footer.php';?>
-</div>
 <script src="../assets/js/swiper.min.js"></script>
-</body>
-</html>
