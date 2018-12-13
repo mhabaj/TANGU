@@ -47,8 +47,68 @@
     }
 }
 
+@keyframes popUp {
+    0% { transform: scale(0, 0); }
+    4.5% { transform: scale(.728, .728); }
+    9.01% { transform: scale(1.32, 1.32); }
+    13.51% { transform: scale(1.631, 1.631); }
+    17.92% { transform: scale(1.709, 1.709); }
+    29.03% { transform: scale(1.548, 1.548); }
+    34.63% { transform: scale(1.491, 1.491); }
+    40.14% { transform: scale(1.477, 1.477); }
+    62.36% { transform: scale(1.503, 1.503); }
+    84.68% { transform: scale(1.5, 1.5); }
+    100% { transform: scale(1.5, 1.5); }
+}
+
+@keyframes popDown {
+    0% { transform: scale(1.5, 1.5); }
+    4.5% { transform: scale(1.5, 1.5); }
+    9.01% { transform: scale(1.503, 1.503); }
+    13.51% { transform: scale(1.477, 1.477); }
+    17.92% { transform: scale(1.491, 1.491); }
+    29.03% { transform: scale(1.548, 1.548); }
+    34.63% { transform: scale(1.709, 1.709); }
+    40.14% { transform: scale(1.631, 1.631); }
+    62.36% { transform: scale(1.32, 1.32); }
+    84.68% { transform: scale(.728, .728); }
+    100% { transform: scale(0, 0); }
+}
+
+.animated-blur {
+    animation: blurInAnim 2.5s linear;
+}
+
+.animated-popup {
+    animation: popUp 1000ms linear both;
+}
+
+.animated-popdown {
+    animation: popDown 500ms linear both;
+}
+
 #mainBox {
     border-style: none;
+}
+
+#popUp {
+    display: none;
+    z-index: 2;
+    border: none;
+    position: fixed;
+    top: 40%;
+    left: 25%;
+    width: 50%;
+    height: 20%;
+    border-radius: 10px;
+    background: none;
+    text-align: center;
+    color: lawngreen;
+}
+
+#popUp h1 {
+    font-family: SF-Display-Regular;
+    font-size: 2.2em;
 }
 
 canvas {
@@ -67,7 +127,6 @@ canvas {
 }
 
 #target {
-    z-index: 1;
     border: none;
     position: fixed;
     top: 50%;
@@ -75,7 +134,6 @@ canvas {
     height: 400px;
     width: 100%;
     transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.2);
 }
 
 #target1 {
@@ -208,4 +266,10 @@ canvas {
     width: 6px;
     border-radius: 50%;
     transform: translate(-50%, -50%);
+}
+
+@font-face {
+    font-family: SF-Display-Regular;
+    src: url(../fonts/SF/SFProDisplay-Regular.ttf);
+    font-weight: normal;
 }

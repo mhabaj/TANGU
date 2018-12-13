@@ -5,6 +5,9 @@
         <h1 id="voleeText"></h1>
     </div>
 </div>
+<div id="popUp">
+    <h1 id="popUpMessage"></h1>
+</div>
 <div class="container-fluid" id="mainBox">
     <div id="target">
         <div id="target1"></div>
@@ -35,14 +38,15 @@
         subTarget5 = document.getElementById('subTarget5'),
         subTarget6 = document.getElementById('subTarget6');
 
-    let points = document.getElementsByClassName('point');
+    var popUpElement = document.getElementById("popUp"),
+        popUpMsgElement = document.getElementById("popUpMessage");
 
     var serieText = document.getElementById('serieText'),
         voleeText = document.getElementById('voleeText');
 
     var nbrSeries = 1,
         nbrVolees = 1,
-        nbrTirs = 5,
+        nbrTirs = 15,
         countSeries = 1,
         countVolees = 1,
         countTirs = 0;
@@ -51,10 +55,37 @@
         nbr9 = 0,
         nbr8 = 0;
 
+    var combo10 = 0;
+
     let target = document.getElementById("target");
 
     serieText.innerHTML = "Serie " + countSeries;
     voleeText.innerHTML = "Volee " + countVolees;
+
+    function triggerPopUp() {
+        popUpElement.classList.remove('animated-popdown');
+        popUpElement.style.display = "block";
+        popUpElement.classList.add('animated-popup');
+    }
+
+    function triggerPopDown() {
+        popUpElement.classList.remove('animated-popup');
+        popUpElement.classList.add('animated-popdown');
+        window.setTimeout(function () {
+            popUpElement.style.display = "none";
+        }, 1000);
+    }
+    
+    function showMessage(popTime, blurTime) {
+        blurInAnimation();
+        let blurElements = document.getElementsByClassName('animated-blur');
+        for (let i = 0; i < blurElements.length; i++) {
+            blurElements[i].style.animationDuration = blurTime + "ms";
+        }
+        triggerPopUp();
+        window.setTimeout(triggerPopDown, popTime);
+        window.setTimeout(blurEmptyAnimation, blurTime);
+    }
 
     function draw(e, x, y) {
         let point = document.createElement('div');
@@ -95,53 +126,100 @@
     }
 
     function blurInAnimation() {
-        target.style.animation = "blurInAnim 3.5s linear infinite";
-        /*for(i = 0; i < points.length; i++) {
-            points[i].style.animation = "blurInAnim 3.5s linear";
-        }*/
+        let points = document.getElementsByClassName('point');
+        var i;
+
+        for(i = 0; i < points.length; i++) {
+            points[i].classList.add('animated-blur');
+        }
+        target.classList.add('animated-blur');
+    }
+
+    function blurEmptyAnimation() {
+        let points = document.getElementsByClassName('point');
+        var i;
+
+        for(i = 0; i < points.length; i++) {
+            points[i].classList.remove('animated-blur');
+        }
+        target.classList.remove('animated-blur');
+    }
+
+    function activateBlur(time) {
+        blurInAnimation();
+        window.setTimeout(blurEmptyAnimation, time);
     }
 
     function launchConfetti() {
         killTouchEvents();
+        triggerPopUp();
         blurInAnimation();
         RestartConfetti();
         window.setTimeout(DeactivateConfetti, 1800);
-        window.setTimeout(launchTouchEvents, 2800);
+        window.setTimeout(triggerPopDown, 2000);
+        window.setTimeout(function () {
+            blurEmptyAnimation();
+            launchTouchEvents();
+        }, 2800);
+    }
+
+    function checkCombo() {
+        if(combo10 > 1 && combo10 < 5) {
+            popUpMsgElement.innerHTML = combo10 + " in a row !";
+        } else if(combo10 == 5) {
+            popUpMsgElement.innerHTML = combo10 + " in a row, WOW !";
+        } else if(combo10 == 6) {
+            popUpMsgElement.innerHTML = "You're a pro !";
+        } else if(combo10 > 6) {
+            popUpMsgElement.innerHTML = "Come On !!";
+        } else {
+            popUpMsgElement.innerHTML = "Well done !";
+        }
     }
 
     function inc(e) {
         switch (e.target.id) {
             case "target2":
-
+                combo10 = 0;
                 break;
             case "subTarget2":
-
+                combo10 = 0;
                 break;
             case "target3":
+                combo10 = 0;
                 nbr8++;
                 console.log(nbr8);
                 break;
             case "subTarget3":
+                combo10 = 0;
                 nbr8++;
                 console.log(nbr8);
                 break;
             case "target4":
+                combo10 = 0;
                 nbr9++;
                 break;
             case "subTarget4":
+                combo10 = 0;
                 nbr9++;
                 break;
             case "target5":
                 launchConfetti();
                 nbr10++;
+                combo10++;
+                checkCombo();
                 break;
             case "subTarget5":
                 launchConfetti();
                 nbr10++;
+                combo10++;
+                checkCombo();
                 break;
             case "subTarget6":
                 launchConfetti();
                 nbr10++;
+                combo10++;
+                checkCombo();
                 break;
             default:
         }
@@ -175,6 +253,14 @@
             draw(e, clientX, clientY);
             countTirs++;
             inc(e);
+            if(countTirs == (nbrTirs - 1)) {
+                popUpMsgElement.innerHTML = "Last shot!";
+                showMessage(1000, 1500);
+            }
+            if(countTirs == nbrTirs) {
+                popUpMsgElement.innerHTML = "End of your training!";
+                showMessage(1000, 1500);
+            }
             console.log('Serie ' + countSeries + ' Volee '+ countVolees  + ' Tir ' + countTirs);
         }
     }
@@ -182,25 +268,25 @@
     function moveHandler(e) {
         switch (e.target.id) {
             case "target2":
-                console.log('hover t2');
+                console.log('from t2');
                 break;
             case "subTarget2":
-                console.log('hover st2');
+                console.log('from st2');
                 break;
             case "target3":
-                console.log('hover t3');
+                console.log('from t3');
                 break;
             case "subTarget3":
-                console.log('hover st3');
+                console.log('from st3');
                 break;
             case "target4":
-                console.log('hover t4');
+                console.log('from t4');
                 break;
             case "subTarget4":
-                console.log('hover st4');
+                console.log('from st4');
                 break;
             case "target5":
-                console.log('hover t5');
+                console.log('from t5');
                 break;
             case "subTarget5":
                 break;
@@ -208,7 +294,15 @@
                 break;
             default:
         }
+
+        let clientX = e.changedTouches[0].clientX,
+            clientY = e.changedTouches[0].clientY;
+
+        console.log('X: ' + clientX + ', Y: ' + clientY);
+        draw(e, clientX, clientY);
+
     }
+
     function launchTouchEvents() {
         target1.addEventListener('touchend', touchHandler);
 
@@ -256,6 +350,22 @@
         subTarget6.addEventListener('touchmove', moveHandler);
     }
 
+    function killMoveEvents() {
+        target1.removeEventListener('touchmove', moveHandler);
+
+        target2.removeEventListener('touchmove', moveHandler);
+        target3.removeEventListener('touchmove', moveHandler);
+        target4.removeEventListener('touchmove', moveHandler);
+        target5.removeEventListener('touchmove', moveHandler);
+
+        subTarget1.removeEventListener('touchmove', moveHandler);
+        subTarget2.removeEventListener('touchmove', moveHandler);
+        subTarget3.removeEventListener('touchmove', moveHandler);
+        subTarget4.removeEventListener('touchmove', moveHandler);
+        subTarget5.removeEventListener('touchmove', moveHandler);
+        subTarget6.removeEventListener('touchmove', moveHandler);
+    }
+
     function greetings() {
         var pct8 = nbr8 / nbrTirs,
             pct9 = nbr9 / nbrTirs,
@@ -278,7 +388,7 @@
         console.log(msg);
     }
 
-    launchMoveEvents();
+    launchTouchEvents();
 
     $(document).ready(function () {
         SetGlobals();
