@@ -1,8 +1,9 @@
 <canvas id="confetti"></canvas>
+<div id="blurBckg"></div>
 <div class="container-fluid header" id="headerBox">
     <div id="titleBox">
         <h1 id="serieText"></h1>
-        <h1 id="voleeText"></h1>
+        <h3 id="voleeText"></h3>
     </div>
 </div>
 <div id="popUp">
@@ -26,6 +27,9 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
 
+    var mainBox = document.getElementById('mainBox'),
+        blurBckg = document.getElementById('blurBckg');
+
     var target1 = document.getElementById('target1'),
         target2 = document.getElementById('target2'),
         target3 = document.getElementById('target3'),
@@ -44,9 +48,9 @@
     var serieText = document.getElementById('serieText'),
         voleeText = document.getElementById('voleeText');
 
-    var nbrSeries = 1,
-        nbrVolees = 1,
-        nbrTirs = 15,
+    var nbrSeries = 2,
+        nbrVolees = 2,
+        nbrTirs = 3,
         countSeries = 1,
         countVolees = 1,
         countTirs = 0;
@@ -76,7 +80,8 @@
         }, 1000);
     }
     
-    function showMessage(popTime, blurTime) {
+    function showMessage(popTime, blurTime, relaunch) {
+        killTouchEvents();
         blurInAnimation();
         let blurElements = document.getElementsByClassName('animated-blur');
         for (let i = 0; i < blurElements.length; i++) {
@@ -85,6 +90,9 @@
         triggerPopUp();
         window.setTimeout(triggerPopDown, popTime);
         window.setTimeout(blurEmptyAnimation, blurTime);
+        if(relaunch) {
+            window.setTimeout(launchTouchEvents, blurTime);
+        }
     }
 
     function draw(e, x, y) {
@@ -143,11 +151,21 @@
             points[i].classList.remove('animated-blur');
         }
         target.classList.remove('animated-blur');
+        document.body.classList.remove('animated-background');
     }
 
     function activateBlur(time) {
         blurInAnimation();
         window.setTimeout(blurEmptyAnimation, time);
+    }
+
+    function pointDisappear() {
+        let points = document.getElementsByClassName('point');
+        let i;
+
+        for(i = points.length-1; i >= 0; i--) {
+            points[i].classList.add('disappear-animation');
+        }
     }
 
     function launchConfetti() {
@@ -160,7 +178,7 @@
         window.setTimeout(function () {
             blurEmptyAnimation();
             launchTouchEvents();
-        }, 2800);
+        }, 4500);
     }
 
     function checkCombo() {
@@ -229,39 +247,52 @@
         let clientX = e.changedTouches[0].clientX,
             clientY = e.changedTouches[0].clientY;
 
+        countTirs++;
         if(countTirs >= nbrTirs) {
-            greetings();
-            if(countVolees >= nbrVolees) {
-                if(countSeries >= nbrSeries) {
-                    //$('.point').remove();
-                    console.log('Fin de entrainement');
-                    killTouchEvents();
-
-                } else {
-                    countVolees = 0;
-                    countSeries++;
-                }
-            } else {
-                nbr8 = 0;
-                countTirs = 0;
-                countVolees++;
-                $('.point').remove();
+            if(countTirs == nbrTirs) {
+                draw(e, clientX, clientY);
+                inc(e);
+                console.log('Serie ' + countSeries + ' Volee '+ countVolees  + ' Tir ' + countTirs);
+                window.setTimeout(function () {
+                    $('.point').remove();
+                }, 1400);
+                window.setTimeout(pointDisappear, 300);
             }
+            countTirs = 0;
+            window.setTimeout(function () {
+                if(countVolees >= nbrVolees) {
+
+                    if(countSeries >= nbrSeries) {
+                        //$('.point').remove();
+                        popUpMsgElement.innerHTML = "End of your training!";
+                        showMessage(1000, 1500, false);
+                        console.log('Fin de entrainement');
+
+                    } else {
+                        countVolees = 1;
+                        countSeries++;
+                        serieText.innerHTML = "Serie " + countSeries;
+                        voleeText.innerHTML = "Volee " + countVolees;
+                        popUpMsgElement.innerHTML = "Set " + countSeries;
+                        showMessage(1000, 1500, true);
+                    }
+                } else {
+                    countVolees++;
+                    nbr8 = 0;
+                    voleeText.innerHTML = "Volee " + countVolees;
+                    popUpMsgElement.innerHTML = "Volley " + countVolees;
+                    showMessage(1000, 1500, true);
+                    $('.point').remove();
+                }
+            }, 1500);
         } else {
-            serieText.innerHTML = "Serie " + countSeries;
-            voleeText.innerHTML = "Volee " + countVolees;
             draw(e, clientX, clientY);
-            countTirs++;
             inc(e);
+            console.log('Serie ' + countSeries + ' Volee '+ countVolees  + ' Tir ' + countTirs);
             if(countTirs == (nbrTirs - 1)) {
                 popUpMsgElement.innerHTML = "Last shot!";
-                showMessage(1000, 1500);
+                showMessage(1000, 1500, true);
             }
-            if(countTirs == nbrTirs) {
-                popUpMsgElement.innerHTML = "End of your training!";
-                showMessage(1000, 1500);
-            }
-            console.log('Serie ' + countSeries + ' Volee '+ countVolees  + ' Tir ' + countTirs);
         }
     }
 
