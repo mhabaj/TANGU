@@ -1,16 +1,13 @@
 <canvas id="confetti"></canvas>
-<div class="container-fluid" id="mainBox">
-    <!--
+<div class="container-fluid header" id="headerBox">
     <div id="titleBox">
-        <h1 id="serieText"></h1><br><br>
+        <h1 id="serieText"></h1>
         <h1 id="voleeText"></h1>
     </div>
-    <br>
-    <br>
-    --->
+</div>
+<div class="container-fluid" id="mainBox">
     <div id="target">
-        <div id="target1">
-        </div>
+        <div id="target1"></div>
         <div id="subTarget1"></div>
         <div id="target2"></div>
         <div id="subTarget2"></div>
@@ -24,8 +21,8 @@
     </div>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="../assets/js/confetti-js-master/dist/index.min.js"></script>
 <script>
+
     var target1 = document.getElementById('target1'),
         target2 = document.getElementById('target2'),
         target3 = document.getElementById('target3'),
@@ -37,15 +34,14 @@
         subTarget4 = document.getElementById('subTarget4'),
         subTarget5 = document.getElementById('subTarget5'),
         subTarget6 = document.getElementById('subTarget6');
-    
+
+    let points = document.getElementsByClassName('point');
 
     var serieText = document.getElementById('serieText'),
-        voleeText = document.getElementById('voleeText'),
-        tirText = document.getElementById('tirText');
+        voleeText = document.getElementById('voleeText');
 
-
-    var nbrSeries = 2,
-        nbrVolees = 3,
+    var nbrSeries = 1,
+        nbrVolees = 1,
         nbrTirs = 5,
         countSeries = 1,
         countVolees = 1,
@@ -57,28 +53,112 @@
 
     let target = document.getElementById("target");
 
-    //serieText.innerHTML = "Serie " + countSeries;
-    //voleeText.innerHTML = "Volee " + countVolees;
+    serieText.innerHTML = "Serie " + countSeries;
+    voleeText.innerHTML = "Volee " + countVolees;
 
-
-    function draw(x, y) {
+    function draw(e, x, y) {
         let point = document.createElement('div');
         point.className = "point";
+        switch (e.target.id) {
+            case "target2":
+                point.style.backgroundColor = "rgba(179, 179, 255, .9)";
+                break;
+            case "subTarget2":
+                point.style.backgroundColor = "rgba(179, 179, 255, .9)";
+                break;
+            case "target3":
+                point.style.backgroundColor = "rgba(128, 191, 254, .9)";
+                break;
+            case "subTarget3":
+                point.style.backgroundColor = "rgba(128, 191, 254, .9)";
+                break;
+            case "target4":
+                point.style.backgroundColor = "rgba(251, 106, 116, 0.9)";
+                break;
+            case "subTarget4":
+                point.style.backgroundColor = "rgba(251, 106, 116, 0.9)";
+                break;
+            case "target5":
+                point.style.backgroundColor = "rgba(253, 226, 104, 0.9)";
+                break;
+            case "subTarget5":
+                point.style.backgroundColor = "rgba(253, 226, 104, 0.9)";
+                break;
+            case "subTarget6":
+                point.style.backgroundColor = "rgba(253, 226, 104, 0.9)";
+                break;
+            default:
+        }
         point.style.top = y + "px";
         point.style.left = x + "px";
         document.body.appendChild(point);
     }
 
+    function blurInAnimation() {
+        target.style.animation = "blurInAnim 3.5s linear infinite";
+        /*for(i = 0; i < points.length; i++) {
+            points[i].style.animation = "blurInAnim 3.5s linear";
+        }*/
+    }
+
+    function launchConfetti() {
+        killTouchEvents();
+        blurInAnimation();
+        RestartConfetti();
+        window.setTimeout(DeactivateConfetti, 1800);
+        window.setTimeout(launchTouchEvents, 2800);
+    }
+
+    function inc(e) {
+        switch (e.target.id) {
+            case "target2":
+
+                break;
+            case "subTarget2":
+
+                break;
+            case "target3":
+                nbr8++;
+                console.log(nbr8);
+                break;
+            case "subTarget3":
+                nbr8++;
+                console.log(nbr8);
+                break;
+            case "target4":
+                nbr9++;
+                break;
+            case "subTarget4":
+                nbr9++;
+                break;
+            case "target5":
+                launchConfetti();
+                nbr10++;
+                break;
+            case "subTarget5":
+                launchConfetti();
+                nbr10++;
+                break;
+            case "subTarget6":
+                launchConfetti();
+                nbr10++;
+                break;
+            default:
+        }
+    }
+
     function touchHandler(e) {
         let clientX = e.changedTouches[0].clientX,
             clientY = e.changedTouches[0].clientY;
+
         if(countTirs >= nbrTirs) {
             greetings();
             if(countVolees >= nbrVolees) {
                 if(countSeries >= nbrSeries) {
-                    $('.point').remove();
+                    //$('.point').remove();
                     console.log('Fin de entrainement');
                     killTouchEvents();
+
                 } else {
                     countVolees = 0;
                     countSeries++;
@@ -90,67 +170,45 @@
                 $('.point').remove();
             }
         } else {
-            //serieText.innerHTML = "Serie " + countSeries;
-            //voleeText.innerHTML = "Volee " + countVolees;
-            //tirText.innerHTML = 'Plus que ' + (nbrTirs - countTirs) + ' tirs';
-            draw(clientX, clientY);
+            serieText.innerHTML = "Serie " + countSeries;
+            voleeText.innerHTML = "Volee " + countVolees;
+            draw(e, clientX, clientY);
             countTirs++;
+            inc(e);
             console.log('Serie ' + countSeries + ' Volee '+ countVolees  + ' Tir ' + countTirs);
         }
     }
 
-    function target1Handler(e) {
-        touchHandler(e);
+    function moveHandler(e) {
+        switch (e.target.id) {
+            case "target2":
+                console.log('hover t2');
+                break;
+            case "subTarget2":
+                console.log('hover st2');
+                break;
+            case "target3":
+                console.log('hover t3');
+                break;
+            case "subTarget3":
+                console.log('hover st3');
+                break;
+            case "target4":
+                console.log('hover t4');
+                break;
+            case "subTarget4":
+                console.log('hover st4');
+                break;
+            case "target5":
+                console.log('hover t5');
+                break;
+            case "subTarget5":
+                break;
+            case "subTarget6":
+                break;
+            default:
+        }
     }
-
-    function target2Handler(e) {
-        touchHandler(e);
-    }
-
-    function target3Handler(e) {
-        touchHandler(e);
-        nbr8++;
-    }
-
-    function target4Handler(e) {
-        touchHandler(e);
-        nbr9++;
-    }
-
-    function target5Handler(e) {
-        touchHandler(e);
-        nbr10++;
-    }
-
-    function subTarget1Handler(e) {
-        touchHandler(e);
-    }
-
-    function subTarget2Handler(e) {
-        touchHandler(e);
-    }
-
-    function subTarget3Handler(e) {
-        touchHandler(e);
-        nbr8++;
-    }
-
-    function subTarget4Handler(e) {
-        touchHandler(e);
-        nbr9++;
-    }
-
-    function subTarget5Handler(e) {
-        touchHandler(e);
-        nbr10++;
-    }
-
-    function subTarget6Handler(e) {
-        touchHandler(e);
-        nbr10++;
-    }
-
-
     function launchTouchEvents() {
         target1.addEventListener('touchend', touchHandler);
 
@@ -182,16 +240,20 @@
         subTarget6.removeEventListener('touchend', touchHandler);
     }
 
-    function pct8() {
-        return nbr8 / nbrTirs;
-    }
+    function launchMoveEvents() {
+        target1.addEventListener('touchmove', moveHandler);
 
-    function pct9() {
-        return nbr9 / nbrTirs;
-    }
+        target2.addEventListener('touchmove', moveHandler);
+        target3.addEventListener('touchmove', moveHandler);
+        target4.addEventListener('touchmove', moveHandler);
+        target5.addEventListener('touchmove', moveHandler);
 
-    function pct10() {
-        return nbr10 / nbrTirs;
+        subTarget1.addEventListener('touchmove', moveHandler);
+        subTarget2.addEventListener('touchmove', moveHandler);
+        subTarget3.addEventListener('touchmove', moveHandler);
+        subTarget4.addEventListener('touchmove', moveHandler);
+        subTarget5.addEventListener('touchmove', moveHandler);
+        subTarget6.addEventListener('touchmove', moveHandler);
     }
 
     function greetings() {
@@ -201,21 +263,33 @@
 
         var msg;
 
-        if(pct8 > 0.9) {
-            console.log(pct8);
+        if(pct8 >= 0.9) {
             msg = "Pas mal!";
         }
 
-        if(pct9 > 0.8) {
+        if(pct9 >= 0.7) {
             msg = "Bien joué !";
         }
 
-        if(pct10 > 0.8) {
+        if(pct10 >= 0.8) {
             msg = "Wow!";
         }
 
         console.log(msg);
     }
 
-    launchTouchEvents();
+    launchMoveEvents();
+
+    $(document).ready(function () {
+        SetGlobals();
+
+        $(window).resize(function () {
+            W = window.innerWidth;
+            H = window.innerHeight;
+            canvas.width = W;
+            canvas.height = H;
+        });
+
+    });
+
 </script>

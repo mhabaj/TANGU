@@ -1,44 +1,49 @@
-@keyframes zoomUp {
+@keyframes blurInAnim {
     0% {
-        zoom: 100%;
+         filter: blur(0px);
     }
 
-    25% {
-        zoom: 110%;
+    15% {
+         filter: blur(1px);
     }
 
-    50% {
-        zoom: 120%;
+    30% {
+         filter: blur(2px);
     }
 
-    75% {
-        zoom: 130%;
+    45% {
+         filter: blur(3px);
+    }
+
+    80% {
+        filter: blur(2px);
+    }
+
+    90% {
+        filter: blur(1px);
     }
 
     100% {
-        zoom: 135%;
+        filter: blur(0px);
     }
+
 }
 
-@keyframes zoomDown {
+@keyframes blurOutAnim {
     0% {
-        zoom: 135%;
+        filter: blur(3px);
     }
 
-    25% {
-        zoom: 130%;
+    33% {
+        filter: blur(2px);
     }
 
-    50% {
-        zoom: 120%;
-    }
-
-    75% {
-        zoom: 110%;
+    66% {
+        filter: blur(1px);
     }
 
     100% {
-        zoom: 100%;
+        filter: blur(0px);
     }
 }
 
@@ -46,8 +51,11 @@
     border-style: none;
 }
 
-#titleBox h1 {
-    border-style: solid;
+canvas {
+    display: block;
+    z-index: 1;
+    pointer-events: none;
+    position: relative;
 }
 
 .point {
@@ -58,26 +66,19 @@
     background-color: black;
 }
 
-.point2 {
-    position: fixed;
-    height: 5px;
-    width: 5px;
-    border-radius: 50%;
-    background-color: rgba(204, 204, 204, 0.9);
-}
-
 #target {
-    border: solid red;
+    z-index: 1;
+    border: none;
     position: fixed;
     top: 50%;
     left: 50%;
     height: 400px;
     width: 100%;
     transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 #target1 {
-    z-index: 1;
     border: solid black 1px;
     background-color: white;
     position: fixed;
@@ -90,7 +91,6 @@
 }
 
 #subTarget1 {
-    z-index: 2;
     border: solid rgba(140, 140, 140, 0.9) 1px;
     background: none;
     position: fixed;
@@ -103,9 +103,8 @@
 }
 
 #target2 {
-    z-index: 3;
     border: none;
-    background-color: black;
+    background-color: rgba(0, 0, 90, 0.9);
     position: fixed;
     top: 50%;
     left: 50%;
@@ -116,7 +115,6 @@
 }
 
 #subTarget2 {
-    z-index: 4;
     border: solid rgba(204, 204, 204, 0.9) 1px;
     background: none;
     position: fixed;
@@ -129,7 +127,6 @@
 }
 
 #target3 {
-    z-index: 5;
     border: none;
     background-color: rgba(1, 115, 228, 1);
     position: fixed;
@@ -142,7 +139,6 @@
 }
 
 #subTarget3 {
-    z-index: 6;
     border: solid rgba(128, 191, 254, 0.9) 1px;
     background: none;
     position: fixed;
@@ -155,7 +151,6 @@
 }
 
 #target4 {
-    z-index: 7;
     border: none;
     background-color: rgba(216, 5, 20, 0.9);
     position: fixed;
@@ -168,7 +163,6 @@
 }
 
 #subTarget4 {
-    z-index: 8;
     border: solid rgba(251, 106, 116, 0.9) 1px;
     background: none;
     position: fixed;
@@ -181,7 +175,6 @@
 }
 
 #target5 {
-    z-index: 9;
     border: none;
     background-color: rgba(228, 188, 2, 0.9);
     position: fixed;
@@ -194,7 +187,6 @@
 }
 
 #subTarget5 {
-    z-index: 10;
     border: solid rgba(253, 226, 104, 0.9) 1px;
     background: none;
     position: fixed;
@@ -207,7 +199,6 @@
 }
 
 #subTarget6 {
-    z-index: 11;
     border: solid rgba(253, 226, 104, 0.9) 1px;
     background: none;
     position: fixed;
