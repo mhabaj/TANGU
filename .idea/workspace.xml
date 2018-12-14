@@ -100,7 +100,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="89" />
+          <entry key="CSS" value="90" />
           <entry key="HTML" value="2" />
           <entry key="JavaScript" value="23" />
           <entry key="PHP" value="125" />
@@ -161,13 +161,18 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/includes/message.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="25">
               <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/assets/css/message.css">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -213,7 +218,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/assets/js/jquery.zoomooz.js" />
         <option value="$PROJECT_DIR$/assets/csss/header.css" />
         <option value="$PROJECT_DIR$/assets/js/confetti-js-master/dist/index.js" />
         <option value="$PROJECT_DIR$/assets/js/confetti.js" />
@@ -264,6 +268,7 @@
         <option value="$PROJECT_DIR$/controllers/functions/sanitize.php" />
         <option value="$PROJECT_DIR$/views/includes/back-header.php" />
         <option value="$PROJECT_DIR$/views/includes/message.php" />
+        <option value="$PROJECT_DIR$/assets/css/message.css" />
       </list>
     </option>
   </component>
@@ -304,6 +309,12 @@
               <item name="TANGU" type="b2602c69:ProjectViewProjectNode" />
               <item name="TANGU" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TANGU" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TANGU" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TANGU" type="b2602c69:ProjectViewProjectNode" />
@@ -378,7 +389,7 @@
       <workItem from="1544561282308" duration="28022000" />
       <workItem from="1544611864211" duration="46387000" />
       <workItem from="1544721237559" duration="51833000" />
-      <workItem from="1544812985586" duration="16625000" />
+      <workItem from="1544812985586" duration="16679000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <created>1544649165150</created>
@@ -419,7 +430,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="198487000" />
+    <option name="totallyTimeSpent" value="198541000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
@@ -458,13 +469,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Update" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/views/includes/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="3" column="10" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/header.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
@@ -882,6 +886,9 @@
           <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/message.css">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
