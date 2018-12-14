@@ -23,7 +23,7 @@ include('controllers/functions/uploadImage.php');
     <script src="js/bootstrap.min.js"></script>
 </head>
 <body>
-
+<?php include 'views/addArc.view.php';?>
 <?php if (isset($_POST['envoyerCreateArc'])) {
 
 

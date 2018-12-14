@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="24a430f1-dafd-4e5d-98b4-56d1fe6d0252" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addArc.php" beforeDir="false" afterPath="$PROJECT_DIR$/addArc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/checkHeader.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/checkHeader.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/editArc.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/edits.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/swiper.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/swiper.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/swipy.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/swipy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/classes/ConnexionBDD.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/classes/ConnexionBDD.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/editArc.php" beforeDir="false" afterPath="$PROJECT_DIR$/editArc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/editBlason.php" beforeDir="false" afterPath="$PROJECT_DIR$/editBlason.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/includes/back-header.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/includes/back-header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/addArc.view.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/addArc.view.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -121,7 +112,7 @@
         <counts>
           <entry key="CSS" value="4437" />
           <entry key="JavaScript" value="52" />
-          <entry key="PHP" value="18401" />
+          <entry key="PHP" value="18425" />
           <entry key="PLAIN_TEXT" value="6" />
         </counts>
       </usages-collector>
@@ -129,20 +120,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/addArc.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="992">
-              <caret line="61" column="2" selection-start-line="61" selection-start-column="2" selection-end-line="61" selection-end-column="2" />
+            <state relative-caret-position="242">
+              <caret line="25" column="40" lean-forward="true" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/views/addArc.view.html">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/addArc.view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="4" column="14" lean-forward="true" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+            <state relative-caret-position="300">
+              <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -344,7 +335,7 @@
       <workItem from="1544546421907" duration="276000" />
       <workItem from="1544561282308" duration="28022000" />
       <workItem from="1544611864211" duration="46387000" />
-      <workItem from="1544721237559" duration="33888000" />
+      <workItem from="1544721237559" duration="33965000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <created>1544649165150</created>
@@ -385,10 +376,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="163917000" />
+    <option name="totallyTimeSpent" value="163994000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1885906" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -819,13 +811,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/addArc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="992">
-          <caret line="61" column="2" selection-start-line="61" selection-start-column="2" selection-end-line="61" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/csss/addArc.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -833,10 +818,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/addArc.view.html">
+    <entry file="file://$PROJECT_DIR$/views/addArc.view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="14" lean-forward="true" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+        <state relative-caret-position="300">
+          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addArc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="25" column="40" lean-forward="true" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
         </state>
       </provider>
     </entry>
