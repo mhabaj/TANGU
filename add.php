@@ -19,6 +19,7 @@ $title = "Nouvel Entrainement";?>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="../assets/js/targetInteractions.js"></script>
     <script src="assets/js/confetti.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
 <?php include 'views/add.view.php'; ?>

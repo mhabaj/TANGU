@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="24a430f1-dafd-4e5d-98b4-56d1fe6d0252" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/add.php" beforeDir="false" afterPath="$PROJECT_DIR$/add.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/targetInteractions.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/targetInteractions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/add.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/add.view.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -114,7 +112,7 @@
         <counts>
           <entry key="CSS" value="5053" />
           <entry key="JavaScript" value="2116" />
-          <entry key="PHP" value="19537" />
+          <entry key="PHP" value="19538" />
           <entry key="PLAIN_TEXT" value="6" />
         </counts>
       </usages-collector>
@@ -122,10 +120,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/add.view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="492">
+            <state relative-caret-position="517">
               <caret line="25" column="6" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
             </state>
           </provider>
@@ -161,11 +159,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/add.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="417">
-              <caret line="19" column="62" selection-start-line="19" selection-start-column="62" selection-end-line="19" selection-end-column="62" />
+            <state relative-caret-position="467">
+              <caret line="21" column="92" selection-start-line="21" selection-start-column="92" selection-end-line="21" selection-end-column="92" />
             </state>
           </provider>
         </entry>
@@ -252,9 +250,9 @@
         <option value="$PROJECT_DIR$/assets/js/inputFieldCreator.js" />
         <option value="$PROJECT_DIR$/views/addArc.view.php" />
         <option value="$PROJECT_DIR$/assets/css/addArc.css" />
+        <option value="$PROJECT_DIR$/assets/js/targetInteractions.js" />
         <option value="$PROJECT_DIR$/views/add.view.php" />
         <option value="$PROJECT_DIR$/add.php" />
-        <option value="$PROJECT_DIR$/assets/js/targetInteractions.js" />
       </list>
     </option>
   </component>
@@ -373,7 +371,7 @@
       <workItem from="1544546421907" duration="276000" />
       <workItem from="1544561282308" duration="28022000" />
       <workItem from="1544611864211" duration="46387000" />
-      <workItem from="1544721237559" duration="46686000" />
+      <workItem from="1544721237559" duration="46711000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <created>1544649165150</created>
@@ -414,7 +412,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="176715000" />
+    <option name="totallyTimeSpent" value="176740000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
@@ -815,13 +813,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/add.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="19" column="62" selection-start-line="19" selection-start-column="62" selection-end-line="19" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/targetInteractions.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1950">
@@ -852,8 +843,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/add.view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
+        <state relative-caret-position="517">
           <caret line="25" column="6" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/add.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="21" column="92" selection-start-line="21" selection-start-column="92" selection-end-line="21" selection-end-column="92" />
         </state>
       </provider>
     </entry>
