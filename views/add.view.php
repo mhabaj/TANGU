@@ -27,7 +27,7 @@
             </div>
             <div id="dateField">
                 <h3 id="dateLabel">Date et heure</h3>
-                <input type="datetime-local">
+                <input type="text" class="datepicker-here">
             </div>
             <div id="submitField">
                 <input type="submit" value="submit" id="popUpSubmitButton">

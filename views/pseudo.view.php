@@ -9,24 +9,37 @@
 </div>
 
 <script>
-    var pseudoInput = document.getElementById("pseudoInput"),
-        checkLink = document.getElementById("checkLink"),
+    function updatePseudo(pseudo) {
+        if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            // code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.open("GET","getPseudo.php?pseudo=" + pseudo, true);
+        xmlhttp.send();
+    }
+</script>
+<script>
+    let pseudoInput = document.getElementById("pseudoInput"),
+        checkButton = document.getElementById("right-button"),
         checkSign = document.getElementById("check");
 
     pseudoInput.addEventListener("input", function() {
-        inputLength = pseudoInput.value.length;
+        let inputLength = pseudoInput.value.length;
         if(inputLength < 6 || inputLength > 20) {
             //Wrong red
             pseudoInput.style.borderColor = "rgba(255, 59, 48, 1)";
             checkSign.style.color = "rgba(130, 127, 254, 0.55)";
             checkSign.style.filter = "blur(0.65px)";
-            checkLink.style.pointerEvents = "none";
+            checkButton.style.pointerEvents = "none";
         } else {
             //Right green
             pseudoInput.style.borderColor = "rgba(76, 217, 100, 1)";
             checkSign.style.color = "rgba(130, 127, 254, 1)";
             checkSign.style.filter = "none";
-            checkLink.style.pointerEvents = "auto";
+            checkButton.style.pointerEvents = "auto";
         }
     });
 

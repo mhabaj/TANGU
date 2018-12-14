@@ -3,8 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="24a430f1-dafd-4e5d-98b4-56d1fe6d0252" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/addTraining.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/addTraining.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account.php" beforeDir="false" afterPath="$PROJECT_DIR$/account.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/add.php" beforeDir="false" afterPath="$PROJECT_DIR$/add.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addArc.php" beforeDir="false" afterPath="$PROJECT_DIR$/addArc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/edit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/editArc.php" beforeDir="false" afterPath="$PROJECT_DIR$/editArc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/editBlason.php" beforeDir="false" afterPath="$PROJECT_DIR$/editBlason.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/password.php" beforeDir="false" afterPath="$PROJECT_DIR$/password.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pseudo.php" beforeDir="false" afterPath="$PROJECT_DIR$/pseudo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stats.php" beforeDir="false" afterPath="$PROJECT_DIR$/stats.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training.php" beforeDir="false" afterPath="$PROJECT_DIR$/training.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/add.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/add.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/includes/back-header.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/includes/back-header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/pseudo.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/pseudo.view.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -104,17 +115,17 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="85" />
+          <entry key="CSS" value="86" />
           <entry key="HTML" value="2" />
           <entry key="JavaScript" value="23" />
-          <entry key="PHP" value="102" />
+          <entry key="PHP" value="122" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="5917" />
           <entry key="JavaScript" value="2120" />
-          <entry key="PHP" value="21226" />
+          <entry key="PHP" value="21625" />
           <entry key="PLAIN_TEXT" value="6" />
         </counts>
       </usages-collector>
@@ -122,77 +133,39 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/views/add.view.php">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pseudo.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="449">
-              <caret line="29" column="45" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
+            <state relative-caret-position="453">
+              <caret line="32" column="16" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/includes/back-header.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="8" column="45" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/pseudo.view.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="428">
+              <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
               <folding>
-                <element signature="n#div#0;n#div#2;n#!!top" />
-                <element signature="n#div#0;n#div#4;n#!!top" />
                 <element signature="n#script#0;n#!!top" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/add.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="11" column="71" selection-start-line="11" selection-start-column="71" selection-end-line="11" selection-end-column="71" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/css/addTraining.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="405" column="16" selection-start-line="405" selection-start-column="16" selection-end-line="405" selection-end-column="16" />
-              <folding>
-                <element signature="e#0#337#0" />
-                <element signature="e#339#540#0" />
-                <element signature="e#542#1050#0" />
-                <element signature="e#1052#1562#0" />
-                <element signature="e#1649#1691#0" />
-                <element signature="e#1714#1775#0" />
-                <element signature="e#1793#1837#0" />
-                <element signature="e#1857#1902#0" />
-                <element signature="e#1925#1984#0" />
-                <element signature="e#1996#2139#0" />
-                <element signature="e#2152#2210#0" />
-                <element signature="e#2222#2267#0" />
-                <element signature="e#2282#2345#0" />
-                <element signature="e#2356#2383#0" />
-                <element signature="e#2396#2466#0" />
-                <element signature="e#2479#2629#0" />
-                <element signature="e#2638#2889#0" />
-                <element signature="e#2977#3310#0" />
-                <element signature="e#3319#3408#0" />
-                <element signature="e#3417#3527#0" />
-                <element signature="e#3537#3701#0" />
-                <element signature="e#3712#3922#0" />
-                <element signature="e#3936#4158#0" />
-                <element signature="e#4169#4382#0" />
-                <element signature="e#4396#4618#0" />
-                <element signature="e#4629#4843#0" />
-                <element signature="e#4857#5079#0" />
-                <element signature="e#5090#5303#0" />
-                <element signature="e#5317#5537#0" />
-                <element signature="e#5548#5762#0" />
-                <element signature="e#5776#5996#0" />
-                <element signature="e#6010#6228#0" />
-                <element signature="e#6328#6452#0" />
-                <element signature="e#6241#6358#0" />
-                <element signature="e#6371#6486#0" />
-                <element signature="e#6499#6612#0" />
-                <element signature="e#6625#6738#0" />
-                <element signature="e#7628#7739#0" />
-                <element signature="e#7752#7865#0" />
-              </folding>
-            </state>
-          </provider>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/getPseudo.php">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -229,10 +202,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/models/Serie.php" />
-        <option value="$PROJECT_DIR$/controllers/classes/SerieController.php" />
         <option value="$PROJECT_DIR$/controllers/functions/control-session.php" />
-        <option value="$PROJECT_DIR$/stats.php" />
         <option value="$PROJECT_DIR$/assets/css/add.css" />
         <option value="$PROJECT_DIR$/assets/js/jquery.zoomooz.js" />
         <option value="$PROJECT_DIR$/assets/csss/header.css" />
@@ -252,34 +222,37 @@
         <option value="$PROJECT_DIR$/assets/css/editArc.css" />
         <option value="$PROJECT_DIR$/assets/css/checkHeader.css" />
         <option value="$PROJECT_DIR$/controllers/classes/ConnexionBDD.php" />
-        <option value="$PROJECT_DIR$/editBlason.php" />
         <option value="$PROJECT_DIR$/views/addArc.view.html" />
-        <option value="$PROJECT_DIR$/views/includes/back-header.php" />
         <option value="$PROJECT_DIR$/assets/css/edits.css" />
-        <option value="$PROJECT_DIR$/views/pseudo.view.php" />
-        <option value="$PROJECT_DIR$/password.php" />
         <option value="$PROJECT_DIR$/assets/css/pseudo.css" />
         <option value="$PROJECT_DIR$/assets/css/password.css" />
         <option value="$PROJECT_DIR$/views/password.view.php" />
-        <option value="$PROJECT_DIR$/pseudo.php" />
-        <option value="$PROJECT_DIR$/addArc.php" />
         <option value="$PROJECT_DIR$/views/addArc.view.php" />
         <option value="$PROJECT_DIR$/assets/css/addArc.css" />
         <option value="$PROJECT_DIR$/assets/js/targetInteractions.js" />
         <option value="$PROJECT_DIR$/assets/js/inputFieldCreator.js" />
         <option value="$PROJECT_DIR$/assets/css/inputFieldCreator.css" />
         <option value="$PROJECT_DIR$/views/edit.view.php" />
-        <option value="$PROJECT_DIR$/edit.php" />
         <option value="$PROJECT_DIR$/assets/css/training.css" />
-        <option value="$PROJECT_DIR$/editArc.php" />
-        <option value="$PROJECT_DIR$/training.php" />
         <option value="$PROJECT_DIR$/ChoisirSerie.php" />
         <option value="$PROJECT_DIR$/entrainement.php" />
         <option value="$PROJECT_DIR$/views/redirect.php" />
         <option value="$PROJECT_DIR$/assets/css/modalFormInput.css" />
-        <option value="$PROJECT_DIR$/add.php" />
         <option value="$PROJECT_DIR$/assets/css/addTraining.css" />
         <option value="$PROJECT_DIR$/views/add.view.php" />
+        <option value="$PROJECT_DIR$/add.php" />
+        <option value="$PROJECT_DIR$/training.php" />
+        <option value="$PROJECT_DIR$/stats.php" />
+        <option value="$PROJECT_DIR$/edit.php" />
+        <option value="$PROJECT_DIR$/account.php" />
+        <option value="$PROJECT_DIR$/password.php" />
+        <option value="$PROJECT_DIR$/editBlason.php" />
+        <option value="$PROJECT_DIR$/editArc.php" />
+        <option value="$PROJECT_DIR$/addArc.php" />
+        <option value="$PROJECT_DIR$/views/includes/back-header.php" />
+        <option value="$PROJECT_DIR$/pseudo.php" />
+        <option value="$PROJECT_DIR$/views/pseudo.view.php" />
+        <option value="$PROJECT_DIR$/getPseudo.php" />
       </list>
     </option>
   </component>
@@ -315,27 +288,6 @@
             <path>
               <item name="TANGU" type="b2602c69:ProjectViewProjectNode" />
               <item name="TANGU" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TANGU" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TANGU" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TANGU" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TANGU" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TANGU" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TANGU" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TANGU" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TANGU" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -399,7 +351,7 @@
       <workItem from="1544561282308" duration="28022000" />
       <workItem from="1544611864211" duration="46387000" />
       <workItem from="1544721237559" duration="51833000" />
-      <workItem from="1544812985586" duration="6879000" />
+      <workItem from="1544812985586" duration="9655000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <created>1544649165150</created>
@@ -440,7 +392,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="188741000" />
+    <option name="totallyTimeSpent" value="191517000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
@@ -479,30 +431,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Update" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/csss/header.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="98" column="23" lean-forward="true" selection-start-line="98" selection-start-column="23" selection-end-line="98" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/csss/checkHeader.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1033" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1500" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/csss/navbar.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="619">
-          <caret line="36" column="1" lean-forward="true" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/edit.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="325">
@@ -603,13 +531,6 @@
     <entry file="file://$PROJECT_DIR$/controllers/functions/control-session.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/editBlason.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="52" selection-start-line="2" selection-start-column="52" selection-end-line="2" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/csss/addArc.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -617,52 +538,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/includes/back-header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="13" column="6" lean-forward="true" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/account.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/password.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="27" lean-forward="true" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/pseudo.css">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret selection-end-line="2" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pseudo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="2" lean-forward="true" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/pseudo.view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="46" lean-forward="true" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/checkHeader.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1125">
-          <caret line="45" column="34" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -684,6 +563,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="492">
           <caret line="112" column="9" lean-forward="true" selection-start-line="112" selection-start-column="9" selection-end-line="112" selection-end-column="9" />
+          <folding>
+            <element signature="n#script#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -694,13 +576,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
           <caret line="19" column="10" lean-forward="true" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/addArc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -727,38 +602,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/edit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="21" column="43" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/edit.view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/training.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="725">
-          <caret line="50" column="9" selection-start-line="50" selection-start-column="9" selection-end-line="50" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/swipy.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="12" column="34" lean-forward="true" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/editArc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="53" column="9" selection-start-line="53" selection-start-column="9" selection-end-line="53" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -820,17 +667,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/add.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="11" column="71" selection-start-line="11" selection-start-column="71" selection-end-line="11" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/modalFormInput.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="47" column="1" lean-forward="true" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/add.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="29" column="57" selection-start-line="29" selection-start-column="57" selection-end-line="29" selection-end-column="57" />
+          <folding>
+            <element signature="n#div#0;n#div#2;n#!!top" />
+            <element signature="n#div#0;n#div#4;n#!!top" />
+            <element signature="n#script#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -882,17 +734,115 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/add.view.php">
+    <entry file="file://$PROJECT_DIR$/views/training.view.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/training.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="29" column="45" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
+        <state relative-caret-position="253">
+          <caret line="21" column="92" selection-start-line="21" selection-start-column="92" selection-end-line="21" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stats.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="19" column="92" selection-start-line="19" selection-start-column="92" selection-end-line="19" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/add.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="25" column="7" lean-forward="true" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/edit.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="25" column="38" lean-forward="true" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/account.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="19" column="92" selection-start-line="19" selection-start-column="92" selection-end-line="19" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/password.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="21" column="92" selection-start-line="21" selection-start-column="92" selection-end-line="21" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inscription.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/editArc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="25" column="92" selection-start-line="25" selection-start-column="92" selection-end-line="25" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addArc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="490">
+          <caret line="26" column="92" selection-start-line="26" selection-start-column="92" selection-end-line="26" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/editBlason.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="25" column="92" selection-start-line="25" selection-start-column="92" selection-end-line="25" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/checkHeader.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1090">
+          <caret line="45" column="34" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/includes/back-header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="45" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pseudo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="453">
+          <caret line="32" column="16" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/pseudo.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="428">
+          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
           <folding>
-            <element signature="n#div#0;n#div#2;n#!!top" />
-            <element signature="n#div#0;n#div#4;n#!!top" />
             <element signature="n#script#0;n#!!top" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/getPseudo.php">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
