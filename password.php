@@ -1,5 +1,8 @@
 <?php
 require_once 'controllers/functions/control-session.php';
+$title = "Nouveau Mot de Passe";
+$left_url = "account.php";
+$right_url = "account.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">

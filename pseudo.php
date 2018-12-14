@@ -1,5 +1,8 @@
 <?php
 require_once 'controllers/functions/control-session.php';
+$title = "Nouveau Pseudo";
+$left_url = "account.php";
+$right_url = "account.php";
 ?>
 <!DOCTYPE html>
 
@@ -8,7 +11,7 @@ require_once 'controllers/functions/control-session.php';
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Nouveau Pseudo</title>
+    <title><?=$title;?></title>
 
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/checkHeader.css">
