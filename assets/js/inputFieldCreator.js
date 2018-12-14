@@ -1,4 +1,4 @@
-function createInputField(number = 1, datatype="string", label, min, max, restriction="text", form, placeholder = "", tiny = false) {
+/*function createInputField(number = 1, datatype="string", label, min, max, restriction="text", form, placeholder = "", tiny = false) {
     let divElement = document.createElement('div'),
         inputElement = document.createElement('input'),
         labelElement = document.createElement('h3');
@@ -21,7 +21,7 @@ function createInputField(number = 1, datatype="string", label, min, max, restri
 
     let elements = [divElement, inputElement, labelElement];
     return elements;
-}
+}*/
 
 function createInputFields(param, tiny, form) {
     if(param.length == 2 & tiny) {

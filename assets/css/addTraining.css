@@ -114,6 +114,7 @@
 }
 
 #headerBox {
+    display: none;
     border: none;
     padding: 0 0;
 }
@@ -159,10 +160,27 @@
     width: 50%;
     height: 20%;
     border-radius: 10px;
-    background: none;
+    background: red;
     text-align: center;
     color: lawngreen;
     padding: 10% 0;
+}
+
+#form-popUp {
+    display: none;
+    z-index: 2;
+    border: none;
+    position: fixed;
+    top: 30%;
+    left: 25%;
+    width: 50%;
+    height: 40%;
+    border-radius: 10px;
+    background: red;
+    text-align: center;
+    color: lawngreen;
+    padding: 10% 0;
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);;
 }
 
 #popUp h1 {
@@ -186,6 +204,7 @@ canvas {
 }
 
 #target {
+    display: none;
     border: none;
     position: fixed;
     top: 50%;

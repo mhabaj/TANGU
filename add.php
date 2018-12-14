@@ -10,6 +10,7 @@ $title = "Nouvel Entrainement";?>
 
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/addTraining.css">
+    <link rel="stylesheet" href="assets/css/modalFormInput.css">
     <link rel="stylesheet" href="assets/css/navbar.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -17,9 +18,9 @@ $title = "Nouvel Entrainement";?>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 
     <script src="assets/js/bootstrap.min.js"></script>
-    <script src="../assets/js/targetInteractions.js"></script>
-    <script src="assets/js/confetti.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="assets/js/confetti.js"></script>
+    <script src="assets/js/inputFieldCreator.js"></script>
 </head>
 <body>
 <?php include 'views/add.view.php'; ?>
