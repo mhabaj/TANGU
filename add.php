@@ -9,8 +9,8 @@ $title = "Nouvel Entrainement";?>
     <title><?= $title;?></title>
 
     <link rel="stylesheet" href="assets/css/header.css">
+    <!--<link rel="stylesheet" href="assets/css/modalFormInput.css">-->
     <link rel="stylesheet" href="assets/css/addTraining.css">
-    <link rel="stylesheet" href="assets/css/modalFormInput.css">
     <link rel="stylesheet" href="assets/css/navbar.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -20,9 +20,9 @@ $title = "Nouvel Entrainement";?>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="assets/js/confetti.js"></script>
-    <script src="assets/js/inputFieldCreator.js"></script>
 </head>
 <body>
 <?php include 'views/add.view.php'; ?>
+
 </body>
 </html>

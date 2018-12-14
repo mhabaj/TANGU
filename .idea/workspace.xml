@@ -2,9 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="24a430f1-dafd-4e5d-98b4-56d1fe6d0252" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChoisirSerie.php" beforeDir="false" afterPath="$PROJECT_DIR$/ChoisirSerie.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/add.php" beforeDir="false" afterPath="$PROJECT_DIR$/add.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/css/addTraining.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/addTraining.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/css/modalFormInput.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/modalFormInput.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/training.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/training.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/edit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/editArc.php" beforeDir="false" afterPath="$PROJECT_DIR$/editArc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entrainement.php" beforeDir="false" afterPath="$PROJECT_DIR$/entrainement.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training.php" beforeDir="false" afterPath="$PROJECT_DIR$/training.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/add.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/add.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/edit.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/edit.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/redirect.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/redirect.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -97,23 +107,24 @@
           <entry key="project.closed" value="3" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.6" value="2" />
+          <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="79" />
+          <entry key="CSS" value="85" />
           <entry key="HTML" value="2" />
-          <entry key="JavaScript" value="21" />
-          <entry key="PHP" value="90" />
+          <entry key="JavaScript" value="23" />
+          <entry key="PHP" value="102" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="5539" />
+          <entry key="CSS" value="5638" />
           <entry key="JavaScript" value="2120" />
-          <entry key="PHP" value="20484" />
+          <entry key="PHP" value="21045" />
           <entry key="PLAIN_TEXT" value="6" />
         </counts>
       </usages-collector>
@@ -124,38 +135,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/add.view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
+            <state relative-caret-position="474">
+              <caret line="24" column="74" selection-start-line="24" selection-start-column="74" selection-end-line="24" selection-end-column="74" />
               <folding>
-                <element signature="n#div#3;n#!!top" />
-                <element signature="e#769#785#0#HTML" />
-                <element signature="e#2826#3379#0#HTML" />
-                <element signature="e#3188#4594#0#HTML" />
-                <element signature="e#4627#4869#0#HTML" />
-                <element signature="e#4905#5216#0#HTML" />
-                <element signature="e#5250#5337#0#HTML" />
-                <element signature="e#5369#5573#0#HTML" />
-                <element signature="e#5605#5944#0#HTML" />
-                <element signature="e#5972#6450#0#HTML" />
-                <element signature="e#6472#7703#0#HTML" />
-                <element signature="e#7734#9814#0#HTML" />
-                <element signature="e#9844#10868#0#HTML" />
-                <element signature="e#10903#11590#0#HTML" />
-                <element signature="e#11623#12342#0#HTML" />
-                <element signature="e#12376#13063#0#HTML" />
-                <element signature="e#13095#13815#0#HTML" />
-                <element signature="e#13842#14202#0#HTML" />
-                <element signature="e#14264#14478#0#HTML" />
+                <element signature="n#div#0;n#div#2;n#!!top" />
+                <element signature="n#div#0;n#div#4;n#!!top" />
+                <element signature="n#script#0;n#!!top" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/css/modalFormInput.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+            <state relative-caret-position="217">
+              <caret line="47" column="1" lean-forward="true" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -163,44 +158,56 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/add.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="14" column="60" lean-forward="true" selection-start-line="14" selection-start-column="60" selection-end-line="14" selection-end-column="60" />
+            <state relative-caret-position="178">
+              <caret line="11" column="71" selection-start-line="11" selection-start-column="71" selection-end-line="11" selection-end-column="71" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/css/addTraining.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="171" column="16" selection-start-line="171" selection-start-column="16" selection-end-line="171" selection-end-column="16" />
+            <state relative-caret-position="171">
+              <caret line="348" column="20" selection-start-line="348" selection-start-column="20" selection-end-line="348" selection-end-column="20" />
               <folding>
                 <element signature="e#0#337#0" />
                 <element signature="e#339#540#0" />
                 <element signature="e#542#1050#0" />
                 <element signature="e#1052#1562#0" />
+                <element signature="e#1649#1691#0" />
                 <element signature="e#1714#1775#0" />
                 <element signature="e#1793#1837#0" />
                 <element signature="e#1857#1902#0" />
                 <element signature="e#1925#1984#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/css/inputFieldCreator.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="567">
-              <caret line="61" column="1" lean-forward="true" selection-start-line="61" selection-start-column="1" selection-end-line="61" selection-end-column="1" />
-              <folding>
-                <element signature="e#293#553#0" />
-                <element signature="e#663#741#0" />
-                <element signature="e#760#843#0" />
-                <element signature="e#862#948#0" />
-                <element signature="e#963#1055#0" />
-                <element signature="e#1068#1179#0" />
-                <element signature="e#1192#1305#0" />
+                <element signature="e#1996#2139#0" />
+                <element signature="e#2152#2210#0" />
+                <element signature="e#2222#2267#0" />
+                <element signature="e#2282#2345#0" />
+                <element signature="e#2356#2383#0" />
+                <element signature="e#2396#2466#0" />
+                <element signature="e#2479#2629#0" />
+                <element signature="e#2638#2889#0" />
+                <element signature="e#2977#3310#0" />
+                <element signature="e#3319#3408#0" />
+                <element signature="e#3417#3527#0" />
+                <element signature="e#3537#3701#0" />
+                <element signature="e#3712#3922#0" />
+                <element signature="e#3936#4158#0" />
+                <element signature="e#4169#4382#0" />
+                <element signature="e#4396#4618#0" />
+                <element signature="e#4629#4843#0" />
+                <element signature="e#4857#5079#0" />
+                <element signature="e#5090#5303#0" />
+                <element signature="e#5317#5537#0" />
+                <element signature="e#5548#5762#0" />
+                <element signature="e#5776#5996#0" />
+                <element signature="e#6010#6228#0" />
+                <element signature="e#6241#6358#0" />
+                <element signature="e#6371#6486#0" />
+                <element signature="e#6499#6612#0" />
+                <element signature="e#6625#6738#0" />
+                <element signature="e#7628#7739#0" />
+                <element signature="e#7752#7865#0" />
               </folding>
             </state>
           </provider>
@@ -240,15 +247,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/controllers/classes/Arc.php" />
-        <option value="$PROJECT_DIR$/controllers/classes/Blason.php" />
-        <option value="$PROJECT_DIR$/controllers/classes/Entrainement.php" />
-        <option value="$PROJECT_DIR$/models/SerieModel.php" />
         <option value="$PROJECT_DIR$/models/Serie.php" />
         <option value="$PROJECT_DIR$/controllers/classes/SerieController.php" />
         <option value="$PROJECT_DIR$/controllers/functions/control-session.php" />
         <option value="$PROJECT_DIR$/stats.php" />
-        <option value="$PROJECT_DIR$/training.php" />
         <option value="$PROJECT_DIR$/assets/css/add.css" />
         <option value="$PROJECT_DIR$/assets/js/jquery.zoomooz.js" />
         <option value="$PROJECT_DIR$/assets/csss/header.css" />
@@ -261,17 +263,14 @@
         <option value="$PROJECT_DIR$/views/training.view.php" />
         <option value="$PROJECT_DIR$/views/stats.view.php" />
         <option value="$PROJECT_DIR$/assets/csss/edit.css" />
-        <option value="$PROJECT_DIR$/views/edit.view.php" />
         <option value="$PROJECT_DIR$/assets/css/navbar.css" />
         <option value="$PROJECT_DIR$/assets/css/edit.css" />
         <option value="$PROJECT_DIR$/assets/js/swipy.js" />
         <option value="$PROJECT_DIR$/assets/css/swiper.css" />
         <option value="$PROJECT_DIR$/assets/css/editArc.css" />
-        <option value="$PROJECT_DIR$/edit.php" />
         <option value="$PROJECT_DIR$/assets/css/checkHeader.css" />
         <option value="$PROJECT_DIR$/controllers/classes/ConnexionBDD.php" />
         <option value="$PROJECT_DIR$/editBlason.php" />
-        <option value="$PROJECT_DIR$/editArc.php" />
         <option value="$PROJECT_DIR$/views/addArc.view.html" />
         <option value="$PROJECT_DIR$/views/includes/back-header.php" />
         <option value="$PROJECT_DIR$/assets/css/edits.css" />
@@ -286,11 +285,19 @@
         <option value="$PROJECT_DIR$/assets/css/addArc.css" />
         <option value="$PROJECT_DIR$/assets/js/targetInteractions.js" />
         <option value="$PROJECT_DIR$/assets/js/inputFieldCreator.js" />
-        <option value="$PROJECT_DIR$/add.php" />
         <option value="$PROJECT_DIR$/assets/css/inputFieldCreator.css" />
-        <option value="$PROJECT_DIR$/assets/css/addTraining.css" />
+        <option value="$PROJECT_DIR$/views/edit.view.php" />
+        <option value="$PROJECT_DIR$/edit.php" />
+        <option value="$PROJECT_DIR$/assets/css/training.css" />
+        <option value="$PROJECT_DIR$/editArc.php" />
+        <option value="$PROJECT_DIR$/training.php" />
+        <option value="$PROJECT_DIR$/ChoisirSerie.php" />
+        <option value="$PROJECT_DIR$/entrainement.php" />
+        <option value="$PROJECT_DIR$/views/redirect.php" />
         <option value="$PROJECT_DIR$/views/add.view.php" />
         <option value="$PROJECT_DIR$/assets/css/modalFormInput.css" />
+        <option value="$PROJECT_DIR$/add.php" />
+        <option value="$PROJECT_DIR$/assets/css/addTraining.css" />
       </list>
     </option>
   </component>
@@ -305,7 +312,7 @@
       <path value="$PROJECT_DIR$/assets/js/confetti-js-master/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="240" />
     <option name="y" value="125" />
     <option name="width" value="1440" />
@@ -319,6 +326,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -340,12 +348,6 @@
             <path>
               <item name="TANGU" type="b2602c69:ProjectViewProjectNode" />
               <item name="TANGU" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TANGU" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TANGU" type="462c0819:PsiDirectoryNode" />
               <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -357,7 +359,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -416,6 +417,7 @@
       <workItem from="1544561282308" duration="28022000" />
       <workItem from="1544611864211" duration="46387000" />
       <workItem from="1544721237559" duration="51833000" />
+      <workItem from="1544812985586" duration="4988000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <created>1544649165150</created>
@@ -456,13 +458,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="181862000" />
+    <option name="totallyTimeSpent" value="186850000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1885906" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19127516" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -495,43 +497,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="Update" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/views/stats.view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="3" column="6" lean-forward="true" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/blasonSlides.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/csss/back.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/csss/edit.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-222">
-          <caret line="32" column="1" lean-forward="true" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/csss/header.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
           <caret line="98" column="23" lean-forward="true" selection-start-line="98" selection-start-column="23" selection-end-line="98" selection-end-column="23" />
-          <folding>
-            <element signature="e#55#152#0" />
-            <element signature="e#165#264#0" />
-            <element signature="e#277#380#0" />
-            <element signature="e#428#541#0" />
-            <element signature="e#554#671#0" />
-            <element signature="e#684#797#0" />
-            <element signature="e#799#930#0" />
-            <element signature="e#932#1063#0" />
-            <element signature="e#1065#1313#0" />
-            <element signature="e#1326#1542#0" />
-            <element signature="e#1820#1957#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -549,11 +518,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="619">
           <caret line="36" column="1" lean-forward="true" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
-          <folding>
-            <element signature="e#11#113#0" />
-            <element signature="e#120#170#0" />
-            <element signature="e#182#227#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -561,13 +525,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="325">
           <caret line="52" column="1" lean-forward="true" selection-start-line="52" selection-start-column="1" selection-end-line="52" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/edit.view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="21" lean-forward="true" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -602,14 +559,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="975">
           <caret line="76" column="9" lean-forward="true" selection-start-line="76" selection-start-column="9" selection-end-line="76" selection-end-column="9" />
-          <folding>
-            <element signature="n#script#0;n#!!top" />
-          </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/training.css">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/account.css">
       <provider selected="true" editor-type-id="text-editor" />
@@ -624,13 +575,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
           <caret line="3136" column="25" selection-start-line="3136" selection-start-column="20" selection-end-line="3136" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/swipy.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -655,20 +599,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/includes/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="37" column="30" lean-forward="true" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="30" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#!!top" />
-            <element signature="n#div#1;n#div#0;n#!!top" />
-            <element signature="n#div#3;n#div#0;n#!!top" />
-            <element signature="n#div#4;n#div#0;n#!!top" />
-            <element signature="n#script#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/classes/Blason.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2475" />
@@ -678,13 +608,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="117">
           <caret line="27" column="18" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/editArc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -705,24 +628,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/edit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-122">
-          <caret line="4" column="15" lean-forward="true" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/csss/addArc.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/edits.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -793,9 +702,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="492">
           <caret line="112" column="9" lean-forward="true" selection-start-line="112" selection-start-column="9" selection-end-line="112" selection-end-column="9" />
-          <folding>
-            <element signature="n#script#0;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -820,16 +726,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1">
           <caret line="23" column="3" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
-          <folding>
-            <element signature="n#!!block;n#activateValidationHandler#0" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/inputFieldCreator.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="567">
-          <caret line="61" column="1" lean-forward="true" selection-start-line="61" selection-start-column="1" selection-end-line="61" selection-end-column="1" />
+          <caret line="61" column="1" selection-start-line="61" selection-start-column="1" selection-end-line="61" selection-end-column="1" />
           <folding>
             <element signature="e#293#553#0" />
             <element signature="e#663#741#0" />
@@ -842,62 +745,169 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/addTraining.css">
+    <entry file="file://$PROJECT_DIR$/edit.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="171" column="16" selection-start-line="171" selection-start-column="16" selection-end-line="171" selection-end-column="16" />
+        <state relative-caret-position="342">
+          <caret line="21" column="43" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/edit.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/training.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="725">
+          <caret line="50" column="9" selection-start-line="50" selection-start-column="9" selection-end-line="50" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/swipy.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="12" column="34" lean-forward="true" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/editArc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="53" column="9" selection-start-line="53" selection-start-column="9" selection-end-line="53" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/edits.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/includes/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="35" column="38" selection-start-line="35" selection-start-column="38" selection-end-line="35" selection-end-column="38" />
           <folding>
-            <element signature="e#0#337#0" />
-            <element signature="e#339#540#0" />
-            <element signature="e#542#1050#0" />
-            <element signature="e#1052#1562#0" />
-            <element signature="e#1714#1775#0" />
-            <element signature="e#1793#1837#0" />
-            <element signature="e#1857#1902#0" />
-            <element signature="e#1925#1984#0" />
+            <element signature="n#div#0;n#div#0;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#!!top" />
+            <element signature="n#div#2;n#div#0;n#!!top" />
+            <element signature="n#div#3;n#div#0;n#!!top" />
+            <element signature="n#div#4;n#div#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ChoisirSerie.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1425">
+          <caret line="57" column="2" selection-start-line="57" selection-start-column="2" selection-end-line="57" selection-end-column="2" />
+          <folding>
+            <element signature="e#9#1253#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/redirect.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
+          <folding>
+            <element signature="e#6#51#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/entrainement.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2992">
+          <caret line="229" column="2" selection-start-line="229" selection-start-column="2" selection-end-line="229" selection-end-column="2" />
+          <folding>
+            <element signature="e#6#7986#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/training.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="925">
+          <caret line="37" column="1" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/add.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="24" column="74" selection-start-line="24" selection-start-column="74" selection-end-line="24" selection-end-column="74" />
+          <folding>
+            <element signature="n#div#0;n#div#2;n#!!top" />
+            <element signature="n#div#0;n#div#4;n#!!top" />
+            <element signature="n#script#0;n#!!top" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/add.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="14" column="60" lean-forward="true" selection-start-line="14" selection-start-column="60" selection-end-line="14" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/add.view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
-          <folding>
-            <element signature="n#div#3;n#!!top" />
-            <element signature="e#769#785#0#HTML" />
-            <element signature="e#2826#3379#0#HTML" />
-            <element signature="e#3188#4594#0#HTML" />
-            <element signature="e#4627#4869#0#HTML" />
-            <element signature="e#4905#5216#0#HTML" />
-            <element signature="e#5250#5337#0#HTML" />
-            <element signature="e#5369#5573#0#HTML" />
-            <element signature="e#5605#5944#0#HTML" />
-            <element signature="e#5972#6450#0#HTML" />
-            <element signature="e#6472#7703#0#HTML" />
-            <element signature="e#7734#9814#0#HTML" />
-            <element signature="e#9844#10868#0#HTML" />
-            <element signature="e#10903#11590#0#HTML" />
-            <element signature="e#11623#12342#0#HTML" />
-            <element signature="e#12376#13063#0#HTML" />
-            <element signature="e#13095#13815#0#HTML" />
-            <element signature="e#13842#14202#0#HTML" />
-            <element signature="e#14264#14478#0#HTML" />
-          </folding>
+        <state relative-caret-position="178">
+          <caret line="11" column="71" selection-start-line="11" selection-start-column="71" selection-end-line="11" selection-end-column="71" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/modalFormInput.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        <state relative-caret-position="217">
+          <caret line="47" column="1" lean-forward="true" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/addTraining.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="348" column="20" selection-start-line="348" selection-start-column="20" selection-end-line="348" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#337#0" />
+            <element signature="e#339#540#0" />
+            <element signature="e#542#1050#0" />
+            <element signature="e#1052#1562#0" />
+            <element signature="e#1649#1691#0" />
+            <element signature="e#1714#1775#0" />
+            <element signature="e#1793#1837#0" />
+            <element signature="e#1857#1902#0" />
+            <element signature="e#1925#1984#0" />
+            <element signature="e#1996#2139#0" />
+            <element signature="e#2152#2210#0" />
+            <element signature="e#2222#2267#0" />
+            <element signature="e#2282#2345#0" />
+            <element signature="e#2356#2383#0" />
+            <element signature="e#2396#2466#0" />
+            <element signature="e#2479#2629#0" />
+            <element signature="e#2638#2889#0" />
+            <element signature="e#2977#3310#0" />
+            <element signature="e#3319#3408#0" />
+            <element signature="e#3417#3527#0" />
+            <element signature="e#3537#3701#0" />
+            <element signature="e#3712#3922#0" />
+            <element signature="e#3936#4158#0" />
+            <element signature="e#4169#4382#0" />
+            <element signature="e#4396#4618#0" />
+            <element signature="e#4629#4843#0" />
+            <element signature="e#4857#5079#0" />
+            <element signature="e#5090#5303#0" />
+            <element signature="e#5317#5537#0" />
+            <element signature="e#5548#5762#0" />
+            <element signature="e#5776#5996#0" />
+            <element signature="e#6010#6228#0" />
+            <element signature="e#6241#6358#0" />
+            <element signature="e#6371#6486#0" />
+            <element signature="e#6499#6612#0" />
+            <element signature="e#6625#6738#0" />
+            <element signature="e#7628#7739#0" />
+            <element signature="e#7752#7865#0" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -166,6 +166,11 @@
     padding: 10% 0;
 }
 
+#popUp h1 {
+    font-family: SF-Display-Regular;
+    font-size: 2.2em;
+}
+
 #form-popUp {
     display: none;
     z-index: 2;
@@ -181,11 +186,6 @@
     color: lawngreen;
     padding: 0 0;
     box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);;
-}
-
-#popUp h1 {
-    font-family: SF-Display-Regular;
-    font-size: 2.2em;
 }
 
 canvas {
@@ -346,6 +346,56 @@ canvas {
     transform: translate(-50%, -50%);
 }
 
+#popUpSubmitButton {
+    border-style: solid;
+    background: none;
+    width: 80%;
+    border-radius: 4px;
+}
+
+#formTitle {
+    text-align: left;
+    font-size: 90%;
+    font-family: SF-Text-Regular;
+    margin-bottom: 8%;
+    margin-left: 10%;
+}
+
+#newTrainingForm {
+    padding: 5% 0;
+    height: 100%;
+    background-color: none;
+    border-radius: 10px;
+}
+
+#newTrainingForm div {
+    border-style: none;
+}
+
+#newTrainingForm div h3 {
+    text-align: left;
+    margin-left: 10%;
+    font-family: SF-Text-Semibold;
+    font-size: 70%;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+input[type="text"] {
+    margin-top: 2%;
+    margin-bottom: 5%;
+    height: 6%;
+    width: 80%;
+    border-radius: 4px;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-family: SF-Text-Regular;
+    font-size: 70%;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    outline: none;
+}
+
 @font-face {
     font-family: SF-Display-Regular;
     src: url(../fonts/SF/SFProDisplay-Regular.ttf);
@@ -361,5 +411,23 @@ canvas {
 @font-face {
     font-family: SF-Display-Light;
     src: url(../fonts/SF/SFProDisplay-Light.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: SF-Text-Semibold;
+    src: url(../fonts/SF/SFProText-Semibold.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: SF-Text-Regular;
+    src: url(../fonts/SF/SFProText-Regular.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: SF-Text-Semibold;
+    src: url(../fonts/SF/SFProText-Semibold.ttf);
     font-weight: normal;
 }

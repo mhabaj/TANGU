@@ -1,5 +1,5 @@
    <?php
-
+/*
    if (!isset($_GET['new_ID_Ent'])){
 
        header("Location: training.php");
@@ -55,5 +55,5 @@
        </form>
        <?php
    }
-
+*/
 ?>

@@ -29,29 +29,32 @@ $right_url = "addArc.php";
 <body>
 <div class="container-fluid" id="mainBox">
     <?php include_once 'views/includes/back-header.php'; ?>
+    <?php
+    $bdd = new ConnexionBDD();
+    $con = $bdd->getCon();
+    $query = "SELECT * FROM arc WHERE ID_USER = ?";
+    $stmt = $con->prepare($query);
+    $stmt->execute([$idUser]);
+    $result = $stmt->fetchAll();
+    if(count($result) == 0):?>
+        <div id="contentBox">No arc records</div>
+    <?php else:?>
 
     <div class="swiper-container" id="contentBox">
         <div class="swiper-wrapper">
-            <?php
-            $bdd = new ConnexionBDD();
-            $con = $bdd->getCon();
-            $query = "SELECT NOMARC, TAILLEARC, PHOTOARC FROM arc WHERE ID_USER = ?";
-            $stmt = $con->prepare($query);
-            $stmt->execute([$idUser]);
-            $result = $stmt->fetchAll();
-
-            foreach ($result as $arc):?>
-                <div class="swiper-slide" id="e1">
-                    <h3><?=$arc['NOMARC']?></h3>
+            <?php foreach ($result as $arc):?>
+                <div class="swiper-slide">
+                    <h3><?=$arc['NOMARC'];?></h3>
                 </div>
             <?php endforeach;?>
         </div>
         <div class="swiper-pagination"></div>
     </div>
+        <script src="assets/js/swipy.js"></script>
+    <?php endif;?>
 
     <?php include_once 'views/includes/footer.php'; ?>
 </div>
-<script src="assets/js/swipy.js"></script>
 </body>
 </html>
 

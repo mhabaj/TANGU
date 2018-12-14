@@ -1,5 +1,6 @@
 <?php
-require 'controllers/functions/control-session.php';
+require_once 'controllers/functions/control-session.php';
+require_once 'controllers/classes/ConnexionBDD.php';
 $title = "Entrainements"; ?>
 <!DOCTYPE html>
 
@@ -11,83 +12,46 @@ $title = "Entrainements"; ?>
     <title><?= $title ?></title>
 
     <link rel="stylesheet" href="assets/css/header.css">
-    <link rel="stylesheet" href="assets/css/edit.css">
+    <link rel="stylesheet" href="assets/css/training.css">
     <link rel="stylesheet" href="assets/css/navbar.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="assets/css/swiper.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
-          integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-    <style> a {
-            color: inherit;
-        }</style>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
     <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/swiper.min.js"></script>
 </head>
 <body>
-
-
 <div class="container-fluid" id="mainBox">
     <?php include_once 'views/includes/header.php'; ?>
 
+    <?php
+    $bdd = new ConnexionBDD();
+    $con = $bdd->getCon();
+    $query = "SELECT * FROM entrainement WHERE ID_USER = ?";
+    $stmt = $con->prepare($query);
+    $stmt->execute([$idUser]);
+    $result = $stmt->fetchAll();
+    if(count($result) == 0):?>
+        <div id="contentBox">No training records</div>
+    <?php else:?>
+
     <div class="swiper-container" id="contentBox">
-
         <div class="swiper-wrapper">
-            <?php
-
-            include('controllers/functions/connexion_bdd.php'); //on se connect a la base et on envoie la requete
-
-            $reponse = $bdd->query("SELECT * FROM entrainement WHERE ID_USER='$idUser' order by ID_ENT_USER asc ");
-            $n = 1;
-            // On affiche chaque entrée une à une
-            while ($donnees = $reponse->fetch()) {
-
-
-                ?>
-
-
-                <div class="container swiper-slide" id="e<?php echo $n; ?>">
-                    <a href="ChoisirSerie.php?new_ID_Ent=<?php echo $donnees['ID_ENT_USER']; ?>">
-                        <div>
-                            <h4><i>Nom:</i></h4>
-                            <p><?php echo $donnees['NOM_ENT']; ?></p>
-                            <h4><i>Lieu</i></h4>
-                            <p><?php echo $donnees['LIEU_ENT']; ?></p>
-                            <h4><i>Distance</i></h4>
-                            <p><?php echo $donnees['DIST_ENT']; ?></p>
-                            <h4><i>Date </i></h4>
-                            <p><?php echo $donnees['DATE_ENT']; ?></p>
-
-                        </div>
-                    </a>
+            <?php foreach ($result as $training):?>
+                <div class="swiper-slide">
+                    <h3><?= $training['NOM_ENT'];?></h3>
                 </div>
-
-                <?php
-
-
-                $n++;
-            }
-
-            $reponse->closeCursor(); // Termine le traitement de la requête
-
-
-            ?>
-
-
+            <?php endforeach;?>
         </div>
         <div class="swiper-pagination"></div>
     </div>
-
-
+        <script src="assets/js/swipy.js"></script>
+    <?php endif;?>
+    <?php include_once 'views/includes/footer.php'; ?>
 </div>
-
-<?php include_once 'views/includes/footer.php'; ?>
-
-<script src="assets/js/swiper.min.js"></script>
-
-</div>
-
 </body>
-<script src="assets/js/swiperinc.js"></script>
 </html>
 
 

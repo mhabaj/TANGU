@@ -1,3 +1,9 @@
+#popUpSubmitButton {
+    border-style: solid;
+    background: none;
+    width: 80%;
+}
+
 #formTitle {
     text-align: left;
     font-size: 90%;

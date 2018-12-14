@@ -15,4 +15,3 @@
     </div>
     <?php include_once 'includes/footer.php';?>
 </div>
-<script src="../assets/js/swiper.min.js"></script>

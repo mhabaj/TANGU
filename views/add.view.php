@@ -1,29 +1,33 @@
 <canvas id="confetti"></canvas>
-<div id="blurBckg"></div>
-<div class="container-fluid header" id="headerBox">
-    <div id="titleBox">
-        <h1 id="serieText"></h1>
-        <h3 id="voleeText"></h3>
-    </div>
-</div>
-<div id="popUp">
-    <h1 id="popUpMessage"></h1>
-</div>
-<div id="form-popUp">
-    <form id="newTrainingForm">
-        <h3 id="formTitle">Add a new training...</h3>
-        <div id="nameField">
-            <h3 id="nameLabel">Name</h3>
-            <input type="text" maxlength="30" placeholder="Nom de l'entrainement">
-        </div>
-        <div id="locationField">
-            <h3 id="locationLabel">Location</h3>
-            <input type="text" maxlength="200" placeholder="Lieu de l'entrainement">
-        </div>
-    </form>
-
-</div>
 <div class="container-fluid" id="mainBox">
+    <div id="popUp">
+        <h1 id="popUpMessage"></h1>
+    </div>
+    <div class="container-fluid header" id="headerBox">
+        <div id="titleBox">
+            <h1 id="serieText"></h1>
+            <h3 id="voleeText"></h3>
+        </div>
+    </div>
+
+    <div id="form-popUp">
+        <form method="get" id="newTrainingForm">
+            <h3 id="formTitle">Add a new training...</h3>
+            <div id="nameField">
+                <h3 id="nameLabel">Name</h3>
+                <input type="text" name="name" maxlength="30" placeholder="Nom de l'entrainement">
+            </div>
+            <div id="locationField">
+                <h3 id="locationLabel">Location</h3>
+                <input type="text" name="location" maxlength="200" placeholder="Lieu de l'entrainement">
+            </div>
+            <div id="submitField">
+                <input type="submit" value="submit" id="popUpSubmitButton">
+            </div>
+        </form>
+
+    </div>
+
     <div id="target">
         <div id="target1"></div>
         <div id="subTarget1"></div>
@@ -37,6 +41,7 @@
         <div id="subTarget5"></div>
         <div id="subTarget6"></div>
     </div>
+    <? include 'includes/footer.php';?>
 </div>
 <script>
     let formPopUpElement = document.getElementById("form-popUp");
