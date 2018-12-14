@@ -1,7 +1,7 @@
-#addIcon {
+#addIcon, #arrowIcon {
     display: none;
 }
 
-#check {
+#check, #quitIcon {
     display: block;
 }

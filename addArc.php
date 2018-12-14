@@ -2,6 +2,9 @@
 include('controllers/classes/Arc.php');
 include('controllers/functions/functions.php');
 include('controllers/functions/uploadImage.php');
+$title = "Ajouter un arc";
+$left_url = "editArc.php";
+$right_url = "#";
 ?>
 <!DOCTYPE html>
 
@@ -10,7 +13,7 @@ include('controllers/functions/uploadImage.php');
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Nouvel Arc</title>
+    <title><?= $title?></title>
 
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/checkHeader.css">

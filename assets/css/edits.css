@@ -2,11 +2,11 @@
     padding: 0 0;
 }
 
-#check {
+#check, #quitIcon {
     display: none;
 }
 
-#addIcon {
+#addIcon, #arrowIcon {
     display: block;
 }
 

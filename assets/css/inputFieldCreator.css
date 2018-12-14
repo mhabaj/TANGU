@@ -1,0 +1,13 @@
+.input-field {
+    position: fixed;
+    margin-top: 5%;
+    height: 6%;
+    width: 90%;
+    border-radius: 4px;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-family: SF-Text-Regular;
+    font-size: 1em;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    outline: none;
+}
