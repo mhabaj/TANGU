@@ -21,6 +21,14 @@
                 <h3 id="locationLabel">Location</h3>
                 <input type="text" name="location" maxlength="200" placeholder="Lieu de l'entrainement">
             </div>
+            <div id="distanceField">
+                <h3 id="distanceLabel">Distance (m)</h3>
+                <input type="number" name="distance" max="20" min="1" placeholder="Distance de la cible">
+            </div>
+            <div id="dateField">
+                <h3 id="dateLabel">Date et heure</h3>
+                <input type="datetime-local">
+            </div>
             <div id="submitField">
                 <input type="submit" value="submit" id="popUpSubmitButton">
             </div>

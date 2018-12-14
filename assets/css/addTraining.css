@@ -346,13 +346,6 @@ canvas {
     transform: translate(-50%, -50%);
 }
 
-#popUpSubmitButton {
-    border-style: solid;
-    background: none;
-    width: 80%;
-    border-radius: 4px;
-}
-
 #formTitle {
     text-align: left;
     font-size: 90%;
@@ -362,14 +355,22 @@ canvas {
 }
 
 #newTrainingForm {
-    padding: 5% 0;
+    padding: 0;
     height: 100%;
-    background-color: none;
+    background-color: yellow;
     border-radius: 10px;
 }
 
 #newTrainingForm div {
     border-style: none;
+}
+
+#locationField {
+    background-color: black;
+}
+
+#nameField {
+    background-color: blue;
 }
 
 #newTrainingForm div h3 {
@@ -386,14 +387,43 @@ input[type="text"] {
     height: 6%;
     width: 80%;
     border-radius: 4px;
-    padding-top: 2.5%;
-    padding-bottom: 2.5%;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding: 2.5% 5%;
     font-family: SF-Text-Regular;
     font-size: 70%;
     border: 1px solid rgba(0, 0, 0, 0.6);
     outline: none;
+}
+
+#distanceField {
+    background-color: red;
+    width: 50%;
+}
+
+#distanceField input {
+    margin-top: 2%;
+    margin-bottom: 5%;
+    height: 6%;
+    width: 100%;
+    border-radius: 4px;
+    padding: 2.5% 5%;
+    font-family: SF-Text-Regular;
+    font-size: 70%;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    outline: none;
+}
+
+#submitField {
+    border-style: solid;
+    background-color: green;
+    margin-top: 20%;
+}
+
+#popUpSubmitButton {
+    border-style: solid;
+    background: none;
+    width: 80%;
+    border-radius: 4px;
+    margin-top: 0;
 }
 
 @font-face {

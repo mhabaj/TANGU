@@ -3,18 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="24a430f1-dafd-4e5d-98b4-56d1fe6d0252" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChoisirSerie.php" beforeDir="false" afterPath="$PROJECT_DIR$/ChoisirSerie.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/add.php" beforeDir="false" afterPath="$PROJECT_DIR$/add.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/css/addTraining.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/addTraining.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/modalFormInput.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/modalFormInput.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/training.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/training.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/editArc.php" beforeDir="false" afterPath="$PROJECT_DIR$/editArc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entrainement.php" beforeDir="false" afterPath="$PROJECT_DIR$/entrainement.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training.php" beforeDir="false" afterPath="$PROJECT_DIR$/training.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/add.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/add.view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/edit.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/edit.view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/redirect.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/redirect.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -122,9 +112,9 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="5638" />
+          <entry key="CSS" value="5917" />
           <entry key="JavaScript" value="2120" />
-          <entry key="PHP" value="21045" />
+          <entry key="PHP" value="21226" />
           <entry key="PLAIN_TEXT" value="6" />
         </counts>
       </usages-collector>
@@ -132,25 +122,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/add.view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="474">
-              <caret line="24" column="74" selection-start-line="24" selection-start-column="74" selection-end-line="24" selection-end-column="74" />
+            <state relative-caret-position="449">
+              <caret line="29" column="45" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
               <folding>
                 <element signature="n#div#0;n#div#2;n#!!top" />
                 <element signature="n#div#0;n#div#4;n#!!top" />
                 <element signature="n#script#0;n#!!top" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/css/modalFormInput.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="47" column="1" lean-forward="true" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -164,11 +145,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/css/addTraining.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="348" column="20" selection-start-line="348" selection-start-column="20" selection-end-line="348" selection-end-column="20" />
+            <state relative-caret-position="317">
+              <caret line="405" column="16" selection-start-line="405" selection-start-column="16" selection-end-line="405" selection-end-column="16" />
               <folding>
                 <element signature="e#0#337#0" />
                 <element signature="e#339#540#0" />
@@ -202,6 +183,7 @@
                 <element signature="e#5548#5762#0" />
                 <element signature="e#5776#5996#0" />
                 <element signature="e#6010#6228#0" />
+                <element signature="e#6328#6452#0" />
                 <element signature="e#6241#6358#0" />
                 <element signature="e#6371#6486#0" />
                 <element signature="e#6499#6612#0" />
@@ -294,10 +276,10 @@
         <option value="$PROJECT_DIR$/ChoisirSerie.php" />
         <option value="$PROJECT_DIR$/entrainement.php" />
         <option value="$PROJECT_DIR$/views/redirect.php" />
-        <option value="$PROJECT_DIR$/views/add.view.php" />
         <option value="$PROJECT_DIR$/assets/css/modalFormInput.css" />
         <option value="$PROJECT_DIR$/add.php" />
         <option value="$PROJECT_DIR$/assets/css/addTraining.css" />
+        <option value="$PROJECT_DIR$/views/add.view.php" />
       </list>
     </option>
   </component>
@@ -312,7 +294,7 @@
       <path value="$PROJECT_DIR$/assets/js/confetti-js-master/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="240" />
     <option name="y" value="125" />
     <option name="width" value="1440" />
@@ -417,7 +399,7 @@
       <workItem from="1544561282308" duration="28022000" />
       <workItem from="1544611864211" duration="46387000" />
       <workItem from="1544721237559" duration="51833000" />
-      <workItem from="1544812985586" duration="4988000" />
+      <workItem from="1544812985586" duration="6879000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <created>1544649165150</created>
@@ -458,7 +440,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="186850000" />
+    <option name="totallyTimeSpent" value="188741000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
@@ -838,18 +820,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/add.view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="474">
-          <caret line="24" column="74" selection-start-line="24" selection-start-column="74" selection-end-line="24" selection-end-column="74" />
-          <folding>
-            <element signature="n#div#0;n#div#2;n#!!top" />
-            <element signature="n#div#0;n#div#4;n#!!top" />
-            <element signature="n#script#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/add.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="178">
@@ -859,15 +829,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/modalFormInput.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
+        <state relative-caret-position="442">
           <caret line="47" column="1" lean-forward="true" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/addTraining.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="348" column="20" selection-start-line="348" selection-start-column="20" selection-end-line="348" selection-end-column="20" />
+        <state relative-caret-position="317">
+          <caret line="405" column="16" selection-start-line="405" selection-start-column="16" selection-end-line="405" selection-end-column="16" />
           <folding>
             <element signature="e#0#337#0" />
             <element signature="e#339#540#0" />
@@ -901,12 +871,25 @@
             <element signature="e#5548#5762#0" />
             <element signature="e#5776#5996#0" />
             <element signature="e#6010#6228#0" />
+            <element signature="e#6328#6452#0" />
             <element signature="e#6241#6358#0" />
             <element signature="e#6371#6486#0" />
             <element signature="e#6499#6612#0" />
             <element signature="e#6625#6738#0" />
             <element signature="e#7628#7739#0" />
             <element signature="e#7752#7865#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/add.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="449">
+          <caret line="29" column="45" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
+          <folding>
+            <element signature="n#div#0;n#div#2;n#!!top" />
+            <element signature="n#div#0;n#div#4;n#!!top" />
+            <element signature="n#script#0;n#!!top" />
           </folding>
         </state>
       </provider>
