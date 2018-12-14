@@ -13,6 +13,7 @@ include('controllers/functions/uploadImage.php');
     <title>Nouvel Arc</title>
 
     <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/checkHeader.css">
     <link rel="stylesheet" href="assets/css/addArc.css">
     <link rel="stylesheet" href="assets/css/navbar.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
