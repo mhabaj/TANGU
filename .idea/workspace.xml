@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="24a430f1-dafd-4e5d-98b4-56d1fe6d0252" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/add.php" beforeDir="false" afterPath="$PROJECT_DIR$/add.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/css/addTraining.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/addTraining.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/inputFieldCreator.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/inputFieldCreator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/targetInteractions.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/targetInteractions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/modalFormInput.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/modalFormInput.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/add.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/add.view.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -97,7 +94,7 @@
     <session id="-1684926160">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.6" value="2" />
           <entry key="project.open.time.8" value="1" />
@@ -106,7 +103,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="78" />
+          <entry key="CSS" value="79" />
           <entry key="HTML" value="2" />
           <entry key="JavaScript" value="21" />
           <entry key="PHP" value="90" />
@@ -114,9 +111,9 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="5155" />
+          <entry key="CSS" value="5539" />
           <entry key="JavaScript" value="2120" />
-          <entry key="PHP" value="20196" />
+          <entry key="PHP" value="20484" />
           <entry key="PLAIN_TEXT" value="6" />
         </counts>
       </usages-collector>
@@ -127,8 +124,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/add.view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="33" column="65" selection-start-line="33" selection-start-column="65" selection-end-line="33" selection-end-column="65" />
+            <state relative-caret-position="400">
+              <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
               <folding>
                 <element signature="n#div#3;n#!!top" />
                 <element signature="e#769#785#0#HTML" />
@@ -154,36 +151,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/css/modalFormInput.css">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/css/inputFieldCreator.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="73" column="1" lean-forward="true" selection-start-line="73" selection-start-column="1" selection-end-line="73" selection-end-column="1" />
-              <folding>
-                <element signature="e#13#273#0" />
-                <element signature="e#293#553#0" />
-                <element signature="e#566#644#0" />
-                <element signature="e#663#741#0" />
-                <element signature="e#760#843#0" />
-                <element signature="e#862#948#0" />
-                <element signature="e#963#1055#0" />
-                <element signature="e#1068#1179#0" />
-                <element signature="e#1192#1305#0" />
-              </folding>
+            <state relative-caret-position="225">
+              <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/add.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="12" column="64" lean-forward="true" selection-start-line="12" selection-start-column="64" selection-end-line="12" selection-end-column="64" />
+            <state relative-caret-position="275">
+              <caret line="14" column="60" lean-forward="true" selection-start-line="14" selection-start-column="60" selection-end-line="14" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -191,8 +172,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/css/addTraining.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="173" column="13" lean-forward="true" selection-start-line="173" selection-start-column="13" selection-end-line="173" selection-end-column="13" />
+            <state relative-caret-position="200">
+              <caret line="171" column="16" selection-start-line="171" selection-start-column="16" selection-end-line="171" selection-end-column="16" />
               <folding>
                 <element signature="e#0#337#0" />
                 <element signature="e#339#540#0" />
@@ -202,6 +183,24 @@
                 <element signature="e#1793#1837#0" />
                 <element signature="e#1857#1902#0" />
                 <element signature="e#1925#1984#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/css/inputFieldCreator.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="567">
+              <caret line="61" column="1" lean-forward="true" selection-start-line="61" selection-start-column="1" selection-end-line="61" selection-end-column="1" />
+              <folding>
+                <element signature="e#293#553#0" />
+                <element signature="e#663#741#0" />
+                <element signature="e#760#843#0" />
+                <element signature="e#862#948#0" />
+                <element signature="e#963#1055#0" />
+                <element signature="e#1068#1179#0" />
+                <element signature="e#1192#1305#0" />
               </folding>
             </state>
           </provider>
@@ -283,15 +282,15 @@
         <option value="$PROJECT_DIR$/views/password.view.php" />
         <option value="$PROJECT_DIR$/pseudo.php" />
         <option value="$PROJECT_DIR$/addArc.php" />
-        <option value="$PROJECT_DIR$/assets/css/inputFieldCreator.css" />
         <option value="$PROJECT_DIR$/views/addArc.view.php" />
         <option value="$PROJECT_DIR$/assets/css/addArc.css" />
         <option value="$PROJECT_DIR$/assets/js/targetInteractions.js" />
-        <option value="$PROJECT_DIR$/assets/css/addTraining.css" />
         <option value="$PROJECT_DIR$/assets/js/inputFieldCreator.js" />
+        <option value="$PROJECT_DIR$/add.php" />
+        <option value="$PROJECT_DIR$/assets/css/inputFieldCreator.css" />
+        <option value="$PROJECT_DIR$/assets/css/addTraining.css" />
         <option value="$PROJECT_DIR$/views/add.view.php" />
         <option value="$PROJECT_DIR$/assets/css/modalFormInput.css" />
-        <option value="$PROJECT_DIR$/add.php" />
       </list>
     </option>
   </component>
@@ -416,7 +415,7 @@
       <workItem from="1544546421907" duration="276000" />
       <workItem from="1544561282308" duration="28022000" />
       <workItem from="1544611864211" duration="46387000" />
-      <workItem from="1544721237559" duration="49628000" />
+      <workItem from="1544721237559" duration="51833000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <created>1544649165150</created>
@@ -457,7 +456,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="179657000" />
+    <option name="totallyTimeSpent" value="181862000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
@@ -800,23 +799,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/addTraining.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="173" column="13" lean-forward="true" selection-start-line="173" selection-start-column="13" selection-end-line="173" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#337#0" />
-            <element signature="e#339#540#0" />
-            <element signature="e#542#1050#0" />
-            <element signature="e#1052#1562#0" />
-            <element signature="e#1714#1775#0" />
-            <element signature="e#1793#1837#0" />
-            <element signature="e#1857#1902#0" />
-            <element signature="e#1925#1984#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/targetInteractions.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -834,24 +816,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/inputFieldCreator.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="73" column="1" lean-forward="true" selection-start-line="73" selection-start-column="1" selection-end-line="73" selection-end-column="1" />
-          <folding>
-            <element signature="e#13#273#0" />
-            <element signature="e#293#553#0" />
-            <element signature="e#566#644#0" />
-            <element signature="e#663#741#0" />
-            <element signature="e#760#843#0" />
-            <element signature="e#862#948#0" />
-            <element signature="e#963#1055#0" />
-            <element signature="e#1068#1179#0" />
-            <element signature="e#1192#1305#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/inputFieldCreator.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1">
@@ -862,10 +826,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/add.view.php">
+    <entry file="file://$PROJECT_DIR$/assets/css/inputFieldCreator.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="61" column="1" lean-forward="true" selection-start-line="61" selection-start-column="1" selection-end-line="61" selection-end-column="1" />
+          <folding>
+            <element signature="e#293#553#0" />
+            <element signature="e#663#741#0" />
+            <element signature="e#760#843#0" />
+            <element signature="e#862#948#0" />
+            <element signature="e#963#1055#0" />
+            <element signature="e#1068#1179#0" />
+            <element signature="e#1192#1305#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/addTraining.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
-          <caret line="33" column="65" selection-start-line="33" selection-start-column="65" selection-end-line="33" selection-end-column="65" />
+          <caret line="171" column="16" selection-start-line="171" selection-start-column="16" selection-end-line="171" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#337#0" />
+            <element signature="e#339#540#0" />
+            <element signature="e#542#1050#0" />
+            <element signature="e#1052#1562#0" />
+            <element signature="e#1714#1775#0" />
+            <element signature="e#1793#1837#0" />
+            <element signature="e#1857#1902#0" />
+            <element signature="e#1925#1984#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/add.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="14" column="60" lean-forward="true" selection-start-line="14" selection-start-column="60" selection-end-line="14" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/add.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
           <folding>
             <element signature="n#div#3;n#!!top" />
             <element signature="e#769#785#0#HTML" />
@@ -891,12 +895,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/modalFormInput.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/add.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
-          <caret line="12" column="64" lean-forward="true" selection-start-line="12" selection-start-column="64" selection-end-line="12" selection-end-column="64" />
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
         </state>
       </provider>
     </entry>

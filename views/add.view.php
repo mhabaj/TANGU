@@ -10,8 +10,16 @@
     <h1 id="popUpMessage"></h1>
 </div>
 <div id="form-popUp">
-    <h1 id=""></h1>
     <form id="newTrainingForm">
+        <h3 id="formTitle">Add a new training...</h3>
+        <div id="nameField">
+            <h3 id="nameLabel">Name</h3>
+            <input type="text" maxlength="30" placeholder="Nom de l'entrainement">
+        </div>
+        <div id="locationField">
+            <h3 id="locationLabel">Location</h3>
+            <input type="text" maxlength="200" placeholder="Lieu de l'entrainement">
+        </div>
     </form>
 
 </div>
