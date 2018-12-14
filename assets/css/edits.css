@@ -1,18 +1,31 @@
+#mainBox {
+    padding: 0 0;
+}
+
+#check {
+    display: none;
+}
+
+#addIcon {
+    display: block;
+}
+
 .swiper-container {
     position: fixed;
-    border-style: none;
+    top: 8%;
+    left: 0;
+    height: 82%;
+    border: none;
 }
 
 .swiper-wrapper {
-    position: fixed;
-    top: 12%;
-    bottom: 8%;
-    margin: auto 0;
-    border-style: none;
+    top: 16%;
+    padding: 0 0;
+    margin: 0 0;
+    border: none;
 }
 
 .swiper-slide {
-    height: 90%;
     text-align: center;
     font-size: 18px;
     background: grey;
@@ -33,5 +46,5 @@
 }
 
 .swiper-pagination {
-    margin-bottom: 10%;
+    margin-bottom: 30%;
 }

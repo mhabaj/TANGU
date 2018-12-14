@@ -1,7 +1,9 @@
 <?php
 require_once 'controllers/functions/control-session.php';
+require_once 'controllers/classes/ConnexionBDD.php';
 $title = "Personnaliser";
-$back_url = "edit.php";
+$left_url = "edit.php";
+$right_url = "addArc.php";
 ?>
 <!DOCTYPE html>
 
@@ -14,7 +16,7 @@ $back_url = "edit.php";
 
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/checkHeader.css">
-    <link rel="stylesheet" href="assets/css/editArc.css">
+    <link rel="stylesheet" href="assets/css/edits.css">
     <link rel="stylesheet" href="assets/css/navbar.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="assets/css/swiper.css">
@@ -30,24 +32,26 @@ $back_url = "edit.php";
 
     <div class="swiper-container" id="contentBox">
         <div class="swiper-wrapper">
-            <div class="container swiper-slide" id="e1">
-                <h3>Nom blason</h3>
-            </div>
-            <div class="container swiper-slide" id="e2">
-                <h3>Nom blason</h3>
-            </div>
-            <div class="container swiper-slide" id="e3">
-                <h3>Nom blason</h3>
-            </div>
-            <div class="container swiper-slide" id="e4">
-                <h3>Nom blason</h3>
-            </div>
+            <?php
+            $bdd = new ConnexionBDD();
+            $con = $bdd->getCon();
+            $query = "SELECT NOMARC, TAILLEARC, PHOTOARC FROM arc WHERE ID_USER = ?";
+            $stmt = $con->prepare($query);
+            $stmt->execute([$idUser]);
+            $result = $stmt->fetchAll();
+
+            foreach ($result as $arc):?>
+                <div class="swiper-slide" id="e1">
+                    <h3><?=$arc['NOMARC']?></h3>
+                </div>
+            <?php endforeach;?>
         </div>
         <div class="swiper-pagination"></div>
     </div>
+
+    <?php include_once 'views/includes/footer.php'; ?>
 </div>
-<?php include_once 'views/includes/footer.php'; ?>
-</div>
+<script src="assets/js/swipy.js"></script>
 </body>
 </html>
 

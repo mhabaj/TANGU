@@ -1,22 +1,13 @@
 <div class="container-fluid header" id="headerBox">
-    <div id="left-arrow">
-        <button>
-            <a href="<?= $back_url;?>">
-                <!---
-                <i class="fas fa-chevron-left fa-2x"></i>
-                --->
-                <i class="fas fa-arrow-left fa-2x"></i>
-                <!---
-                <img src="img/cross.png" width="45%" height="45%">
-                --->
-            </a>
+    <div id="left-button">
+        <button type="button" onclick="window.location='<?= $left_url;?>'">
+            <i class="fas fa-arrow-left fa-2x"></i>
         </button>
     </div>
-    <div id="right-check">
-        <button disabled>
-            <a href="training.php" id="checkLink">
-                <i class="fas fa-check fa-2x" id="check"></i>
-            </a>
+    <div id="right-button">
+        <button type="button" onclick="window.location='<?= $right_url;?>'">
+            <i class="fas fa-check fa-2x" id="check"></i>
+            <i class="fas fa-plus fa-2x" id="addIcon"></i>
         </button>
     </div>
 </div>

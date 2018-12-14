@@ -1,4 +1,5 @@
 <?php
+require_once 'controllers/functions/control-session.php';
 $title = "Personnaliser";
 ?>
 <!DOCTYPE html>
