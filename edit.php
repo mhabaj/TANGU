@@ -1,4 +1,6 @@
-<?php $title = "Personnaliser";?>
+<?php
+$title = "Personnaliser";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -1,7 +1,7 @@
 <div class="container-fluid header" id="headerBox">
     <div id="left-arrow">
         <button>
-            <a href="account.php">
+            <a href="<?= $back_url;?>">
                 <!---
                 <i class="fas fa-chevron-left fa-2x"></i>
                 --->
