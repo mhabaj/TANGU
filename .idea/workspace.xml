@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="24a430f1-dafd-4e5d-98b4-56d1fe6d0252" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account.php" beforeDir="false" afterPath="$PROJECT_DIR$/account.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/add.php" beforeDir="false" afterPath="$PROJECT_DIR$/add.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addArc.php" beforeDir="false" afterPath="$PROJECT_DIR$/addArc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/editArc.php" beforeDir="false" afterPath="$PROJECT_DIR$/editArc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/editBlason.php" beforeDir="false" afterPath="$PROJECT_DIR$/editBlason.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/password.php" beforeDir="false" afterPath="$PROJECT_DIR$/password.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/getPseudo.php" beforeDir="false" afterPath="$PROJECT_DIR$/getPseudo.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pseudo.php" beforeDir="false" afterPath="$PROJECT_DIR$/pseudo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stats.php" beforeDir="false" afterPath="$PROJECT_DIR$/stats.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training.php" beforeDir="false" afterPath="$PROJECT_DIR$/training.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/add.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/add.view.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/includes/back-header.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/includes/back-header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/pseudo.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/pseudo.view.php" afterDir="false" />
     </list>
@@ -115,17 +105,17 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="86" />
+          <entry key="CSS" value="88" />
           <entry key="HTML" value="2" />
           <entry key="JavaScript" value="23" />
-          <entry key="PHP" value="122" />
+          <entry key="PHP" value="124" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="5917" />
           <entry key="JavaScript" value="2120" />
-          <entry key="PHP" value="21625" />
+          <entry key="PHP" value="22909" />
           <entry key="PLAIN_TEXT" value="6" />
         </counts>
       </usages-collector>
@@ -136,8 +126,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pseudo.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="453">
-              <caret line="32" column="16" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
+            <state relative-caret-position="-22">
+              <caret line="20" column="7" lean-forward="true" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/controllers/functions/sanitize.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="325">
+              <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -145,8 +144,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/includes/back-header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="8" column="45" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
+            <state relative-caret-position="275">
+              <caret line="11" column="17" lean-forward="true" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -154,18 +153,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/pseudo.view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="428">
-              <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-              <folding>
-                <element signature="n#script#0;n#!!top" />
-              </folding>
+            <state relative-caret-position="675">
+              <caret line="27" column="41" lean-forward="true" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/getPseudo.php">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -202,7 +193,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/controllers/functions/control-session.php" />
         <option value="$PROJECT_DIR$/assets/css/add.css" />
         <option value="$PROJECT_DIR$/assets/js/jquery.zoomooz.js" />
         <option value="$PROJECT_DIR$/assets/csss/header.css" />
@@ -249,10 +239,11 @@
         <option value="$PROJECT_DIR$/editBlason.php" />
         <option value="$PROJECT_DIR$/editArc.php" />
         <option value="$PROJECT_DIR$/addArc.php" />
-        <option value="$PROJECT_DIR$/views/includes/back-header.php" />
-        <option value="$PROJECT_DIR$/pseudo.php" />
-        <option value="$PROJECT_DIR$/views/pseudo.view.php" />
         <option value="$PROJECT_DIR$/getPseudo.php" />
+        <option value="$PROJECT_DIR$/views/includes/back-header.php" />
+        <option value="$PROJECT_DIR$/views/pseudo.view.php" />
+        <option value="$PROJECT_DIR$/pseudo.php" />
+        <option value="$PROJECT_DIR$/controllers/functions/sanitize.php" />
       </list>
     </option>
   </component>
@@ -288,6 +279,17 @@
             <path>
               <item name="TANGU" type="b2602c69:ProjectViewProjectNode" />
               <item name="TANGU" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TANGU" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TANGU" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TANGU" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TANGU" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="functions" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -351,7 +353,7 @@
       <workItem from="1544561282308" duration="28022000" />
       <workItem from="1544611864211" duration="46387000" />
       <workItem from="1544721237559" duration="51833000" />
-      <workItem from="1544812985586" duration="9655000" />
+      <workItem from="1544812985586" duration="16470000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <created>1544649165150</created>
@@ -392,7 +394,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="191517000" />
+    <option name="totallyTimeSpent" value="198332000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
@@ -431,13 +433,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Update" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/css/edit.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="52" column="1" lean-forward="true" selection-start-line="52" selection-start-column="1" selection-end-line="52" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/blasonSlides.view.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -556,16 +551,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
           <caret line="10" column="20" lean-forward="true" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/password.view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="112" column="9" lean-forward="true" selection-start-line="112" selection-start-column="9" selection-end-line="112" selection-end-column="9" />
-          <folding>
-            <element signature="n#script#0;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -812,37 +797,66 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/checkHeader.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1090">
-          <caret line="45" column="34" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/includes/back-header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" column="45" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pseudo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="32" column="16" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/pseudo.view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+        <state relative-caret-position="400">
+          <caret line="44" column="23" selection-start-line="44" selection-start-column="23" selection-end-line="44" selection-end-column="23" />
           <folding>
-            <element signature="n#script#0;n#!!top" />
+            <element signature="e#11#30#0" />
+            <element signature="e#60#163#0" />
+            <element signature="e#178#194#0" />
+            <element signature="e#210#227#0" />
+            <element signature="e#271#367#0" />
+            <element signature="e#425#523#0" />
+            <element signature="e#545#561#0" />
+            <element signature="e#584#618#0" />
+            <element signature="e#643#681#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/password.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1275">
+          <caret line="112" column="9" lean-forward="true" selection-start-line="112" selection-start-column="9" selection-end-line="112" selection-end-column="9" />
+          <folding>
+            <element signature="e#1388#3551#0#HTML" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/getPseudo.php">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/includes/back-header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="11" column="17" lean-forward="true" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/pseudo.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="27" column="41" lean-forward="true" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pseudo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-22">
+          <caret line="20" column="7" lean-forward="true" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/functions/sanitize.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>

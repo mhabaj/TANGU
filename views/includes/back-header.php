@@ -6,7 +6,7 @@
         </button>
     </div>
     <div id="right-button">
-        <button type="button" name="submitBtn" id="right-btn" onclick="window.location='<?= $right_url;?>'">
+        <button type="submit" name="submitBtn" id="right-btn" disabled>
             <i class="fas fa-check fa-2x" id="check"></i>
             <i class="fas fa-plus fa-2x" id="addIcon"></i>
         </button>

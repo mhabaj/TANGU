@@ -23,15 +23,21 @@ $right_url = "account.php";
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
 </head>
-
 <body>
 <?php include_once 'views/pseudo.view.php';?>
-<?php
-$db = new ConnexionBDD();
-$con = $db->getCon();
+<?php if(isset($_POST['submitBtn'])) {
+    if(isset($_POST['newPseudo']) && !empty($_POST['newPseudo'])) {
+        $newPseudo = $_POST['newPseudo'];
+        $newPseudo = trim($newPseudo);
+        $newPseudo = stripslashes($newPseudo);
+        $newPseudo = filter_var($newPseudo, FILTER_SANITIZE_STRING);
+        if(preg_match("/^[a-zA-Z0-9]*$/", $newPseudo)) {
+            echo '<script>alert("' . $newPseudo . '");</script>';
+        } else {
+            echo '<script>alert("not good");</script>';
+        }
 
-var_dump($_GET);
-
-?>
+    }
+} ;?>
 </body>
 </html>

@@ -1,29 +1,15 @@
 <div class="container-fluid" id="mainBox">
-    <?php include 'includes/back-header.php';?>
     <div class="container-fluid" id="formBox">
-        <form>
+        <form method="post" id="myform" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
             <h3>Nouveau Pseudo</h3><br>
             <input type="text" name="newPseudo" id="pseudoInput" placeholder="Entrer votre nouveau pseudo..." autocomplete="off" maxlength="30">
+            <?php include 'includes/back-header.php';?>
         </form>
     </div>
 </div>
-
-<script>
-    function updatePseudo(pseudo) {
-        if (window.XMLHttpRequest) {
-            // code for IE7+, Firefox, Chrome, Opera, Safari
-            xmlhttp = new XMLHttpRequest();
-        } else {
-            // code for IE6, IE5
-            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-        }
-        xmlhttp.open("GET","getPseudo.php?pseudo=" + pseudo, true);
-        xmlhttp.send();
-    }
-</script>
 <script>
     let pseudoInput = document.getElementById("pseudoInput"),
-        checkButton = document.getElementById("right-button"),
+        checkButton = document.getElementById("right-btn"),
         checkSign = document.getElementById("check");
 
     pseudoInput.addEventListener("input", function() {
@@ -33,13 +19,13 @@
             pseudoInput.style.borderColor = "rgba(255, 59, 48, 1)";
             checkSign.style.color = "rgba(130, 127, 254, 0.55)";
             checkSign.style.filter = "blur(0.65px)";
-            checkButton.style.pointerEvents = "none";
+            checkButton.disabled = true;
         } else {
             //Right green
             pseudoInput.style.borderColor = "rgba(76, 217, 100, 1)";
             checkSign.style.color = "rgba(130, 127, 254, 1)";
             checkSign.style.filter = "none";
-            checkButton.style.pointerEvents = "auto";
+            checkButton.disabled = false;
         }
     });
 
