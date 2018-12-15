@@ -21,9 +21,10 @@
         </div>
         <div id="bowsField">
             <h3>Bows</h3>
-            <select>
-                <option>Bow 1</option>
-                <option>Bow 2</option>
+            <select name="sources" id="sources" class="custom-select sources" placeholder="Source Type">
+                <option value="profile">Profile</option>
+                <option value="word">Word</option>
+                <option value="hashtag">Hashtag</option>
             </select>
         </div>
         <div id="blasonsField">
