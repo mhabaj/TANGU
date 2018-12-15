@@ -27,10 +27,10 @@
 }
 
 #arcButton {
-    background: url('../img/arc-wallpaper-2.jpg');
+    background: url('../img/laura-crowe-689639-unsplash.jpg');
     background-repeat: no-repeat;
     background-origin: border-box;
-    background-size: cover;
+    background-size: 100% 100%;
 }
 
 /*
@@ -46,10 +46,11 @@
 }
 
 #blasonButton {
-    background: url('../img/blason-wallpaper-3.jpg');
+    background: url('../img/annie-spratt-450564-unsplash.jpg');
     background-repeat: no-repeat;
     background-origin: border-box;
     background-size: cover;
+    background-position: center;
 }
 
 /*
