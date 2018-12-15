@@ -39,7 +39,6 @@ $right_url = "addArc.php";
     $stmt = $con->prepare($query);
     $stmt->execute([$idUser]);
     $result = $stmt->fetchAll();
-    var_dump($result);
     if(count($result) == 0):?>
     <?php echo "<script>triggerMessageBox('success', 'You don\'t have any bow yet')</script>"; ?>
     <?php else:?>

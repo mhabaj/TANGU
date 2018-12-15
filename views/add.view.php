@@ -5,7 +5,7 @@
         <h3 id="formTitle">Add a new training</h3>
         <div id="nameField">
             <h3>Your Training Name</h3>
-            <input type="text" name="name" id="nameInput" placeholder="Enter your training name...">
+            <input type="text" name="name" id="nameInput" placeholder="Enter your training name..." autocomplete="on">
         </div>
         <div id="locationField">
             <h3>Your Training Location</h3>

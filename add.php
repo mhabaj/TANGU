@@ -42,7 +42,15 @@ $left_url = "training.php";
 <?php
 if(isset($_GET['submitBtn'])) {
     if(sanitize_training($_GET['name'], $_GET['location'], $_GET['date'], $_GET['distance'], $_GET['sets'], $_GET['volleys'], $_GET['arrows'])) {
-        echo $_GET['name'];
+        $name = $_GET['name'];
+        $location = $_GET['location'];
+        $date = $_GET['date'];
+        $distance = $_GET['distance'];
+        $sets = $_GET['sets'];
+        $volleys = $_GET['volleys'];
+        $arrows = $_GET['arrows'];
+
+        $training = new Entrainement($name, $location, $date, $distance, 1, 1, 2, 3, 6, $idUser);
     }
 }
 
