@@ -37,6 +37,22 @@ $left_url = "training.php";
 </head>
 <body>
 <?php include_once 'views/includes/message.php' ;?>
+<?php
+// Fetch bows and blazons of user to put in select
+$db = new ConnexionBDD();
+$con = $db->getCon();
+$arcs_query = "SELECT ID_ARC, NOMARC FROM arc WHERE ID_USER = ?";
+$blasons_query = "SELECT ID_BLAS, NOMBLAS FROM blason WHERE ID_USER = ?";
+
+$arcs_stmt = $con->prepare($arcs_query);
+$blasons_stmt = $con->prepare($blasons_query);
+
+$arcs_stmt->execute([$idUser]);
+$blasons_stmt->execute([$idUser]);
+
+$arcs = $arcs_stmt->fetchAll();
+$blasons = $blasons_stmt->fetchAll();
+;?>
 <?php include 'views/add.view.php'; ?>
 
 <?php

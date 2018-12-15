@@ -114,6 +114,10 @@
     display: none;
 }
 
+.addTraining {
+    display: block;
+}
+
 #headerBox {
     border: none;
     padding: 0 0;
@@ -163,7 +167,7 @@
     width: 50%;
     height: 20%;
     border-radius: 10px;
-    background: red;
+    background: none;
     text-align: center;
     color: lawngreen;
     padding: 10% 0;
@@ -190,7 +194,7 @@ canvas {
 }
 
 #target {
-    display: none;
+    display: block;
     border: none;
     position: fixed;
     top: 50%;
@@ -412,6 +416,8 @@ input[type="text"] {
     border: 1px solid rgba(0, 0, 0, 0.6);
     outline: none;
 }
+
+
 
 #serieField, #volleyField, #arrowField {
     border-style: none;

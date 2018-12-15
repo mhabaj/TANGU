@@ -19,6 +19,20 @@
             <h3>Distance</h3>
             <input type="number" name="distance" id="distanceInput"  min="1" max="30" placeholder="Distance...">
         </div>
+        <div id="bowsField">
+            <h3>Bows</h3>
+            <select>
+                <option>Bow 1</option>
+                <option>Bow 2</option>
+            </select>
+        </div>
+        <div id="blasonsField">
+            <h3>Blasons</h3>
+            <select>
+                <option>Bow 1</option>
+                <option>Bow 2</option>
+            </select>
+        </div>
         <div id="serieField">
             <h3>Series</h3>
             <input type="number" name="sets" id="serieInput" min = "1" max="3" placeholder="1">
@@ -38,6 +52,10 @@
 <div class="container-fluid currentTraining" id="mainBox">
     <div id="popUp">
         <h1 id="popUpMessage"></h1>
+    </div>
+    <div id="titleBox">
+        <h3 id="serieText"></h3>
+        <h3 id="voleeText"></h3>
     </div>
     <div id="target">
         <div id="target1"></div>
@@ -63,7 +81,7 @@
     });
 </script>
 <script>
-
+    targetInteractions();
 
     function triggerPopUp(elem) {
         elem.classList.remove('animated-popdown');
