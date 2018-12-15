@@ -1,6 +1,11 @@
-<?php require('controllers/functions/control-session.php');
+<?php
+require('controllers/functions/control-session.php');
+require_once 'controllers/functions/sanitize.php';
+require_once 'controllers/classes/ConnexionBDD.php';
+require_once 'controllers/classes/Entrainement.php';
+
 $title = "Nouvel Entrainement";
-$left_url = "";
+$left_url = "training.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,6 +15,7 @@ $left_url = "";
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title><?= $title;?></title>
 
+    <link rel="stylesheet" href="assets/css/message.css">
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/checkHeader.css">
     <!--<link rel="stylesheet" href="assets/css/modalFormInput.css">-->
@@ -30,7 +36,16 @@ $left_url = "";
     <script src="assets/js/swiper.min.js"></script>
 </head>
 <body>
+<?php include_once 'views/includes/message.php' ;?>
 <?php include 'views/add.view.php'; ?>
 
+<?php
+if(isset($_GET['submitBtn'])) {
+    if(sanitize_training($_GET['name'], $_GET['location'], $_GET['date'], $_GET['distance'], $_GET['sets'], $_GET['volleys'], $_GET['arrows'])) {
+        echo $_GET['name'];
+    }
+}
+
+?>
 </body>
 </html>

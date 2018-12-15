@@ -1,8 +1,8 @@
-#addIcon, #arrowIcon {
+#addIcon, #arrowIcon, #quitIconRight {
     display: none;
 }
 
-#check, #quitIcon {
+#check, #quitIconLeft {
     display: block;
 }
 

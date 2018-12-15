@@ -14,6 +14,7 @@ $right_url = "#";
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title><?= $title?></title>
 
+    <link rel="stylesheet" href="assets/css/message.css">
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/checkHeader.css">
     <link rel="stylesheet" href="assets/css/edits.css">
@@ -29,19 +30,21 @@ $right_url = "#";
 </head>
 <body>
 <div class="container-fluid" id="mainBox">
+    <?php include_once 'views/includes/message.php';?>
     <?php include_once 'views/includes/back-header.php'; ?>
-
+    <?php
+    $bdd = new ConnexionBDD();
+    $con = $bdd->getCon();
+    $query = "SELECT NOMBLAS, TAILLEBLAS, PHOTOBLAS FROM blason WHERE ID_USER = ?";
+    $stmt = $con->prepare($query);
+    $stmt->execute([$idUser]);
+    $result = $stmt->fetchAll();
+    if(count($result) == 0):?>
+    <?php echo "<script>triggerMessageBox('success', 'You don\'t have any blazon yet')</script>"; ?>
+    <?php else:?>
     <div class="swiper-container" id="contentBox">
         <div class="swiper-wrapper">
-            <?php
-            $bdd = new ConnexionBDD();
-            $con = $bdd->getCon();
-            $query = "SELECT NOMBLAS, TAILLEBLAS, PHOTOBLAS FROM blason WHERE ID_USER = ?";
-            $stmt = $con->prepare($query);
-            $stmt->execute([$idUser]);
-            $result = $stmt->fetchAll();
-
-            foreach ($result as $blason):?>
+            <?php foreach ($result as $blason):?>
                 <div class="swiper-slide" id="e1">
                     <h3><?=$blason['NOMBLAS']?></h3>
                 </div>
@@ -49,9 +52,10 @@ $right_url = "#";
         </div>
         <div class="swiper-pagination"></div>
     </div>
-
+        <script src="assets/js/swipy.js"></script>
+    <?php endif ;?>
     <?php include_once 'views/includes/footer.php'; ?>
 </div>
-<script src="assets/js/swipy.js"></script>
+
 </body>
 </html>

@@ -14,6 +14,7 @@ $right_url = "addArc.php";
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title><?= $title ?></title>
 
+    <link rel="stylesheet" href="assets/css/message.css">
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/checkHeader.css">
     <link rel="stylesheet" href="assets/css/edits.css">
@@ -29,6 +30,7 @@ $right_url = "addArc.php";
 </head>
 <body>
 <div class="container-fluid" id="mainBox">
+    <?php include_once 'views/includes/message.php';?>
     <?php include_once 'views/includes/back-header.php'; ?>
     <?php
     $bdd = new ConnexionBDD();
@@ -37,8 +39,9 @@ $right_url = "addArc.php";
     $stmt = $con->prepare($query);
     $stmt->execute([$idUser]);
     $result = $stmt->fetchAll();
+    var_dump($result);
     if(count($result) == 0):?>
-        <div id="contentBox">No arc records</div>
+    <?php echo "<script>triggerMessageBox('success', 'You don\'t have any bow yet')</script>"; ?>
     <?php else:?>
 
     <div class="swiper-container" id="contentBox">
@@ -56,6 +59,13 @@ $right_url = "addArc.php";
 
     <?php include_once 'views/includes/footer.php'; ?>
 </div>
+<script>
+    let rightBtn = document.getElementById("right-btn");
+    rightBtn.disabled = false;
+    rightBtn.addEventListener('touchend', function () {
+       window.location = "<?=$right_url;?>"
+    });
+</script>
 </body>
 </html>
 

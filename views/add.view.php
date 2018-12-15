@@ -1,7 +1,7 @@
 <canvas id="confetti"></canvas>
 <div class="container-fluid addTraining" id="mainBox">
     <?php include 'includes/back-header.php';?>
-    <form method="post" id="newTrainingForm">
+    <form method="get" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" id="newTrainingForm">
         <h3 id="formTitle">Add a new training</h3>
         <div id="nameField">
             <h3>Your Training Name</h3>
@@ -13,12 +13,25 @@
         </div>
         <div id="dateField">
             <h3>The Date</h3>
-            <input type="text" class="datepicker-here" id="dateInput" data-position="top left" data-timepicker="true" data-time-format='h:ii AA' data-language="fr" placeholder="Choose a date">
+            <input type="text" name="date" class="datepicker-here" id="dateInput" data-position="top left" data-timepicker="true" data-time-format='h:ii AA' data-language="fr" placeholder="Pick a date...">
         </div>
         <div id="distanceField">
             <h3>Distance</h3>
-            <input type="number" id="distanceInput"  min="1" max="30">
+            <input type="number" name="distance" id="distanceInput"  min="1" max="30" placeholder="Distance...">
         </div>
+        <div id="serieField">
+            <h3>Series</h3>
+            <input type="number" name="sets" id="serieInput" min = "1" max="3" placeholder="1">
+        </div>
+        <div id="arrowField">
+            <h3>Arrows</h3>
+            <input type="number" name="arrows" id="arrowInput" min = "1" max="10" placeholder="1">
+        </div>
+        <div id="volleyField">
+            <h3>Volleys</h3>
+            <input type="number" name="volleys" id="volleyInput" min = "1" max="6" placeholder="1">
+        </div>
+        <input type="submit" name="submitBtn" id="submitBtn" value="Let's practice !">
     </form>
     <? include 'includes/footer.php';?>
 </div>
@@ -41,6 +54,14 @@
     </div>
 
 </div>
+<script>
+    let rightBtn = document.getElementById("right-btn");
+    rightBtn.disabled = false;
+    console.log(rightBtn);
+    rightBtn.addEventListener('touchend', function () {
+        window.location = "<?= $left_url;?>";
+    });
+</script>
 <script>
 
 

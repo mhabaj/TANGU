@@ -2,7 +2,7 @@
     padding: 0 0;
 }
 
-#check, #quitIcon {
+#check, #quitIconLeft, #quitIconRight {
     display: none;
 }
 

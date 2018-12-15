@@ -27,15 +27,16 @@
 }
 
 #arcButton {
-    background: url('../img/laura-crowe-689639-unsplash.jpg');
+    background: url('../img/niklas-tidbury-317689-unsplash.jpg');
     background-repeat: no-repeat;
     background-origin: border-box;
-    background-size: 100% 100%;
+    background-size: cover;
+    background-position: right;
 }
 
 /*
 #arcButton {
-    background: linear-gradient(to bottom right, rgba(91, 93, 56, 0.5), rgba(114, 107, 89, 0.2)), url('../img/arc-wallpaper-2.jpg');
+    background: linear-gradient(to bottom right, rgba(91, 93, 56, 0.5), rgba(114, 107, 89, 0.2)), url('../img/niklas-tidbury-317689-unsplash.jpg');
     background-repeat: no-repeat;
     background-origin: border-box;
     background-size: cover;
@@ -46,11 +47,11 @@
 }
 
 #blasonButton {
-    background: url('../img/annie-spratt-450564-unsplash.jpg');
+    background: url('../img/annie-spratt-450566-unsplash.jpg');
     background-repeat: no-repeat;
     background-origin: border-box;
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
 }
 
 /*
@@ -64,13 +65,31 @@
 */
 #contentBox h3 {
     z-index: 3;
-    font-size: 1.9em;
-    font-family: SF-Display-Semibold;
+    font-size: 210%;
+    font-family: SF-Display-Regular;
     color: white;
+}
+
+#arcButton h3 {
+    text-align: right;
+    margin-top: 15%;
+    margin-right: 10%;
+}
+
+#blasonButton h3 {
+    text-align: right;
+    margin-right: 10%;
+    margin-top: 25%;
 }
 
 @font-face {
     font-family: SF-Display-Semibold;
     src: url(../fonts/SF/SFProDisplay-Semibold.ttf);
     font-weight: bold;
+}
+
+@font-face {
+    font-family: SF-Display-Semibold;
+    src: url(../fonts/SF/SFProDisplay-Regular.ttf);
+    font-weight: normal;
 }

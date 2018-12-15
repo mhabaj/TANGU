@@ -1,3 +1,51 @@
+.no-data {
+    font-family: SF-Display-Light;
+    font-size: 250%;
+    border: none;
+    position: fixed;
+    top: 41%;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.15), 0 6px 10px rgba(0, 0, 0, 0.13);
+}
+
+@font-face {
+    font-family: SF-Display-Light;
+    src: url(../fonts/SF/SFProDisplay-Light.ttf);
+    font-weight: normal;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .swiper-container {
     position: fixed;
     top: 8%;

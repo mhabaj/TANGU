@@ -54,7 +54,7 @@ if(isset($_POST['submitBtn'])) {
                     if($update_stmt->execute([$hashed_new_pwd, $idUser])) {
                         echo "<script>triggerMessageBox('success', 'Your password has been changed!')</script>";
                     } else {
-                        echo "<script>triggerMessageBox('error', 'An error occured, we\'re sorry)</script>";
+                        echo "<script>triggerMessageBox('error', 'An error occured, we\'re sorry')</script>";
                     }
 
                 }

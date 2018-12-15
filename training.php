@@ -11,6 +11,7 @@ $title = "Entrainements"; ?>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title><?= $title ?></title>
 
+    <link rel="stylesheet" href="assets/css/message.css">
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/training.css">
     <link rel="stylesheet" href="assets/css/navbar.css">
@@ -25,8 +26,8 @@ $title = "Entrainements"; ?>
 </head>
 <body>
 <div class="container-fluid" id="mainBox">
+    <?php include_once 'views/includes/message.php';?>
     <?php include_once 'views/includes/header.php'; ?>
-
     <?php
     $bdd = new ConnexionBDD();
     $con = $bdd->getCon();
@@ -35,7 +36,8 @@ $title = "Entrainements"; ?>
     $stmt->execute([$idUser]);
     $result = $stmt->fetchAll();
     if(count($result) == 0):?>
-        <div id="contentBox">No training records</div>
+    <?php echo "<p class=\"no-data\">No training data</p>";?>
+    <?php echo "<script>triggerMessageBox('success', 'You have no training yet')</script>"; ?>
     <?php else:?>
 
     <div class="swiper-container" id="contentBox">

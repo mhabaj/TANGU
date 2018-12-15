@@ -1,4 +1,10 @@
 <?php
+
+/*
+ *!!!!!!!!!!!!! DO NOT DELETE THESE FUNCTIONS !!!!!!!!!!!!!
+ *
+ *
+ */
 function sanitize_pseudo($pseudo) {
     $pseudo = trim($pseudo);
     $pseudo = stripslashes($pseudo);
@@ -26,6 +32,48 @@ function sanitize_password($current_pwd, $new_pwd, $confirm_pwd) {
         }
     } else {
         echo "<script>triggerMessageBox('error', 'Your password must have 6-30 characters')</script>";
+        return false;
+    }
+}
+
+function sanitize_training($name, $location, $date, $distance, $series, $volleys, $arrows) {
+    $name = stripslashes(trim($name));
+    $name = filter_var($name, FILTER_SANITIZE_STRING);
+
+    $location = stripslashes(trim($location));
+    $location = filter_var($location, FILTER_SANITIZE_STRING);
+
+    $date_time = date_format($date, "Y/m/d H:i:s");
+
+    if(strlen($name) >= 6 && strlen($name) <= 50) {
+        if(strlen($location) >= 6 && strlen($location) <= 200) {
+            if($distance >= 1 && $distance <= 4) {
+                if($series >=1 && $series <= 4) {
+                    if($volleys >= 1 && $volleys <= 10) {
+                        if($arrows >= 1 && $arrows <= 10) {
+                            return true;
+                        } else {
+                            echo "<script>triggerMessageBox('error', 'Invalid arrows')</script>";
+                            return false;
+                        }
+                    } else {
+                        echo "<script>triggerMessageBox('error', 'Invalid volleys')</script>";
+                        return false;
+                    }
+                } else {
+                    echo "<script>triggerMessageBox('error', 'Invalid sets')</script>";
+                    return false;
+                }
+            } else {
+                echo "<script>triggerMessageBox('error', 'Invalid distance')</script>";
+                return false;
+            }
+        } else {
+            echo "<script>triggerMessageBox('error', 'Invalid location')</script>";
+            return false;
+        }
+    } else {
+        echo "<script>triggerMessageBox('error', 'Invalid name')</script>";
         return false;
     }
 }
