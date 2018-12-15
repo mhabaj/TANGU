@@ -3,9 +3,6 @@
 require_once('controllers/classes/ConnexionBDD.php');
 class entrainement
 {
-    // private $tabTrain = array(nbserie, nbvolees, nbfleche);
-    //private $tabTrain[$nbserie][$nbvolees][$nbfleches];
-
 
     private $nom;
     private $lieu;
@@ -42,8 +39,7 @@ class entrainement
         if ($this->creerEntrainement($this->nom, $this->lieu, $this->date, $this->distance, $this->ID_arc, $this->ID_blason, $this->nbserie, $this->nbvolees, $this->nbfleches, $this->ID_user)) {
 
             $ID_ENT_USER = $this->GetEntID();
-            header("Location: ChoisirSerie.php?new_ID_Ent=$ID_ENT_USER");
-            die();
+            header('Location: ' );
 
         }
     }
@@ -67,8 +63,7 @@ class entrainement
             and !empty($distance) and !empty($nbserie) and !empty($nbvolees) and !empty($nbfleches)) {
 
 
-            if (is_numeric($ID_blason) and is_numeric($ID_arc) and strlen($nom) <= 30 and strlen($lieu) <= 200
-                and $this->verifdateheure($date) and is_numeric($distance) and $distance <= 125
+            if (is_numeric($ID_blason) and is_numeric($ID_arc) and strlen($nom) <= 30 and strlen($lieu) <= 200 and is_numeric($distance) and $distance <= 125
                 and is_numeric($nbserie) and $nbserie <= 5 and is_numeric($nbvolees) and $nbvolees <= 10 and is_numeric($nbfleches) and $nbfleches <= 10) {
                 echo $ID_user;
                 echo $nom;
@@ -142,8 +137,6 @@ class entrainement
         $ID_ENT_USER = intval($ID_user . '00' . $ID_ENT);
 
         return $ID_ENT_USER;
-
-
     }
 
 ////////////////////////////////////////////////////////////////////////////////////////////
@@ -159,6 +152,8 @@ class entrainement
 
             $bdd = new ConnexionBDD();
             $con = $bdd->getCon();
+
+            $date = (string) $date;
 
 
             $requ = $con->exec("INSERT INTO `entrainement` (`ID_ENT`,`ID_ENT_USER`, `ID_USER`, `ID_ARC`, `ID_BLAS`, `NOM_ENT`, `LIEU_ENT`, `DATE_ENT`, `DIST_ENT`,`NBR_SERIE`,`NBR_VOLEE`, `NBR_FLECHES`, `PTS_TOTAL`, `PCT_DIX`, `PCT_NEUF`, `MOY_ENT`, `STATUT_ENT`) 

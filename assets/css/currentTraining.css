@@ -1,0 +1,321 @@
+@keyframes blurInAnim {
+    0% {
+        filter: blur(0px);
+    }
+
+    15% {
+        filter: blur(1px);
+    }
+
+    30% {
+        filter: blur(2px);
+    }
+
+    45% {
+        filter: blur(3px);
+    }
+
+    80% {
+        filter: blur(2px);
+    }
+
+    90% {
+        filter: blur(1px);
+    }
+
+    100% {
+        filter: blur(0px);
+    }
+
+}
+
+@keyframes blurOutAnim {
+    0% {
+        filter: blur(3px);
+    }
+
+    33% {
+        filter: blur(2px);
+    }
+
+    66% {
+        filter: blur(1px);
+    }
+
+    100% {
+        filter: blur(0px);
+    }
+}
+
+@keyframes popUp {
+    0% { transform: scale(0, 0); }
+    4.5% { transform: scale(.728, .728); }
+    9.01% { transform: scale(1.32, 1.32); }
+    13.51% { transform: scale(1.631, 1.631); }
+    17.92% { transform: scale(1.709, 1.709); }
+    29.03% { transform: scale(1.548, 1.548); }
+    34.63% { transform: scale(1.491, 1.491); }
+    40.14% { transform: scale(1.477, 1.477); }
+    62.36% { transform: scale(1.503, 1.503); }
+    84.68% { transform: scale(1.5, 1.5); }
+    100% { transform: scale(1.5, 1.5); }
+}
+
+@keyframes popDown {
+    0% { transform: scale(1.5, 1.5); }
+    4.5% { transform: scale(1.5, 1.5); }
+    9.01% { transform: scale(1.503, 1.503); }
+    13.51% { transform: scale(1.477, 1.477); }
+    17.92% { transform: scale(1.491, 1.491); }
+    29.03% { transform: scale(1.548, 1.548); }
+    34.63% { transform: scale(1.709, 1.709); }
+    40.14% { transform: scale(1.631, 1.631); }
+    62.36% { transform: scale(1.32, 1.32); }
+    84.68% { transform: scale(.728, .728); }
+    100% { transform: scale(0, 0); }
+}
+
+@keyframes disappear {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+.animated-blur {
+    animation: blurInAnim 2.5s linear;
+}
+
+.animated-background {
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.animated-popup {
+    animation: popUp 1000ms linear both;
+}
+
+.animated-popdown {
+    animation: popDown 500ms linear both;
+}
+
+.disappear-animation {
+    animation: disappear 1100ms linear;
+    opacity: 0;
+}
+
+#headerBox {
+    border: none;
+    padding: 0 0;
+}
+
+#titleBox {
+    border-style: none;
+    height: 100%;
+}
+
+#titleBox h1 {
+    border-style: solid;
+    font-family: SF-Display-Light;
+}
+
+#mainBox {
+    border-style: none;
+    padding: 0;
+}
+
+#serieText {
+    display: none;
+    position: fixed;
+    top: 0;
+    margin: 3.5% 0;
+    left: 5%;
+}
+
+#voleeText {
+    display: none;
+    border-style: solid;
+    position: fixed;
+    top: 0;
+    margin: 8% 0;
+    left: 50%;
+    font-family: SF-Display-Light;
+    font-size: 130%;
+}
+
+#popUp {
+    display: none;
+    z-index: 2;
+    border: none;
+    position: fixed;
+    top: 40%;
+    left: 25%;
+    width: 50%;
+    height: 20%;
+    border-radius: 10px;
+    background: none;
+    text-align: center;
+    color: lawngreen;
+    padding: 10% 0;
+}
+
+#popUp h1 {
+    font-family: SF-Display-Regular;
+    font-size: 2.2em;
+}
+
+canvas {
+    display: none;
+    z-index: 1;
+    pointer-events: none;
+    position: relative;
+}
+
+.point {
+    position: fixed;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    background-color: black;
+}
+
+#target {
+    display: block;
+    border: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 400px;
+    width: 100%;
+    transform: translate(-50%, -50%);
+}
+
+#target1 {
+    border: solid black 1px;
+    background-color: white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 350px;
+    width: 350px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#subTarget1 {
+    border: solid rgba(140, 140, 140, 0.9) 1px;
+    background: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 305px;
+    width: 305px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#target2 {
+    border: none;
+    background-color: rgba(0, 0, 90, 0.9);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 260px;
+    width: 260px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#subTarget2 {
+    border: solid rgba(204, 204, 204, 0.9) 1px;
+    background: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 215px;
+    width: 215px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#target3 {
+    border: none;
+    background-color: rgba(1, 115, 228, 1);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#subTarget3 {
+    border: solid rgba(128, 191, 254, 0.9) 1px;
+    background: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 135px;
+    width: 135px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#target4 {
+    border: none;
+    background-color: rgba(216, 5, 20, 0.9);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#subTarget4 {
+    border: solid rgba(251, 106, 116, 0.9) 1px;
+    background: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#target5 {
+    border: none;
+    background-color: rgba(228, 188, 2, 0.9);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#subTarget5 {
+    border: solid rgba(253, 226, 104, 0.9) 1px;
+    background: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#subTarget6 {
+    border: solid rgba(253, 226, 104, 0.9) 1px;
+    background: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}

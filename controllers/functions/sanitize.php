@@ -43,7 +43,6 @@ function sanitize_training($name, $location, $date, $distance, $series, $volleys
     $location = stripslashes(trim($location));
     $location = filter_var($location, FILTER_SANITIZE_STRING);
 
-    $date_time = date_format($date, "Y/m/d H:i:s");
 
     if(!empty($name) && !empty($location) && !empty($date) && !empty($distance) && !empty($series) && !empty($volleys) && !empty($arrows)) {
         if(strlen($name) >= 6 && strlen($name) <= 50) {

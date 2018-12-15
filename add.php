@@ -32,7 +32,6 @@ $left_url = "training.php";
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/datepicker.min.js"></script>
     <script src="assets/js/datepicker.fr.js"></script>
-    <script src="assets/js/confetti.js"></script>
     <script src="assets/js/swiper.min.js"></script>
 </head>
 <body>
@@ -53,28 +52,34 @@ $blasons_stmt->execute([$idUser]);
 $arcs = $arcs_stmt->fetchAll();
 $blasons = $blasons_stmt->fetchAll();
 ;?>
-<?php include 'views/add.view.php'; ?>
 
 <?php
 if(isset($_GET['submitBtn'])) {
     if(sanitize_training($_GET['name'], $_GET['location'], $_GET['date'], $_GET['distance'], $_GET['sets'], $_GET['volleys'], $_GET['arrows'])) {
         $name = $_GET['name'];
         $location = $_GET['location'];
-        $date = $_GET['date'];
+        $date = date_create_from_format("d/m/Y h:i A", $_GET['date']);
         $distance = $_GET['distance'];
         $sets = $_GET['sets'];
         $volleys = $_GET['volleys'];
         $arrows = $_GET['arrows'];
         $blason_select = $_GET['blasons'];
         $bow_select = $_GET['bows'];
+        if($blason_select != "No blason") {
+            $blasonID = (int) $blason_select;
+        }
 
+        if($bow_select != "No bow") {
+            $arcID = (int) $bow_select;
+        }
 
-        //$training = new Entrainement($name, $location, $date, $distance, 1, 1, 2, 3, 6, $idUser);
+        $date_time = date_format($date, "Y-m-d H:i");
+
+        $training = new Entrainement($name, $location, $date_time, $distance, $arcID, 1, $sets, $volleys, $arrows, $idUser);
     }
-} else {
-    echo "NOONE";
 }
 
 ?>
+<?php include 'views/add.view.php'; ?>
 </body>
 </html>
