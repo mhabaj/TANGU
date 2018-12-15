@@ -12,9 +12,11 @@
         checkButton = document.getElementById("right-btn"),
         checkSign = document.getElementById("check");
 
+    checkButton.disabled = true;
+
     pseudoInput.addEventListener("input", function() {
         let inputLength = pseudoInput.value.length;
-        if(inputLength < 6 || inputLength > 20) {
+        if(inputLength < 3 || inputLength > 30) {
             //Wrong red
             pseudoInput.style.borderColor = "rgba(255, 59, 48, 1)";
             checkSign.style.color = "rgba(130, 127, 254, 0.55)";

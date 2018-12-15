@@ -1,7 +1,6 @@
 <div class="container-fluid" id="mainBox">
-    <?php include 'includes/back-header.php';?>
     <div class="container-fluid" id="formBox">
-        <form>
+        <form method="post" id="myform">
             <div id="currentPwdBox">
                 <h3>Mot de Passe Actuel</h3><br>
                 <input type="password" name="currentPwd" id="currentPwd" placeholder="Mot de passe actuel..." autocomplete="off" maxlength="30">
@@ -14,6 +13,7 @@
                 <h3>Confirmer le Nouveau Mot de Passe</h3><br>
                 <input type="password" name="confirmPwd" id="confirmPwd" placeholder="Confirmer votre nouveau mot de passe" autocomplete="off" maxlength="30">
             </div>
+            <?php include 'includes/back-header.php';?>
         </form>
     </div>
 </div>
@@ -22,11 +22,12 @@
     var currentPwdInput = document.getElementById("currentPwd"),
         newPwdInput = document.getElementById("newPwd"),
         confirmPwdInput = document.getElementById("confirmPwd"),
-        checkLink = document.getElementById("checkLink"),
+        checkButton = document.getElementById("right-btn"),
         checkSign = document.getElementById("check");
 
+    checkButton.disabled = true;
     var inputs = [currentPwdInput, newPwdInput];
-    var check = []
+    var check = [];
 
     currentPwdInput.addEventListener('input', function() {
         if(currentPwdInput.value.length < 6 || currentPwdInput.value.length > 30) {
@@ -38,7 +39,6 @@
             check[0] = true;
 
         }
-        console.log("niveau 0: " + check);
         if(check[0] && check[1] && check[2]) {
             allowSubmitDisplay();
         }
@@ -53,7 +53,6 @@
                 check[1] = true;
             }
 
-            console.log("niveau 1: " + check);
             confirmPwdInput.addEventListener('input', function() {
                 if (confirmPwdInput.value != newPwdInput.value || confirmPwdInput.value.length > 30) {
                     errorDisplay(confirmPwdInput);
@@ -66,7 +65,6 @@
                     successDisplay(confirmPwdInput);
                     successDisplay(newPwdInput);
                 }
-                console.log("niveau 2:" + check);
                 if(check[0] && check[1] && check[2]) {
                     allowSubmitDisplay();
                 }
@@ -82,7 +80,6 @@
                 check[2] = true;
                 successDisplay(newPwdInput);
             }
-            console.log("niveau 3: " + check);
             if(check[0] && check[1] && check[2]) {
                 allowSubmitDisplay();
             } else {
@@ -102,12 +99,12 @@
     function hideSubmitDisplay() {
         checkSign.style.color = "rgba(130, 127, 254, 0.55)";
         checkSign.style.filter = "blur(0.65px)";
-        checkLink.style.pointerEvents = "none";
+        checkButton.disabled = true;
     }
 
     function allowSubmitDisplay() {
         checkSign.style.color = "rgba(130, 127, 254, 1)";
         checkSign.style.filter = "none";
-        checkLink.style.pointerEvents = "auto";
+        checkButton.disabled = false;
     }
 </script>

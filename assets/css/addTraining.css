@@ -102,19 +102,15 @@
     opacity: 0;
 }
 
-#blurBckg {
-    z-index: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: red;
-    opacity: 0;
+#arrowIcon, #check {
+    display: none;
+}
+
+.currentTraining {
+    display: none;
 }
 
 #headerBox {
-    display: none;
     border: none;
     padding: 0 0;
 }
@@ -131,9 +127,11 @@
 
 #mainBox {
     border-style: none;
+    padding: 0;
 }
 
 #serieText {
+    display: none;
     position: fixed;
     top: 0;
     margin: 3.5% 0;
@@ -141,6 +139,7 @@
 }
 
 #voleeText {
+    display: none;
     border-style: solid;
     position: fixed;
     top: 0;
@@ -171,25 +170,8 @@
     font-size: 2.2em;
 }
 
-#form-popUp {
-    display: none;
-    z-index: 2;
-    border: none;
-    position: fixed;
-    top: 30%;
-    left: 25%;
-    width: 50%;
-    height: 40%;
-    border-radius: 10px;
-    background: none;
-    text-align: center;
-    color: lawngreen;
-    padding: 0 0;
-    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);;
-}
-
 canvas {
-    display: block;
+    display: none;
     z-index: 1;
     pointer-events: none;
     position: relative;
@@ -346,38 +328,26 @@ canvas {
     transform: translate(-50%, -50%);
 }
 
-#formTitle {
-    text-align: left;
-    font-size: 90%;
-    font-family: SF-Text-Regular;
-    margin-bottom: 8%;
-    margin-left: 10%;
-}
 
 #newTrainingForm {
-    padding: 0;
-    height: 100%;
-    background-color: yellow;
-    border-radius: 10px;
+    position: fixed;
+    top: 8%;
+    height: 92%;
+    width: 100%;
+    background: none;
+    padding: 6% 6%;
 }
 
-#newTrainingForm div {
-    border-style: none;
+#formTitle {
+    font-family: SF-Display-Regular;
+    font-size: 200%;
+    border: none;
+    margin-bottom: 10%;
 }
 
-#locationField {
-    background-color: black;
-}
-
-#nameField {
-    background-color: blue;
-}
-
-#newTrainingForm div h3 {
-    text-align: left;
-    margin-left: 10%;
+#newTrainingForm  div > h3 {
     font-family: SF-Text-Semibold;
-    font-size: 70%;
+    font-size: 110%;
     color: rgba(0, 0, 0, 0.8);
 }
 
@@ -385,46 +355,69 @@ input[type="text"] {
     margin-top: 2%;
     margin-bottom: 5%;
     height: 6%;
-    width: 80%;
+    width: 100%;
     border-radius: 4px;
-    padding: 2.5% 5%;
+    padding: 3% 5%;
     font-family: SF-Text-Regular;
-    font-size: 70%;
+    font-size: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    outline: none;
+}
+
+#dateField {
+    border: none;
+    width: 50%;
+    float: left;
+}
+
+#dateInput {
+    margin-top: 2%;
+    margin-bottom: 5%;
+    height: 6%;
+    width: 95%;
+    border-radius: 4px;
+    padding: 3% 5%;
+    font-family: SF-Text-Regular;
+    font-size: 100%;
     border: 1px solid rgba(0, 0, 0, 0.6);
     outline: none;
 }
 
 #distanceField {
-    background-color: red;
+    border: none;
     width: 50%;
+    float: right;
 }
 
-#distanceField input {
+#distanceInput {
     margin-top: 2%;
     margin-bottom: 5%;
     height: 6%;
-    width: 100%;
+    width: 95%;
     border-radius: 4px;
-    padding: 2.5% 5%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-left: 5%;
+    padding-right: 0;
     font-family: SF-Text-Regular;
-    font-size: 70%;
+    font-size: 100%;
     border: 1px solid rgba(0, 0, 0, 0.6);
     outline: none;
 }
 
-#submitField {
-    border-style: solid;
-    background-color: green;
-    margin-top: 20%;
-}
 
-#popUpSubmitButton {
-    border-style: solid;
-    background: none;
-    width: 80%;
-    border-radius: 4px;
-    margin-top: 0;
-}
+
+
+
+
+
+
+
+
+
+
+
+
 
 @font-face {
     font-family: SF-Display-Regular;
@@ -457,7 +450,7 @@ input[type="text"] {
 }
 
 @font-face {
-    font-family: SF-Text-Semibold;
-    src: url(../fonts/SF/SFProText-Semibold.ttf);
+    font-family: SF-Display-Semibold;
+    src: url(../fonts/SF/SFProDisplay-Semibold.ttf);
     font-weight: normal;
 }
