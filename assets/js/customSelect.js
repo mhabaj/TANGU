@@ -14,19 +14,15 @@ $(".custom-select").each(function() {
     $(this).hide();
     $(this).after(template);
 });
-$(".custom-option:first-of-type").hover(function() {
-    $(this).parents(".custom-options").addClass("option-hover");
-}, function() {
-    $(this).parents(".custom-options").removeClass("option-hover");
-});
-$(".custom-select-trigger").on("click", function() {
-    $('html').one('click',function() {
+
+$(".custom-select-trigger").on("touchend", function() {
+    $('html').one('touchend',function() {
         $(".custom-select").removeClass("opened");
     });
     $(this).parents(".custom-select").toggleClass("opened");
     event.stopPropagation();
 });
-$(".custom-option").on("click", function() {
+$(".custom-option").on("touchend", function() {
     $(this).parents(".custom-select-wrapper").find("select").val($(this).data("value"));
     $(this).parents(".custom-options").find(".custom-option").removeClass("selection");
     $(this).addClass("selection");

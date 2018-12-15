@@ -372,7 +372,7 @@ input[type="text"] {
     padding: 3% 5%;
     font-family: SF-Text-Regular;
     font-size: 100%;
-    border: 1px solid rgba(0, 0, 0, 0.6);
+    border: 1px solid #b5b5b5;
     outline: none;
 }
 
@@ -388,10 +388,14 @@ input[type="text"] {
     height: 6%;
     width: 95%;
     border-radius: 4px;
-    padding: 3% 5%;
+    padding: 3% 3%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-left: 4%;
+    padding-right: 0;
     font-family: SF-Text-Regular;
     font-size: 100%;
-    border: 1px solid rgba(0, 0, 0, 0.6);
+    border: 1px solid #b5b5b5;
     outline: none;
 }
 
@@ -409,16 +413,29 @@ input[type="text"] {
     border-radius: 4px;
     padding-top: 3%;
     padding-bottom: 3%;
-    padding-left: 5%;
+    padding-left: 8%;
     padding-right: 0;
     font-family: SF-Text-Regular;
     font-size: 100%;
-    border: 1px solid rgba(0, 0, 0, 0.6);
+    border: 1px solid #b5b5b5;
     outline: none;
 }
 
 #bowsField, #blasonsField {
-    border-style: solid;
+    border-style: none;
+    width: 50%;
+}
+
+#sources {
+    width: 95%;
+}
+
+#bowsField {
+    float: left;
+}
+
+#blasonsField {
+    float: right;
 }
 
 /** Custom Select **/
@@ -523,11 +540,7 @@ input[type="text"] {
     border-bottom: 0;
     border-radius: 0 0 4px 4px;
 }
-.custom-option:hover,
-.custom-option.selection {
-    background: #f9f9f9;
-}
-
+/**Custom Select **/
 
 #serieField, #volleyField, #arrowField {
     border-style: none;
@@ -554,11 +567,11 @@ input[type="text"] {
     border-radius: 4px;
     padding-top: 3%;
     padding-bottom: 3%;
-    padding-left: 5%;
+    padding-left: 8%;
     padding-right: 0;
     font-family: SF-Text-Regular;
     font-size: 100%;
-    border: 1px solid rgba(0, 0, 0, 0.6);
+    border: 1px solid #b5b5b5;
     outline: none;
 }
 
@@ -570,11 +583,11 @@ input[type="text"] {
     border-radius: 4px;
     padding-top: 3%;
     padding-bottom: 3%;
-    padding-left: 5%;
+    padding-left: 8%;
     padding-right: 0;
     font-family: SF-Text-Regular;
     font-size: 100%;
-    border: 1px solid rgba(0, 0, 0, 0.6);
+    border: 1px solid #b5b5b5;
     outline: none;
 }
 
@@ -582,7 +595,8 @@ input[type="text"] {
     background-color: rgba(130, 127, 254, 1);
     border: none;
     width: 100%;
-    margin-top: 18%;
+    margin-top: 8%;
+    margin-bottom: 2%;
     height: 8%;
     border-radius: 3px;
     color: white;

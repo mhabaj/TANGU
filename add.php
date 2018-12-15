@@ -65,9 +65,14 @@ if(isset($_GET['submitBtn'])) {
         $sets = $_GET['sets'];
         $volleys = $_GET['volleys'];
         $arrows = $_GET['arrows'];
+        $blason_select = $_GET['blasons'];
+        $bow_select = $_GET['bows'];
 
-        $training = new Entrainement($name, $location, $date, $distance, 1, 1, 2, 3, 6, $idUser);
+
+        //$training = new Entrainement($name, $location, $date, $distance, 1, 1, 2, 3, 6, $idUser);
     }
+} else {
+    echo "NOONE";
 }
 
 ?>

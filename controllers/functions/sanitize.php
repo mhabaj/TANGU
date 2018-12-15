@@ -45,37 +45,43 @@ function sanitize_training($name, $location, $date, $distance, $series, $volleys
 
     $date_time = date_format($date, "Y/m/d H:i:s");
 
-    if(strlen($name) >= 6 && strlen($name) <= 50) {
-        if(strlen($location) >= 6 && strlen($location) <= 200) {
-            if($distance >= 1 && $distance <= 4) {
-                if($series >=1 && $series <= 4) {
-                    if($volleys >= 1 && $volleys <= 10) {
-                        if($arrows >= 1 && $arrows <= 10) {
-                            return true;
+    if(!empty($name) && !empty($location) && !empty($date) && !empty($distance) && !empty($series) && !empty($volleys) && !empty($arrows)) {
+        if(strlen($name) >= 6 && strlen($name) <= 50) {
+            if(strlen($location) >= 3 && strlen($location) <= 200) {
+                if($distance >= 1 && $distance <= 30) {
+                    if($series >=1 && $series <= 4) {
+                        if($volleys >= 1 && $volleys <= 10) {
+                            if($arrows >= 1 && $arrows <= 10) {
+                                return true;
+                            } else {
+                                echo "<script>triggerMessageBox('error', 'Invalid arrows')</script>";
+                                return false;
+                            }
                         } else {
-                            echo "<script>triggerMessageBox('error', 'Invalid arrows')</script>";
+                            echo "<script>triggerMessageBox('error', 'Invalid volleys')</script>";
                             return false;
                         }
                     } else {
-                        echo "<script>triggerMessageBox('error', 'Invalid volleys')</script>";
+                        echo "<script>triggerMessageBox('error', 'Invalid sets')</script>";
                         return false;
                     }
                 } else {
-                    echo "<script>triggerMessageBox('error', 'Invalid sets')</script>";
+                    echo "<script>triggerMessageBox('error', 'Invalid distance')</script>";
                     return false;
                 }
             } else {
-                echo "<script>triggerMessageBox('error', 'Invalid distance')</script>";
+                echo "<script>triggerMessageBox('error', 'Invalid location')</script>";
                 return false;
             }
         } else {
-            echo "<script>triggerMessageBox('error', 'Invalid location')</script>";
+            echo "<script>triggerMessageBox('error', 'Invalid name')</script>";
             return false;
         }
     } else {
-        echo "<script>triggerMessageBox('error', 'Invalid name')</script>";
+        echo "<script>triggerMessageBox('error', 'Fill everything')</script>";
         return false;
     }
+
 }
 
 ?>
