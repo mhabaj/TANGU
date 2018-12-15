@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2018-11-06" view-index="0" gantt-divider-location="623" resource-divider-location="518" version="2.8.9" locale="fr">
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2018-11-15" view-index="0" gantt-divider-location="623" resource-divider-location="518" version="2.8.9" locale="fr">
     <description/>
     <view zooming-state="default:1" id="gantt-chart">
         <field id="tpd3" name="Nom" width="273" order="0"/>
@@ -34,7 +34,7 @@
             <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
             <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
         </taskproperties>
-        <task id="139" name="jalon 1" color="#8cb6ce" meeting="false" project="true" start="2018-10-16" duration="10" complete="100" thirdDate="2018-10-16" thirdDate-constraint="0" expand="false">
+        <task id="139" name="jalon 1" color="#8cb6ce" meeting="false" project="true" start="2018-10-16" duration="10" complete="100" thirdDate="2018-10-16" thirdDate-constraint="0" expand="true">
             <depend id="119" type="2" difference="0" hardness="Strong"/>
             <task id="140" name="1 : base de données" color="#ff3333" meeting="false" start="2018-10-16" duration="2" complete="100" thirdDate="2018-10-11" thirdDate-constraint="0" expand="true">
                 <depend id="141" type="2" difference="0" hardness="Strong"/>
@@ -101,7 +101,7 @@
             <task id="133" name="8.2 : MP onglet entrainements" color="#8cb6ce" meeting="false" start="2018-11-15" duration="2" complete="0" thirdDate="2018-10-18" thirdDate-constraint="0" expand="true"/>
             <task id="135" name="5.2 : MP onglet catalogue tirs" color="#8cb6ce" meeting="false" start="2018-11-17" duration="3" complete="0" thirdDate="2018-10-16" thirdDate-constraint="0" expand="true"/>
         </task>
-        <task id="106" name="Jalon 3" color="#8cb6ce" meeting="true" project="true" start="2018-11-21" duration="0" complete="0" thirdDate="2018-11-10" thirdDate-constraint="0" expand="false">
+        <task id="106" name="Jalon 3" color="#8cb6ce" meeting="true" project="true" start="2018-11-21" duration="0" complete="0" thirdDate="2018-11-10" thirdDate-constraint="0" expand="true">
             <depend id="102" type="2" difference="0" hardness="Strong"/>
             <task id="113" name="6.0 : conception onglet statistiques" color="#8cb6ce" meeting="false" start="2018-11-21" duration="5" complete="0" thirdDate="2018-11-20" thirdDate-constraint="0" expand="true"/>
             <task id="114" name="6.1 : code onglet statistiques" color="#8cb6ce" meeting="false" start="2018-11-27" duration="6" complete="0" thirdDate="2018-10-16" thirdDate-constraint="0" expand="true">
