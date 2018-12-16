@@ -44,7 +44,17 @@ $title = "Entrainements"; ?>
         <div class="swiper-wrapper">
             <?php foreach ($result as $training):?>
                 <div class="swiper-slide">
-                    <h3><?= $training['NOM_ENT'];?></h3>
+                    <h3>Nom: <?= $training['NOM_ENT'];?></h3><br>
+                    <p>
+                        Lieu: <?= $training['LIEU_ENT'];?>
+                        Date: <?= $training['DATE_ENT'];?>
+                        Distance: <?= $training['DIST_ENT'];?>
+                        Serie: <?= $training['NBR_SERIE'];?>, Volées: <?= $training['NBR_VOLEE'];?>, Fleches: <?= $training['NBR_FLECHES'];?>
+                        Points: <?= $training['PTS_TOTAL'];?>
+                        %10: <?= $training['PCT_DIX'];?>
+                        %9: <?= $training['PCT_NEUF'];?>
+                        Moyenne: <?= $training['MOY_ENT'];?>
+                    </p>
                 </div>
             <?php endforeach;?>
         </div>

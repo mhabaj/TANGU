@@ -163,7 +163,7 @@
 }
 
 canvas {
-    display: none;
+    display: block;
     z-index: 1;
     pointer-events: none;
     position: relative;

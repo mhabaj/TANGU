@@ -17,8 +17,7 @@ $title = "Entrainement";
     <link rel="stylesheet" href="assets/css/message.css">
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/checkHeader.css">
-    <!--<link rel="stylesheet" href="assets/css/modalFormInput.css">-->
-    <link rel="stylesheet" href="assets/css/currentTraining.css.css">
+    <link rel="stylesheet" href="assets/css/currentTraining.css">
     <link rel="stylesheet" href="assets/css/navbar.css">
     <link rel="stylesheet" href="assets/css/datepicker.css">
     <link rel="stylesheet" href="assets/css/responsive.css">

@@ -204,7 +204,11 @@ input[type="text"] {
     width: 50%;
 }
 
-#sources {
+#bowInput {
+    width: 95%;
+}
+
+#blasonInput {
     width: 95%;
 }
 
@@ -382,6 +386,7 @@ input[type="text"] {
     font-size: 115%;
     box-shadow: 0px 10px 18px rgba(46, 43, 253, 0.35);
     outline: none;
+    opacity: 1;
 }
 
 

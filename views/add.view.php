@@ -20,7 +20,7 @@
         </div>
         <div id="bowsField">
             <h3>Bows</h3>
-            <select name="bows" id="sources" class="custom-select sources" placeholder="Source Type">
+            <select name="bows" id="bowInput" class="custom-select sources" placeholder="Source Type">
                 <?php
                 if(count($arcs) == 0):?>
                     <option>No bow</option>
@@ -34,7 +34,7 @@
         </div>
         <div id="blasonsField">
             <h3>Blasons</h3>
-            <select name="blasons" id="sources" class="custom-select sources" placeholder="Source Type">
+            <select name="blasons" id="blasonInput" class="custom-select sources" placeholder="Source Type">
                 <?php
                 if(count($blasons) == 0):?>
                 <option>No blason</option>
@@ -64,8 +64,51 @@
 <script>
     let rightBtn = document.getElementById("right-btn");
     rightBtn.disabled = false;
-    console.log(rightBtn);
+
     rightBtn.addEventListener('touchend', function () {
         window.location = "<?= $left_url;?>";
     });
+
+    let submitBtn = document.getElementById("submitBtn");
+
+    let nameInput = document.getElementById("nameInput"),
+        locationInput = document.getElementById("locationInput"),
+        dateInput = document.getElementById("dateInput"),
+        distanceInput = document.getElementById("distanceInput"),
+        bowInput = document.getElementById("bowInput"),
+        blasonInput = document.getElementById("blasonInput"),
+        serieInput = document.getElementById("serieInput"),
+        volleyInput = document.getElementById("volleyInput"),
+        arrowInput = document.getElementById("arrowInput");
+
+    let nameLength = nameInput.value.length,
+        locationLength = locationInput.value.length,
+        dateLength = dateInput.value.length,
+        distanceLength = distanceInput.value.length,
+        bowLength = bowInput.value.length,
+        blasonLength = blasonInput.value.length,
+        serieLength = serieInput.value.length,
+        volleyLength = volleyInput.value.length,
+        arrowLength = arrowInput.value.length;
+
+    let inputs = [nameInput, locationInput, dateInput, distanceInput, bowInput, blasonInput, serieInput, volleyInput, arrowInput];
+
+
+    /*
+    nameInput.addEventListener('input', function () {
+        if(!(nameLength == 0 || locationLength == 0 || dateLength == 0 || distanceLength == 0 || bowLength == 0 || blasonLength == 0 || serieLength == 0 || volleyLength == 0 || arrowLength == 0)) {
+            submitBtn.disabled = false;
+            submitBtn.style.opacity = "1";
+        }
+    });
+
+    locationInput.addEventListener('input', function () {
+        if(!(nameLength == 0 || locationLength == 0 || dateLength == 0 || distanceLength == 0 || serieLength == 0 || volleyLength == 0 || arrowLength == 0)) {
+            submitBtn.disabled = false;
+            submitBtn.style.opacity = "1";
+        }
+    });
+
+    */
+
 </script>

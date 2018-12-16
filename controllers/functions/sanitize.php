@@ -77,7 +77,7 @@ function sanitize_training($name, $location, $date, $distance, $series, $volleys
             return false;
         }
     } else {
-        echo "<script>triggerMessageBox('error', 'Fill everything')</script>";
+        //echo "<script>triggerMessageBox('error', 'Fill everything')</script>";
         return false;
     }
 

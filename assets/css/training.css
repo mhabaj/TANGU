@@ -10,6 +10,10 @@
     text-shadow: 0 4px 8px rgba(0, 0, 0, 0.15), 0 6px 10px rgba(0, 0, 0, 0.13);
 }
 
+.swiper-slide {
+
+}
+
 @font-face {
     font-family: SF-Display-Light;
     src: url(../fonts/SF/SFProDisplay-Light.ttf);
