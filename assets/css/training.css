@@ -10,10 +10,6 @@
     text-shadow: 0 4px 8px rgba(0, 0, 0, 0.15), 0 6px 10px rgba(0, 0, 0, 0.13);
 }
 
-.scaleChange {
-    animation: scaleChange 1000 linear both;
-}
-
 .slide-content p {
     color: black;
     font-family: SF-Text-Regular;
@@ -104,17 +100,4 @@
     font-family: SF-Text-Regular;
     src: url(../fonts/SF/SFProText-Regular.ttf);
     font-weight: normal;
-}
-
-@keyframes scaleChange {
-    0% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-    5.71% { -webkit-transform: matrix3d(1.375, 0, 0, 0, 0, 1.375, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.375, 0, 0, 0, 0, 1.375, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-    11.31% { -webkit-transform: matrix3d(1.635, 0, 0, 0, 0, 1.635, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.635, 0, 0, 0, 0, 1.635, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-    17.02% { -webkit-transform: matrix3d(1.809, 0, 0, 0, 0, 1.809, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.809, 0, 0, 0, 0, 1.809, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-    22.62% { -webkit-transform: matrix3d(1.913, 0, 0, 0, 0, 1.913, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.913, 0, 0, 0, 0, 1.913, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-    28.33% { -webkit-transform: matrix3d(1.973, 0, 0, 0, 0, 1.973, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.973, 0, 0, 0, 0, 1.973, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-    33.93% { -webkit-transform: matrix3d(2.002, 0, 0, 0, 0, 2.002, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(2.002, 0, 0, 0, 0, 2.002, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-    45.15% { -webkit-transform: matrix3d(2.017, 0, 0, 0, 0, 2.017, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(2.017, 0, 0, 0, 0, 2.017, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-    72.57% { -webkit-transform: matrix3d(2.004, 0, 0, 0, 0, 2.004, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(2.004, 0, 0, 0, 0, 2.004, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-    100% { -webkit-transform: matrix3d(2, 0, 0, 0, 0, 2, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(2, 0, 0, 0, 0, 2, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
 }

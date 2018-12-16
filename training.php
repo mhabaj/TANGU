@@ -73,7 +73,7 @@ $title = "Entrainements"; ?>
         nbrsText = document.getElementsByClassName("nbrs"),
         pctText = document.getElementsByClassName("pcts"),
         miscText = document.getElementsByClassName("misc");
-
+    /*
 
     for(let i = 0; i < slideHeaders.length; i++) {
         slideHeaders[i].addEventListener('touchstart', function (e) {
@@ -84,7 +84,7 @@ $title = "Entrainements"; ?>
             pctText[0].style.display = "block";
             miscText[0].style.display = "block";
         });
-
+        */
         /*
         slideHeaders[i].addEventListener('touchend', function () {
             slideHeaders[i].style.transition = "height 800ms ease-out, background-position 800ms linear";
@@ -94,8 +94,8 @@ $title = "Entrainements"; ?>
             pctText[0].style.display = "none";
             miscText[0].style.display = "none";
         });
-        */
-    }
+
+    }*/
 
 
 </script>
