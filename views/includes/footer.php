@@ -96,23 +96,18 @@
 
     switch (title) {
         case titles[0]:
-            console.log('Page: ' + titles[0]);
             $training.style.color = "rgba(0, 0, 0, 0.9)";
             break;
         case titles[1]:
-            console.log('Page: ' + titles[1]);
             $stats.style.color = "rgba(0, 0, 0, 0.9)";
             break;
         case titles[2]:
-            console.log('Page: ' + titles[2]);
             $add.style.color = "rgba(0, 0, 0, 0.9)";
             break;
         case titles[3]:
-            console.log('Page: ' + titles[3]);
             $edit.style.color = "rgba(0, 0, 0, 0.9)";
             break;
         case titles[4]:
-            console.log('Page: ' + titles[4]);
             $account.style.color = "rgba(0, 0, 0, 0.9)";
             break;
         default:

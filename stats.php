@@ -1,5 +1,7 @@
 <?php
 require_once 'controllers/functions/control-session.php';
+require_once 'controllers/classes/ConnexionBDD.php';
+
 $title = "Statistiques";?>
 <!DOCTYPE html>
 
@@ -11,7 +13,7 @@ $title = "Statistiques";?>
     <title><?=$title?></title>
 
     <link rel="stylesheet" href="assets/css/header.css">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="assets/css/stats.css">
     <link rel=stylesheet href="assets/css/navbar.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -19,9 +21,19 @@ $title = "Statistiques";?>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
 </head>
 
 <body>
-    <?php include_once 'views/stats.view.php'?>
+<?php
+$db = new ConnexionBDD();
+$con = $db->getCon();
+$query = "SELECT * FROM entrainement WHERE ID_USER = ?";
+$stmt = $con->prepare($query);
+$stmt->execute([$idUser]);
+$result = $stmt->fetchAll();
+$js_result = json_encode($result);
+?>
+<?php include_once 'views/stats.view.php'?>
 </body>
 </html>
