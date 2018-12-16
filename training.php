@@ -1,6 +1,8 @@
 <?php
 require_once 'controllers/functions/control-session.php';
 require_once 'controllers/classes/ConnexionBDD.php';
+require_once 'controllers/functions/functions.php';
+
 $title = "Entrainements"; ?>
 <!DOCTYPE html>
 
@@ -44,19 +46,17 @@ $title = "Entrainements"; ?>
         <div class="swiper-wrapper">
             <?php foreach ($result as $training):?>
                 <div class="swiper-slide">
-                    <div class="slide-header"></div>
-                    <!--<h3>Nom: <?= $training['NOM_ENT'];?></h3>-->
-                    <!---
-                    <p>
-                        Lieu: <?= $training['LIEU_ENT'];?>
-                        Date: <?= $training['DATE_ENT'];?>
-                        Distance: <?= $training['DIST_ENT'];?>
-                        Serie: <?= $training['NBR_SERIE'];?>, Volées: <?= $training['NBR_VOLEE'];?>, Fleches: <?= $training['NBR_FLECHES'];?>
-                        Points: <?= $training['PTS_TOTAL'];?>
-                        %10: <?= $training['PCT_DIX'];?>
-                        %9: <?= $training['PCT_NEUF'];?>
-                        Moyenne: <?= $training['MOY_ENT'];?>
-                    </p>-->
+                    <div class="slide-header" id="slideHeader">
+                        <div class="blur"></div>
+                    </div>
+                    <div class="slide-content">
+                        <p>Nom: <?= $training['NOM_ENT'];?></p>
+                        <p>Lieu: <?= $training['LIEU_ENT'];?>&emsp; Distance: <?= $training['DIST_ENT'];?>m</p>
+                        <p class="date">Date: <?= convertStringDate($training['DATE_ENT']);?></p>
+                        <p class="nbrs">Serie: <?= $training['NBR_SERIE'];?>, Volées: <?= $training['NBR_VOLEE'];?>, Fleches: <?= $training['NBR_FLECHES'];?></p>
+                        <p class="pcts">%10: <?= $training['PCT_DIX'];?>, %9: <?= $training['PCT_NEUF'];?></p>
+                        <p class="misc">Points: <?= $training['PTS_TOTAL'];?>, Moyenne: <?= $training['MOY_ENT'];?></p>
+                    </div>
                 </div>
             <?php endforeach;?>
         </div>
@@ -66,6 +66,39 @@ $title = "Entrainements"; ?>
     <?php endif;?>
     <?php include_once 'views/includes/footer.php'; ?>
 </div>
+<script>
+    let slides = document.getElementsByClassName("swiper-slide");
+    let slideHeaders = document.getElementsByClassName("slide-header"),
+        dateText = document.getElementsByClassName("date"),
+        nbrsText = document.getElementsByClassName("nbrs"),
+        pctText = document.getElementsByClassName("pcts"),
+        miscText = document.getElementsByClassName("misc");
+
+
+    for(let i = 0; i < slideHeaders.length; i++) {
+        slideHeaders[i].addEventListener('touchstart', function (e) {
+            slideHeaders[i].style.transition = "height 800ms ease-out, background-position 800ms linear";
+            slideHeaders[i].style.height = "50%";
+            slideHeaders[i].style.backgroundPosition = "center";
+            nbrsText[0].style.display = "block";
+            pctText[0].style.display = "block";
+            miscText[0].style.display = "block";
+        });
+
+        /*
+        slideHeaders[i].addEventListener('touchend', function () {
+            slideHeaders[i].style.transition = "height 800ms ease-out, background-position 800ms linear";
+            slideHeaders[i].style.height = "70%";
+            slideHeaders[i].style.backgroundPosition = "bottom";
+            nbrsText[0].style.display = "none";
+            pctText[0].style.display = "none";
+            miscText[0].style.display = "none";
+        });
+        */
+    }
+
+
+</script>
 </body>
 </html>
 

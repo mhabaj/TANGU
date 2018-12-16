@@ -14,11 +14,16 @@
     animation: scaleChange 1000 linear both;
 }
 
-.swiper-slide h3 {
-    color: white;
-    font-family: SF-Display-Light;
-    border: solid;
-    font-size: 120%;
+.slide-content p {
+    color: black;
+    font-family: SF-Text-Regular;
+    border: none;
+    font-size: 100%;
+    margin-bottom: 0.5%;
+}
+
+.blur {
+    background: red;
 }
 
 .slide-header {
@@ -27,9 +32,25 @@
     border-bottom-left-radius: 0px;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
-    height: 20%;
-    background: url("../img/arc-wallpaper-2.jpg");
+    height: 70%;
+    background: url("../img/annie-spratt-450564-unsplash.jpg");
     background-size: cover;
+    background-position: bottom;
+}
+
+.slide-content {
+    padding: 3% 3%;
+    border: none;
+    height: 30%;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    overflow-y: hidden;
+}
+
+.nbrs, .moyenne, .pcts, .misc {
+    display: none;
 }
 
 .swiper-container {
@@ -45,11 +66,11 @@
     padding: 0 0;
     border: none;
     margin-bottom: 10%;
-    perspective: 100px;
 }
 
 .swiper-slide {
-    background: whitesmoke;
+    background: none;
+    z-index: 5;
     border-radius: 6px;
     /* Center slide text vertically */
     /*
@@ -74,8 +95,14 @@
 
 
 @font-face {
-    font-family: SF-Display-Light;
-    src: url(../fonts/SF/SFProDisplay-Light.ttf);
+    font-family: SF-Text-Light;
+    src: url(../fonts/SF/SFProText-Light.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: SF-Text-Regular;
+    src: url(../fonts/SF/SFProText-Regular.ttf);
     font-weight: normal;
 }
 
