@@ -1,19 +1,20 @@
 html, body {
-    position: relative;
-    overflow: hidden;
+    overflow: scroll;
     height: 100%;
     margin: 0px;
     padding: 0px;
 }
 
 body {
-    background: white;
+    background-color: white;
 }
 
 #mainBox {
-    border-style: none;
-    height: 100%;
-    background: white;
+    border: none;
+    height: 80%;
+    background-color: white;
+    position: fixed;
+    top: 12%;
 }
 
 #footerBox, #footerBox div {
@@ -26,6 +27,7 @@ body {
     width: 100%;
     left: 0px;
     z-index: 1;
+    box-shadow: 0 -6px 20px rgba(30, 30, 30, 0.1);
 }
 
 #footerBox div {
@@ -44,7 +46,7 @@ body {
 
 #addBox {
     left: 40%;
-    border-top: solid lightgrey 1px;
+    border-top: solid rgba(245, 245, 245, 1) 1px;
     border-bottom: none;
     border-left: none;
     border-right: none;
@@ -82,7 +84,7 @@ body {
     height: 8%;
     position: fixed;
     bottom: 0;
-    border-top: solid lightgrey 1px;
+    border-top: solid rgba(245, 245, 245, 1) 1px;
     border-bottom: none;
     border-left: none;
     border-right: none;

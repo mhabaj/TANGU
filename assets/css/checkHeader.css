@@ -1,6 +1,7 @@
 #headerBox {
     height: 6%;
     box-shadow: none;
+    background-color: white;
 }
 
 #headerBox button i {

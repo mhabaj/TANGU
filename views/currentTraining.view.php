@@ -6,7 +6,9 @@
     <div id="showTrainingData">
         <h3 id="serieText"></h3>
         <h3 id="voleeText"></h3>
-        <p id="totalPts">TEST</p>
+        <p id="totalPts">Total Pts: 0</p>
+        <p id="ptsVolee">Pts sur la volée: 0</p>
+        <p id="ptsSerie">Pts sur la série: 0</p>
     </div>
     <div id="titleBox">
         <h3 id="serieText"></h3>
@@ -48,7 +50,9 @@
 
     var serieText = document.getElementById('serieText'),
         voleeText = document.getElementById('voleeText'),
-        totalPtsText = document.getElementById('totalPts');
+        totalPtsText = document.getElementById('totalPts'),
+        ptsVoleeText = document.getElementById("ptsVolee"),
+        ptsSerieText = document.getElementById("ptsSerie");
 
     var nbrSeries = <?= $_GET['sets'];?>,
         nbrVolees = <?= $_GET['volleys'];?>,
@@ -57,7 +61,9 @@
         countVolees = 1,
         countTirs = 0;
 
-    let totalPts = 0;
+    let totalPts = 0,
+        ptsVolee = 0,
+        ptsSerie = 0;
 
     var nbr10 = 0,
         nbr9 = 0,
@@ -66,6 +72,17 @@
     var combo10 = 0;
 
     let target = document.getElementById("target");
+
+    let pts = [];
+    for(let i = 0; i < nbrSeries; i++) {
+        pts.push([]);
+        for(let j = 0; j < nbrVolees; j++) {
+            pts[i].push([]);
+            for(let k = 0; k < nbrTirs; k++) {
+                pts[i][j].push(0);
+            }
+        }
+    }
 
     serieText.innerText = "Serie " + countSeries;
     voleeText.innerText = "Volee " + countVolees;
@@ -206,69 +223,106 @@
     function inc(e) {
         switch (e.target.id) {
             case "target1":
+                combo10 = 0;
                 totalPts += 1;
-                console.log(totalPts);
+                ptsVolee += 1;
+                ptsSerie += 1;
+                pts[countSeries-1][countVolees-1][countTirs-1] = 1;
                 totalPtsText.innerText = "Total Pts: " + totalPts;
+                ptsVoleeText.innerText = "Pts sur la volée: " + ptsVolee;
+                ptsSerieText.innerText = "Pts sur la série: " + ptsSerie;
                 break;
             case "subTarget1":
+                combo10 = 0;
                 totalPts += 2;
-                console.log(totalPts);
+                ptsVolee += 2;
+                ptsSerie += 2;
+                pts[countSeries-1][countVolees-1][countTirs-1] = 2;
                 totalPtsText.innerText = "Total Pts: " + totalPts;
+                ptsVoleeText.innerText = "Pts sur la volée: " + ptsVolee;
+                ptsSerieText.innerText = "Pts sur la série: " + ptsSerie;
                 break;
             case "target2":
                 combo10 = 0;
-                totalPts += 4;
-                console.log(totalPts);
+                totalPts += 3;
+                ptsVolee += 3;
+                ptsSerie += 3;
+                pts[countSeries-1][countVolees-1][countTirs-1] = 3;
                 totalPtsText.innerText = "Total Pts: " + totalPts;
+                ptsVoleeText.innerText = "Pts sur la volée: " + ptsVolee;
+                ptsSerieText.innerText = "Pts sur la série: " + ptsSerie;
                 break;
             case "subTarget2":
                 combo10 = 0;
-                totalPts += 6;
-                console.log(totalPts);
+                totalPts += 4;
+                ptsVolee += 4;
+                ptsSerie += 4;
+                pts[countSeries-1][countVolees-1][countTirs-1] = 4;
                 totalPtsText.innerText = "Total Pts: " + totalPts;
+                ptsVoleeText.innerText = "Pts sur la volée: " + ptsVolee;
+                ptsSerieText.innerText = "Pts sur la série: " + ptsSerie;
                 break;
             case "target3":
                 combo10 = 0;
-                totalPts += 8;
-                console.log(totalPts);
+                totalPts += 5;
+                ptsVolee += 5;
+                ptsSerie += 5;
+                pts[countSeries-1][countVolees-1][countTirs-1] = 5;
                 totalPtsText.innerText = "Total Pts: " + totalPts;
-                nbr8++;
+                ptsVoleeText.innerText = "Pts sur la volée: " + ptsVolee;
+                ptsSerieText.innerText = "Pts sur la série: " + ptsSerie;
                 break;
             case "subTarget3":
                 combo10 = 0;
-                totalPts += 8;
-                console.log(totalPts);
+                totalPts += 6;
+                ptsVolee += 6;
+                ptsSerie += 6;
+                pts[countSeries-1][countVolees-1][countTirs-1] = 6;
                 totalPtsText.innerText = "Total Pts: " + totalPts;
-                nbr8++;
+                ptsVoleeText.innerText = "Pts sur la volée: " + ptsVolee;
+                ptsSerieText.innerText = "Pts sur la série: " + ptsSerie;
                 break;
             case "target4":
                 combo10 = 0;
-                totalPts += 9;
-                console.log(totalPts);
+                totalPts += 7;
+                ptsVolee += 7;
+                ptsSerie += 7;
+                pts[countSeries-1][countVolees-1][countTirs-1] = 7;
                 totalPtsText.innerText = "Total Pts: " + totalPts;
-                nbr9++;
+                ptsVoleeText.innerText = "Pts sur la volée: " + ptsVolee;
+                ptsSerieText.innerText = "Pts sur la série: " + ptsSerie;
                 break;
             case "subTarget4":
                 combo10 = 0;
-                totalPts += 9;
-                console.log(totalPts);
+                totalPts += 8;
+                ptsVolee += 8;
+                ptsSerie += 8;
+                pts[countSeries-1][countVolees-1][countTirs-1] = 8;
                 totalPtsText.innerText = "Total Pts: " + totalPts;
-                nbr9++;
+                ptsVoleeText.innerText = "Pts sur la volée: " + ptsVolee;
+                ptsSerieText.innerText = "Pts sur la série: " + ptsSerie;
+                nbr8++;
                 break;
             case "target5":
-                launchConfetti();
-                totalPts += 10;
-                console.log(totalPts);
+                combo10 = 0;
+                totalPts += 9;
+                ptsVolee += 9;
+                ptsSerie += 9;
+                pts[countSeries-1][countVolees-1][countTirs-1] = 9;
                 totalPtsText.innerText = "Total Pts: " + totalPts;
-                nbr10++;
-                combo10++;
-                checkCombo();
+                ptsVoleeText.innerText = "Pts sur la volée: " + ptsVolee;
+                ptsSerieText.innerText = "Pts sur la série: " + ptsSerie;
+                nbr9++;
                 break;
             case "subTarget5":
                 launchConfetti();
                 totalPts += 10;
-                console.log(totalPts);
+                ptsVolee += 10;
+                ptsSerie += 10;
+                pts[countSeries-1][countVolees-1][countTirs-1] = 10;
                 totalPtsText.innerText = "Total Pts: " + totalPts;
+                ptsVoleeText.innerText = "Pts sur la volée: " + ptsVolee;
+                ptsSerieText.innerText = "Pts sur la série: " + ptsSerie;
                 nbr10++;
                 combo10++;
                 checkCombo();
@@ -276,14 +330,29 @@
             case "subTarget6":
                 launchConfetti();
                 totalPts += 10;
-                console.log(totalPts);
+                ptsVolee += 10;
+                ptsSerie += 10;
+                pts[countSeries-1][countVolees-1][countTirs-1] = 10;
                 totalPtsText.innerText = "Total Pts: " + totalPts;
+                ptsVoleeText.innerText = "Pts sur la volée: " + ptsVolee;
+                ptsSerieText.innerText = "Pts sur la série: " + ptsSerie;
                 nbr10++;
                 combo10++;
                 checkCombo();
                 break;
             default:
         }
+    }
+
+    function sendData(str) {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+            }
+        };
+        xmlhttp.open("POST", "endTraining.php", true);
+        xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xmlhttp.send("data=" + str);
     }
 
     function touchHandler(e) {
@@ -307,30 +376,41 @@
 
                     if(countSeries >= nbrSeries) {
                         //$('.point').remove();
-                        popUpMsgElement.innerHTML = "End of your training!";
+                        //console.log(pts);
+                        let ptsArray = JSON.stringify(pts);
+                        sendData(ptsArray);
+                        popUpMsgElement.innerHTML = "Fin de l'entrainement";
                         showMessage(1000, 1500, false);
-                        console.log('Fin de entrainement');
 
                     } else {
+                        //Nouvelle Serie
                         countVolees = 1;
+                        ptsSerie = 0;
+                        ptsVolee = 0;
                         countSeries++;
                         serieText.innerHTML = "Serie " + countSeries;
                         voleeText.innerHTML = "Volee " + countVolees;
                         popUpMsgElement.innerHTML = "Set " + countSeries;
                         showMessage(1000, 1500, true);
+                        ptsSerieText.innerText = "Pts sur la série: " + ptsSerie;
+                        ptsVoleeText.innerText = "Pts sur la volée: " + ptsVolee;
                     }
                 } else {
+                    //Nouvelle Volee
                     countVolees++;
+                    ptsVolee = 0;
                     nbr8 = 0;
                     voleeText.innerHTML = "Volee " + countVolees;
                     popUpMsgElement.innerHTML = "Volley " + countVolees;
                     showMessage(1000, 1500, true);
+                    ptsVoleeText.innerText = "Pts sur la volée: 0";
                     $('.point').remove();
                 }
             }, 1500);
         } else {
             draw(e, clientX, clientY);
             inc(e);
+            console.log(pts);
             console.log('Serie ' + countSeries + ' Volee '+ countVolees  + ' Tir ' + countTirs);
             if(countTirs == (nbrTirs - 1)) {
                 popUpMsgElement.innerHTML = "Last shot!";

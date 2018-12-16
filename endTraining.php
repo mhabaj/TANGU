@@ -33,7 +33,6 @@ $title = "Entrainement";
 </head>
 <body>
 <?php include_once 'views/includes/message.php' ;?>
-<?php include 'views/currentTraining.view.php'; ?>
 <?php var_dump($_POST['data']);?>
 </body>
 </html>

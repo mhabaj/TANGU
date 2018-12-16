@@ -65,7 +65,7 @@
 }
 
 .swiper-slide {
-    background: none;
+    background: white;
     z-index: 5;
     border-radius: 6px;
     /* Center slide text vertically */

@@ -25,6 +25,7 @@ $title = "Entrainements"; ?>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/swiper.min.js"></script>
+    <script src="assets/js/pulltorefresh.min.js"></script>
 </head>
 <body>
 <div class="container-fluid" id="mainBox">
@@ -98,6 +99,8 @@ $title = "Entrainements"; ?>
     }*/
 
 
+</script>
+<script>
 </script>
 </body>
 </html>
