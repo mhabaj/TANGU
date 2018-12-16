@@ -34,6 +34,8 @@ $title = "Entrainement";
 <body>
 <?php include_once 'views/includes/message.php' ;?>
 <?php include 'views/currentTraining.view.php'; ?>
-<?php var_dump($_POST['data']);?>
+<?php $serieController = unserialize($_SESSION['serieController']);
+var_dump($serieController);
+?>
 </body>
 </html>

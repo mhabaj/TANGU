@@ -235,6 +235,18 @@ class entrainement
 
     }
 
+    public function getNbrSerie() {
+        return $this->nbserie;
+    }
+
+    public function getNbrVolee() {
+        return $this->nbvolees;
+    }
+
+    public function getNbrTir() {
+        return $this->nbfleches;
+    }
+
 ////////////////////////////////////////////////////////////////////////////////////////////
 
 

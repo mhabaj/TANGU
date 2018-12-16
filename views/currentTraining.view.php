@@ -350,9 +350,14 @@
             if (this.readyState == 4 && this.status == 200) {
             }
         };
-        xmlhttp.open("POST", "endTraining.php", true);
-        xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        xmlhttp.send("data=" + str);
+        console.log(window.location.href);
+        let currentURL = window.location.href,
+            newURL = currentURL + "&data=" + str;
+        xmlhttp.open("GET", newURL, true);
+        xmlhttp.send();
+        window.setTimeout(function () {
+            window.location.href = newURL;
+        }, 1500);
     }
 
     function touchHandler(e) {
@@ -378,9 +383,10 @@
                         //$('.point').remove();
                         //console.log(pts);
                         let ptsArray = JSON.stringify(pts);
-                        sendData(ptsArray);
+
                         popUpMsgElement.innerHTML = "Fin de l'entrainement";
                         showMessage(1000, 1500, false);
+                        sendData(ptsArray);
 
                     } else {
                         //Nouvelle Serie

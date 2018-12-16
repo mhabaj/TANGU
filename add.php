@@ -3,6 +3,7 @@ require('controllers/functions/control-session.php');
 require_once 'controllers/functions/sanitize.php';
 require_once 'controllers/classes/ConnexionBDD.php';
 require_once 'controllers/classes/Entrainement.php';
+require_once 'controllers/classes/SerieController.php';
 
 $title = "Nouvel Entrainement";
 $left_url = "training.php";
@@ -77,6 +78,7 @@ if(isset($_GET['submitBtn'])) {
 
         $training = new Entrainement($name, $location, $date_time, $distance, $arcID, 1, $sets, $volleys, $arrows, $idUser);
         $serieController = new SerieController($training);
+        $_SESSION['serieController'] = serialize($serieController);
     }
 }
 
