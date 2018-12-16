@@ -1,6 +1,6 @@
 <div class="container-fluid addTraining" id="mainBox">
     <?php include 'includes/back-header.php';?>
-    <form method="get" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" id="newTrainingForm">
+    <form method="get" action="./currentTraining.php" id="newTrainingForm">
         <h3 id="formTitle">Add a new training</h3>
         <div id="nameField">
             <h3>Your Training Name</h3>

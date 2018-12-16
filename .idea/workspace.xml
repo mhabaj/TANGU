@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="24a430f1-dafd-4e5d-98b4-56d1fe6d0252" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/addTraining.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/addTraining.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/css/currentTraining.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/currentTraining.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/training.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/training.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/functions/sanitize.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/functions/sanitize.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/currentTraining.php" beforeDir="false" afterPath="$PROJECT_DIR$/currentTraining.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training.php" beforeDir="false" afterPath="$PROJECT_DIR$/training.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/classes/Entrainement.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/classes/Entrainement.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/add.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/add.view.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/currentTraining.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/currentTraining.view.php" afterDir="false" />
     </list>
@@ -111,17 +106,17 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="118" />
+          <entry key="CSS" value="121" />
           <entry key="HTML" value="2" />
           <entry key="JavaScript" value="26" />
-          <entry key="PHP" value="191" />
+          <entry key="PHP" value="200" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="8818" />
+          <entry key="CSS" value="8830" />
           <entry key="JavaScript" value="2153" />
-          <entry key="PHP" value="33139" />
+          <entry key="PHP" value="33619" />
           <entry key="PLAIN_TEXT" value="6" />
           <entry key="SQL" value="1" />
         </counts>
@@ -136,116 +131,37 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/add.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-672">
-              <caret line="10" column="16" lean-forward="true" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-              <folding>
-                <element signature="e#1788#1793#0#PHP" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/currentTraining.view.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="10750">
-              <caret line="433" column="4" selection-start-line="433" selection-start-column="4" selection-end-line="433" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/currentTraining.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="67">
-              <caret line="19" column="59" selection-start-line="19" selection-start-column="59" selection-end-line="19" selection-end-column="59" />
+            <state relative-caret-position="425">
+              <caret line="32" column="7" lean-forward="true" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/assets/css/addTraining.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="389" column="1" lean-forward="true" selection-start-line="389" selection-start-column="1" selection-end-line="389" selection-end-column="1" />
-              <folding>
-                <element signature="e#0#337#0" />
-                <element signature="e#339#540#0" />
-                <element signature="e#542#1050#0" />
-                <element signature="e#1052#1562#0" />
-                <element signature="e#1649#1691#0" />
-                <element signature="e#1714#1775#0" />
-                <element signature="e#1793#1837#0" />
-                <element signature="e#1857#1902#0" />
-                <element signature="e#1925#1984#0" />
-                <element signature="e#2030#2052#0" />
-                <element signature="e#2077#2109#0" />
-                <element signature="e#6680#6918#0" />
-                <element signature="e#6935#6990#0" />
-                <element signature="e#7007#7315#0" />
-                <element signature="e#7458#7535#0" />
-                <element signature="e#7566#7588#0" />
-                <element signature="e#7604#7658#0" />
-                <element signature="e#7682#7928#0" />
-                <element signature="e#7958#8284#0" />
-                <element signature="e#8336#8409#0" />
-                <element signature="e#8873#8972#0" />
-                <element signature="e#8996#9305#0" />
-                <element signature="e#9327#9355#0" />
-                <element signature="e#9371#9621#0" />
-                <element signature="e#9651#9686#0" />
-                <element signature="e#9715#9772#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/add.view.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="60" column="85" selection-start-line="60" selection-start-column="85" selection-end-line="60" selection-end-column="85" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/training.view.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="3" column="6" lean-forward="true" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/training.php">
+        <entry file="file://$PROJECT_DIR$/views/currentTraining.view.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="175">
-              <caret line="46" column="65" selection-start-line="46" selection-start-column="65" selection-end-line="46" selection-end-column="65" />
+              <caret line="7" column="32" lean-forward="true" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/css/training.css">
+        <entry file="file://$PROJECT_DIR$/assets/css/currentTraining.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
+            <state relative-caret-position="242">
+              <caret line="102" column="1" selection-start-line="102" selection-start-column="1" selection-end-line="102" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controllers/functions/sanitize.php">
+        <entry file="file://$PROJECT_DIR$/add.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="79" column="10" selection-start-line="79" selection-start-column="10" selection-end-line="79" selection-end-column="10" />
-              <folding>
-                <element signature="n#sanitize_password#0;n#!!top" />
-              </folding>
+            <state relative-caret-position="626">
+              <caret line="79" column="1" lean-forward="true" selection-start-line="79" selection-start-column="1" selection-end-line="79" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -327,17 +243,17 @@
         <option value="$PROJECT_DIR$/assets/css/edit.css" />
         <option value="$PROJECT_DIR$/assets/js/customSelect.js" />
         <option value="$PROJECT_DIR$/controllers/classes/Training.php" />
-        <option value="$PROJECT_DIR$/controllers/classes/Entrainement.php" />
         <option value="$PROJECT_DIR$/views/currentTraining.php" />
         <option value="$PROJECT_DIR$/add.php" />
         <option value="$PROJECT_DIR$/currentTraining.php" />
-        <option value="$PROJECT_DIR$/views/currentTraining.view.php" />
-        <option value="$PROJECT_DIR$/assets/css/currentTraining.css" />
         <option value="$PROJECT_DIR$/controllers/functions/sanitize.php" />
         <option value="$PROJECT_DIR$/assets/css/training.css" />
         <option value="$PROJECT_DIR$/training.php" />
-        <option value="$PROJECT_DIR$/views/add.view.php" />
         <option value="$PROJECT_DIR$/assets/css/addTraining.css" />
+        <option value="$PROJECT_DIR$/controllers/classes/Entrainement.php" />
+        <option value="$PROJECT_DIR$/views/add.view.php" />
+        <option value="$PROJECT_DIR$/views/currentTraining.view.php" />
+        <option value="$PROJECT_DIR$/assets/css/currentTraining.css" />
       </list>
     </option>
   </component>
@@ -388,7 +304,24 @@
             <path>
               <item name="TANGU" type="b2602c69:ProjectViewProjectNode" />
               <item name="TANGU" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TANGU" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TANGU" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TANGU" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TANGU" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TANGU" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TANGU" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="includes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -454,7 +387,7 @@
       <workItem from="1544611864211" duration="46387000" />
       <workItem from="1544721237559" duration="51833000" />
       <workItem from="1544812985586" duration="52058000" />
-      <workItem from="1544901017824" duration="14465000" />
+      <workItem from="1544901017824" duration="16441000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <created>1544649165150</created>
@@ -495,7 +428,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="248385000" />
+    <option name="totallyTimeSpent" value="250361000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
@@ -791,48 +724,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/classes/Entrainement.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="41" column="30" lean-forward="true" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/currentTraining.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="168" column="23" lean-forward="true" selection-start-line="168" selection-start-column="23" selection-end-line="168" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#337#0" />
-            <element signature="e#339#540#0" />
-            <element signature="e#542#1050#0" />
-            <element signature="e#1052#1562#0" />
-            <element signature="e#1649#1691#0" />
-            <element signature="e#1714#1775#0" />
-            <element signature="e#1793#1837#0" />
-            <element signature="e#1857#1902#0" />
-            <element signature="e#1925#1984#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/currentTraining.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67">
-          <caret line="19" column="59" selection-start-line="19" selection-start-column="59" selection-end-line="19" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/add.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-672">
-          <caret line="10" column="16" lean-forward="true" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-          <folding>
-            <element signature="e#1788#1793#0#PHP" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/functions/sanitize.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -840,13 +731,6 @@
           <folding>
             <element signature="n#sanitize_password#0;n#!!top" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/currentTraining.view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10750">
-          <caret line="433" column="4" selection-start-line="433" selection-start-column="4" selection-end-line="433" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -885,17 +769,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/classes/Entrainement.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="40" column="45" selection-start-line="40" selection-start-column="45" selection-end-line="40" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/views/add.view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="60" column="85" selection-start-line="60" selection-start-column="85" selection-end-line="60" selection-end-column="85" />
+        <state relative-caret-position="50">
+          <caret line="2" column="53" lean-forward="true" selection-start-line="2" selection-start-column="53" selection-end-line="2" selection-end-column="53" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/addTraining.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="389" column="1" lean-forward="true" selection-start-line="389" selection-start-column="1" selection-end-line="389" selection-end-column="1" />
+        <state relative-caret-position="617">
+          <caret line="439" column="1" lean-forward="true" selection-start-line="439" selection-start-column="1" selection-end-line="439" selection-end-column="1" />
           <folding>
             <element signature="e#0#337#0" />
             <element signature="e#339#540#0" />
@@ -908,22 +799,35 @@
             <element signature="e#1925#1984#0" />
             <element signature="e#2030#2052#0" />
             <element signature="e#2077#2109#0" />
-            <element signature="e#6680#6918#0" />
-            <element signature="e#6935#6990#0" />
-            <element signature="e#7007#7315#0" />
-            <element signature="e#7458#7535#0" />
-            <element signature="e#7566#7588#0" />
-            <element signature="e#7604#7658#0" />
-            <element signature="e#7682#7928#0" />
-            <element signature="e#7958#8284#0" />
-            <element signature="e#8336#8409#0" />
-            <element signature="e#8873#8972#0" />
-            <element signature="e#8996#9305#0" />
-            <element signature="e#9327#9355#0" />
-            <element signature="e#9371#9621#0" />
-            <element signature="e#9651#9686#0" />
-            <element signature="e#9715#9772#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/add.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="626">
+          <caret line="79" column="1" lean-forward="true" selection-start-line="79" selection-start-column="1" selection-end-line="79" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/currentTraining.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="102" column="1" selection-start-line="102" selection-start-column="1" selection-end-line="102" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/currentTraining.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="32" column="7" lean-forward="true" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/currentTraining.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="32" lean-forward="true" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
         </state>
       </provider>
     </entry>

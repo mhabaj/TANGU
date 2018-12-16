@@ -102,28 +102,13 @@
     opacity: 0;
 }
 
-#headerBox {
-    border: none;
-    padding: 0 0;
-}
-
-#titleBox {
-    border-style: none;
-    height: 100%;
-}
-
-#titleBox h1 {
-    border-style: solid;
-    font-family: SF-Display-Light;
-}
-
 #mainBox {
     border-style: none;
     padding: 0;
 }
 
 #serieText {
-    display: none;
+    display: block;
     position: fixed;
     top: 0;
     margin: 3.5% 0;
@@ -131,7 +116,7 @@
 }
 
 #voleeText {
-    display: none;
+    display: block;
     border-style: solid;
     position: fixed;
     top: 0;
@@ -318,4 +303,40 @@ canvas {
     width: 6px;
     border-radius: 50%;
     transform: translate(-50%, -50%);
+}
+
+@font-face {
+    font-family: SF-Display-Regular;
+    src: url(../fonts/SF/SFProDisplay-Regular.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: SF-Display-Medium;
+    src: url(../fonts/SF/SFProDisplay-Medium.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: SF-Display-Light;
+    src: url(../fonts/SF/SFProDisplay-Light.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: SF-Text-Semibold;
+    src: url(../fonts/SF/SFProText-Semibold.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: SF-Text-Regular;
+    src: url(../fonts/SF/SFProText-Regular.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: SF-Display-Semibold;
+    src: url(../fonts/SF/SFProDisplay-Semibold.ttf);
+    font-weight: normal;
 }

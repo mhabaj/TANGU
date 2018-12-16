@@ -3,6 +3,11 @@
     <div id="popUp">
         <h1 id="popUpMessage"></h1>
     </div>
+    <div id="showTrainingData">
+        <h3 id="serieText"></h3>
+        <h3 id="voleeText"></h3>
+        <p id="totalPts">TEST</p>
+    </div>
     <div id="titleBox">
         <h3 id="serieText"></h3>
         <h3 id="voleeText"></h3>
@@ -42,14 +47,17 @@
         popUpMsgElement = document.getElementById("popUpMessage");
 
     var serieText = document.getElementById('serieText'),
-        voleeText = document.getElementById('voleeText');
+        voleeText = document.getElementById('voleeText'),
+        totalPtsText = document.getElementById('totalPts');
 
-    var nbrSeries = 2,
-        nbrVolees = 2,
-        nbrTirs = 3,
+    var nbrSeries = <?= $_GET['sets'];?>,
+        nbrVolees = <?= $_GET['volleys'];?>,
+        nbrTirs = <?= $_GET['arrows'];?>,
         countSeries = 1,
         countVolees = 1,
         countTirs = 0;
+
+    let totalPts = 0;
 
     var nbr10 = 0,
         nbr9 = 0,
@@ -59,8 +67,8 @@
 
     let target = document.getElementById("target");
 
-    serieText.innerHTML = "Serie " + countSeries;
-    voleeText.innerHTML = "Volee " + countVolees;
+    serieText.innerText = "Serie " + countSeries;
+    voleeText.innerText = "Volee " + countVolees;
 
     function triggerPopUp(elem) {
         elem.classList.remove('animated-popdown');
@@ -197,44 +205,79 @@
 
     function inc(e) {
         switch (e.target.id) {
+            case "target1":
+                totalPts += 1;
+                console.log(totalPts);
+                totalPtsText.innerText = "Total Pts: " + totalPts;
+                break;
+            case "subTarget1":
+                totalPts += 2;
+                console.log(totalPts);
+                totalPtsText.innerText = "Total Pts: " + totalPts;
+                break;
             case "target2":
                 combo10 = 0;
+                totalPts += 4;
+                console.log(totalPts);
+                totalPtsText.innerText = "Total Pts: " + totalPts;
                 break;
             case "subTarget2":
                 combo10 = 0;
+                totalPts += 6;
+                console.log(totalPts);
+                totalPtsText.innerText = "Total Pts: " + totalPts;
                 break;
             case "target3":
                 combo10 = 0;
+                totalPts += 8;
+                console.log(totalPts);
+                totalPtsText.innerText = "Total Pts: " + totalPts;
                 nbr8++;
-                console.log(nbr8);
                 break;
             case "subTarget3":
                 combo10 = 0;
+                totalPts += 8;
+                console.log(totalPts);
+                totalPtsText.innerText = "Total Pts: " + totalPts;
                 nbr8++;
-                console.log(nbr8);
                 break;
             case "target4":
                 combo10 = 0;
+                totalPts += 9;
+                console.log(totalPts);
+                totalPtsText.innerText = "Total Pts: " + totalPts;
                 nbr9++;
                 break;
             case "subTarget4":
                 combo10 = 0;
+                totalPts += 9;
+                console.log(totalPts);
+                totalPtsText.innerText = "Total Pts: " + totalPts;
                 nbr9++;
                 break;
             case "target5":
                 launchConfetti();
+                totalPts += 10;
+                console.log(totalPts);
+                totalPtsText.innerText = "Total Pts: " + totalPts;
                 nbr10++;
                 combo10++;
                 checkCombo();
                 break;
             case "subTarget5":
                 launchConfetti();
+                totalPts += 10;
+                console.log(totalPts);
+                totalPtsText.innerText = "Total Pts: " + totalPts;
                 nbr10++;
                 combo10++;
                 checkCombo();
                 break;
             case "subTarget6":
                 launchConfetti();
+                totalPts += 10;
+                console.log(totalPts);
+                totalPtsText.innerText = "Total Pts: " + totalPts;
                 nbr10++;
                 combo10++;
                 checkCombo();

@@ -39,7 +39,6 @@ class entrainement
         if ($this->creerEntrainement($this->nom, $this->lieu, $this->date, $this->distance, $this->ID_arc, $this->ID_blason, $this->nbserie, $this->nbvolees, $this->nbfleches, $this->ID_user)) {
 
             $ID_ENT_USER = $this->GetEntID();
-            header('Location: ' );
 
         }
     }
