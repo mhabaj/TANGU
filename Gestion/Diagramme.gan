@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2018-11-15" view-index="0" gantt-divider-location="623" resource-divider-location="518" version="2.8.9" locale="fr">
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2018-10-15" view-index="0" gantt-divider-location="678" resource-divider-location="518" version="2.8.9" locale="fr">
     <description/>
     <view zooming-state="default:1" id="gantt-chart">
-        <field id="tpd3" name="Nom" width="273" order="0"/>
-        <field id="tpd4" name="Date de début" width="173" order="1"/>
-        <field id="tpd5" name="Date de fin" width="173" order="2"/>
+        <field id="tpd3" name="Nom" width="291" order="0"/>
+        <field id="tpd4" name="Date de début" width="192" order="1"/>
+        <field id="tpd5" name="Date de fin" width="191" order="2"/>
         <option id="color.recent"><![CDATA[#ff0000 #cc0000 #ff3333 #66ffff #00ffff #00ffcc #33ff33 #33ff00 #ff0033]]></option>
     </view>
     <view id="resource-table">
@@ -75,7 +75,7 @@
             <task id="158" name="3.2 : MP onglet création d'un blason" color="#8cb6ce" meeting="false" start="2018-10-25" duration="1" complete="100" thirdDate="2018-10-11" thirdDate-constraint="0" expand="true"/>
             <task id="159" name="7.2 : MP onglet personaliser" color="#8cb6ce" meeting="false" start="2018-10-25" duration="2" complete="100" thirdDate="2018-10-16" thirdDate-constraint="0" expand="true"/>
         </task>
-        <task id="119" name="Jalon 2" color="#8cb6ce" meeting="false" project="true" start="2018-11-06" duration="13" complete="57" thirdDate="2018-11-06" thirdDate-constraint="0" expand="true">
+        <task id="119" name="Jalon 2" color="#8cb6ce" meeting="false" project="true" start="2018-11-06" duration="13" complete="87" thirdDate="2018-11-06" thirdDate-constraint="0" expand="true">
             <depend id="106" type="2" difference="0" hardness="Strong"/>
             <task id="122" name="4.0 : conception onglet nouveau tir" color="#8cb6ce" shape="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" meeting="false" start="2018-11-06" duration="3" complete="100" thirdDate="2018-11-06" thirdDate-constraint="1" priority="4" expand="true">
                 <depend id="123" type="2" difference="0" hardness="Strong"/>
@@ -94,11 +94,11 @@
                 <depend id="133" type="2" difference="0" hardness="Strong"/>
             </task>
             <task id="130" name="8.0 : conception onglet EnCoursEntrainement" color="#8cb6ce" meeting="false" start="2018-11-09" duration="4" complete="100" thirdDate="2018-11-09" thirdDate-constraint="1" expand="true"/>
-            <task id="131" name="5.1 : code ongletList Entrainements" color="#8cb6ce" meeting="false" start="2018-11-13" duration="4" complete="20" thirdDate="2018-10-16" thirdDate-constraint="0" expand="true">
+            <task id="131" name="5.1 : code ongletList Entrainements" color="#8cb6ce" meeting="false" start="2018-11-13" duration="4" complete="100" thirdDate="2018-10-16" thirdDate-constraint="0" expand="true">
                 <depend id="135" type="2" difference="0" hardness="Strong"/>
             </task>
-            <task id="132" name="4.2 : MP onglet nouveau tir" color="#8cb6ce" meeting="false" start="2018-11-13" duration="4" complete="0" thirdDate="2018-10-22" thirdDate-constraint="0" expand="true"/>
-            <task id="133" name="8.2 : MP onglet entrainements" color="#8cb6ce" meeting="false" start="2018-11-15" duration="2" complete="0" thirdDate="2018-10-18" thirdDate-constraint="0" expand="true"/>
+            <task id="132" name="4.2 : MP onglet nouveau tir" color="#8cb6ce" meeting="false" start="2018-11-13" duration="4" complete="100" thirdDate="2018-10-22" thirdDate-constraint="0" expand="true"/>
+            <task id="133" name="8.2 : MP onglet entrainements" color="#8cb6ce" meeting="false" start="2018-11-15" duration="2" complete="100" thirdDate="2018-10-18" thirdDate-constraint="0" expand="true"/>
             <task id="135" name="5.2 : MP onglet catalogue tirs" color="#8cb6ce" meeting="false" start="2018-11-17" duration="3" complete="0" thirdDate="2018-10-16" thirdDate-constraint="0" expand="true"/>
         </task>
         <task id="106" name="Jalon 3" color="#8cb6ce" meeting="true" project="true" start="2018-11-21" duration="0" complete="0" thirdDate="2018-11-10" thirdDate-constraint="0" expand="true">
