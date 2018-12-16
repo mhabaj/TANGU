@@ -7,7 +7,7 @@
         </button>
         <button id="homeBtn2">
             <a href="training.php">
-                <i class="far fa-list-alt fa-lg" id="trainingLogo" style="color: rgba(179, 179, 179, 0.9)"></i>
+                <i class="far fa-list-alt fa-" id="trainingLogo" style="color: rgba(179, 179, 179, 0.9)"></i>
             </a>
         </button>
         <button id="homeBtn3">
@@ -87,6 +87,7 @@
 </div>
 <script>
     let title = document.title;
+    console.log()
     let titles = ["Entrainements", "Statistiques", "Nouvel Entrainement", "Personnaliser", "Mon Compte"];
     $training = document.getElementById('trainingLogo');
     $stats = document.getElementById('statsLogo');
@@ -96,19 +97,19 @@
 
     switch (title) {
         case titles[0]:
-            $training.style.color = "rgba(0, 0, 0, 0.9)";
+            $training.style.color = "rgba(130, 127, 254, 1)";
             break;
         case titles[1]:
-            $stats.style.color = "rgba(0, 0, 0, 0.9)";
+            $stats.style.color = "rgba(130, 127, 254, 1)";
             break;
         case titles[2]:
-            $add.style.color = "rgba(0, 0, 0, 0.9)";
+            $add.style.color = "rgba(130, 127, 254, 1)";
             break;
         case titles[3]:
-            $edit.style.color = "rgba(0, 0, 0, 0.9)";
+            $edit.style.color = "rgba(130, 127, 254, 1)";
             break;
         case titles[4]:
-            $account.style.color = "rgba(0, 0, 0, 0.9)";
+            $account.style.color = "rgba(130, 127, 254, 1)";
             break;
         default:
             break;

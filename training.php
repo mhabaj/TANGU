@@ -44,7 +44,9 @@ $title = "Entrainements"; ?>
         <div class="swiper-wrapper">
             <?php foreach ($result as $training):?>
                 <div class="swiper-slide">
-                    <h3>Nom: <?= $training['NOM_ENT'];?></h3><br>
+                    <div class="slide-header"></div>
+                    <!--<h3>Nom: <?= $training['NOM_ENT'];?></h3>-->
+                    <!---
                     <p>
                         Lieu: <?= $training['LIEU_ENT'];?>
                         Date: <?= $training['DATE_ENT'];?>
@@ -54,7 +56,7 @@ $title = "Entrainements"; ?>
                         %10: <?= $training['PCT_DIX'];?>
                         %9: <?= $training['PCT_NEUF'];?>
                         Moyenne: <?= $training['MOY_ENT'];?>
-                    </p>
+                    </p>-->
                 </div>
             <?php endforeach;?>
         </div>

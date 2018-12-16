@@ -7,7 +7,6 @@
 </div>
 <script>
     let trainings = <?= $js_result;?>;
-    console.log(trainings);
     let names = [],
         dates = [],
         moyennes = [],

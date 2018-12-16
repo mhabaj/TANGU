@@ -1,5 +1,5 @@
 var swiper = new Swiper('.swiper-container', {
-    slidesPerView: 1.3,
+    slidesPerView: 1.5,
     speed: 700,
     spaceBetween: 30,
     centeredSlides: true,
@@ -11,24 +11,34 @@ var swiper = new Swiper('.swiper-container', {
 });
 
 var firstSlide = swiper.slides[0];
-firstSlide.style.boxShadow = "0 4px 8px 0 rgba(0, 0, 0, 0.25), 0 6px 20px 0 rgba(0, 0, 0, 0.19)";
+firstSlide.style.boxShadow = "0 6px 20px 0 rgba(0, 0, 0, 0.43), 0 -3px 18px 0 rgba(0, 0, 0, 0.23)";
+firstSlide.style.transform = "scale(1.08)";
+swiper.slides[1].style.transform = "scale(2)";
 var nbrOfSlides = swiper.slides.length;
 
 for(var i = 1; i < nbrOfSlides; i++) {
-    /*swiper.slides[i].style.height = "98%";*/
     swiper.slides[i].style.boxShadow = "none";
+    swiper.slides[i].style.transform = "scale(0.95)";
 }
 
-swiper.on('slideChangeTransitionStart', function() {
+swiper.on('slideChange', function() {
     var nbrOfSlides = swiper.slides.length;
     var currentSlideId = swiper.activeIndex;
 
-    for (var i = 0; i < nbrOfSlides && i != currentSlideId; i++) {
-        swiper.slides[i].style.transition = "box-shadow .3s ease-in-out";
-        /*swiper.slides[i].style.height = "98%";*/
-        swiper.slides[i].style.boxShadow = "none";
+    swiper.slides[currentSlideId].style.transition = "transform 500ms linear, box-shadow 500ms linear";
+    //swiper.slides[currentSlideId].style.transform = "scale(1.08)";
+    swiper.slides[currentSlideId].style.boxShadow = "0 6px 20px 0 rgba(0, 0, 0, 0.43), 0 -3px 18px 0 rgba(0, 0, 0, 0.23)";
+    /*for(let i = 0; i < nbrOfSlides; i++) {
+        if(i != currentSlideId) {
+            swiper.slides[i].style.transition = "transform 800ms ease-out, box-shadow 500ms linear";
+            swiper.slides[i].style.transform = "rotateY(5deg)";
+            swiper.slides[i].style.boxShadow = "0 3px 20px 0 rgba(0, 0, 0, 0.25), 0 -3px 18px 0 rgba(0, 0, 0, 0.13)";
+        }
+    }*/
+    if(currentSlideId != 0) {
+        swiper.slides[currentSlideId-1].style.transform = "rotateY(5deg)";
     }
-    swiper.slides[currentSlideId].style.transition = "box-shadow .3s ease-in-out";
-    /*swiper.slides[currentSlideId].style.height = "100%";*/
-    swiper.slides[currentSlideId].style.boxShadow = "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)";
+
+    //swiper.slides[currentSlideId+1].style.transform = "rotateY(-5deg)";
+
 });

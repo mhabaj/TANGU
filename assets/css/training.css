@@ -10,67 +10,49 @@
     text-shadow: 0 4px 8px rgba(0, 0, 0, 0.15), 0 6px 10px rgba(0, 0, 0, 0.13);
 }
 
-.swiper-slide {
-
+.scaleChange {
+    animation: scaleChange 1000 linear both;
 }
 
-@font-face {
+.swiper-slide h3 {
+    color: white;
     font-family: SF-Display-Light;
-    src: url(../fonts/SF/SFProDisplay-Light.ttf);
-    font-weight: normal;
+    border: solid;
+    font-size: 120%;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.slide-header {
+    border: none;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    height: 20%;
+    background: url("../img/arc-wallpaper-2.jpg");
+    background-size: cover;
+}
 
 .swiper-container {
     position: fixed;
-    top: 8%;
+    top: 12%;
     left: 0;
-    height: 82%;
+    height: 78%;
     border: none;
 }
 
 .swiper-wrapper {
-    top: 16%;
+    top: 22%;
     padding: 0 0;
-    margin: 0 0;
     border: none;
+    margin-bottom: 10%;
+    perspective: 100px;
 }
 
 .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: grey;
-    border-radius: 10px;
+    background: whitesmoke;
+    border-radius: 6px;
     /* Center slide text vertically */
+    /*
     display: -webkit-box;
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -83,8 +65,29 @@
     -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center;
+    */
 }
 
 .swiper-pagination {
-    margin-bottom: 30%;
+    margin-bottom: 15%;
+}
+
+
+@font-face {
+    font-family: SF-Display-Light;
+    src: url(../fonts/SF/SFProDisplay-Light.ttf);
+    font-weight: normal;
+}
+
+@keyframes scaleChange {
+    0% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    5.71% { -webkit-transform: matrix3d(1.375, 0, 0, 0, 0, 1.375, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.375, 0, 0, 0, 0, 1.375, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    11.31% { -webkit-transform: matrix3d(1.635, 0, 0, 0, 0, 1.635, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.635, 0, 0, 0, 0, 1.635, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    17.02% { -webkit-transform: matrix3d(1.809, 0, 0, 0, 0, 1.809, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.809, 0, 0, 0, 0, 1.809, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    22.62% { -webkit-transform: matrix3d(1.913, 0, 0, 0, 0, 1.913, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.913, 0, 0, 0, 0, 1.913, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    28.33% { -webkit-transform: matrix3d(1.973, 0, 0, 0, 0, 1.973, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1.973, 0, 0, 0, 0, 1.973, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    33.93% { -webkit-transform: matrix3d(2.002, 0, 0, 0, 0, 2.002, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(2.002, 0, 0, 0, 0, 2.002, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    45.15% { -webkit-transform: matrix3d(2.017, 0, 0, 0, 0, 2.017, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(2.017, 0, 0, 0, 0, 2.017, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    72.57% { -webkit-transform: matrix3d(2.004, 0, 0, 0, 0, 2.004, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(2.004, 0, 0, 0, 0, 2.004, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    100% { -webkit-transform: matrix3d(2, 0, 0, 0, 0, 2, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(2, 0, 0, 0, 0, 2, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
 }
