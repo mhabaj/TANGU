@@ -15,7 +15,7 @@ $right_url = "addArc.php";
     <title><?= $title ?></title>
 
     <link rel="stylesheet" href="assets/css/message.css">
-    <link rel="stylesheet" href="assets/css/header.css">
+    <!--<link rel="stylesheet" href="assets/css/header.css">-->
     <link rel="stylesheet" href="assets/css/checkHeader.css">
     <link rel="stylesheet" href="assets/css/edits.css">
     <link rel="stylesheet" href="assets/css/navbar.css">

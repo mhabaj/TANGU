@@ -7,7 +7,7 @@ html, body {
 }
 
 body {
-    background: ghostwhite;
+    background: white;
 }
 
 #mainBox {
@@ -44,6 +44,10 @@ body {
 
 #addBox {
     left: 40%;
+    border-top: solid lightgrey 1px;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
 }
 
 #editBox {
@@ -56,17 +60,18 @@ body {
 
 /****** BUTTONS ********/
 
-button a:active {
+#footerBox button a:active {
     text-decoration: none;
 }
 
-button a p {
-    color: black;
+#footerBox button a p {
+    color: #3D4E66;
     font-family: SF-Text-Medium;
     font-size: 65%;
     margin-bottom: 0;
     margin-top: 10%;
     text-align: center;
+    font-weight: 100;
 }
 
 #homeBtn, #homeBtn2, #homeBtn3, #statsBtn, #statsBtn2, #statsBtn3, #editBtn, #editBtn2, #editBtn3, #accountBtn, #accountBtn2, #accountBtn3 {
@@ -83,8 +88,12 @@ button a p {
     border-right: none;
 }
 
-button a i{
-    color: black;
+#addBox i {
+    color: white;
+}
+
+#homeBox i, #statsBox i, #editBox i, #accountBox i{
+    color: #3D4E66;
 }
 
 #homeBtn, #homeBtn2, #homeBtn3 {
@@ -116,10 +125,6 @@ button a i{
     border-radius: 50%;
     box-shadow: 0px -1px 20px #A8DADC;
     transform: translate(-50%, -50%);
-}
-
-#addBox i {
-    color: white;
 }
 
 #addBtn2, #addBtn3 {

@@ -12,14 +12,14 @@
 
 .swiper-container {
     position: fixed;
-    top: 8%;
+    top: 12%;
     left: 0;
     height: 82%;
     border: none;
 }
 
 .swiper-wrapper {
-    top: 16%;
+    top: 22%;
     padding: 0 0;
     margin: 0 0;
     border: none;

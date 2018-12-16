@@ -1,5 +1,10 @@
 #headerBox {
-    height: 8%;
+    height: 6%;
+    box-shadow: none;
+}
+
+#headerBox button i {
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
 }
 
 #left-button, #right-button {
@@ -43,5 +48,5 @@
 }
 
 #right-button button i {
-    color: rgba(130, 127, 254, 1);
+    color: #A8DADC;
 }
