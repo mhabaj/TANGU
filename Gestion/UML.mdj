@@ -2895,7 +2895,8 @@
 								"$ref": "AAAAAAFnT4Od6zVrJIs="
 							},
 							"name": "$idArc",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -2904,7 +2905,8 @@
 								"$ref": "AAAAAAFnT4Od6zVrJIs="
 							},
 							"name": "$idUser",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -2913,7 +2915,8 @@
 								"$ref": "AAAAAAFnT4Od6zVrJIs="
 							},
 							"name": "$nom",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -2922,7 +2925,8 @@
 								"$ref": "AAAAAAFnT4Od6zVrJIs="
 							},
 							"name": "$poids",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -2931,7 +2935,8 @@
 								"$ref": "AAAAAAFnT4Od6zVrJIs="
 							},
 							"name": "$taille",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -2940,7 +2945,8 @@
 								"$ref": "AAAAAAFnT4Od6zVrJIs="
 							},
 							"name": "$puissance",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -2949,7 +2955,8 @@
 								"$ref": "AAAAAAFnT4Od6zVrJIs="
 							},
 							"name": "$photo",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						}
 					],
 					"operations": [
@@ -3010,7 +3017,8 @@
 								"$ref": "AAAAAAFnT5Ku4jXXTOU="
 							},
 							"name": "$idBlas",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -3019,7 +3027,8 @@
 								"$ref": "AAAAAAFnT5Ku4jXXTOU="
 							},
 							"name": "$idUser",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -3028,7 +3037,8 @@
 								"$ref": "AAAAAAFnT5Ku4jXXTOU="
 							},
 							"name": "$nom",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -3037,7 +3047,8 @@
 								"$ref": "AAAAAAFnT5Ku4jXXTOU="
 							},
 							"name": "$taille",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -3046,7 +3057,8 @@
 								"$ref": "AAAAAAFnT5Ku4jXXTOU="
 							},
 							"name": "$photo",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						}
 					],
 					"operations": [
@@ -3199,7 +3211,8 @@
 								"$ref": "AAAAAAFnT5MsLzY4g3o="
 							},
 							"name": "$pseudo",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -3208,7 +3221,8 @@
 								"$ref": "AAAAAAFnT5MsLzY4g3o="
 							},
 							"name": "$mdp",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						}
 					],
 					"operations": [
@@ -3226,7 +3240,8 @@
 									"_parent": {
 										"$ref": "AAAAAAFnUdpvjuZXuxY="
 									},
-									"name": "$verif_mdp"
+									"name": "$verif_mdp",
+									"type": ""
 								}
 							]
 						},
@@ -3325,7 +3340,8 @@
 								"$ref": "AAAAAAFnT5THITnJBoA="
 							},
 							"name": "$nom",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -3334,7 +3350,8 @@
 								"$ref": "AAAAAAFnT5THITnJBoA="
 							},
 							"name": "$lieu",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -3343,7 +3360,8 @@
 								"$ref": "AAAAAAFnT5THITnJBoA="
 							},
 							"name": "$date",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -3352,7 +3370,8 @@
 								"$ref": "AAAAAAFnT5THITnJBoA="
 							},
 							"name": "$distance",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -3361,7 +3380,8 @@
 								"$ref": "AAAAAAFnT5THITnJBoA="
 							},
 							"name": "$nbserie",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -3370,7 +3390,8 @@
 								"$ref": "AAAAAAFnT5THITnJBoA="
 							},
 							"name": "$nbvolees",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -3379,7 +3400,8 @@
 								"$ref": "AAAAAAFnT5THITnJBoA="
 							},
 							"name": "$nbfleches",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -3388,7 +3410,8 @@
 								"$ref": "AAAAAAFnT5THITnJBoA="
 							},
 							"name": "$ID_blason",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -3397,7 +3420,8 @@
 								"$ref": "AAAAAAFnT5THITnJBoA="
 							},
 							"name": "$ID_arc",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -3406,7 +3430,8 @@
 								"$ref": "AAAAAAFnT5THITnJBoA="
 							},
 							"name": "$ID_user",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -3415,7 +3440,8 @@
 								"$ref": "AAAAAAFnT5THITnJBoA="
 							},
 							"name": "$new_ID_Ent",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -3424,7 +3450,8 @@
 								"$ref": "AAAAAAFnT5THITnJBoA="
 							},
 							"name": "$ID_ENT",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -3433,7 +3460,8 @@
 								"$ref": "AAAAAAFnT5THITnJBoA="
 							},
 							"name": "$ID_SERIE",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -3442,7 +3470,8 @@
 								"$ref": "AAAAAAFnT5THITnJBoA="
 							},
 							"name": "$ID_VOLEE",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						}
 					],
 					"operations": [
@@ -4502,7 +4531,7 @@
 											"top": 774,
 											"width": 131,
 											"height": 13,
-											"text": "Personaliser"
+											"text": "Personnaliser"
 										},
 										{
 											"_type": "LabelView",
@@ -6428,7 +6457,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFnT7cchUzwjrI="
 					},
-					"name": "Personaliser",
+					"name": "Personnaliser",
 					"ownedElements": [
 						{
 							"_type": "UMLInclude",
@@ -6478,6 +6507,85 @@
 					},
 					"name": "Statistiques",
 					"documentation": "Generer des statisques en fonction de l'entrainement."
+				}
+			]
+		},
+		{
+			"_type": "UMLCollaboration",
+			"_id": "AAAAAAFntz+FwAF70Kg=",
+			"_parent": {
+				"$ref": "AAAAAAFF+h6SjaM2Hec="
+			},
+			"name": "Collaboration1",
+			"ownedElements": [
+				{
+					"_type": "UMLInteraction",
+					"_id": "AAAAAAFntz+FwQF8RpE=",
+					"_parent": {
+						"$ref": "AAAAAAFntz+FwAF70Kg="
+					},
+					"name": "Interaction1",
+					"ownedElements": [
+						{
+							"_type": "UMLSequenceDiagram",
+							"_id": "AAAAAAFntz+FwQF9Hqc=",
+							"_parent": {
+								"$ref": "AAAAAAFntz+FwQF8RpE="
+							},
+							"name": "SequenceDiagram1",
+							"ownedViews": [
+								{
+									"_type": "UMLFrameView",
+									"_id": "AAAAAAFntz+FwQF+WOQ=",
+									"_parent": {
+										"$ref": "AAAAAAFntz+FwQF9Hqc="
+									},
+									"model": {
+										"$ref": "AAAAAAFntz+FwQF9Hqc="
+									},
+									"subViews": [
+										{
+											"_type": "LabelView",
+											"_id": "AAAAAAFntz+FwQF/txw=",
+											"_parent": {
+												"$ref": "AAAAAAFntz+FwQF+WOQ="
+											},
+											"font": "Arial;13;0",
+											"left": 75.97900390625,
+											"top": 10,
+											"width": 115.9052734375,
+											"height": 13,
+											"text": "SequenceDiagram1"
+										},
+										{
+											"_type": "LabelView",
+											"_id": "AAAAAAFntz+FwQGAmWM=",
+											"_parent": {
+												"$ref": "AAAAAAFntz+FwQF+WOQ="
+											},
+											"font": "Arial;13;1",
+											"left": 10,
+											"top": 10,
+											"width": 60.97900390625,
+											"height": 13,
+											"text": "interaction"
+										}
+									],
+									"font": "Arial;13;0",
+									"left": 5,
+									"top": 5,
+									"width": 695,
+									"height": 595,
+									"nameLabel": {
+										"$ref": "AAAAAAFntz+FwQF/txw="
+									},
+									"frameTypeLabel": {
+										"$ref": "AAAAAAFntz+FwQGAmWM="
+									}
+								}
+							]
+						}
+					]
 				}
 			]
 		}
