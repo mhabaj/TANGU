@@ -1,10 +1,11 @@
 <div class="container-fluid" id="mainBox">
+    <?php include_once 'includes/header.php';?>
     <canvas id="chart1"></canvas>
     <canvas id="chart2"></canvas>
     <canvas id="chart3"></canvas>
-    <?php include_once 'includes/header.php';?>
-    <?php include_once 'includes/footer.php';?>
+    <canvas id="chart4"></canvas>
 </div>
+<?php include_once 'includes/footer.php';?>
 <script>
     let trainings = <?= $js_result;?>;
     let names = [],
@@ -18,8 +19,9 @@
         nbrTirs = [];
 
     for(let i = 0; i < trainings.length; i++) {
+        let dateObjet = new Date(trainings[i]['DATE_ENT']);
         names.push(trainings[i]['NOM_ENT']);
-        dates.push(trainings[i]['DATE_ENT']);
+        dates.push(dateObjet.getDate() + "/" + dateObjet.getMonth() + "/" + dateObjet.getFullYear());
         moyennes.push(trainings[i]['MOY_ENT']);
         distances.push(trainings[i]['DIST_ENT']);
         pct10s.push(trainings[i]['PCT_DIX']);
@@ -29,6 +31,13 @@
         nbrTirs.push(trainings[i]['NBR_FLECHES']);
     }
 
+    let namesReversed = names.reverse(),
+        datesReversed = dates.reverse(),
+        moyennesReversed = moyennes.reverse(),
+        distancesReversed = distances.reverse(),
+        pct10sReversed = pct10s.reverse(),
+        pct9sReversed = pct9s.reverse();
+
     let nbrTirsTotal = [];
 
     for(let j = 0; j < nbrTirs.length; j++) {
@@ -36,6 +45,8 @@
         nbrTirsTotal.push(total);
     }
 
+    console.log(dates);
+    console.log(datesReversed);
     let ctx1 = document.getElementById("chart1").getContext('2d');
     let chart1 = new Chart(ctx1, {
         type: 'line',
@@ -174,6 +185,54 @@
                     scaleLabel: {
                         display: true,
                         labelString: '% de 10'
+                    }
+                }]
+            }
+        }
+    });
+
+    let ctx4 = document.getElementById("chart4").getContext('2d');
+    let chart4 = new Chart(ctx4, {
+        type: 'line',
+        data: {
+            labels: datesReversed,
+            datasets: [{
+                label: 'Moyennes',
+                data: moyennesReversed,
+                backgroundColor: [
+                    'rgba(130, 127, 254, .2)',
+                ],
+                borderColor: [
+                    'rgba(130, 127, 254, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            legend: {
+                labels: {
+                    fontSize: 15
+                }
+            },
+            responsive: true,
+            title: {
+                display: true,
+                text: 'Moyennes en fonction de la date'
+            },
+            events: ["touchstart"],
+            scales: {
+                xAxes: [{
+                    display: true,
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Dates d\'entrainement'
+                    }
+                }],
+                yAxes: [{
+                    display: true,
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Moyennes'
                     }
                 }]
             }

@@ -1,6 +1,6 @@
 <div class="container-fluid addTraining" id="mainBox">
     <?php include 'includes/back-header.php';?>
-    <form method="get" action="./currentTraining.php" id="newTrainingForm">
+    <form method="get" action="" id="newTrainingForm">
         <h3 id="formTitle">Add a new training</h3>
         <div id="nameField">
             <h3>Your Training Name</h3>
@@ -23,7 +23,7 @@
             <select name="bows" id="bowInput" class="custom-select sources" placeholder="Source Type">
                 <?php
                 if(count($arcs) == 0):?>
-                    <option>No bow</option>
+                    <option value="null" disabled>No bow</option>
                 <?php else:?>
                     <?php
                     foreach ($arcs as $arc):?>
@@ -37,11 +37,11 @@
             <select name="blasons" id="blasonInput" class="custom-select sources" placeholder="Source Type">
                 <?php
                 if(count($blasons) == 0):?>
-                <option>No blason</option>
+                <option value="null" disabled>No blason</option>
                 <?php else:?>
                 <?php
                 foreach ($blasons as $blason):?>
-                <option value="<?=$blasons['ID_BLAS'];?>"><?=$blasons['NOMBLAS'];?></option>
+                <option value="<?=$blason['ID_BLAS'];?>"><?=$blason['NOMBLAS'];?></option>
                 <?php endforeach;?>
                 <?php endif;?>
             </select>

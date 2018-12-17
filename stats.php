@@ -28,7 +28,7 @@ $title = "Statistiques";?>
 <?php
 $db = new ConnexionBDD();
 $con = $db->getCon();
-$query = "SELECT * FROM entrainement WHERE ID_USER = ?";
+$query = "SELECT * FROM entrainement WHERE ID_USER = ? AND (PTS_TOTAL IS NOT NULL) AND (PCT_DIX IS NOT NULL) AND (PCT_NEUF IS NOT NULL) ORDER BY DATE_ENT DESC LIMIT 10";
 $stmt = $con->prepare($query);
 $stmt->execute([$idUser]);
 $result = $stmt->fetchAll();
