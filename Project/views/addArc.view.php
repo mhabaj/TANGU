@@ -1,30 +1,54 @@
 <div class="container-fluid" id="mainBox">
     <?php include 'views/includes/back-header.php'; ?>
-    <form method="POST" enctype="multipart/form-data" id="myform">
 
 
-        <h5>Nom de l'arc *</h5><input type="text" placeholder="Nom de l'arc" max="19" autocomplete="off" min="1"
-                                      name="Nomarc">
+    <form method="POST" enctype="multipart/form-data" >
+        <div class="form-group">
+            <label>Nom de l'arc
+                <mark>*</mark>
+            </label>
+            <input type="Text" class="form-control" max="19" autocomplete="off" min="1"
+                   name="Nomarc" placeholder="Nom de l'arc">
+        </div>
 
 
-        <h5>Poids de l'arc *</h5><input type="number" placeholder="Poids de l'arc" max="50" min="1" value=""
-                                        name="Poids">
+        <div class="form-group">
+            <label>Poids de l'arc (kg)
+                <mark>*</mark>
+            </label>
+            <input class="form-control" type="number" placeholder="Poids de l'arc" max="50" min="1"
+                   name="Poids">
+        </div>
+
+        <div class="form-group">
+            <label>Taille de l'arc (cm)
+                <mark>*</mark>
+            </label>
+            <input type="number" class="form-control" placeholder="Taille de l'arc" max="230" min="1"
+                   name="Taille">
+        </div>
+
+        <div class="form-group">
+            <label>Force de l'arc
+                <mark>*</mark>
+            </label>
+            <input type="number" class="form-control" placeholder="Force de l'arc" max="190" min="1"
+                   name="Force">
+        </div>
+
+        <div class="form-group">
+            <label>Type de l'arc
+                <mark>*</mark>
+            </label>
+            <input type="text" class="form-control" placeholder="Type de l'arc" max="60" min="1" name="Type">
+        </div>
 
 
-        <h5>Taille de l'arc *</h5><input type="text" value="" placeholder="Taille de l'arc" max="300" min="1"
-                                         name="Taille">
-
-
-        <h5>Force de l'arc *</h5><input type="text" value="" placeholder="Force de l'arc" max="100" min="1"
-                                        name="Force">
-
-
-        <h5>Type de l'arc *</h5><input type="text" value="" placeholder="Type de l'arc" max="50" min="1" name="Type">
-
-
-        <h5>Commentaires divers</h5>  <input type="text" name="commArc" max="99" value=""
-                                             placeholder="Commentaires">
-
+        <div class="form-group">
+            <label for="Commentairesdivers">Commentaires divers</label>
+            <textarea class="form-control" id="Commentairesdivers" rows="3" name="commArc" max="120"
+                      placeholder="Commentaires"></textarea>
+        </div>
 
         <h5>Photo de l'arc</h5><input type="image" max="1024" value="" name="Photo">
 
@@ -33,8 +57,8 @@
         <input type="file" id="photo" name="photo"/><br/>
         <br>
 
-        <input type="submit" name="envoyerCreateArc">
 
+        <button type="submit" name="envoyerCreateArc" class="btn btn-primary">Submit</button>
     </form>
 
 </div>
