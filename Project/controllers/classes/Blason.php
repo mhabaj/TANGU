@@ -1,20 +1,11 @@
 <?php
 
-/**
- * Effectu la connexion a la base de donné pour permettre les transferts dans la classe.
- */
 require_once('controllers/classes/ConnexionBDD.php');
-//require_once('../controllers/classes/ConnexionBDD.php');
 
-/**
- * Inclut le fichier log pour garder une trace des actions effectuées dans Blason.
- */
 require_once('controllers/classes/Log.php');
-//require_once('../controllers/classes/Log.php');
-//global $logFile;
 
 /**
- * Class Blason
+ * Elle permet de creer et supprimer des blasons.
  */
 class Blason
 {
@@ -23,54 +14,51 @@ class Blason
      * ID du blason générer par la base de données.
      * @var int
      */
-    private $idBlas;
+    private $blazID;
 
     /**
      * ID de l'utilisateur a qui l'arc appartient.
      * @var int
      */
-    private $idUser;
+    private $userID;
 
     /**
      * Nom de blason.
      * @var string
      */
-    private $nom;
+    private $name;
 
     /**
      * Taille du blason.
      * @var int
      */
-    private $taille;
+    private $size;
 
     /**
      * Emplacement de la photo du blason.
      * @var string
      */
-    private $photo;
+    private $picture;
 
     /**
      * Blason constructor.
-     * @param $nom
-     * @param $taille
-     * @param $photo
-     * @param $idUser
+     * @param $name
+     * @param $size
+     * @param $picture
+     * @param $userID
      */
-    public function __construct($nom, $taille, $photo, $idUser)
+    public function __construct($name, $size, $picture, $userID)
     {
 
 
-        $this->idUser = $idUser;
-        $this->nom = addslashes($nom);
-        $this->taille = $taille;
-        $this->photo = $photo;
+        $this->userID = $userID;
+        $this->name = addslashes($name);
+        $this->size = $size;
+        $this->picture = $picture;
 
-
-        //Inserer valeurs à la creation d une nouvelle instance
         $this->creerBlason();
 
-        //Recuper l'id du blason
-        $this->idBlas = $this->getBlasonID();
+        $this->blazID = $this->getBlasonID();
 
     }
 
@@ -85,10 +73,9 @@ class Blason
         $bdd = new ConnexionBDD();
         $con = $bdd->getCon();
 
-        //selectionne l'ID du blason dans la base de données.
         $requete = "SELECT ID_BLAS FROM blason WHERE ID_USER = ? AND NOMBLAS = ? AND TAILLEBLAS = ? AND PHOTOBLAS = ?";
         $stmt = $con->prepare($requete);
-        $stmt->execute([$this->idUser, $this->nom, $this->taille, $this->photo]);
+        $stmt->execute([$this->userID, $this->name, $this->size, $this->picture]);
         $result = $stmt->fetchColumn();
 
         return $result;
@@ -105,10 +92,9 @@ class Blason
         $bdd = new ConnexionBDD();
         $con = $bdd->getCon();
 
-        //selectionne l'ID du blason dans la base de données.
         $requete = "SELECT COUNT(ID_BLAS) FROM blason WHERE NOMBLAS = ? AND ID_USER = ?";
         $stmt = $con->prepare($requete);
-        $stmt->execute([$this->nom, $this->idUser]);
+        $stmt->execute([$this->name, $this->userID]);
         $result = $stmt->fetchColumn();
         if ($result == 0) {
             return false;
@@ -131,24 +117,22 @@ class Blason
         $con = $bdd->getCon();
 
         if ($this->checkBlason() == false) {
-            //Insérer données dans la DB
+
             $requete = "INSERT INTO blason (ID_USER, NOMBLAS, TAILLEBLAS, PHOTOBLAS) VALUES (:idUser, :nomBlas, :tailleBlas, :photoBlas)";
 
             $add = $con->prepare($requete);
-            $add->bindParam(':idUser', $this->idUser);
-            $add->bindParam(':nomBlas', $this->nom);
-            $add->bindParam(':tailleBlas', $this->taille);
-            $add->bindParam(':photoBlas', $this->photo);
+            $add->bindParam(':idUser', $this->userID);
+            $add->bindParam(':nomBlas', $this->name);
+            $add->bindParam(':tailleBlas', $this->size);
+            $add->bindParam(':photoBlas', $this->picture);
 
-            //Inserer la ligne
             $add->execute();
 
-            //Inserer dans le fichier log l'action effectuée
-            $log_message = "Nouveau blason crée par idUser: " . $this->idUser;
+            $log_message = "Nouveau blason crée par idUser: " . $this->userID;
 
-            //$logFile->open();
-            //$logFile->write($log_message);
-            //$logFile->close();
+            $logFile->open();
+            $logFile->write($log_message);
+            $logFile->close();
         }
     }
 
@@ -160,36 +144,19 @@ class Blason
 
         global $logFile;
 
-        //Effacer données du blason
-        //Valeur $id a prendre dans l'url
         $bdd = new ConnexionBDD();
         $con = $bdd->getCon();
 
-        $blasID = $this->idBlas;
+        $blasID = $this->blazID;
         $requete = "DELETE FROM blason WHERE ID_BLAS = '$blasID'";
 
         $con->exec($requete);
 
-        //Inserer dans le fichier log l'action effectuée
-        $log_message = "idBlas: " . $blasID . " supprimé par idUser: " . $this->idUser;
+        $log_message = "idBlas: " . $blasID . " supprimé par idUser: " . $this->userID;
 
-        //$logFile->open();
-        //$logFile->write($log_message);
-        //$logFile->close();
+        $logFile->open();
+        $logFile->write($log_message);
+        $logFile->close();
     }
 }
-
-//$nom = "Nom Blas";
-//$nom2 = "Nom";
-//$taille = 25;
-//$photo = "photo blason";
-
-//$attr = array("NOMBLAS" => "nouveau nom", "TAILLEBLAS" => NULL, "PHOTOBLAS" => "nouvelle photo");
-
-//$blason = new Blason($nom, $taille, $photo);
-//$blason->modifierBlason($attr);
-//$blason2 = new Blason($nom2, $taille, $photo);
-//$blason->supprimerBlason();
-//$blason2->modifierBlason($attr);
-//$blason2->supprimerBlason();
 ?>

@@ -1,18 +1,11 @@
 <?php
 
-/**
- * Effectu la connexion a la base de donné pour permettre les transferts dans la classe.
- */
 require_once('controllers/classes/ConnexionBDD.php');
-//require_once('../controllers/classes/ConnexionBDD.php');
-/**
- * Inclut le fichier log pour garder une trace des actions effectuées dans Arc.
- */
+
 require_once('controllers/classes/Log.php');
-//require_once('../controllers/classes/Log.php');
 
 /**
- * Class Arc
+ * Elle permet de creer et supprimer des arcs.
  */
 class Arc {
 
@@ -20,37 +13,37 @@ class Arc {
      * ID de l'arc générer par la base de données.
      * @var int
      */
-    private $idArc;
+    private $bowID;
 
     /**
      * ID de l'utilisateur a qui l'arc appartient.
      * @var int
      */
-    private $idUser;
+    private $userID;
 
     /**
      * Nom de l'arc.
      * @var string
      */
-    private $nom;
+    private $name;
 
     /**
      * Poids de l'arc.
      * @var int
      */
-    private $poids;
+    private $weight;
 
     /**
      * Taille de l'arc.
      * @var int
      */
-    private $taille;
+    private $size;
 
     /**
      * Puissance de l'arc.
      * @var int
      */
-    private $puissance;
+    private $power;
 
     /**
      * Type d'arc.
@@ -59,33 +52,42 @@ class Arc {
     private $type;
 
     /**
+     * Commentaires de l'arc
+     * @var string
+     */
+    private $commArc;
+
+    /**
      * Emplacement de la photo de l'arc.
      * @var string
      */
-    private $photo;
+    private $picture;
 
     /**
      * Constructeur de la classe arc.
-     * @param $nom
-     * @param $poids
-     * @param $taille
-     * @param $puissance
+     * @param $name
+     * @param $weight
+     * @param $size
+     * @param $power
      * @param $type
-     * @param $photo
+     * @param $commArc
+     * @param $picture
      */
-	public function __construct($nom, $poids, $taille, $puissance, $type, $photo) {
+
+	public function __construct($name, $weight, $size, $power, $type,$commArc, $picture) {
         
-        $this->idUser = $_SESSION['ID'];
-		$this->nom = addslashes($nom);
-        $this->poids = $poids;
-        $this->taille = $taille;
-        $this->puissance = $puissance;
+        $this->userID = $_SESSION['ID'];
+		$this->name = addslashes($name);
+        $this->weight = $weight;
+        $this->size = $size;
+        $this->power = $power;
 		$this->type = addslashes($type);
-		$this->photo = $photo;
+		$this->commArc = $commArc;
+		$this->picture = $picture;
 
-        $this->creerArc();//Inserer valeurs à la creation d une nouvelle instance.
+        $this->creerArc();
 
-        $this->idArc = $this->getArcID(); //récupère l'id générer par la base de donné.
+        $this->bowID = $this->getArcID();
 	}
 
     /**
@@ -98,8 +100,7 @@ class Arc {
         $bdd = new ConnexionBDD();
         $con = $bdd->getCon();
 
-        //selectionne l'ID de l'arc dans la base de données.
-        $requete = "SELECT ID_ARC FROM arc WHERE ID_USER = '$this->idUser' AND NOMARC = '$this->nom' AND POIDSARC = '$this->poids' AND TAILLEARC = '$this->taille' AND PWRARC = '$this->puissance' AND TYPEARC = '$this->type' AND PHOTOARC = '$this->photo'";
+        $requete = "SELECT ID_ARC FROM arc WHERE ID_USER = '$this->userID' AND NOMARC = '$this->name' AND POIDSARC = '$this->weight' AND TAILLEARC = '$this->size' AND PWRARC = '$this->power' AND TYPEARC = '$this->type' AND PHOTOARC = '$this->picture'";
         $reponse = $con-> query($requete);
         $donne = $reponse->fetch();
         $idArc = $donne['ID_ARC'];
@@ -116,8 +117,7 @@ class Arc {
         $bdd = new ConnexionBDD();
         $con = $bdd->getCon();
 
-        //selectionne l'ID de l'arc dans la base de données.
-        $requete = "SELECT ID_ARC FROM arc WHERE NOMARC = '$this->nom' AND ID_USER = '$this->idUser'";
+        $requete = "SELECT ID_ARC FROM arc WHERE NOMARC = '$this->name' AND ID_USER = '$this->userID'";
         $stmt = $con->query($requete);
         $result = $stmt->rowCount();
         if($result == 0) {
@@ -138,25 +138,24 @@ class Arc {
         global $logFile;
         
         if ($this->checkArc() == false) {
-            //Insérer données dans la DB
-            $requete = "INSERT INTO arc (ID_USER, NOMARC, POIDSARC, TAILLEARC, PWRARC, TYPEARC, PHOTOARC) VALUES (:idUser, :nomArc, :poidsArc, :tailleArc, :pwrArc, :typeArc, :photoArc)";
+
+            $requete = "INSERT INTO arc (ID_USER, NOMARC, POIDSARC, TAILLEARC, PWRARC, TYPEARC, PHOTOARC, COMMARC) VALUES (:idUser, :nomArc, :poidsArc, :tailleArc, :pwrArc, :typeArc, :photoArc,:commArc)";
             $add = $con->prepare($requete);
-            $add->bindParam(':idUser', $this->idUser);
-            $add->bindParam(':nomArc', $this->nom);
-            $add->bindParam(':poidsArc', $this->poids);
-            $add->bindParam(':tailleArc', $this->taille);
-            $add->bindParam(':pwrArc', $this->puissance);
+            $add->bindParam(':idUser', $this->userID);
+            $add->bindParam(':nomArc', $this->name);
+            $add->bindParam(':poidsArc', $this->weight);
+            $add->bindParam(':tailleArc', $this->size);
+            $add->bindParam(':pwrArc', $this->power);
             $add->bindParam('typeArc', $this->type);
-            $add->bindParam('photoArc', $this->photo);
-            //Inserer la ligne
+            $add->bindParam('commArc', $this->commArc);
+            $add->bindParam('photoArc', $this->picture);
             $add->execute();
-            
-            //Inserer dans le fichier log l'action effectuée
-            $log_message = "Nouvel arc crée par idUser: " . $this->idUser;
-            //$logFile->open();
-            //$logFile->write($log_message);
-            //<$logFile->close();
-            echo "<p>Données insérées avec succes</p>";
+
+            $log_message = "Nouvel arc crée par idUser: " . $this->userID;
+            $logFile->open();
+            $logFile->write($log_message);
+            $logFile->close();
+            header('Location: editArc.php');
         }
     }
 
@@ -172,30 +171,15 @@ class Arc {
         $arcID = $this->getArcID();
         $requete = "DELETE FROM arc WHERE ID_ARC = '$arcID'";
         $con->exec($requete);
-        
-        //Inserer dans le fichier log l'action effectuée
-        $log_message = "idArc: " . $arcID ." supprimé par idUser: " . $this->idUser;
-        //$logFile->open();
-        //$logFile->write($log_message);
-        //$logFile->close();
+
+        $log_message = "idArc: " . $arcID ." supprimé par idUser: " . $this->userID;
+        $logFile->open();
+        $logFile->write($log_message);
+        $logFile->close();
 	}
     
     public function __destruct(){
 
     }
 }
-//$nom = "Nom Arc";
-//$nom2 = "Nol";
-//$poids = 25;
-//$taille = 25;
-//$pwr = 12;
-//$type = "Cool";
-//$photo = "photo";
-//$attr = array("NOMARC" => "nom", "POIDSARC" => 17, "TAILLEARC" => NULL, "PWRARC" => NULL, "TYPEARC" => "poius", "PHOTOARC" => NULL);
-//$arc = new Arc($nom, $poids, $taille, $pwr, $type, $photo);
-//$arc->modifierArc($attr);
-//$arc2 = new Arc($nom2, $poids, $taille, $pwr, $type, $photo);
-//$arc->supprimerArc();
-//$arc2->modifierArc($attr);
-//$arc2->supprimerArc();
 ?>

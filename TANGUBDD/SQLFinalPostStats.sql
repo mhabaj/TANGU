@@ -1,6 +1,6 @@
-﻿/*==============================================================*/
+/*==============================================================*/
 /* Nom de SGBD :  MySQL 5.0                                     */
-/* Date de création :  11/12/2018 12:48:31                      */
+/* Date de création :  18/12/2018 16:29:00                      */
 /*==============================================================*/
 
 
@@ -31,6 +31,7 @@ create table ARC
    PWRARC               tinyint not null,
    TYPEARC              varchar(50) not null,
    PHOTOARC             varchar(1024),
+   COMMARC              varchar(100),
    primary key (ID_ARC)
 );
 
@@ -79,7 +80,6 @@ create table FLECHE
 (
    ID_FLECHE            int not null auto_increment,
    ID_VOL               int not null,
-   NUMFLECHE            int not null,
    PTSFLECHE            smallint,
    primary key (ID_FLECHE)
 );
@@ -91,7 +91,6 @@ create table SERIE
 (
    ID_SERIE             int not null auto_increment,
    ID_ENT_USER          int not null,
-   NUMSERIE             int not null,
    PTSSERIE             smallint,
    NBRVOLSERIE          tinyint not null,
    MOYSERIE             real,
@@ -122,7 +121,6 @@ create table VOLEE
 (
    ID_VOL               int not null auto_increment,
    ID_SERIE             int not null,
-   NUMVOLEE             int,
    PTSVOL               smallint,
    NBRFLECHEVOL         tinyint not null,
    MOYVOL               real,
