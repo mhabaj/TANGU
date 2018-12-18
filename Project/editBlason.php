@@ -1,6 +1,10 @@
 <?php
 require_once 'controllers/functions/control-session.php';
-$title = "Personnaliser";?>
+require_once 'controllers/classes/ConnexionBDD.php';
+$title = "Personnaliser";
+$left_url = "edit.php";
+$right_url = "#";
+?>
 <!DOCTYPE html>
 
 <html lang="en">
@@ -10,156 +14,48 @@ $title = "Personnaliser";?>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title><?= $title?></title>
 
+    <link rel="stylesheet" href="assets/css/message.css">
     <link rel="stylesheet" href="assets/css/header.css">
-    <link rel="stylesheet" href="assets/css/edit.css">
+    <link rel="stylesheet" href="assets/css/checkHeader.css">
+    <link rel="stylesheet" href="assets/css/edits.css">
     <link rel="stylesheet" href="assets/css/navbar.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="assets/css/swiper.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/swiper.min.js"></script>
 </head>
 <body>
-    
-	
-               
-
-
-
-  <div class="container-fluid" id="mainBox">
-            <?php include_once 'views/includes/header.php';?>
-          
-            
-	<div class="swiper-container" id="contentBox">
-	
-	<div class="text-center">
-	<a href="addBlason.php"> <button type="button" class="btn btn-dark">Ajouter</button> </a> </div>
-    <div class="swiper-wrapper">
-	
-      		
-		<?php 
-		
-		
-		
-		  include('controllers/functions/connexion_bdd.php'); //on se connect a la base et on envoie la requete
-
-                $reponse = $bdd->query("SELECT * FROM blason WHERE ID_USER='$idUser'");
-                $n = 1;
-                // On affiche chaque entrée une à une
-                while ($donnees = $reponse->fetch()) {
-					
-					
-		
-		
-		
-		
-		
-		
-		?>
-			
-
-			<div class="container swiper-slide" id="e<?php echo $n ; ?>">
-				<h3>  <?php echo $donnees['NOMBLAS']; ?></h3>
-			</div>
-	
-	<?php 
-	
-	
-	 $n++;
-                }
-
-                $reponse->closeCursor(); // Termine le traitement de la requête
-
-	
-	
-	
-	
-	?>
-	
-
-	
-	
-	</div>
-
-
-
-
-
-	<div class="swiper-pagination"></div>
+<div class="container-fluid" id="mainBox">
+    <?php include_once 'views/includes/message.php';?>
+    <?php include_once 'views/includes/back-header.php'; ?>
+    <?php
+    $bdd = new ConnexionBDD();
+    $con = $bdd->getCon();
+    $query = "SELECT NOMBLAS, TAILLEBLAS, PHOTOBLAS FROM blason WHERE ID_USER = ?";
+    $stmt = $con->prepare($query);
+    $stmt->execute([$idUser]);
+    $result = $stmt->fetchAll();
+    if(count($result) == 0):?>
+    <?php echo "<script>triggerMessageBox('success', 'You don\'t have any blazon yet')</script>"; ?>
+    <?php else:?>
+    <div class="swiper-container" id="contentBox">
+        <div class="swiper-wrapper">
+            <?php foreach ($result as $blason):?>
+                <div class="swiper-slide" id="e1">
+                    <h3><?=$blason['NOMBLAS']?></h3>
+                </div>
+            <?php endforeach;?>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+        <script src="assets/js/swipy.js"></script>
+    <?php endif ;?>
+    <?php include_once 'views/includes/footer.php'; ?>
 </div>
-		
-		 
-		
-		
-		
-            </div>
-      
-            <?php include_once 'views/includes/footer.php';?>
-        
-        <script src="assets/js/swiper.min.js"></script> 
-		
-		</div>
-      
-    </body>
+
+</body>
 </html>
-
-
-			   
-			   
-			   
-			   
-		
-           
-
-
-	
-	
-	
-	
-	
-	
-	<script>
-    var swiperBlason = new Swiper('.swiper-container', {
-            slidesPerView: 1.3,
-            speed: 700,
-            setWrapperSize: true,
-            effect: 'slide',
-            spaceBetween: 20,
-            centeredSlides: true,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: false,
-                dynamicBullets: true,
-            },
-    });
-
-    var firstSlideBlason = swiperBlason.slides[0];
-    firstSlideBlason.style.boxShadow = "0 4px 8px 0 rgba(0, 0, 0, 0.25), 0 6px 20px 0 rgba(0, 0, 0, 0.19)";
-
-    var nbrOfSlidesBlason = swiperBlason.slides.length;
-
-    for(var i = 1; i < nbrOfSlidesBlason; i++) {
-        /*swiper.slides[i].style.height = "98%";*/
-        swiperBlason.slides[i].style.boxShadow = "none";
-    }
-
-    swiperBlason.on('slideChangeTransitionStart', function() {
-        var nbrOfSlides = swiperBlason.slides.length;
-        var currentSlideId = swiperBlason.activeIndex;
-
-        for (var i = 0; i < nbrOfSlides && i != currentSlideId; i++) {
-            swiperBlason.slides[i].style.transition = "box-shadow .3s ease-in-out";
-            /*swiper.slides[i].style.height = "98%";*/
-            swiperBlason.slides[i].style.boxShadow = "none";
-        }
-
-        swiperBlason.slides[currentSlideId].style.transition = "box-shadow .3s ease-in-out";
-        /*swiper.slides[currentSlideId].style.height = "100%";*/
-        swiperBlason.slides[currentSlideId].style.boxShadow = "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)";
-    });
-
-</script>
-	
-	
-	

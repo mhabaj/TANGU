@@ -1,0 +1,17 @@
+#addIcon, #arrowIcon, #quitIconRight {
+    display: none;
+}
+
+#check, #quitIconLeft {
+    display: block;
+}
+
+#myPost {
+    border: none;
+    position: fixed;
+    top: 8%;
+    height: 92%;
+    left: 0;
+    width: 100%;
+    padding: 0 5%;
+}

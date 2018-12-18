@@ -1,112 +1,114 @@
-
-        <div class="container-fluid" id="mainBox">
-            <div class="container-fluid header" id="headerBox">
-                <div id="titleBox">
-                    <h1>Ajouter</h1>
-                </div>
-                <div id="line"></div>
-            </div>
-
-            <div class="container-fluid" id="formBox">
-                <form method="POST">
-                    <input name="nom" placeholder="Nom " maxlength='30' type="text" value="">
-                    <input name="lieu" placeholder="Lieu " maxlength='200' type="text" value="">
-                    <input name="date" placeholder="Date" type="datetime-local" value="">
-                    <input name="distance" placeholder="Distance" min="1" max="126" type="number" value="">
-                    <input name="arc" placeholder="arc"  type="number" value="">
-                    <input name="blason" placeholder="blason"  type="number" value="">
-                    <input name="serie" placeholder="Serie(s)" min="1" max="5" type="number" value="">
-                    <input name="volee" placeholder="Volée(s)" min="1" max="10" type="number" value="">
-                    <input name="fleche" placeholder="Fleche(s)" min="1" max="10" type="number" value="">
-                    <button type="submit" name="creationEnt">Connexion</button>
-                </form>
-            </div>
-
-            <div class="container-fluid footer" id="footerBox">
-                <div class="container" id="homeBox">
-                    <button id="homeBtn">
-                        <a href="index.html">
-                            <i class="far fa-list-alt fa-2x" style="color: rgba(179, 179, 179, 0.9)"></i>
-                        </a>
-                    </button>
-                    <button id="homeBtn2">
-                        <a href="index.html">
-                            <i class="far fa-list-alt fa-lg" style="color: rgba(179, 179, 179, 0.9)"></i>
-                        </a>
-                    </button>
-                    <button id="homeBtn3">
-                        <a href="index.html">
-                            <i class="far fa-list-alt fa-3x" style="color: rgba(179, 179, 179, 0.9)"></i>
-                        </a>
-                    </button>
-                </div>
-                <div class="container" id="statsBox">
-                    <button id="statsBtn">
-                        <a href="stats.html">
-                            <i class="fas fa-chart-line fa-2x" style="color: rgba(179, 179, 179, 0.9)"></i>
-                        </a>
-                    </button>
-                    <button id="statsBtn2">
-                        <a href="stats.html">
-                            <i class="fas fa-chart-line fa-lg" style="color: rgba(179, 179, 179, 0.9)"></i>
-                        </a>
-                    </button>
-                    <button id="statsBtn3">
-                        <a href="stats.html">
-                            <i class="fas fa-chart-line fa-3x" style="color: rgba(179, 179, 179, 0.9)"></i>
-                        </a>
-                    </button>
-                </div>
-                <div class="container" id="addBox">
-                    <button id="addBtn">
-                        <a href="add.html">
-                            <i class="fas fa-plus fa-2x" style="color: white"></i>
-                        </a>
-                    </button>
-                    <button id="addBtn2">
-                        <a href="add.html">
-                            <i class="fas fa-plus fa-lg" style="color: white"></i>
-                        </a>
-                    </button>
-                    <button id="addBtn3">
-                        <a href="add.html">
-                            <i class="fas fa-plus fa-3x" style="color: white"></i>
-                        </a>
-                    </button>
-                </div>
-                <div class="container" id="editBox">
-                        <button id="editBtn">
-                            <a href="edit.html">
-                                <i class="far fa-edit fa-2x" style="color: rgba(179, 179, 179, 0.9)"></i>
-                            </a>
-                        </button>
-                        <button id="editBtn2">
-                            <a href="edit.html">
-                                <i class="far fa-edit fa-lg" style="color: rgba(179, 179, 179, 0.9)"></i>
-                            </a>
-                        </button>
-                        <button id="editBtn3">
-                            <a href="edit.html">
-                                <i class="far fa-edit fa-3x" style="color: rgba(179, 179, 179, 0.9)"></i>
-                            </a>
-                        </button>
-                </div>
-                <div class="container" id="accountBox">
-                    <button id="accountBtn">
-                        <a href="account.html">
-                            <i class="far fa-user fa-2x" style="color: rgba(179, 179, 179, 0.9)"></i>
-                        </a>
-                    </button>
-                    <button id="accountBtn2">
-                        <a href="account.html">
-                            <i class="far fa-user fa-lg" style="color: rgba(179, 179, 179, 0.9)"></i>
-                        </a>
-                    </button>
-                    <button id="accountBtn3">
-                        <a href="account.html">
-                            <i class="far fa-user fa-3x" style="color: rgba(179, 179, 179, 0.9)"></i>
-                        </a>
-                    </button>
-                </div>
-            </div>
+<div class="container-fluid addTraining" id="mainBox">
+    <?php include 'includes/back-header.php';?>
+    <form method="get" action="" id="newTrainingForm">
+        <h3 id="formTitle">Add a new training</h3>
+        <div id="nameField">
+            <h3>Your Training Name</h3>
+            <input type="text" name="name" id="nameInput" placeholder="Enter your training name..." autocomplete="on">
         </div>
+        <div id="locationField">
+            <h3>Your Training Location</h3>
+            <input type="text" name="location" id="locationInput" placeholder="Enter your training location...">
+        </div>
+        <div id="dateField">
+            <h3>The Date</h3>
+            <input type="text" name="date" class="datepicker-here" id="dateInput" data-position="top left" data-timepicker="true" data-time-format='h:ii AA' data-language="fr" placeholder="Pick a date...">
+        </div>
+        <div id="distanceField">
+            <h3>Distance(m)</h3>
+            <input type="number" name="distance" id="distanceInput"  min="1" max="30" placeholder="Distance...">
+        </div>
+        <div id="bowsField">
+            <h3>Bows</h3>
+            <select name="bows" id="bowInput" class="custom-select sources" placeholder="Source Type">
+                <?php
+                if(count($arcs) == 0):?>
+                    <option value="null" disabled>No bow</option>
+                <?php else:?>
+                    <?php
+                    foreach ($arcs as $arc):?>
+                        <option value="<?=$arc['ID_ARC'];?>"><?=$arc['NOMARC'];?></option>
+                    <?php endforeach;?>
+                <?php endif;?>
+            </select>
+        </div>
+        <div id="blasonsField">
+            <h3>Blasons</h3>
+            <select name="blasons" id="blasonInput" class="custom-select sources" placeholder="Source Type">
+                <?php
+                if(count($blasons) == 0):?>
+                <option value="null" disabled>No blason</option>
+                <?php else:?>
+                <?php
+                foreach ($blasons as $blason):?>
+                <option value="<?=$blason['ID_BLAS'];?>"><?=$blason['NOMBLAS'];?></option>
+                <?php endforeach;?>
+                <?php endif;?>
+            </select>
+        </div>
+        <div id="serieField">
+            <h3>Series</h3>
+            <input type="number" name="sets" id="serieInput" min = "1" max="3" placeholder="1">
+        </div>
+        <div id="arrowField">
+            <h3>Arrows</h3>
+            <input type="number" name="arrows" id="arrowInput" min = "1" max="10" placeholder="1">
+        </div>
+        <div id="volleyField">
+            <h3>Volleys</h3>
+            <input type="number" name="volleys" id="volleyInput" min = "1" max="6" placeholder="1">
+        </div>
+        <input type="submit" name="submitBtn" id="submitBtn" value="Let's practice !">
+    </form>
+</div>
+<script>
+    let rightBtn = document.getElementById("right-btn");
+    rightBtn.disabled = false;
+
+    rightBtn.addEventListener('touchend', function () {
+        window.location = "<?= $left_url;?>";
+    });
+
+    let submitBtn = document.getElementById("submitBtn");
+
+    let nameInput = document.getElementById("nameInput"),
+        locationInput = document.getElementById("locationInput"),
+        dateInput = document.getElementById("dateInput"),
+        distanceInput = document.getElementById("distanceInput"),
+        bowInput = document.getElementById("bowInput"),
+        blasonInput = document.getElementById("blasonInput"),
+        serieInput = document.getElementById("serieInput"),
+        volleyInput = document.getElementById("volleyInput"),
+        arrowInput = document.getElementById("arrowInput");
+
+    let nameLength = nameInput.value.length,
+        locationLength = locationInput.value.length,
+        dateLength = dateInput.value.length,
+        distanceLength = distanceInput.value.length,
+        bowLength = bowInput.value.length,
+        blasonLength = blasonInput.value.length,
+        serieLength = serieInput.value.length,
+        volleyLength = volleyInput.value.length,
+        arrowLength = arrowInput.value.length;
+
+    let inputs = [nameInput, locationInput, dateInput, distanceInput, bowInput, blasonInput, serieInput, volleyInput, arrowInput];
+
+
+    /*
+    nameInput.addEventListener('input', function () {
+        if(!(nameLength == 0 || locationLength == 0 || dateLength == 0 || distanceLength == 0 || bowLength == 0 || blasonLength == 0 || serieLength == 0 || volleyLength == 0 || arrowLength == 0)) {
+            submitBtn.disabled = false;
+            submitBtn.style.opacity = "1";
+        }
+    });
+
+    locationInput.addEventListener('input', function () {
+        if(!(nameLength == 0 || locationLength == 0 || dateLength == 0 || distanceLength == 0 || serieLength == 0 || volleyLength == 0 || arrowLength == 0)) {
+            submitBtn.disabled = false;
+            submitBtn.style.opacity = "1";
+        }
+    });
+
+    */
+
+</script>

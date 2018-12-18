@@ -11,6 +11,15 @@ function checkMdp($mdp) {
     
 }
 
+function convertStringDate($date) {
+    // Convert date and time to seconds
+    $sec = strtotime($date);
+
+    //Convert seconds to a format
+    $date = date("D. M. Y H:i", $sec);
+    return $date;
+}
+
 function equivMdp($mdp, $verif_mdp) {
     $hash_mdp = sha1($mdp);
     $hash_verif = sha1($verif_mdp);

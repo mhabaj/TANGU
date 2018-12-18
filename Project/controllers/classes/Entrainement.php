@@ -3,9 +3,6 @@
 require_once('controllers/classes/ConnexionBDD.php');
 class entrainement
 {
-    // private $tabTrain = array(nbserie, nbvolees, nbfleche);
-    //private $tabTrain[$nbserie][$nbvolees][$nbfleches];
-
 
     private $nom;
     private $lieu;
@@ -27,12 +24,6 @@ class entrainement
 
 
     {
-
-
-
-
-
-
         $this->ID_blason = $ID_blason;
         $this->ID_arc = $ID_arc;
         $this->nom = $nom;
@@ -45,14 +36,9 @@ class entrainement
         $this->ID_user = $ID_user;
 
 
-
-
-
         if ($this->creerEntrainement($this->nom, $this->lieu, $this->date, $this->distance, $this->ID_arc, $this->ID_blason, $this->nbserie, $this->nbvolees, $this->nbfleches, $this->ID_user)) {
 
             $ID_ENT_USER = $this->GetEntID();
-            header("Location: ChoisirSerie.php?new_ID_Ent=$ID_ENT_USER");
-            die();
 
         }
     }
@@ -76,28 +62,27 @@ class entrainement
             and !empty($distance) and !empty($nbserie) and !empty($nbvolees) and !empty($nbfleches)) {
 
 
-            if (is_numeric($ID_blason) and is_numeric($ID_arc) and strlen($nom) <= 30 and strlen($lieu) <= 200
-                and $this->verifdateheure($date) and is_numeric($distance) and $distance <= 125
+            if (is_numeric($ID_blason) and is_numeric($ID_arc) and strlen($nom) <= 30 and strlen($lieu) <= 200 and is_numeric($distance) and $distance <= 125
                 and is_numeric($nbserie) and $nbserie <= 5 and is_numeric($nbvolees) and $nbvolees <= 10 and is_numeric($nbfleches) and $nbfleches <= 10) {
                 echo $ID_user;
                 echo $nom;
                 $bdd = new ConnexionBDD();
-					$con = $bdd->getCon();
+                $con = $bdd->getCon();
 
                 // on verifie la validité de l'utilisateur:
-				$requete = "SELECT ID_USER FROM users WHERE ID_USER='$ID_user'";
+                $requete = "SELECT ID_USER FROM users WHERE ID_USER='$ID_user'";
                 $stmt = $con->query($requete);
                 $nbrOccur = $stmt->rowCount();
 
                 if ($nbrOccur == 1) {
 
                     //on verifie si le nom de l'entrainement existe deja chez le meme user
-					
-					$bdd = new ConnexionBDD();
-					$con = $bdd->getCon();
-					
-					
-					
+
+                    $bdd = new ConnexionBDD();
+                    $con = $bdd->getCon();
+
+
+
                     $stmt = $con->query("SELECT * FROM `entrainement` WHERE ID_USER='$ID_user' and NOM_ENT='$nom'");
 
                     $nbrOccur = $stmt->rowCount();
@@ -130,11 +115,10 @@ class entrainement
 
         }
 
-
     }
 
 ////////////////////////////////////////////////////////////////////////////////////////////
-   public function verifdateheure($dateheure)
+    public function verifdateheure($dateheure)
     {
 
 
@@ -152,8 +136,6 @@ class entrainement
         $ID_ENT_USER = intval($ID_user . '00' . $ID_ENT);
 
         return $ID_ENT_USER;
-
-
     }
 
 ////////////////////////////////////////////////////////////////////////////////////////////
@@ -167,8 +149,10 @@ class entrainement
         if ($this->checkEnt($nom, $lieu, $date, $distance, $ID_arc, $ID_blason, $nbserie, $nbvolees, $nbfleches, $ID_user) == true) {
 
 
-			 $bdd = new ConnexionBDD();
-			$con = $bdd->getCon();
+            $bdd = new ConnexionBDD();
+            $con = $bdd->getCon();
+
+            $date = (string) $date;
 
 
             $requ = $con->exec("INSERT INTO `entrainement` (`ID_ENT`,`ID_ENT_USER`, `ID_USER`, `ID_ARC`, `ID_BLAS`, `NOM_ENT`, `LIEU_ENT`, `DATE_ENT`, `DIST_ENT`,`NBR_SERIE`,`NBR_VOLEE`, `NBR_FLECHES`, `PTS_TOTAL`, `PCT_DIX`, `PCT_NEUF`, `MOY_ENT`, `STATUT_ENT`) 
@@ -194,7 +178,7 @@ class entrainement
 
             $requ3 = $con->exec("UPDATE `entrainement` SET `ID_ENT_USER` = '$new_ID_Ent' WHERE `entrainement`.`ID_ENT` = '$ID_ENT' AND `entrainement`.`NOM_ENT` = '$nom'") or die(print_r($bdd->errorInfo()));
 
-			$nbr1=1;
+            $nbr1=1;
             for ($i = 0; $i < $nbserie; $i++) {
 
                 $requ4 = $con->exec("INSERT INTO `serie` (`ID_SERIE`, `ID_ENT_USER`,`NUMSERIE`, `PTSSERIE`, `NBRVOLSERIE`, `MOYSERIE`, `PCTDIXSERIE`, `PCTHUITSERIE`, `ID_ENT`) 
@@ -209,9 +193,9 @@ class entrainement
                 $ID_SERIE = $donnees2['ID_SERIE'];
 
                 $this->ID_SERIE = $ID_SERIE;
-				
-				$nbr1++;
-				$nbr2=1;
+
+                $nbr1++;
+                $nbr2=1;
 
                 for ($j = 0; $j < $nbvolees; $j++) {
 
@@ -226,16 +210,16 @@ class entrainement
                     $ID_VOLEE = $donnees3['ID_VOL'];
 
                     $this->ID_VOLEE = $ID_VOLEE;
-					
-					$nbr3=1;
+
+                    $nbr3=1;
 
                     for ($z = 0; $z < $nbfleches; $z++) {
                         $requ7 = $con->exec("INSERT INTO `fleche` (`ID_FLECHE`, `ID_VOL`,`NUMFLECHE`, `PTSFLECHE`) 
                         VALUES (NULL,'$ID_VOLEE', '$nbr3' , NULL)") or die(print_r($bdd->errorInfo()));
 
-					$nbr3++;
+                        $nbr3++;
                     }
-					$nbr2++;
+                    $nbr2++;
                 }
 
 
@@ -251,11 +235,23 @@ class entrainement
 
     }
 
+    public function getNbrSerie() {
+        return $this->nbserie;
+    }
+
+    public function getNbrVolee() {
+        return $this->nbvolees;
+    }
+
+    public function getNbrTir() {
+        return $this->nbfleches;
+    }
+
 ////////////////////////////////////////////////////////////////////////////////////////////
 
 
- //   public function lancerEntrainement($ID_ENT, $nbserie, $nbvolees, $nbfleches)
-   // {
+    //   public function lancerEntrainement($ID_ENT, $nbserie, $nbvolees, $nbfleches)
+    // {
 
 
     //}

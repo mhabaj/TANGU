@@ -1,14 +1,8 @@
 @media screen and (min-height: 800px) and (max-height: 999px) {
-    #titleBox h1 {
-        font-size: 2.7em;
-    }
+
 }
 
 @media screen and (max-height: 600px) {
-    #titleBox h1 {
-        font-size: 2em;
-    }
-    
     #homeBtn {
         display: none;
     }
@@ -55,10 +49,6 @@
 }
 
 @media screen and (max-height: 799px) and (min-height: 601px) {
-    #titleBox h1 {
-        font-size: 2.3em;
-    }
-    
     
     #homeBtn {
         display: none;
@@ -152,11 +142,7 @@
     }
 }
 
-
 @media screen and (min-height: 1000px) {
-    #titleBox h1 {
-        font-size: 3.8em;
-    }
     
     #addBtn {
         max-width: 90px;
@@ -167,9 +153,6 @@
 }
 
 @media screen and (min-width: 1000px) {
-    #titleBox h1 {
-        font-size: 4.8em;
-    }
     
     #homeBtn {
         display: none;

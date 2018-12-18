@@ -1,4 +1,5 @@
 <?php
+/*
 require('controllers/functions/control-session.php');
 
 include('controllers/classes/entrainement.php');
@@ -226,14 +227,6 @@ if ((!isset($_POST['Serie']) and !isset($_POST['new_ID_Ent'])) and (!isset($_GET
 
     }
 }
-
+*/
 
 ?>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-<script>
-    $(document).ready(function () {
-        $('input[id="Score_Submit"]').change(function () {
-            $(this).parent().submit();
-        });
-    });</script>

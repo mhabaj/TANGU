@@ -1,0 +1,103 @@
+.no-data {
+    font-family: SF-Display-Light;
+    font-size: 250%;
+    border: none;
+    position: fixed;
+    top: 41%;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.15), 0 6px 10px rgba(0, 0, 0, 0.13);
+}
+
+.slide-content p {
+    color: black;
+    font-family: SF-Text-Regular;
+    border: none;
+    font-size: 100%;
+    margin-bottom: 0.5%;
+}
+
+.blur {
+    background: red;
+}
+
+.slide-header {
+    border: none;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    height: 70%;
+    background: url("../img/annie-spratt-450564-unsplash.jpg");
+    background-size: cover;
+    background-position: bottom;
+}
+
+.slide-content {
+    padding: 3% 3%;
+    border: none;
+    height: 30%;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    overflow-y: hidden;
+}
+
+.nbrs, .moyenne, .pcts, .misc {
+    display: none;
+}
+
+.swiper-container {
+    position: fixed;
+    top: 12%;
+    left: 0;
+    height: 78%;
+    border: none;
+}
+
+.swiper-wrapper {
+    top: 22%;
+    padding: 0 0;
+    border: none;
+    margin-bottom: 10%;
+}
+
+.swiper-slide {
+    background: white;
+    z-index: 5;
+    border-radius: 6px;
+    /* Center slide text vertically */
+    /*
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    */
+}
+
+.swiper-pagination {
+    margin-bottom: 15%;
+}
+
+
+@font-face {
+    font-family: SF-Text-Light;
+    src: url(../fonts/SF/SFProText-Light.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: SF-Text-Regular;
+    src: url(../fonts/SF/SFProText-Regular.ttf);
+    font-weight: normal;
+}

@@ -118,7 +118,7 @@ class Arc {
 
         //selectionne l'ID de l'arc dans la base de données.
         $requete = "SELECT ID_ARC FROM arc WHERE NOMARC = '$this->nom' AND ID_USER = '$this->idUser'";
-        $stmt = $con -> query($requete);
+        $stmt = $con->query($requete);
         $result = $stmt->rowCount();
         if($result == 0) {
             return false;

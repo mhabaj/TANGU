@@ -1,0 +1,74 @@
+.input-field {
+    position: fixed;
+    margin-top: 2%;
+    height: 6%;
+    width: 80%;
+    border-radius: 4px;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-family: SF-Text-Regular;
+    font-size: 1em;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    outline: none;
+}
+
+.tiny-input-field {
+    position: fixed;
+    margin-top: 2%;
+    height: 6%;
+    width: 40%;
+    border-radius: 4px;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-family: SF-Text-Regular;
+    font-size: 1em;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    outline: none;
+}
+
+.div-field {
+    border: none;
+    height: 16%;
+    width: 100%;
+    margin-bottom: 3%;
+}
+
+.sub-div-field-1 {
+    border-style: none;
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+.sub-div-field-2 {
+    border-style: none;
+    width: 50%;
+    height: 100%;
+    margin-left: 50%;
+}
+
+.tiny-div-field  {
+    border: none;
+    height: 16%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.title-field {
+    font-family: SF-Text-Semibold;
+    font-size: 1.25em;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+@font-face {
+    font-family: SF-Text-Regular;
+    src: url(../fonts/SF/SFProText-Regular.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: SF-Text-Semibold;
+    src: url(../fonts/SF/SFProText-Semibold.ttf);
+    font-weight: normal;
+}

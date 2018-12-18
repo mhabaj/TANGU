@@ -1,98 +1,95 @@
 #contentBox {
     border-style: none;
     position: fixed;
-    top: 15%;
-    height: 75%;
+    top: 0%;
+    height: 90%;
     width: 100%;
     left: 0%;
 }
 
-
-
-
-.blasonContainer {
-    display: none;
+#contentBox div > button {
+    position: fixed;
+    width: 100%;
+    border: none;
 }
 
-.arcContainer {
-    display: block;
-}
-
-.selectBox {
+#contentBox div, #contentBox div button {
+    z-index: 0;
     border-style: none;
     position: fixed;
-    top: 15%;
     left: 0;
-    height: 7%;
-    z-index: 10;
+    height: 46%;
+    width: 100%;
 }
 
-#selectBox i {
-    position: fixed;
-    top: 18%;
-    z-index: 10;
-    left: 20%;
+#arcBox, #arcButton {
+
 }
 
-select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+#arcButton {
+    background: url('../img/niklas-tidbury-317689-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    background-size: cover;
+    background-position: right;
 }
 
-#selectBox select {
-    position: fixed;
-    border-style: none;
-    top: 15%;
-    left: 5%;
-    height: 7%;
-    width: 25%;
-    min-width: 25%;
-    background: none;
-    font-family: SF-Text-Semibold;
-    font-size: 1.1em;
+/*
+#arcButton {
+    background: linear-gradient(to bottom right, rgba(91, 93, 56, 0.5), rgba(114, 107, 89, 0.2)), url('../img/niklas-tidbury-317689-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    background-size: cover;
+}*/
+
+#blasonBox, #blasonButton {
+    top: 46%;
 }
 
-.swiper-container {
-    position: fixed;
-    border-style: none;
+#blasonButton {
+    background: url('../img/annie-spratt-450567-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    background-size: cover;
+    background-position: bottom;
 }
 
-.swiper-wrapper {
-    position: fixed;
-    top: 12%;
-    bottom: 8%;
-    margin: auto 0;
-    border-style: none;
+/*
+#blasonButton {
+    border: none;
+    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.5), rgba(222, 226, 225, 0.2)), url('../img/blason-wallpaper-3.jpg');
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    background-size: cover;
+}
+*/
+#contentBox h3 {
+    z-index: 3;
+    font-size: 210%;
+    font-family: SF-Display-Regular;
+    color: white;
 }
 
-.swiper-slide {
-    height: 90%;
-    text-align: center;
-    font-size: 18px;
-    background: grey;
-    border-radius: 10px;
-    /* Center slide text vertically */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
+#arcButton h3 {
+    text-align: right;
+    margin-top: 15%;
+    margin-right: 10%;
 }
 
-.swiper-pagination {
-    margin-bottom: 10%;
+#blasonButton h3 {
+    text-align: right;
+    margin-right: 10%;
+    margin-top: 25%;
 }
 
 @font-face {
-    font-family: SF-Text-Semibold;
-    src: url(../fonts/SF/SFProText-Semibold.ttf);
+    font-family: SF-Display-Semibold;
+    src: url(../fonts/SF/SFProDisplay-Semibold.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: SF-Display-Semibold;
+    src: url(../fonts/SF/SFProDisplay-Regular.ttf);
     font-weight: normal;
 }
