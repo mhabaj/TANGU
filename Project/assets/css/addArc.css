@@ -15,3 +15,16 @@
     width: 100%;
     padding: 0 5%;
 }
+
+#right-btn {
+
+    display: none;
+
+}
+
+#messageBox p {
+
+    margin-top: 2%;
+    margin-bottom: 2%;
+
+}

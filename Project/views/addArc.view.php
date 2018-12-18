@@ -3,6 +3,9 @@
 
 
     <form method="POST" enctype="multipart/form-data" >
+
+        <h3>Création d'arc</h3>
+
         <div class="form-group">
             <label>Nom de l'arc
                 <mark>*</mark>

@@ -3,7 +3,7 @@ require_once 'controllers/functions/control-session.php';
 require_once 'controllers/classes/ConnexionBDD.php';
 $title = "Personnaliser";
 $left_url = "edit.php";
-$right_url = "#";
+$right_url = "addBlason.php";
 ?>
 <!DOCTYPE html>
 
@@ -56,6 +56,14 @@ $right_url = "#";
     <?php endif ;?>
     <?php include_once 'views/includes/footer.php'; ?>
 </div>
+
+<script>
+    let rightBtn = document.getElementById("right-btn");
+    rightBtn.disabled = false;
+    rightBtn.addEventListener('touchend', function () {
+        window.location = "<?=$right_url;?>"
+    });
+</script>
 
 </body>
 </html>

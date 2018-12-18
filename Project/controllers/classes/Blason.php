@@ -133,6 +133,7 @@ class Blason
             $logFile->open();
             $logFile->write($log_message);
             $logFile->close();
+            header('Location: editBlason.php');
         }
     }
 

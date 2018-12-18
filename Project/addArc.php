@@ -16,7 +16,7 @@ $right_url = "#";
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?= $title ?></title>
 
-    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/message.css">
     <link rel="stylesheet" href="assets/css/checkHeader.css">
     <link rel="stylesheet" href="assets/css/inputFieldCreator.css">
     <link rel="stylesheet" href="assets/css/addArc.css">
@@ -31,6 +31,7 @@ $right_url = "#";
     <script src="assets/js/inputFieldCreator.js"></script>
 </head>
 <body>
+<?php include 'views/includes/message.php'; ?>
 <?php include 'views/addArc.view.php'; ?>
 <?php if (isset($msg)) echo $msg; ?>
 <?php
@@ -63,11 +64,11 @@ if (isset($_POST['envoyerCreateArc'])) {
             }
         } else {
 
-            echo "<p>Veuillez entrer des données valides</p>";
+            echo "<script> triggerMessageBox('error','Veuillez entrer des données valides') </script>";
         }
     } else {
 
-        echo " <p> Les champs * sont obligatoires  </p> ";
+        echo " <script> triggerMessageBox('error','Les champs * sont obligatoires') </script> ";
 
     }
 }
