@@ -71,7 +71,8 @@
 
     var combo10 = 0;
 
-    let target = document.getElementById("target");
+    let target = document.getElementById("target"),
+        confetti = document.getElementById("confetti");
 
     let pts = [];
     for(let i = 0; i < nbrSeries; i++) {

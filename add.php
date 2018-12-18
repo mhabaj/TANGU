@@ -66,12 +66,14 @@ if(isset($_GET['submitBtn'])) {
         $blason_select = $_GET['blasons'];
         $bow_select = $_GET['bows'];
         if($blason_select != "null" && $bow_select != "null") {
-            $blasonID = (int) $blason_select;
-            $arcID = (int) $bow_select;
-            $date_time = date_format($date, "Y-m-d H:i");
-            $training = new Entrainement($name, $location, $date_time, $distance, $arcID, 1, $sets, $volleys, $arrows, $idUser);
-            $_SESSION['ID_ENT_USER'] = $training->getIDENTUser();
-            $_SESSION['training'] = serialize($training);
+            $_SESSION['name'] = $name;
+            $_SESSION['location'] = $location;
+            $_SESSION['date'] = $date;
+            $_SESSION['distance'] = $distance;
+            $_SESSION['sets'] = $sets;
+            $_SESSION['volleys'] = $volleys;
+            $_SESSION['blason_select'] = $blason_select;
+            $_SESSION['bow_select'] = $bow_select;
         } else {
             die();
         }

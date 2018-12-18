@@ -34,5 +34,10 @@ $title = "Entrainement";
 <body>
 <?php include_once 'views/includes/message.php' ;?>
 <?php include 'views/currentTraining.view.php'; ?>
+<?php
+if(isset($_GET['data'])) {
+
+}
+?>
 </body>
 </html>

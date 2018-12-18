@@ -37,8 +37,21 @@ $title = "Entrainement";
 <?php include_once 'views/includes/message.php' ;?>
 <?php
 if(isset($_GET['data'])) {
+    $name = $_SESSION['name'];
+    $location = $_SESSION['location'];
+    $date = date_create_from_format("d/m/Y h:i A", $_SESSION['date']);
+    $distance = $_SESSION['distance'];
+    $sets = $_SESSION['sets'];
+    $volleys = $_SESSION['volleys'];
+    $arrows = $_SESSION['arrows'];
+    $blason_select = $_SESSION['blasons'];
+    $bow_select = $_SESSION['bows'];
+    $blasonID = (int) $blason_select;
+    $arcID = (int) $bow_select;
+    $date_time = date_format($date, "Y-m-d H:i");
+    $training = new Entrainement($name, $location, $date_time, $distance, $arcID, $blasonID, $sets, $volleys, $arrows, $idUser);
     $data = json_decode($_GET['data']);
-    $serieController = new SerieController(unserialize($_SESSION['training']), $data);
+    $serieController = new SerieController($training, $data);
     $serieModel = new Serie($serieController);
 }
 ?>
