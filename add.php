@@ -72,7 +72,8 @@ if(isset($_GET['submitBtn'])) {
             $date_time = date_format($date, "Y-m-d H:i");
             $training = new Entrainement($name, $location, $date_time, $distance, $arcID, 1, $sets, $volleys, $arrows, $idUser);
             $serieController = new SerieController($training);
-            $_SESSION['serieController'] = serialize($serieController);
+            echo serialize($serieController);
+            //$_SESSION['serieController'] = serialize($serieController);
         } else {
             exit();
         }

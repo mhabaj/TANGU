@@ -1,6 +1,6 @@
 <div class="container-fluid addTraining" id="mainBox">
     <?php include 'includes/back-header.php';?>
-    <form method="get" action="" id="newTrainingForm">
+    <form method="get" action="currentTraining.php" id="newTrainingForm">
         <h3 id="formTitle">Add a new training</h3>
         <div id="nameField">
             <h3>Your Training Name</h3>
@@ -14,7 +14,7 @@
             <h3>The Date</h3>
             <input type="text" name="date" class="datepicker-here" id="dateInput" data-position="top left" data-timepicker="true" data-time-format='h:ii AA' data-language="fr" placeholder="Pick a date...">
         </div>
-        <div id="distanceField">
+        <div id="distanceField"> 
             <h3>Distance(m)</h3>
             <input type="number" name="distance" id="distanceInput"  min="1" max="30" placeholder="Distance...">
         </div>
