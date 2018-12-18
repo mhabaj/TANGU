@@ -66,14 +66,15 @@ if(isset($_GET['submitBtn'])) {
         $blason_select = $_GET['blasons'];
         $bow_select = $_GET['bows'];
         if($blason_select != "null" && $bow_select != "null") {
-            $_SESSION['name'] = $name;
+            //$_SESSION['name'] = 'bitch';
+            /*
             $_SESSION['location'] = $location;
             $_SESSION['date'] = $date;
             $_SESSION['distance'] = $distance;
             $_SESSION['sets'] = $sets;
             $_SESSION['volleys'] = $volleys;
             $_SESSION['blason_select'] = $blason_select;
-            $_SESSION['bow_select'] = $bow_select;
+            $_SESSION['bow_select'] = $bow_select;*/
         } else {
             die();
         }

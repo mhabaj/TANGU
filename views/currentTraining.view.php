@@ -351,9 +351,12 @@
             if (this.readyState == 4 && this.status == 200) {
             }
         };
-        console.log(window.location.href);
+
         //let currentURL = window.location.href,
-        let newURL = "endTraining.php?" + "data=" + str;
+        //let newURL = "endTraining.php?" + "data=" + str;
+
+        //let newURL = "endTraining.php?"+ "data=" + str;
+
         xmlhttp.open("GET", newURL, true);
         xmlhttp.send();
         window.setTimeout(function () {
@@ -385,7 +388,6 @@
                         //console.log(pts);
                         killTouchEvents();
                         let ptsArray = JSON.stringify(pts);
-
                         popUpMsgElement.innerHTML = "Fin de l'entrainement";
                         showMessage(1000, 1500, false);
                         sendData(ptsArray);
