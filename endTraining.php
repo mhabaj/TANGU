@@ -3,6 +3,8 @@ require('controllers/functions/control-session.php');
 require_once 'controllers/functions/sanitize.php';
 require_once 'controllers/classes/ConnexionBDD.php';
 require_once 'controllers/classes/Entrainement.php';
+require_once 'controllers/classes/SerieController.php';
+require_once 'models/Serie.php';
 
 $title = "Entrainement";
 ?>
@@ -33,6 +35,12 @@ $title = "Entrainement";
 </head>
 <body>
 <?php include_once 'views/includes/message.php' ;?>
-<?php var_dump($_POST['data']);?>
+<?php
+if(isset($_GET['data'])) {
+    $data = json_decode($_GET['data']);
+    $serieController = new SerieController(unserialize($_SESSION['training']), $data);
+    $serieModel = new Serie($serieController);
+}
+?>
 </body>
 </html>

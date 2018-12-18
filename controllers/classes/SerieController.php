@@ -13,11 +13,13 @@ class SerieController {
     private $nbrVolee;
     private $nbrTir;
     private $idEnt;
-    public function __construct($training) {
+    public function __construct($training, $data) {
         $this->training = $training;
         $this->nbrSerie = $training->getNbrSerie();
         $this->nbrVolee = $training->getNbrVolee();
         $this->nbrTir = $training->getNbrTir();
+        $this->serie = $data;
+        /*
         $this->serie = array_fill(0, $training->getNbrSerie(), []);
         for ($i = 0; $i < $this->nbrSerie; $i++) {
             $this->serie[$i] = array_fill(0, $this->nbrVolee, []);
@@ -26,8 +28,9 @@ class SerieController {
             for ($k = 0; $k < $this->nbrVolee; $k++) {
                 $this->serie[$j][$k] = array_fill(0, $this->nbrTir, 0);
             }
-        }
+        }*/
     }
+
     public function getVoleeStat($numSerie, $numVolee) {
         if($numSerie > $this->nbrSerie || $numVolee > $this->nbrVolee) {
             echo "Erreur: cette serie ou cette volee n'existe pas";
@@ -138,6 +141,11 @@ class SerieController {
     public function setTir($numSerie, $numVolee, $numTir, $value) {
         $this->serie[$numSerie-1][$numVolee-1][$numTir-1] = $value;
     }
+
+    public function setSerie($serie) {
+        $this->serie = $serie;
+    }
+
     public function getSerie() {
         return $this->serie;
     }

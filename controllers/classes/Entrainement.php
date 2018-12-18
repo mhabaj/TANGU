@@ -247,6 +247,10 @@ class entrainement
         return $this->nbfleches;
     }
 
+    public function getIDENTUser() {
+        return $this->new_ID_Ent;
+    }
+
 ////////////////////////////////////////////////////////////////////////////////////////////
 
 

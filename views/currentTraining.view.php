@@ -351,8 +351,8 @@
             }
         };
         console.log(window.location.href);
-        let currentURL = window.location.href,
-            newURL = currentURL + "&data=" + str;
+        //let currentURL = window.location.href,
+        let newURL = "endTraining.php?" + "data=" + str;
         xmlhttp.open("GET", newURL, true);
         xmlhttp.send();
         window.setTimeout(function () {
@@ -382,6 +382,7 @@
                     if(countSeries >= nbrSeries) {
                         //$('.point').remove();
                         //console.log(pts);
+                        killTouchEvents();
                         let ptsArray = JSON.stringify(pts);
 
                         popUpMsgElement.innerHTML = "Fin de l'entrainement";
@@ -465,7 +466,6 @@
 
     function launchTouchEvents() {
         target1.addEventListener('touchend', touchHandler);
-
         target2.addEventListener('touchend', touchHandler);
         target3.addEventListener('touchend', touchHandler);
         target4.addEventListener('touchend', touchHandler);

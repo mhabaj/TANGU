@@ -3,7 +3,6 @@ require('controllers/functions/control-session.php');
 require_once 'controllers/functions/sanitize.php';
 require_once 'controllers/classes/ConnexionBDD.php';
 require_once 'controllers/classes/Entrainement.php';
-require_once 'controllers/classes/SerieController.php';
 
 $title = "Nouvel Entrainement";
 $left_url = "training.php";
@@ -71,15 +70,14 @@ if(isset($_GET['submitBtn'])) {
             $arcID = (int) $bow_select;
             $date_time = date_format($date, "Y-m-d H:i");
             $training = new Entrainement($name, $location, $date_time, $distance, $arcID, 1, $sets, $volleys, $arrows, $idUser);
-            $serieController = new SerieController($training);
-            echo serialize($serieController);
-            //$_SESSION['serieController'] = serialize($serieController);
+            $_SESSION['ID_ENT_USER'] = $training->getIDENTUser();
+            $_SESSION['training'] = serialize($training);
         } else {
-            exit();
+            die();
         }
 
     } else {
-        exit();
+        die();
     }
 }
 

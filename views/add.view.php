@@ -14,7 +14,7 @@
             <h3>The Date</h3>
             <input type="text" name="date" class="datepicker-here" id="dateInput" data-position="top left" data-timepicker="true" data-time-format='h:ii AA' data-language="fr" placeholder="Pick a date...">
         </div>
-        <div id="distanceField"> 
+        <div id="distanceField">
             <h3>Distance(m)</h3>
             <input type="number" name="distance" id="distanceInput"  min="1" max="30" placeholder="Distance...">
         </div>
