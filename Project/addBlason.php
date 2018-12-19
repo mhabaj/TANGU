@@ -57,7 +57,7 @@ $right_url = "#";
             </div>
 
             <div class="form-group">
-                <h5>Photo de l'arc</h5><input type="image" max="1024" value="" name="Photo">
+                <h5>Photo du Blason</h5><input type="image" max="1024" value="" name="Photo">
 
                 <input type="hidden" name="MAX_FILE_SIZE" value="8388608">
                 <label for="photo"> Photo (JPG, JPEG, PNG or GIF | max.8 Mo) :</label><br/>

@@ -32,7 +32,7 @@
         </div>
 
         <div class="form-group">
-            <label>Force de l'arc
+            <label>Force de l'arc (N)
                 <mark>*</mark>
             </label>
             <input type="number" class="form-control" placeholder="Force de l'arc" max="190" min="1"
