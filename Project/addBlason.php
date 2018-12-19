@@ -2,7 +2,7 @@
 include('controllers/classes/Blason.php');
 include('controllers/functions/functions.php');
 include('controllers/functions/uploadImage.php');
-$title = "Ajouter un arc";
+$title = "Ajouter un Blason";
 $left_url = "editBlason.php";
 $right_url = "#";
 ?>
@@ -16,6 +16,8 @@ $right_url = "#";
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Nouveau Blason</title>
 
+
+    <link rel="stylesheet" href="assets/css/message.css">
     <link rel="stylesheet" href="assets/css/checkHeader.css">
     <link rel="stylesheet" href="assets/css/addArc.css">
     <link rel="stylesheet" href="assets/css/navbar.css">
@@ -29,7 +31,7 @@ $right_url = "#";
 </head>
 
 <body>
-
+<?php include 'views/includes/message.php'; ?>
 <div class="container-fluid" id="mainBox">
     <?php include 'views/includes/back-header.php'; ?>
     <?php if (isset($msg)) echo $msg; ?>
@@ -40,6 +42,7 @@ $right_url = "#";
                 <label>Nom du Blason
                     <mark>*</mark>
                 </label>
+                <small>(Entre 1 et 20 caractères)</small>
                 <input type="Text" class="form-control" max="20" placeholder="Nom du blason" min="1" name="NomBlason">
             </div>
 
@@ -48,43 +51,62 @@ $right_url = "#";
                 <label>Taille du Blason
                     <mark>*</mark>
                 </label>
+                <small>(Entre 1 et 120)</small>
                 <input class="form-control" type="number" placeholder="Taille du Blason" max="127" min="1"
                        name="TailleBlason">
+            </div>
+
+            <div class="form-group">
+                <h5>Photo de l'arc</h5><input type="image" max="1024" value="" name="Photo">
+
+                <input type="hidden" name="MAX_FILE_SIZE" value="8388608">
+                <label for="photo"> Photo (JPG, JPEG, PNG or GIF | max.8 Mo) :</label><br/>
+                <input type="file" id="photo" name="photo"/><br/>
+                <br>
             </div>
 
             <button type="submit" name="envoyerCreateBlas" class="btn btn-primary">Valider</button>
         </form>
     </div>
-    <?php if (isset($_POST['envoyerCreateBlas'])) {
+    <?php
 
-        $nom = $_POST['NomBlason'];
+    if (isset($_POST['envoyerCreateBlas'])) {
+
+
+        $nom = htmlspecialchars(($_POST['NomBlason']));
         $taille = $_POST['TailleBlason'];
         $idUser = $_SESSION['ID'];
 
 
-        if (checkNom($nom) == true) {
-
-            if (!empty($nom) && !empty($taille) && !empty($idUser)) {
+        if (!empty($nom) && !empty($taille)) {
 
 
-                if (is_numeric($taille) and $taille <= 300) {
+            if (is_numeric($taille) and $taille <= 299) {
 
-                    if (checkNom($nom) == true) {
-
-
-                        $photo = null;
+                if (checkNom($nom) == true) {
 
 
-                        $blason = new Blason($nom, $taille, $photo, $idUser);
+                    $photo = uploadImage('blason');
 
 
-                    }
+                    $blason = new Blason($nom, $taille, $photo);
+
+
                 } else {
 
-                    echo '<p> Merci de remplir et verifier tous les champs </p>';
+                    echo " <script > triggerMessageBox('error', 'Le nom doit être inférieur ou égale à 20 caractères') </script >";;
 
                 }
+            } else {
+
+                echo " <script > triggerMessageBox('error', 'Saisie taille invalide') </script >";;
+
             }
+
+        } else {
+
+            echo " <script > triggerMessageBox('error', 'Veuillez remplir tous des champs') </script >";;
+
         }
     }
 

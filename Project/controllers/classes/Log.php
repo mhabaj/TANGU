@@ -30,13 +30,13 @@ class Log {
             $text = $msg_type . $sep . $msg . $sep . $location . $sep . $time . PHP_EOL;
             
             fwrite($this->fp, $text);
-            echo "<p>Message ecrit</p>";
+           // echo "<p>Message ecrit</p>";
         }
     }
     
     public function open() {
         $this->fp = fopen($this->file_name, 'a') or die("Impossible d'ouvrir le fichier");
-        echo "<p>Fichier ouvert</p>";
+        //echo "<p>Fichier ouvert</p>";
         return $this->fp;
     }
     
@@ -52,7 +52,5 @@ class Log {
 
 
 $logFile = new Log('controllers/logs/logs.txt');
-//$myfile->open();
-//$myfile->write('Erreur log', 'Erreur');
-//$myfile->close();
+
 ?>

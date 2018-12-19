@@ -2,7 +2,7 @@
     <?php include 'views/includes/back-header.php'; ?>
 
 
-    <form method="POST" enctype="multipart/form-data" >
+    <form method="POST" enctype="multipart/form-data">
 
         <h3>Création d'arc</h3>
 
@@ -52,14 +52,14 @@
             <textarea class="form-control" id="Commentairesdivers" rows="3" name="commArc" max="120"
                       placeholder="Commentaires"></textarea>
         </div>
+        <div class="form-group">
+            <h5>Photo de l'arc</h5><input type="image" max="1024" value="" name="Photo">
 
-        <h5>Photo de l'arc</h5><input type="image" max="1024" value="" name="Photo">
-
-        <input type="hidden" name="MAX_FILE_SIZE" value="8388608">
-        <label for="photo"> Photo (JPG, JPEG, PNG or GIF | max.8 Mo) :</label><br/>
-        <input type="file" id="photo" name="photo"/><br/>
-        <br>
-
+            <input type="hidden" name="MAX_FILE_SIZE" value="8388608">
+            <label for="photo"> Photo (JPG, JPEG, PNG or GIF | max.8 Mo) :</label><br/>
+            <input type="file" id="photo" name="photo"/><br/>
+            <br>
+        </div>
 
         <button type="submit" name="envoyerCreateArc" class="btn btn-primary">Submit</button>
     </form>

@@ -7,7 +7,8 @@ require_once('controllers/classes/Log.php');
 /**
  * Elle permet de creer et supprimer des arcs.
  */
-class Arc {
+class Arc
+{
 
     /**
      * ID de l'arc générer par la base de données.
@@ -74,37 +75,39 @@ class Arc {
      * @param $picture
      */
 
-	public function __construct($name, $weight, $size, $power, $type,$commArc, $picture) {
-        
+    public function __construct($name, $weight, $size, $power, $type, $commArc, $picture)
+    {
+
         $this->userID = $_SESSION['ID'];
-		$this->name = addslashes($name);
+        $this->name = addslashes($name);
         $this->weight = $weight;
         $this->size = $size;
         $this->power = $power;
-		$this->type = addslashes($type);
-		$this->commArc = $commArc;
-		$this->picture = $picture;
+        $this->type = addslashes($type);
+        $this->commArc = $commArc;
+        $this->picture = $picture;
 
         $this->creerArc();
 
         $this->bowID = $this->getArcID();
-	}
+    }
 
     /**
      * Renvoie l'ID de l'arc.
      * Utile pour ensuite le recuperer dans la base de données.
      * @return mixed
      */
-    public function getArcID() {
+    public function getArcID()
+    {
 
         $bdd = new ConnexionBDD();
         $con = $bdd->getCon();
 
         $requete = "SELECT ID_ARC FROM arc WHERE ID_USER = '$this->userID' AND NOMARC = '$this->name' AND POIDSARC = '$this->weight' AND TAILLEARC = '$this->size' AND PWRARC = '$this->power' AND TYPEARC = '$this->type' AND PHOTOARC = '$this->picture'";
-        $reponse = $con-> query($requete);
+        $reponse = $con->query($requete);
         $donne = $reponse->fetch();
         $idArc = $donne['ID_ARC'];
-         return $idArc;
+        return $idArc;
     }
 
     /**
@@ -112,7 +115,8 @@ class Arc {
      * Appeller avant d'envoyer les valeurs dans la base de données.
      * @return bool
      */
-	public function checkArc() {
+    public function checkArc()
+    {
 
         $bdd = new ConnexionBDD();
         $con = $bdd->getCon();
@@ -120,10 +124,14 @@ class Arc {
         $requete = "SELECT ID_ARC FROM arc WHERE NOMARC = '$this->name' AND ID_USER = '$this->userID'";
         $stmt = $con->query($requete);
         $result = $stmt->rowCount();
-        if($result == 0) {
+        if ($result == 0) {
             return false;
         } else {
-            echo "<p> Cet arc existe deja</p>";
+
+
+            echo " <script > triggerMessageBox('error', 'Cet arc existe déjà!') </script >";
+
+
         }
         return true;
     }
@@ -132,11 +140,12 @@ class Arc {
      * Récupère ces valeurs et les envoies dans la base de données.
      * Utilise checkArc.
      */
-	public function creerArc() {
+    public function creerArc()
+    {
         $bdd = new ConnexionBDD();
         $con = $bdd->getCon();
         global $logFile;
-        
+
         if ($this->checkArc() == false) {
 
             $requete = "INSERT INTO arc (ID_USER, NOMARC, POIDSARC, TAILLEARC, PWRARC, TYPEARC, PHOTOARC, COMMARC) VALUES (:idUser, :nomArc, :poidsArc, :tailleArc, :pwrArc, :typeArc, :photoArc,:commArc)";
@@ -156,30 +165,39 @@ class Arc {
             $logFile->write($log_message);
             $logFile->close();
             header('Location: editArc.php');
+        } else {
+
+
+            echo " <script > triggerMessageBox('error', 'Données saisis invalides ou arc existe déjà') </script >";
+
+
         }
     }
 
     /**
      * Supprime l'arc de la base de données.
      */
-	public function supprimerArc() {
+    public function supprimerArc()
+    {
 
         global $logFile;
         $bdd = new ConnexionBDD();
         $con = $bdd->getCon();
-        
+
         $arcID = $this->getArcID();
         $requete = "DELETE FROM arc WHERE ID_ARC = '$arcID'";
         $con->exec($requete);
 
-        $log_message = "idArc: " . $arcID ." supprimé par idUser: " . $this->userID;
+        $log_message = "idArc: " . $arcID . " supprimé par idUser: " . $this->userID;
         $logFile->open();
         $logFile->write($log_message);
         $logFile->close();
-	}
-    
-    public function __destruct(){
+    }
+
+    public function __destruct()
+    {
 
     }
 }
+
 ?>

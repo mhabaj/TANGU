@@ -47,11 +47,11 @@ class Blason
      * @param $picture
      * @param $userID
      */
-    public function __construct($name, $size, $picture, $userID)
+    public function __construct($name, $size, $picture)
     {
 
 
-        $this->userID = $userID;
+        $this->userID = $_SESSION['ID'];
         $this->name = addslashes($name);
         $this->size = $size;
         $this->picture = $picture;
@@ -99,7 +99,11 @@ class Blason
         if ($result == 0) {
             return false;
         } else {
-            echo '<p>Ce blason existe deja</p>';
+
+
+            echo " <script > triggerMessageBox('error', 'Cet Blason existe déjà!') </script >";
+
+
         }
         return true;
 
@@ -134,30 +138,45 @@ class Blason
             $logFile->write($log_message);
             $logFile->close();
             header('Location: editBlason.php');
+        }else {
+
+
+            echo " <script > triggerMessageBox('error', 'Données saisis invalides ou Blason existe déjà') </script >";
+
+
         }
     }
 
     /**
      * Supprime le blason de la base de données.
+     * @param $idBlason
      */
-    public function supprimerBlason()
+    public static function supprimerBlason($idBlason)
     {
 
         global $logFile;
 
+
         $bdd = new ConnexionBDD();
         $con = $bdd->getCon();
 
-        $blasID = $this->blazID;
-        $requete = "DELETE FROM blason WHERE ID_BLAS = '$blasID'";
+
+        $requete = "DELETE FROM blason WHERE ID_BLAS = '$idBlason'";
 
         $con->exec($requete);
 
-        $log_message = "idBlas: " . $blasID . " supprimé par idUser: " . $this->userID;
+        $log_message = "idBlas: " . $idBlason . " supprimé par idUser: " . $_SESSION['ID'];;
 
         $logFile->open();
         $logFile->write($log_message);
         $logFile->close();
+
+
     }
 }
+
+
+
 ?>
+
+

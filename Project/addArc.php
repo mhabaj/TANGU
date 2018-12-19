@@ -58,7 +58,7 @@ if (isset($_POST['envoyerCreateArc'])) {
 
                 $photo = uploadImage('arc');
 
-                $arc = new Arc($nom, $poids, $taille, $pwr, $type, $photo, $commArc, $idUser);
+                $arc = new Arc($nom, $poids, $taille, $pwr, $type, $commArc,$photo );
 
 
             }
