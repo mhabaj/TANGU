@@ -1,17 +1,7 @@
 <?php
 
-try {
     require_once('controllers/classes/ConnexionBDD.php');
     require_once('controllers/classes/Log.php');
-}catch (PDOException $e) {
-    die("Erreur connexion bdd : " . $e->getMessage());
-}
-try {
-    require_once('../controllers/classes/ConnexionBDD.php');
-    require_once('../controllers/classes/Log.php');
-}catch (PDOException $e) {
-    die("Erreur connexion bdd : " . $e->getMessage());
-}
 
 /**
  * Elle permet de creer et supprimer des blasons.
