@@ -10,6 +10,7 @@
                         <a href="pseudo.php"><p>Pseudo</p></a>
                     </button>
                 </div>
+
                 <div id="button2">
                     <button id="passwordBtn">
                         <a href="password.php"><p>Mot de Passe</p></a>

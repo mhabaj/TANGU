@@ -164,7 +164,8 @@ class Arc
             $logFile->open();
             $logFile->write($log_message);
             $logFile->close();
-            header('Location: editArc.php');
+
+           echo'<script> window.location.href="editArc.php";</script>';
         } else {
 
 
@@ -177,21 +178,27 @@ class Arc
     /**
      * Supprime l'arc de la base de données.
      */
-    public function supprimerArc()
+    public static function supprimerBlason($idArc)
     {
 
         global $logFile;
+
+
         $bdd = new ConnexionBDD();
         $con = $bdd->getCon();
 
-        $arcID = $this->getArcID();
-        $requete = "DELETE FROM arc WHERE ID_ARC = '$arcID'";
+
+        $requete = "DELETE FROM arc WHERE ID_ARC = '$idArc'";
+
         $con->exec($requete);
 
-        $log_message = "idArc: " . $arcID . " supprimé par idUser: " . $this->userID;
+        $log_message = "idArc: " . $idArc . " supprimé par idUser: " . $_SESSION['ID'];;
+
         $logFile->open();
         $logFile->write($log_message);
         $logFile->close();
+
+
     }
 
     public function __destruct()
