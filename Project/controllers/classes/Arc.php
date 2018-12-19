@@ -1,8 +1,18 @@
 <?php
 
-require_once('controllers/classes/ConnexionBDD.php');
+try {
+    // require_once('controllers/classes/ConnexionBDD.php');
+    //require_once('controllers/classes/Log.php');
+} catch (PDOException $e) {
+    //die("Erreur connexion bdd : " . $e->getMessage());
+}
+try {
+    require_once('../controllers/classes/ConnexionBDD.php');
+    require_once('../controllers/classes/Log.php');
+} catch (PDOException $e) {
+    die("Erreur connexion bdd : " . $e->getMessage());
+}
 
-require_once('controllers/classes/Log.php');
 
 /**
  * Elle permet de creer et supprimer des arcs.
@@ -78,7 +88,8 @@ class Arc
     public function __construct($name, $weight, $size, $power, $type, $commArc, $picture)
     {
 
-        $this->userID = $_SESSION['ID'];
+        $userID = $_SESSION['ID'];
+        $this->userID = $userID;
         $this->name = addslashes($name);
         $this->weight = $weight;
         $this->size = $size;
@@ -91,6 +102,12 @@ class Arc
 
         $this->bowID = $this->getArcID();
     }
+
+    public function setUp()
+    {
+        $idUser = 1;
+    }
+
 
     /**
      * Renvoie l'ID de l'arc.
@@ -165,7 +182,7 @@ class Arc
             $logFile->write($log_message);
             $logFile->close();
 
-           echo'<script> window.location.href="editArc.php";</script>';
+            echo '<script> window.location.href="editArc.php";</script>';
         } else {
 
 

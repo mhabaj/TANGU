@@ -1,0 +1,95 @@
+#contentBox {
+    border-style: none;
+    position: fixed;
+    top: 0%;
+    height: 90%;
+    width: 100%;
+    left: 0%;
+}
+
+#contentBox div > button {
+    position: fixed;
+    width: 100%;
+    border: none;
+}
+
+#contentBox div, #contentBox div button {
+    z-index: 0;
+    border-style: none;
+    position: fixed;
+    left: 0;
+    height: 46%;
+    width: 100%;
+}
+
+#arcBox, #arcButton {
+
+}
+
+#arcButton {
+    background: url('../img/niklas-tidbury-317689-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    background-size: cover;
+    background-position: right;
+}
+
+/*
+#arcButton {
+    background: linear-gradient(to bottom right, rgba(91, 93, 56, 0.5), rgba(114, 107, 89, 0.2)), url('../img/niklas-tidbury-317689-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    background-size: cover;
+}*/
+
+#blasonBox, #blasonButton {
+    top: 46%;
+}
+
+#blasonButton {
+    background: url('../img/annie-spratt-450567-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    background-size: cover;
+    background-position: bottom;
+}
+
+/*
+#blasonButton {
+    border: none;
+    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.5), rgba(222, 226, 225, 0.2)), url('../img/blason-wallpaper-3.jpg');
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    background-size: cover;
+}
+*/
+#contentBox h3 {
+    z-index: 3;
+    font-size: 210%;
+    font-family: SF-Display-Regular;
+    color: white;
+}
+
+#arcButton h3 {
+    text-align: right;
+    margin-top: 15%;
+    margin-right: 10%;
+}
+
+#blasonButton h3 {
+    text-align: right;
+    margin-right: 10%;
+    margin-top: 25%;
+}
+
+@font-face {
+    font-family: SF-Display-Semibold;
+    src: url(../fonts/SF/SFProDisplay-Semibold.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: SF-Display-Semibold;
+    src: url(../fonts/SF/SFProDisplay-Regular.ttf);
+    font-weight: normal;
+}
