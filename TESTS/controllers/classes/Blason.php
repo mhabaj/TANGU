@@ -1,17 +1,7 @@
 <?php
 
-try {
-    require_once('controllers/classes/ConnexionBDD.php');
-    require_once('controllers/classes/Log.php');
-}catch (PDOException $e) {
-    die("Erreur connexion bdd : " . $e->getMessage());
-}
-try {
-    require_once('../controllers/classes/ConnexionBDD.php');
-    require_once('../controllers/classes/Log.php');
-}catch (PDOException $e) {
-    die("Erreur connexion bdd : " . $e->getMessage());
-}
+require_once('../controllers/classes/ConnexionBDD.php');
+
 
 /**
  * Elle permet de creer et supprimer des blasons.
@@ -54,13 +44,12 @@ class Blason
      * @param $name
      * @param $size
      * @param $picture
-     * @param $userID
      */
     public function __construct($name, $size, $picture)
     {
 
 
-        $this->userID = $_SESSION['ID'];
+        $this->userID = 1;
         $this->name = addslashes($name);
         $this->size = $size;
         $this->picture = $picture;
@@ -110,7 +99,7 @@ class Blason
         } else {
 
 
-            echo " <script > triggerMessageBox('error', 'Cet Blason existe déjà!') </script >";
+            echo "Cet Blason existe déjà!";
 
 
         }
@@ -124,7 +113,7 @@ class Blason
      */
     public function creerBlason()
     {
-        global $logFile;
+
 
         $bdd = new ConnexionBDD();
         $con = $bdd->getCon();
@@ -141,16 +130,11 @@ class Blason
 
             $add->execute();
 
-            $log_message = "Nouveau blason crée par idUser: " . $this->userID;
 
-            $logFile->open();
-            $logFile->write($log_message);
-            $logFile->close();
-            header('Location: editBlason.php');
-        }else {
+        } else {
 
 
-            echo " <script > triggerMessageBox('error', 'Données saisis invalides ou Blason existe déjà') </script >";
+            echo 'Données saisis invalides ou Blason existe déjà';
 
 
         }
@@ -160,30 +144,21 @@ class Blason
      * Supprime le blason de la base de données.
      * @param $idBlason
      */
-    public static function supprimerBlason($idBlason)
+    public function supprimerBlason()
     {
-
-        global $logFile;
 
 
         $bdd = new ConnexionBDD();
         $con = $bdd->getCon();
 
-
-        $requete = "DELETE FROM blason WHERE ID_BLAS = '$idBlason'";
+        $blasID = $this->blazID;
+        $requete = "DELETE FROM blason WHERE ID_BLAS = '$blasID'";
 
         $con->exec($requete);
-
-        $log_message = "idBlas: " . $idBlason . " supprimé par idUser: " . $_SESSION['ID'];;
-
-        $logFile->open();
-        $logFile->write($log_message);
-        $logFile->close();
 
 
     }
 }
-
 
 
 ?>

@@ -96,10 +96,7 @@ class Arc
         $this->bowID = $this->getArcID();
     }
 
-    public function setUp()
-    {
-        $idUser = 1;
-    }
+
 
 
     /**

@@ -42,6 +42,11 @@ class ArcTest extends PHPUnit\Framework\TestCase {
 
     }
 
+    /**
+     *Le but de cette méthode de test est de montrer comment à la fois on peut reprerer des failles
+     * dans le traitement des données avant la base de données et aussi comment la base de données
+     * est configuré contre certains types d'erreurs.
+     */
     public function testCreaArcFalse() {
 
         $arc1 = new Arc("arcf","","","","classique","dfrgrhsfdtfv","rhbfgdgdvbngf");

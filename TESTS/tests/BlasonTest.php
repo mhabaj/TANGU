@@ -32,28 +32,22 @@ class BlasonTest extends TestCase {
 
     }
 
-    public function testModifBlason() {
 
-        $blason = new Blason("blason3",15,"rhbfgdgdvbngf");
-        $attr = array("NOMBLAS" => NULL, "TAILLEBLAS" => 20, "PHOTOBLAS" => "rthbhgfghbfhdr");
-        /*
-        $blason->modifierBlason($attr);
-        $this->assertEquals("blason3", $blason->getNom(), "Le nom a été modifié");
-        $this->assertEquals(20, $blason->getTaille(), "Le poids n'a pas été modifié");
-        $this->assertEquals("rthbhgfghbfhdr", $blason->getPhoto(), "La photo n'a pas été modifié");
-        */
-
-    }
 
     public function testSupprBlason() {
 
-        $blason = new Blason("blason4",25,"rhbf5tfhh5bngf");
-        $this->assertEquals(4, $blason->getBlasonID(), "Le blason n°4 n'a pas été crée");
+        $blason = new Blason("blason3",25,"rhbf5tfhh5bngf");
+        $this->assertEquals(3, $blason->getBlasonID(), "Le blason n°3 n'a pas été crée");
         $blason->supprimerBlason();
-        $this->assertEquals(null, $blason->getBlasonID(), "Le blason n°4 n'a pas été supprimé");
+        $this->assertEquals(null, $blason->getBlasonID(), "Le blason n°3 n'a pas été supprimé");
 
     }
 
+    /**
+     *Le but de cette méthode de test est de montrer comment à la fois on peut reprerer des failles
+     * dans le traitement des données avant la base de données et aussi comment la base de données
+     * est configuré contre certains types d'erreurs.
+     */
     public function testCreaBlasonFalse() {
 
         $blason1 = new Blason("arcf","","dfrgrhsfdtfv");
