@@ -432,3 +432,4 @@
 [Type: Info]::[Message: idArc: 11 supprimé par idUser: 1]::[Location: /TANGU/TANGU/Project/editArc.php]::[19/12/2018:16:29:57]
 [Type: Info]::[Message: Nouvel arc crée par idUser: 1]::[Location: /TANGU/TANGU/Project/addArc.php]::[19/12/2018:16:30:30]
 [Type: Info]::[Message: Nouvel arc crée par idUser: 1]::[Location: /TANGU/TANGU/Project/addArc.php]::[19/12/2018:16:31:30]
+[Type: Info]::[Message: Nouvel arc crée par idUser: 1]::[Location: /TANGU/TANGU/Project/addArc.php]::[19/12/2018:21:36:08]
