@@ -247,31 +247,6 @@ class entrainement
         return $this->nbfleches;
     }
 
-////////////////////////////////////////////////////////////////////////////////////////////
-
-
-    //   public function lancerEntrainement($ID_ENT, $nbserie, $nbvolees, $nbfleches)
-    // {
-
-
-    //}
-
 
 }
-
-//$nom = "nom1";
-//$lieu = "lieu1";
-//$date = "2018-12-07 01:30";
-//$distance = 15;
-//$id_arc = 1;
-//$ID_blason = 1;
-//$nbserie = 2;
-//$nbvolees = 5;
-//$nbfleches = 3;
-
-//$ent1=new entrainement($nom,$lieu,$date,$distance,$id_arc,$ID_blason,$nbserie,$nbvolees,$nbfleches);
-//$ent1->creerEntrainement($nom,$lieu,$date,$distance,1,$ID_blason,$nbserie,$nbvolees,$nbfleches);
-//$genENTRAINEMENTID=entrainement::genIdEntrainement(8,1);
-//echo $genENTRAINEMENTID;
-
 

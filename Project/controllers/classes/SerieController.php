@@ -1,6 +1,6 @@
 <?php
 
-include 'Entrainement.php';
+
 
 
 class SerieController
@@ -118,9 +118,14 @@ class SerieController
         }
         return $stats;
     }
-    //setter qui place le nombre de pts pour chaque tir
-    //$data est de taille $nbrTirs et contient les valeurs des pts pour chaque tir
-    public function setVolee($numSerie, $numVolee, $data)
+   /*
+*   setter qui place le nombre de pts pour chaque tir
+ * $data est de taille $nbrTirs et contient les valeurs des pts pour chaque tir
+  *@param $numSerie
+   *@param $numVolee
+    *@param $data
+	*/  
+public function setVolee($numSerie, $numVolee, $data)
     {
         foreach ($data as $fleche) {
             if ($fleche > 10 || $fleche < 0) {
@@ -215,23 +220,4 @@ class SerieController
     }
 }
 
-/*
-$training = new Entrainement('nom', 'lieu', '', '10', '1', '1', 2, 3, 10, 1);
-$serieController = new SerieController($training);
-$data = [9, 9, 9, 9, 9, 9, 9, 9, 9, 9];
-$data2 = [9, 9, 9, 9, 9, 9, 9, 9, 9, 9];
-$data3 = [9, 9, 9, 9, 9, 9, 9, 9, 9, 9];
-$data4 = [null, null, null, null, null, null, null, null, null, 5];
-$serieController->setVolee(1, 1, $data);
-$serieController->setVolee(1, 2, $data2);
-$serieController->setVolee(1, 3, $data3);
-$arr = $serieController->getSerie();
-$stats = $serieController->getSerieStat(1);
-var_dump($arr);
-$serieController->setVolee(1, 1, $data4);
-$arr = $serieController->getSerie();
-var_dump($arr);
-$serieController->setTir(1, 1, 10, 0);
-$arr = $serieController->getSerie();
-var_dump($arr);*/
 ?>

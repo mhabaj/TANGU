@@ -1,5 +1,5 @@
 <?php
-//require_once '../classes/ConnexionBDD.php';
+
 
 function redirect($url, $permanent = false) {
     if ($permanent) {
@@ -8,9 +8,14 @@ function redirect($url, $permanent = false) {
     header('Location: ' . $url);
     exit();
 }
-
+/*
+*
+*	Checker la longueur min = 6, max=50
+*
+*
+*/
 function checkMdp($mdp) {
-    //Checker la longueur min = 6, max=50
+    
     if(strlen($mdp)>= 6 && strlen($mdp) <= 50) {
         return true;
     } else {
