@@ -156,7 +156,7 @@ class entrainement
 
 
             $requ = $con->exec("INSERT INTO `entrainement` (`ID_ENT`,`ID_ENT_USER`, `ID_USER`, `ID_ARC`, `ID_BLAS`, `NOM_ENT`, `LIEU_ENT`, `DATE_ENT`, `DIST_ENT`,`NBR_SERIE`,`NBR_VOLEE`, `NBR_FLECHES`, `PTS_TOTAL`, `PCT_DIX`, `PCT_NEUF`, `MOY_ENT`, `STATUT_ENT`) 
-            VALUES (NULL,1, '$ID_user', '$ID_arc', '$ID_blason', '$nom', '$lieu', '$date', '$distance','$nbserie','$nbvolees', '$nbfleches', NULL, NULL, NULL, NULL, '1')") or die(print_r($bdd->errorInfo()));
+            VALUES (NULL,1, '$ID_user', '$ID_arc', '$ID_blason', '$nom', '$lieu', '$date', '$distance','$nbserie','$nbvolees', '$nbfleches', NULL, NULL, NULL, NULL, '1')");
 
             $requ2 = $con->query("SELECT ID_ENT FROM entrainement WHERE ID_USER='$ID_user' AND ID_ARC='$ID_arc' AND ID_BLAS='$ID_blason' 
             AND NOM_ENT='$nom' AND LIEU_ENT='$lieu' and DATE_ENT='$date' AND DIST_ENT='$distance' AND NBR_SERIE='$nbserie' AND NBR_VOLEE='$nbvolees' AND NBR_FLECHES='$nbfleches'") or die(print_r($bdd->errorInfo()));

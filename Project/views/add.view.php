@@ -1,6 +1,6 @@
 <div class="container-fluid addTraining" id="mainBox">
     <?php include 'includes/back-header.php';?>
-    <form method="get" action="" id="newTrainingForm">
+    <form method="get" action="currentTraining.php" id="newTrainingForm">
         <h3 id="formTitle">Add a new training</h3>
         <div id="nameField">
             <h3>Your Training Name</h3>
@@ -58,7 +58,7 @@
             <h3>Volleys</h3>
             <input type="number" name="volleys" id="volleyInput" min = "1" max="6" placeholder="1">
         </div>
-        <input type="submit" name="submitBtn" id="submitBtn" value="Let's practice !">
+        <input type="submit" name="submitBtn" id="submitBtn" value="go">
     </form>
 </div>
 <script>

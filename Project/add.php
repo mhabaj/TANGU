@@ -4,7 +4,6 @@ require_once 'controllers/functions/sanitize.php';
 require_once 'controllers/classes/ConnexionBDD.php';
 require_once 'controllers/classes/Entrainement.php';
 require_once 'controllers/classes/SerieController.php';
-
 $title = "Nouvel Entrainement";
 $left_url = "training.php";
 ?>
@@ -19,7 +18,6 @@ $left_url = "training.php";
     <link rel="stylesheet" href="assets/css/message.css">
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/checkHeader.css">
-    <!--<link rel="stylesheet" href="assets/css/modalFormInput.css">-->
     <link rel="stylesheet" href="assets/css/addTraining.css">
     <link rel="stylesheet" href="assets/css/navbar.css">
     <link rel="stylesheet" href="assets/css/datepicker.css">
@@ -67,18 +65,21 @@ if(isset($_GET['submitBtn'])) {
         $blason_select = $_GET['blasons'];
         $bow_select = $_GET['bows'];
         if($blason_select != "null" && $bow_select != "null") {
-            $blasonID = (int) $blason_select;
-            $arcID = (int) $bow_select;
-            $date_time = date_format($date, "Y-m-d H:i");
-            $training = new Entrainement($name, $location, $date_time, $distance, $arcID, 1, $sets, $volleys, $arrows, $idUser);
-            $serieController = new SerieController($training);
-            $_SESSION['serieController'] = serialize($serieController);
+            //$_SESSION['name'] = 'bitch';
+            /*
+            $_SESSION['location'] = $location;
+            $_SESSION['date'] = $date;
+            $_SESSION['distance'] = $distance;
+            $_SESSION['sets'] = $sets;
+            $_SESSION['volleys'] = $volleys;
+            $_SESSION['blason_select'] = $blason_select;
+            $_SESSION['bow_select'] = $bow_select;*/
         } else {
-            exit();
+            die();
         }
 
     } else {
-        exit();
+        die();
     }
 }
 

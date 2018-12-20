@@ -71,14 +71,15 @@
 
     var combo10 = 0;
 
-    let target = document.getElementById("target");
+    let target = document.getElementById("target"),
+        confetti = document.getElementById("confetti");
 
     let pts = [];
-    for(let i = 0; i < nbrSeries; i++) {
+    for (let i = 0; i < nbrSeries; i++) {
         pts.push([]);
-        for(let j = 0; j < nbrVolees; j++) {
+        for (let j = 0; j < nbrVolees; j++) {
             pts[i].push([]);
-            for(let k = 0; k < nbrTirs; k++) {
+            for (let k = 0; k < nbrTirs; k++) {
                 pts[i][j].push(0);
             }
         }
@@ -113,7 +114,7 @@
             triggerPopDown(popUpElement, 1000);
         }, popTime);
         window.setTimeout(blurEmptyAnimation, blurTime);
-        if(relaunch) {
+        if (relaunch) {
             window.setTimeout(launchTouchEvents, blurTime);
         }
     }
@@ -160,7 +161,7 @@
         let points = document.getElementsByClassName('point');
         var i;
 
-        for(i = 0; i < points.length; i++) {
+        for (i = 0; i < points.length; i++) {
             points[i].classList.add('animated-blur');
         }
         target.classList.add('animated-blur');
@@ -170,7 +171,7 @@
         let points = document.getElementsByClassName('point');
         var i;
 
-        for(i = 0; i < points.length; i++) {
+        for (i = 0; i < points.length; i++) {
             points[i].classList.remove('animated-blur');
         }
         target.classList.remove('animated-blur');
@@ -186,7 +187,7 @@
         let points = document.getElementsByClassName('point');
         let i;
 
-        for(i = points.length-1; i >= 0; i--) {
+        for (i = points.length - 1; i >= 0; i--) {
             points[i].classList.add('disappear-animation');
         }
     }
@@ -207,13 +208,13 @@
     }
 
     function checkCombo() {
-        if(combo10 > 1 && combo10 < 5) {
+        if (combo10 > 1 && combo10 < 5) {
             popUpMsgElement.innerHTML = combo10 + " in a row !";
-        } else if(combo10 == 5) {
+        } else if (combo10 == 5) {
             popUpMsgElement.innerHTML = combo10 + " in a row, WOW !";
-        } else if(combo10 == 6) {
+        } else if (combo10 == 6) {
             popUpMsgElement.innerHTML = "You're a pro !";
-        } else if(combo10 > 6) {
+        } else if (combo10 > 6) {
             popUpMsgElement.innerHTML = "Come On !!";
         } else {
             popUpMsgElement.innerHTML = "Well done !";
@@ -227,7 +228,7 @@
                 totalPts += 1;
                 ptsVolee += 1;
                 ptsSerie += 1;
-                pts[countSeries-1][countVolees-1][countTirs-1] = 1;
+                pts[countSeries - 1][countVolees - 1][countTirs - 1] = 1;
                 totalPtsText.innerText = "Total Pts: " + totalPts;
                 ptsVoleeText.innerText = "Pts sur la volée: " + ptsVolee;
                 ptsSerieText.innerText = "Pts sur la série: " + ptsSerie;
@@ -237,7 +238,7 @@
                 totalPts += 2;
                 ptsVolee += 2;
                 ptsSerie += 2;
-                pts[countSeries-1][countVolees-1][countTirs-1] = 2;
+                pts[countSeries - 1][countVolees - 1][countTirs - 1] = 2;
                 totalPtsText.innerText = "Total Pts: " + totalPts;
                 ptsVoleeText.innerText = "Pts sur la volée: " + ptsVolee;
                 ptsSerieText.innerText = "Pts sur la série: " + ptsSerie;
@@ -247,7 +248,7 @@
                 totalPts += 3;
                 ptsVolee += 3;
                 ptsSerie += 3;
-                pts[countSeries-1][countVolees-1][countTirs-1] = 3;
+                pts[countSeries - 1][countVolees - 1][countTirs - 1] = 3;
                 totalPtsText.innerText = "Total Pts: " + totalPts;
                 ptsVoleeText.innerText = "Pts sur la volée: " + ptsVolee;
                 ptsSerieText.innerText = "Pts sur la série: " + ptsSerie;
@@ -257,7 +258,7 @@
                 totalPts += 4;
                 ptsVolee += 4;
                 ptsSerie += 4;
-                pts[countSeries-1][countVolees-1][countTirs-1] = 4;
+                pts[countSeries - 1][countVolees - 1][countTirs - 1] = 4;
                 totalPtsText.innerText = "Total Pts: " + totalPts;
                 ptsVoleeText.innerText = "Pts sur la volée: " + ptsVolee;
                 ptsSerieText.innerText = "Pts sur la série: " + ptsSerie;
@@ -267,7 +268,7 @@
                 totalPts += 5;
                 ptsVolee += 5;
                 ptsSerie += 5;
-                pts[countSeries-1][countVolees-1][countTirs-1] = 5;
+                pts[countSeries - 1][countVolees - 1][countTirs - 1] = 5;
                 totalPtsText.innerText = "Total Pts: " + totalPts;
                 ptsVoleeText.innerText = "Pts sur la volée: " + ptsVolee;
                 ptsSerieText.innerText = "Pts sur la série: " + ptsSerie;
@@ -277,7 +278,7 @@
                 totalPts += 6;
                 ptsVolee += 6;
                 ptsSerie += 6;
-                pts[countSeries-1][countVolees-1][countTirs-1] = 6;
+                pts[countSeries - 1][countVolees - 1][countTirs - 1] = 6;
                 totalPtsText.innerText = "Total Pts: " + totalPts;
                 ptsVoleeText.innerText = "Pts sur la volée: " + ptsVolee;
                 ptsSerieText.innerText = "Pts sur la série: " + ptsSerie;
@@ -287,7 +288,7 @@
                 totalPts += 7;
                 ptsVolee += 7;
                 ptsSerie += 7;
-                pts[countSeries-1][countVolees-1][countTirs-1] = 7;
+                pts[countSeries - 1][countVolees - 1][countTirs - 1] = 7;
                 totalPtsText.innerText = "Total Pts: " + totalPts;
                 ptsVoleeText.innerText = "Pts sur la volée: " + ptsVolee;
                 ptsSerieText.innerText = "Pts sur la série: " + ptsSerie;
@@ -297,7 +298,7 @@
                 totalPts += 8;
                 ptsVolee += 8;
                 ptsSerie += 8;
-                pts[countSeries-1][countVolees-1][countTirs-1] = 8;
+                pts[countSeries - 1][countVolees - 1][countTirs - 1] = 8;
                 totalPtsText.innerText = "Total Pts: " + totalPts;
                 ptsVoleeText.innerText = "Pts sur la volée: " + ptsVolee;
                 ptsSerieText.innerText = "Pts sur la série: " + ptsSerie;
@@ -308,7 +309,7 @@
                 totalPts += 9;
                 ptsVolee += 9;
                 ptsSerie += 9;
-                pts[countSeries-1][countVolees-1][countTirs-1] = 9;
+                pts[countSeries - 1][countVolees - 1][countTirs - 1] = 9;
                 totalPtsText.innerText = "Total Pts: " + totalPts;
                 ptsVoleeText.innerText = "Pts sur la volée: " + ptsVolee;
                 ptsSerieText.innerText = "Pts sur la série: " + ptsSerie;
@@ -319,7 +320,7 @@
                 totalPts += 10;
                 ptsVolee += 10;
                 ptsSerie += 10;
-                pts[countSeries-1][countVolees-1][countTirs-1] = 10;
+                pts[countSeries - 1][countVolees - 1][countTirs - 1] = 10;
                 totalPtsText.innerText = "Total Pts: " + totalPts;
                 ptsVoleeText.innerText = "Pts sur la volée: " + ptsVolee;
                 ptsSerieText.innerText = "Pts sur la série: " + ptsSerie;
@@ -332,7 +333,7 @@
                 totalPts += 10;
                 ptsVolee += 10;
                 ptsSerie += 10;
-                pts[countSeries-1][countVolees-1][countTirs-1] = 10;
+                pts[countSeries - 1][countVolees - 1][countTirs - 1] = 10;
                 totalPtsText.innerText = "Total Pts: " + totalPts;
                 ptsVoleeText.innerText = "Pts sur la volée: " + ptsVolee;
                 ptsSerieText.innerText = "Pts sur la série: " + ptsSerie;
@@ -344,19 +345,42 @@
         }
     }
 
-    function sendData(str) {
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
+    function $_GET(param) {
+        var vars = {};
+        window.location.href.replace(location.hash, '').replace(
+            /[?&]+([^=&]+)=?([^&]*)?/gi, // regexp
+            function (m, key, value) { // callback
+                vars[key] = value !== undefined ? value : '';
             }
-        };
-        console.log(window.location.href);
-        let currentURL = window.location.href,
-            newURL = currentURL + "&data=" + str;
-        xmlhttp.open("GET", newURL, true);
-        xmlhttp.send();
+        );
+
+        if (param) {
+            return vars[param] ? vars[param] : null;
+        }
+        return vars;
+    }
+
+    function sendData(str) {
+
+
+        //let currentURL = window.location.href,
+        //let newURL = "endTraining.php?" + "data=" + str;
+
+
+        let name = $_GET('name');
+        let location = $_GET('location');
+        let date = $_GET('date');
+        let distance = $_GET('distance');
+        let bows = $_GET('bows');
+        let blasons = $_GET('blasons');
+        let sets = $_GET('sets');
+        let arrows = $_GET('arrows');
+        let voleys = $_GET('volleys');
+        let newURL = "endTraining.php?" + "data=" + str + "&name=" + name + "&location=" + location
+            + "&date=" + date + "&distance=" + distance + "&bows=" + bows + "&blasons=" + blasons + "&sets=" + sets + "&arrows=" + arrows + "&volleys=" + voleys;
+        //console.log(newURL);
         window.setTimeout(function () {
-            window.location.href = newURL;
+          window.location.href = newURL;
         }, 1500);
     }
 
@@ -365,11 +389,11 @@
             clientY = e.changedTouches[0].clientY;
 
         countTirs++;
-        if(countTirs >= nbrTirs) {
-            if(countTirs == nbrTirs) {
+        if (countTirs >= nbrTirs) {
+            if (countTirs == nbrTirs) {
                 draw(e, clientX, clientY);
                 inc(e);
-                console.log('Serie ' + countSeries + ' Volee '+ countVolees  + ' Tir ' + countTirs);
+                console.log('Serie ' + countSeries + ' Volee ' + countVolees + ' Tir ' + countTirs);
                 window.setTimeout(function () {
                     $('.point').remove();
                 }, 1400);
@@ -377,13 +401,13 @@
             }
             countTirs = 0;
             window.setTimeout(function () {
-                if(countVolees >= nbrVolees) {
+                if (countVolees >= nbrVolees) {
 
-                    if(countSeries >= nbrSeries) {
+                    if (countSeries >= nbrSeries) {
                         //$('.point').remove();
                         //console.log(pts);
+                        killTouchEvents();
                         let ptsArray = JSON.stringify(pts);
-
                         popUpMsgElement.innerHTML = "Fin de l'entrainement";
                         showMessage(1000, 1500, false);
                         sendData(ptsArray);
@@ -417,8 +441,8 @@
             draw(e, clientX, clientY);
             inc(e);
             console.log(pts);
-            console.log('Serie ' + countSeries + ' Volee '+ countVolees  + ' Tir ' + countTirs);
-            if(countTirs == (nbrTirs - 1)) {
+            console.log('Serie ' + countSeries + ' Volee ' + countVolees + ' Tir ' + countTirs);
+            if (countTirs == (nbrTirs - 1)) {
                 popUpMsgElement.innerHTML = "Last shot!";
                 showMessage(1000, 1500, true);
             }
@@ -465,7 +489,6 @@
 
     function launchTouchEvents() {
         target1.addEventListener('touchend', touchHandler);
-
         target2.addEventListener('touchend', touchHandler);
         target3.addEventListener('touchend', touchHandler);
         target4.addEventListener('touchend', touchHandler);
@@ -533,15 +556,15 @@
 
         var msg;
 
-        if(pct8 >= 0.9) {
+        if (pct8 >= 0.9) {
             msg = "Pas mal!";
         }
 
-        if(pct9 >= 0.7) {
+        if (pct9 >= 0.7) {
             msg = "Bien joué !";
         }
 
-        if(pct10 >= 0.8) {
+        if (pct10 >= 0.8) {
             msg = "Wow!";
         }
 

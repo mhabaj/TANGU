@@ -1,12 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: windf
- * Date: 25/11/2018
- * Time: 19:40
- */
 
-include '../controllers/classes/SerieController.php';
 
 class Serie {
     private $serieController;
@@ -151,6 +144,7 @@ class Serie {
     }
 }
 
+/*
 $training = new Entrainement('nom', 'lieu', '', '10', '1', '1', 3, 2, 5, 1);
 $serieController = new SerieController($training);
 $data = [10, 0, 9, 2, 10];
@@ -161,4 +155,4 @@ try {
     $serieModel->insertData();
 } catch (Exception $e) {
     echo 'Message: ' .$e->getMessage();
-}
+}*/

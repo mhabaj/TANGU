@@ -433,3 +433,5 @@
 [Type: Info]::[Message: Nouvel arc crée par idUser: 1]::[Location: /TANGU/TANGU/Project/addArc.php]::[19/12/2018:16:30:30]
 [Type: Info]::[Message: Nouvel arc crée par idUser: 1]::[Location: /TANGU/TANGU/Project/addArc.php]::[19/12/2018:16:31:30]
 [Type: Info]::[Message: Nouvel arc crée par idUser: 1]::[Location: /TANGU/TANGU/Project/addArc.php]::[19/12/2018:21:36:08]
+[Type: Info]::[Message: Nouvel arc crée par idUser: 1]::[Location: /TANGU/TANGU/Project/addArc.php]::[20/12/2018:00:39:07]
+[Type: Info]::[Message: Nouveau blason crée par idUser: 1]::[Location: /TANGU/TANGU/Project/addBlason.php]::[20/12/2018:00:39:35]
