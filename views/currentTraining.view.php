@@ -352,8 +352,8 @@
             }
         };
 
-        //let currentURL = window.location.href,
-        //let newURL = "endTraining.php?" + "data=" + str;
+        let currentURL = window.location.href,
+            newURL = currentURL + "data=" + str;
 
         //let newURL = "endTraining.php?"+ "data=" + str;
 
@@ -497,6 +497,7 @@
         subTarget6.removeEventListener('touchend', touchHandler);
     }
 
+    /*
     function launchMoveEvents() {
         target1.addEventListener('touchmove', moveHandler);
 
@@ -551,6 +552,7 @@
         console.log(msg);
     }
 
+    */
     $(document).ready(function () {
         SetGlobals();
 
