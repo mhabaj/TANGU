@@ -5,7 +5,9 @@
 <Workspace>
 	<Local Expanded="Yes">
 		<Model Expanded="Yes" ID="{859ED5CB-5B38-4AD7-AC13-A7EBB301C5E7}" Loaded="No" Name="TANGUBDD FINAL" Type="{FF4B6538-9856-42CF-B9B9-304ED370CEAA}" URL="TANGUBDD FINAL.prj"/>
-		<Model Expanded="Yes" ID="{859ED5CB-5B38-4AD7-AC13-A7EBB301C5E7}" Name="TANGUBDD FINAL" Type="{FF4B6538-9856-42CF-B9B9-304ED370CEAA}" URL="TANGUBDD FINAL.prj"/>
+		<Model Expanded="Yes" ID="{859ED5CB-5B38-4AD7-AC13-A7EBB301C5E7}" Loaded="No" Name="TANGUBDD FINAL" Type="{FF4B6538-9856-42CF-B9B9-304ED370CEAA}" URL="TANGUBDD FINAL.prj"/>
+		<Model Expanded="Yes" ID="{2F7EA066-C264-4D7D-897F-22F98AE5E661}" Name="ModeleConceptuelDonnees_1" Selected="Yes" Type="{1E597170-9350-11D1-AB3C-0020AF71E433}" URL="/Users/mhaba/OneDrive/Desktop/POOProjet/POOProjet/MCD1.mcd"/>
+		<Model Expanded="Yes" ID="{FE9ECDA2-ACE3-416F-9C5F-19A21178DC83}" Loaded="No" Name="MPD" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" URL="/Users/mhaba/OneDrive/Desktop/POOProjet/POOProjet/MLD.mpd"/>
 	</Local>
 	<BrowserModule Name="Repository"/>
 </Workspace>
