@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2018-10-11" view-index="1" gantt-divider-location="678" resource-divider-location="518" version="2.8.9" locale="fr">
+    <description/>
+    <view zooming-state="default:1" id="gantt-chart">
+        <field id="tpd3" name="Nom" width="291" order="0"/>
+        <field id="tpd4" name="Date de début" width="192" order="1"/>
+        <field id="tpd5" name="Date de fin" width="191" order="2"/>
+        <option id="color.recent"><![CDATA[#ff0000 #cc0000 #ff3333 #66ffff #00ffff #00ffcc #33ff33 #33ff00 #ff0033]]></option>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Nom" width="317" order="0"/>
+        <field id="1" name="Rôle par défaut" width="197" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="0"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="139" name="jalon 1" color="#8cb6ce" meeting="false" project="true" start="2018-10-16" duration="10" complete="100" thirdDate="2018-10-16" thirdDate-constraint="0" expand="false">
+            <depend id="119" type="2" difference="0" hardness="Strong"/>
+            <depend id="163" type="2" difference="0" hardness="Strong"/>
+            <task id="140" name="1 : base de données" color="#ff3333" meeting="false" start="2018-10-16" duration="2" complete="100" thirdDate="2018-10-11" thirdDate-constraint="0" expand="true">
+                <depend id="141" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="141" name="10 : conception onglet register/login" color="#33ff33" meeting="false" start="2018-10-18" duration="1" complete="100" thirdDate="2018-10-11" thirdDate-constraint="0" expand="true">
+                <depend id="142" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="142" name="10.1 : code onglet register/login" color="#33ff33" meeting="false" start="2018-10-19" duration="1" complete="100" thirdDate="2018-10-11" thirdDate-constraint="0" expand="true">
+                <depend id="143" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="143" name="10.2 : MP onglet register/login" color="#33ff33" meeting="false" start="2018-10-20" duration="1" complete="100" thirdDate="2018-10-11" thirdDate-constraint="0" expand="true">
+                <depend id="144" type="2" difference="0" hardness="Strong"/>
+                <depend id="145" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="144" name="2.0 : conception onglet création d'une arme" color="#00ffcc" meeting="false" start="2018-10-22" duration="1" complete="100" thirdDate="2018-10-11" thirdDate-constraint="0" expand="true">
+                <depend id="122" type="2" difference="0" hardness="Strong"/>
+                <depend id="149" type="2" difference="0" hardness="Strong"/>
+                <depend id="153" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="145" name="3.0 : conception onglet création d'un blason" color="#00ffff" meeting="false" start="2018-10-22" duration="1" complete="100" thirdDate="2018-10-11" thirdDate-constraint="0" expand="true">
+                <depend id="122" type="2" difference="0" hardness="Strong"/>
+                <depend id="149" type="2" difference="0" hardness="Strong"/>
+                <depend id="154" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="149" name="7.0 : conception onglet personaliser" color="#00ffff" meeting="false" start="2018-10-23" duration="1" complete="100" thirdDate="2018-10-22" thirdDate-constraint="1" expand="true">
+                <depend id="156" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="153" name="2.1 : code onglet création d'une arme" color="#00ffff" meeting="false" start="2018-10-23" duration="2" complete="100" thirdDate="2018-10-11" thirdDate-constraint="0" expand="true">
+                <depend id="157" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="154" name="3.1 : code onglet création d'un blason" color="#00ffff" meeting="false" start="2018-10-23" duration="2" complete="100" thirdDate="2018-10-11" thirdDate-constraint="0" expand="true">
+                <depend id="158" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="156" name="7.1 : code onglet personaliser" color="#8cb6ce" meeting="false" start="2018-10-24" duration="1" complete="100" thirdDate="2018-10-16" thirdDate-constraint="0" expand="true">
+                <depend id="159" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="157" name="2.2 : MP onglet création d'une arme" color="#8cb6ce" meeting="false" start="2018-10-25" duration="1" complete="100" thirdDate="2018-10-11" thirdDate-constraint="0" expand="true"/>
+            <task id="158" name="3.2 : MP onglet création d'un blason" color="#8cb6ce" meeting="false" start="2018-10-25" duration="1" complete="100" thirdDate="2018-10-11" thirdDate-constraint="0" expand="true"/>
+            <task id="159" name="7.2 : MP onglet personaliser" color="#8cb6ce" meeting="false" start="2018-10-25" duration="2" complete="100" thirdDate="2018-10-16" thirdDate-constraint="0" expand="true"/>
+            <task id="161" name="Documentation" color="#8cb6ce" meeting="false" start="2018-10-16" duration="3" complete="100" thirdDate="2018-10-15" thirdDate-constraint="0" expand="true"/>
+            <task id="166" name="Test" color="#8cb6ce" meeting="false" start="2018-10-19" duration="6" complete="100" thirdDate="2018-10-12" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="119" name="Jalon 2" color="#8cb6ce" meeting="false" project="true" start="2018-10-27" duration="21" complete="78" thirdDate="2018-11-06" thirdDate-constraint="0" expand="true">
+            <depend id="106" type="2" difference="0" hardness="Strong"/>
+            <task id="122" name="4.0 : conception onglet nouveau tir" color="#8cb6ce" shape="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" meeting="false" start="2018-11-06" duration="3" complete="100" thirdDate="2018-11-06" thirdDate-constraint="1" priority="4" expand="true">
+                <depend id="123" type="2" difference="0" hardness="Strong"/>
+                <depend id="126" type="2" difference="0" hardness="Strong"/>
+                <depend id="129" type="2" difference="0" hardness="Strong"/>
+                <depend id="130" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="123" name="5.0 : conception List entrainements" color="#8cb6ce" meeting="false" start="2018-11-09" duration="3" complete="100" thirdDate="2018-10-16" thirdDate-constraint="0" expand="true">
+                <depend id="113" type="2" difference="0" hardness="Strong"/>
+                <depend id="131" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="126" name="4.1 : code onglet nouveau tir" color="#ff0000" meeting="false" start="2018-11-09" duration="3" complete="100" thirdDate="2018-10-27" thirdDate-constraint="1" priority="4" expand="true">
+                <depend id="132" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="129" name="8.1 : code onglet entrainements" color="#cc0000" meeting="false" start="2018-11-09" duration="5" complete="80" thirdDate="2018-10-18" thirdDate-constraint="0" priority="2" expand="true">
+                <depend id="133" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="130" name="8.0 : conception onglet EnCoursEntrainement" color="#8cb6ce" meeting="false" start="2018-11-09" duration="4" complete="100" thirdDate="2018-11-09" thirdDate-constraint="1" expand="true"/>
+            <task id="131" name="5.1 : code ongletList Entrainements" color="#8cb6ce" meeting="false" start="2018-11-13" duration="4" complete="100" thirdDate="2018-10-16" thirdDate-constraint="0" expand="true">
+                <depend id="135" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="132" name="4.2 : MP onglet nouveau tir" color="#8cb6ce" meeting="false" start="2018-11-13" duration="4" complete="100" thirdDate="2018-10-22" thirdDate-constraint="0" expand="true"/>
+            <task id="133" name="8.2 : MP onglet entrainements" color="#8cb6ce" meeting="false" start="2018-11-15" duration="2" complete="100" thirdDate="2018-10-18" thirdDate-constraint="0" expand="true"/>
+            <task id="135" name="5.2 : MP onglet catalogue tirs" color="#8cb6ce" meeting="false" start="2018-11-17" duration="3" complete="0" thirdDate="2018-10-16" thirdDate-constraint="0" expand="true"/>
+            <task id="163" name="Documentation" color="#8cb6ce" meeting="false" start="2018-10-27" duration="2" complete="100" thirdDate="2018-10-29" thirdDate-constraint="0" expand="true"/>
+            <task id="170" name="Test" color="#8cb6ce" meeting="false" start="2018-10-27" duration="4" complete="0" thirdDate="2018-10-27" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="106" name="Jalon 3" color="#8cb6ce" meeting="true" project="true" start="2018-11-21" duration="0" complete="0" thirdDate="2018-11-10" thirdDate-constraint="0" expand="true">
+            <depend id="102" type="2" difference="0" hardness="Strong"/>
+            <task id="113" name="6.0 : conception onglet statistiques" color="#8cb6ce" meeting="false" start="2018-11-21" duration="5" complete="0" thirdDate="2018-11-20" thirdDate-constraint="0" expand="true"/>
+            <task id="114" name="6.1 : code onglet statistiques" color="#8cb6ce" meeting="false" start="2018-11-27" duration="6" complete="0" thirdDate="2018-10-16" thirdDate-constraint="0" expand="true">
+                <depend id="116" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="116" name="6.2 : MP onglet statistiques" color="#8cb6ce" meeting="false" start="2018-12-04" duration="2" complete="0" thirdDate="2018-10-18" thirdDate-constraint="0" expand="true"/>
+            <task id="174" name="Documentation" color="#8cb6ce" meeting="false" start="2018-11-21" duration="4" complete="0" thirdDate="2018-11-21" thirdDate-constraint="0" expand="true"/>
+            <task id="176" name="Test" color="#8cb6ce" meeting="false" start="2018-11-21" duration="3" complete="0" thirdDate="2018-11-21" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="102" name="fin" color="#8cb6ce" meeting="false" start="2018-12-06" duration="1" complete="0" thirdDate="2018-10-11" thirdDate-constraint="0" expand="true"/>
+    </tasks>
+    <resources>
+        <resource id="0" name="AlhabajMahmod" function="Default:1" contacts="" phone=""/>
+        <resource id="1" name="Gerard " function="SoftwareDevelopment:2" contacts="" phone=""/>
+        <resource id="2" name="MohamadAli" function="SoftwareDevelopment:9" contacts="" phone=""/>
+        <resource id="3" name="Matt" function="SoftwareDevelopment:2" contacts="" phone=""/>
+        <resource id="4" name="Tom" function="Default:1" contacts="" phone=""/>
+    </resources>
+    <allocations>
+        <allocation task-id="122" resource-id="0" function="Default:1" responsible="true" load="40.0"/>
+        <allocation task-id="123" resource-id="0" function="Default:1" responsible="true" load="40.0"/>
+        <allocation task-id="126" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="129" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="130" resource-id="0" function="Default:1" responsible="true" load="40.0"/>
+        <allocation task-id="131" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="140" resource-id="0" function="Default:1" responsible="true" load="80.0"/>
+        <allocation task-id="141" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="142" resource-id="0" function="Default:1" responsible="true" load="50.0"/>
+        <allocation task-id="143" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="144" resource-id="0" function="Default:1" responsible="false" load="33.33"/>
+        <allocation task-id="145" resource-id="0" function="Default:1" responsible="false" load="33.33"/>
+        <allocation task-id="149" resource-id="0" function="Default:1" responsible="false" load="33.33"/>
+        <allocation task-id="156" resource-id="0" function="Default:1" responsible="false" load="33.33"/>
+        <allocation task-id="116" resource-id="1" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="122" resource-id="1" function="SoftwareDevelopment:2" responsible="false" load="20.0"/>
+        <allocation task-id="123" resource-id="1" function="SoftwareDevelopment:2" responsible="false" load="20.0"/>
+        <allocation task-id="130" resource-id="1" function="SoftwareDevelopment:2" responsible="false" load="20.0"/>
+        <allocation task-id="133" resource-id="1" function="SoftwareDevelopment:2" responsible="false" load="50.0"/>
+        <allocation task-id="135" resource-id="1" function="SoftwareDevelopment:2" responsible="true" load="50.0"/>
+        <allocation task-id="157" resource-id="1" function="SoftwareDevelopment:2" responsible="true" load="50.0"/>
+        <allocation task-id="159" resource-id="1" function="SoftwareDevelopment:2" responsible="true" load="50.0"/>
+        <allocation task-id="122" resource-id="2" function="SoftwareDevelopment:9" responsible="false" load="100.0"/>
+        <allocation task-id="132" resource-id="2" function="SoftwareDevelopment:9" responsible="true" load="100.0"/>
+        <allocation task-id="135" resource-id="2" function="SoftwareDevelopment:9" responsible="false" load="50.0"/>
+        <allocation task-id="158" resource-id="2" function="SoftwareDevelopment:9" responsible="true" load="50.0"/>
+        <allocation task-id="159" resource-id="2" function="SoftwareDevelopment:9" responsible="true" load="50.0"/>
+        <allocation task-id="133" resource-id="2" function="SoftwareDevelopment:9" responsible="true" load="50.0"/>
+        <allocation task-id="114" resource-id="3" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="116" resource-id="3" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="122" resource-id="3" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="142" resource-id="3" function="SoftwareDevelopment:2" responsible="false" load="50.0"/>
+        <allocation task-id="144" resource-id="3" function="SoftwareDevelopment:2" responsible="true" load="33.33"/>
+        <allocation task-id="145" resource-id="3" function="SoftwareDevelopment:2" responsible="false" load="33.33"/>
+        <allocation task-id="149" resource-id="3" function="SoftwareDevelopment:2" responsible="true" load="33.33"/>
+        <allocation task-id="153" resource-id="3" function="SoftwareDevelopment:2" responsible="true" load="60.0"/>
+        <allocation task-id="156" resource-id="3" function="SoftwareDevelopment:2" responsible="true" load="33.33"/>
+        <allocation task-id="113" resource-id="3" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="122" resource-id="4" function="Default:1" responsible="false" load="40.0"/>
+        <allocation task-id="123" resource-id="4" function="Default:1" responsible="false" load="40.0"/>
+        <allocation task-id="130" resource-id="4" function="Default:1" responsible="false" load="40.0"/>
+        <allocation task-id="140" resource-id="4" function="Default:1" responsible="true" load="20.0"/>
+        <allocation task-id="144" resource-id="4" function="Default:1" responsible="false" load="33.33"/>
+        <allocation task-id="145" resource-id="4" function="Default:1" responsible="true" load="33.33"/>
+        <allocation task-id="149" resource-id="4" function="Default:1" responsible="true" load="33.33"/>
+        <allocation task-id="154" resource-id="4" function="Default:1" responsible="true" load="60.0"/>
+        <allocation task-id="156" resource-id="4" function="Default:1" responsible="true" load="33.33"/>
+        <allocation task-id="161" resource-id="4" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="166" resource-id="4" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="163" resource-id="4" function="Default:1" responsible="true" load="100.0"/>
+    </allocations>
+    <vacations>
+        <vacation start="2018-10-29" end="2018-11-06" resourceid="0"/>
+        <vacation start="2018-10-29" end="2018-11-06" resourceid="1"/>
+        <vacation start="2018-10-29" end="2018-11-06" resourceid="2"/>
+        <vacation start="2018-10-29" end="2018-11-06" resourceid="3"/>
+        <vacation start="2018-10-29" end="2018-11-06" resourceid="4"/>
+    </vacations>
+    <previous/>
+    <roles roleset-name="Default"/>
+    <roles roleset-name="SoftwareDevelopment"/>
+</project>

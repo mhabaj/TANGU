@@ -1,0 +1,46 @@
+/****FONTS******/
+
+        /****San Francisco******/
+
+@font-face {
+    font-family: SF-Display-Heavy;
+    src: url(../fonts/SF/SFProDisplay-Heavy.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: SF-Display-Regular;
+    src: url(../fonts/SF/SFProDisplay-Regular.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: SF-Display-Medium;
+    src: url(../fonts/SF/SFProDisplay-Medium.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: SF-Display-Light;
+    src: url(../fonts/SF/SFProDisplay-Light.ttf);
+    font-weight: normal;
+}
+
+#headerBox {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 12%;
+    padding: 5% 0;
+    background-color: white;
+}
+
+#titleBox h1 {
+    border-style: none;
+    font-family: SF-Display-Medium;
+    position: fixed;
+    left: 5%;
+    font-size: 170%;
+    color: #3D4E66;
+}
